@@ -18,6 +18,7 @@ _Learn about the person you're helping. Update this as you go._
 - Near-term focus is to build secure skills, reduce repeated mistakes, connect core tools and services, and then build Mission Control.
 - Prefers casual, efficient conversation unless a project genuinely needs depth.
 - Wants each completed topic/project summarized into a dedicated memory file with accomplishments and clear next steps so chat context can be cleared and resumed later.
+- Wants Mission Control's Vault to become the default shared operational memory substrate for agents when the tooling is available, with bounded note capture and no spam.
 
 ---
 
