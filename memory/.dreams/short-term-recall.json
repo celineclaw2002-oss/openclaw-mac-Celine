@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-21T01:48:45.925Z",
+  "updatedAt": "2026-05-08T07:52:10.647Z",
   "entries": {
     "memory:memory/2026-04-08.md:1:9": {
       "key": "memory:memory/2026-04-08.md:1:9",
@@ -187,25 +187,32 @@
       "endLine": 59,
       "source": "memory",
       "snippet": "- Recorded near-term plan: secure skill repository, core integrations, then Mission Control. - Set up `topics/` folder for resumable project summaries and created initial `topics/skills-bootstrap.md`. - Confirmed that tiny tasks can stay with Celine for now, while non-trivial work should default to sub-agents. - Confirmed security posture should be balanced, leaning conservative, until Mac mini migration. - Confirmed integration order: GitHub, Google, Apple ecosystem, calendar/email flows, then Mission Control. - Confirmed Mission Control should start from a GitHub template and be customized. - Pushed current workspace commits to the connected GitHub repository. - Confirmed dedicated Google",
-      "recallCount": 5,
+      "recallCount": 9,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 4.1145844912164975,
+      "totalScore": 8.114584491216497,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-09T05:57:50.083Z",
-      "lastRecalledAt": "2026-04-20T17:38:45.070Z",
+      "lastRecalledAt": "2026-05-02T17:58:02.849Z",
       "queryHashes": [
         "95066e1ee738",
         "ca9d85083bde",
         "cfaec01030d7",
         "f624d4448f91",
-        "7edbf54639d7"
+        "7edbf54639d7",
+        "e68154cbfbe2",
+        "5f004803efcb",
+        "66d49502a71e",
+        "979727a0da3c"
       ],
       "recallDays": [
         "2026-04-09",
         "2026-04-10",
         "2026-04-17",
-        "2026-04-20"
+        "2026-04-20",
+        "2026-04-21",
+        "2026-04-28",
+        "2026-05-02"
       ],
       "conceptTags": [
         "near-term",
@@ -225,25 +232,32 @@
       "endLine": 146,
       "source": "memory",
       "snippet": "- Recorded near-term plan: secure skill repository, core integrations, then Mission Control. - Set up `topics/` folder for resumable project summaries and created initial `topics/skills-bootstrap.md`. - Confirmed that tiny tasks can stay with Celine for now, while non-trivial work should default to sub-agents. - Confirmed security posture should be balanced, leaning conservative, until Mac mini migration. - Confirmed integration order: GitHub, Google, Apple ecosystem, calendar/email flows, then Mission Control. - Confirmed Mission Control should start from a GitHub template and be customized. - Pushed current workspace commits to the connected GitHub repository. - Confirmed dedicated Google",
-      "recallCount": 5,
+      "recallCount": 9,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 4.1145844912164975,
+      "totalScore": 8.114584491216497,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-09T05:57:50.083Z",
-      "lastRecalledAt": "2026-04-20T17:38:45.070Z",
+      "lastRecalledAt": "2026-05-02T17:58:02.849Z",
       "queryHashes": [
         "95066e1ee738",
         "ca9d85083bde",
         "cfaec01030d7",
         "f624d4448f91",
-        "7edbf54639d7"
+        "7edbf54639d7",
+        "e68154cbfbe2",
+        "5f004803efcb",
+        "66d49502a71e",
+        "979727a0da3c"
       ],
       "recallDays": [
         "2026-04-09",
         "2026-04-10",
         "2026-04-17",
-        "2026-04-20"
+        "2026-04-20",
+        "2026-04-21",
+        "2026-04-28",
+        "2026-05-02"
       ],
       "conceptTags": [
         "near-term",
@@ -483,13 +497,13 @@
       "endLine": 73,
       "source": "memory",
       "snippet": "- Completed a Builderz-to-Mission-Control panel mapping so the build can move from planning into implementation. - Refined the Mission Control information architecture: Agents should unify agent detail and future creation/configuration, Workshop should remain the main detailed queue/task system, and Chief of Staff / Maintenance queue concepts should live inside agent detail plus Workshop rather than as separate top-level tabs. - Decided to keep only the full version of the interface and remove separate simple/full mode as a product choice. - Completed the first safe reshape pass in `projects/celine-mission-control`: disabled doctor banner/route, disabled security auto-fix routes, disabled `/",
-      "recallCount": 8,
+      "recallCount": 9,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 7.424101106950038,
+      "totalScore": 8.424101106950038,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-10T15:00:33.202Z",
-      "lastRecalledAt": "2026-04-21T01:46:43.639Z",
+      "lastRecalledAt": "2026-04-26T05:39:56.355Z",
       "queryHashes": [
         "aa91371efccc",
         "c02f06452f79",
@@ -498,7 +512,8 @@
         "a7dbe2a4baca",
         "534096875ca9",
         "1155f15c4a1c",
-        "811a4cfee646"
+        "811a4cfee646",
+        "b8f1e345ab94"
       ],
       "recallDays": [
         "2026-04-10",
@@ -506,7 +521,8 @@
         "2026-04-17",
         "2026-04-18",
         "2026-04-19",
-        "2026-04-20"
+        "2026-04-20",
+        "2026-04-26"
       ],
       "conceptTags": [
         "builderz-to-mission-control",
@@ -526,13 +542,13 @@
       "endLine": 160,
       "source": "memory",
       "snippet": "- Completed a Builderz-to-Mission-Control panel mapping so the build can move from planning into implementation. - Refined the Mission Control information architecture: Agents should unify agent detail and future creation/configuration, Workshop should remain the main detailed queue/task system, and Chief of Staff / Maintenance queue concepts should live inside agent detail plus Workshop rather than as separate top-level tabs. - Decided to keep only the full version of the interface and remove separate simple/full mode as a product choice. - Completed the first safe reshape pass in `projects/celine-mission-control`: disabled doctor banner/route, disabled security auto-fix routes, disabled `/",
-      "recallCount": 7,
+      "recallCount": 8,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 6.424101106950038,
+      "totalScore": 7.424101106950038,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-10T15:00:33.202Z",
-      "lastRecalledAt": "2026-04-21T01:46:43.639Z",
+      "lastRecalledAt": "2026-04-26T05:39:56.355Z",
       "queryHashes": [
         "aa91371efccc",
         "c02f06452f79",
@@ -540,14 +556,16 @@
         "fc360e1b3a9e",
         "534096875ca9",
         "1155f15c4a1c",
-        "811a4cfee646"
+        "811a4cfee646",
+        "b8f1e345ab94"
       ],
       "recallDays": [
         "2026-04-10",
         "2026-04-16",
         "2026-04-17",
         "2026-04-19",
-        "2026-04-20"
+        "2026-04-20",
+        "2026-04-26"
       ],
       "conceptTags": [
         "builderz-to-mission-control",
@@ -567,27 +585,29 @@
       "endLine": 44,
       "source": "memory",
       "snippet": "- Began a Builderz customization plan centered on agent-governed maintenance and Celine-first oversight. - Drafted the Mission Control v1 blueprint, including page map, custom Celine-first modules, governance model, and phased roadmap. - Completed a Builderz-to-Mission-Control panel mapping so the build can move from planning into implementation. - Refined the Mission Control information architecture: Agents should unify agent detail and future creation/configuration, Workshop should remain the main detailed queue/task system, and Chief of Staff / Maintenance queue concepts should live inside agent detail plus Workshop rather than as separate top-level tabs. - Decided to keep only the full v",
-      "recallCount": 6,
+      "recallCount": 7,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 5.308279771153385,
+      "totalScore": 6.308279771153385,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-10T15:00:33.202Z",
-      "lastRecalledAt": "2026-04-20T01:53:42.474Z",
+      "lastRecalledAt": "2026-05-08T07:52:10.647Z",
       "queryHashes": [
         "aa91371efccc",
         "7a74c7dd81ba",
         "38836eef28dd",
         "98d621700739",
         "534096875ca9",
-        "62ea98a5f331"
+        "62ea98a5f331",
+        "d15058728ad0"
       ],
       "recallDays": [
         "2026-04-10",
         "2026-04-11",
         "2026-04-16",
         "2026-04-17",
-        "2026-04-19"
+        "2026-04-19",
+        "2026-05-08"
       ],
       "conceptTags": [
         "agent-governed",
@@ -607,27 +627,29 @@
       "endLine": 131,
       "source": "memory",
       "snippet": "- Began a Builderz customization plan centered on agent-governed maintenance and Celine-first oversight. - Drafted the Mission Control v1 blueprint, including page map, custom Celine-first modules, governance model, and phased roadmap. - Completed a Builderz-to-Mission-Control panel mapping so the build can move from planning into implementation. - Refined the Mission Control information architecture: Agents should unify agent detail and future creation/configuration, Workshop should remain the main detailed queue/task system, and Chief of Staff / Maintenance queue concepts should live inside agent detail plus Workshop rather than as separate top-level tabs. - Decided to keep only the full v",
-      "recallCount": 6,
+      "recallCount": 7,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 5.308279771153385,
+      "totalScore": 6.308279771153385,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-10T15:00:33.202Z",
-      "lastRecalledAt": "2026-04-20T01:53:42.474Z",
+      "lastRecalledAt": "2026-05-08T07:52:10.647Z",
       "queryHashes": [
         "aa91371efccc",
         "7a74c7dd81ba",
         "38836eef28dd",
         "98d621700739",
         "534096875ca9",
-        "62ea98a5f331"
+        "62ea98a5f331",
+        "d15058728ad0"
       ],
       "recallDays": [
         "2026-04-10",
         "2026-04-11",
         "2026-04-16",
         "2026-04-17",
-        "2026-04-19"
+        "2026-04-19",
+        "2026-05-08"
       ],
       "conceptTags": [
         "agent-governed",
@@ -719,13 +741,13 @@
       "endLine": 195,
       "source": "memory",
       "snippet": "- Durable lesson: never claim a Mission Control UI fix is done until the running review instance is rebuilt or restarted as needed and visually confirmed against what Can is seeing. - The main visible issue was a cramped duplicate lower summary block in Agent detail that made `Adjust` and `Open this agent in Workshop` appear misplaced. - The duplicate/cramped Agent detail overview block was removed and the cleaner top operational summary was kept as the primary version. - A clean rebuild of `celine-mission-control` succeeded after fixing a JSX parse error in `src/components/panels/agent-detail-tabs.tsx` caused by a missing closing wrapper during the cleanup. - The local review server was rel",
-      "recallCount": 10,
+      "recallCount": 12,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 9.166748994024125,
+      "totalScore": 11.166748994024125,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-11T00:09:50.203Z",
-      "lastRecalledAt": "2026-04-21T01:46:43.639Z",
+      "lastRecalledAt": "2026-05-01T18:12:44.815Z",
       "queryHashes": [
         "a8969471401d",
         "7a74c7dd81ba",
@@ -736,7 +758,9 @@
         "3d93f0907ea2",
         "a7dbe2a4baca",
         "534096875ca9",
-        "811a4cfee646"
+        "811a4cfee646",
+        "b8f1e345ab94",
+        "5e24d5126e0d"
       ],
       "recallDays": [
         "2026-04-10",
@@ -744,7 +768,9 @@
         "2026-04-17",
         "2026-04-18",
         "2026-04-19",
-        "2026-04-20"
+        "2026-04-20",
+        "2026-04-26",
+        "2026-05-01"
       ],
       "conceptTags": [
         "duplicate/cramped",
@@ -835,23 +861,25 @@
       "endLine": 27,
       "source": "memory",
       "snippet": "- top-level operator comments now trigger an in-thread Celine reply - Celine reply summarizes current task context from metadata - when an assigned worker/session exists, Mission Control prepares and attempts a relay to that worker session - a relay note is written back into the same task thread for auditability - Added focused regression coverage in `src/lib/__tests__/task-comments-celine-loop.test.ts`. - Validated the task-thread reply loop with full `pnpm typecheck`, `pnpm test`, and `pnpm build`, then rebuilt/restarted the standalone review app. - Durable current assessment of system status: - **Healthy / working:** review runtime stability on 3414, review routing semantics, ap",
-      "recallCount": 5,
+      "recallCount": 6,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 4.026288736099333,
+      "totalScore": 5.026288736099333,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-11T20:39:20.669Z",
-      "lastRecalledAt": "2026-04-20T01:53:42.474Z",
+      "lastRecalledAt": "2026-05-08T07:52:10.647Z",
       "queryHashes": [
         "12dc223fdaee",
         "b23d56b8d703",
         "76ec09efe7fe",
         "0b518e01e3ed",
-        "62ea98a5f331"
+        "62ea98a5f331",
+        "d15058728ad0"
       ],
       "recallDays": [
         "2026-04-11",
-        "2026-04-19"
+        "2026-04-19",
+        "2026-05-08"
       ],
       "conceptTags": [
         "top-level",
@@ -906,13 +934,13 @@
       "endLine": 18,
       "source": "memory",
       "snippet": "## Mission Control end-of-session audit and resumable next steps - End-of-session checked state in `projects/celine-mission-control`: - latest commit: `83b6d27` — `Add Celine replies for task conversation` - local review instance healthy on `http://127.0.0.1:3414` - only one fresh listener confirmed on port 3414 after stale-process cleanup - Current real governed attachment state remains: - `Celine` attached with `session_key = agent:main:main` - `Mission Control Coding Specialist` attached with `session_key = agent:main:subagent:0cbae282-83f7-4d28-9fdc-97c60971e82f` - operations settings still normal/connected (`dispatch_enabled=true`, `manual_only_mode=false`) - Current key tas",
-      "recallCount": 11,
+      "recallCount": 12,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 10.268642558790354,
+      "totalScore": 11.268642558790354,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-11T20:48:33.522Z",
-      "lastRecalledAt": "2026-04-21T01:46:43.639Z",
+      "lastRecalledAt": "2026-05-08T07:52:10.647Z",
       "queryHashes": [
         "b23d56b8d703",
         "76ec09efe7fe",
@@ -924,14 +952,16 @@
         "3d93f0907ea2",
         "534096875ca9",
         "62ea98a5f331",
-        "811a4cfee646"
+        "811a4cfee646",
+        "d15058728ad0"
       ],
       "recallDays": [
         "2026-04-11",
         "2026-04-16",
         "2026-04-17",
         "2026-04-19",
-        "2026-04-20"
+        "2026-04-20",
+        "2026-05-08"
       ],
       "conceptTags": [
         "end-of-session",
@@ -1017,13 +1047,13 @@
       "endLine": 8,
       "source": "memory",
       "snippet": "- Implemented and pushed agent presence improvements in Mission Control: commit `717961a` (`Show supervisor attachment in agent presence`). Agents roster now considers operations-control attachment state so attached supervisor/worker roles are surfaced more truthfully instead of relying only on stale heartbeat/last_seen status. - Verified Mission Control data model state: `operations.connected_supervisor_agent = Celine`, `operations.connected_worker_agent = Mission Control Coding Specialist`. DB agent rows showed Celine with `session_key = agent:main:main` and the specialist with a subagent session key. - Confirmed Celine and Mission Control Coding Specialist are genuinely separate OpenClaw",
-      "recallCount": 9,
+      "recallCount": 10,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 9,
+      "totalScore": 10,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-17T12:13:00.917Z",
-      "lastRecalledAt": "2026-04-21T01:46:43.639Z",
+      "lastRecalledAt": "2026-05-01T03:46:39.912Z",
       "queryHashes": [
         "ddaccd360987",
         "e877cfbc6ac8",
@@ -1033,13 +1063,15 @@
         "a7dbe2a4baca",
         "534096875ca9",
         "62ea98a5f331",
-        "811a4cfee646"
+        "811a4cfee646",
+        "88d64c0c2823"
       ],
       "recallDays": [
         "2026-04-17",
         "2026-04-18",
         "2026-04-19",
-        "2026-04-20"
+        "2026-04-20",
+        "2026-04-30"
       ],
       "conceptTags": [
         "operations-control",
@@ -1059,23 +1091,31 @@
       "endLine": 12,
       "source": "memory",
       "snippet": "- Important diagnosis: although code changes were pushed, the live Mission Control UI at `http://127.0.0.1:3414` appeared to be serving a stale frontend bundle. The served compiled output still reflected old code, matching the user screenshot. Root cause is likely that the running Mission Control process/build was not rebuilt or restarted after the latest frontend changes. Next step is to rebuild/restart the local Mission Control app so the pushed UI changes become visible. - Mission Control real-task validation exposed the core worker-thread bug: dispatching a task to an existing worker session was incorrectly treated as task completion. The placeholder text `Task dispatched to existing se",
-      "recallCount": 5,
+      "recallCount": 9,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 5,
+      "totalScore": 9,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-17T12:13:00.917Z",
-      "lastRecalledAt": "2026-04-21T01:46:43.639Z",
+      "lastRecalledAt": "2026-05-01T18:12:44.815Z",
       "queryHashes": [
         "ddaccd360987",
         "e877cfbc6ac8",
         "fc360e1b3a9e",
         "98d621700739",
-        "811a4cfee646"
+        "811a4cfee646",
+        "b8f1e345ab94",
+        "60cce222f551",
+        "88d64c0c2823",
+        "5e24d5126e0d"
       ],
       "recallDays": [
         "2026-04-17",
-        "2026-04-20"
+        "2026-04-20",
+        "2026-04-26",
+        "2026-04-27",
+        "2026-04-30",
+        "2026-05-01"
       ],
       "conceptTags": [
         "127.0.0.1",
@@ -1095,13 +1135,13 @@
       "endLine": 5,
       "source": "memory",
       "snippet": "- Mission Control UX/product direction clarified: the interface should feel like chatting directly with Celine, with worker coordination hidden backstage by default. Desired model is user -> Celine -> worker -> Celine -> user, not mixed relay/audit logs in the main thread. - Implemented and pushed Mission Control conversation-layer UX changes in `projects/celine-mission-control`: commit `ded896c` (`Make task threads feel like talking to Celine`). Changes included making Celine replies more conversational, hiding raw relay comments from the visible task conversation, and rewriting worker return messages so they appear as plain Celine replies rather than explicit `Worker response from ...` wr",
-      "recallCount": 8,
+      "recallCount": 11,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 8,
+      "totalScore": 11,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-17T12:13:00.917Z",
-      "lastRecalledAt": "2026-04-21T01:46:43.639Z",
+      "lastRecalledAt": "2026-05-01T03:46:39.912Z",
       "queryHashes": [
         "ddaccd360987",
         "e877cfbc6ac8",
@@ -1110,13 +1150,19 @@
         "a7dbe2a4baca",
         "534096875ca9",
         "62ea98a5f331",
-        "811a4cfee646"
+        "811a4cfee646",
+        "b8f1e345ab94",
+        "60cce222f551",
+        "88d64c0c2823"
       ],
       "recallDays": [
         "2026-04-17",
         "2026-04-18",
         "2026-04-19",
-        "2026-04-20"
+        "2026-04-20",
+        "2026-04-26",
+        "2026-04-27",
+        "2026-04-30"
       ],
       "conceptTags": [
         "ux/product",
@@ -1136,23 +1182,31 @@
       "endLine": 5,
       "source": "memory",
       "snippet": "- Can explicitly wants a future post-build Mission Control enhancement on the roadmap: auto-discovery/reconciliation of agents that were manually added via terminal/OpenClaw CLI, without needing to prompt Mission Control manually. This should be remembered as a strong candidate project for the Mission Control Coding Specialist after the current build phase. - Related future architecture preference: consider agent-specific workspaces for durable specialist agents, but not as an immediate build-phase task. This should come back up proactively later when discussing what to do next after the current Mission Control build stabilizes. - Mission Control live proof was completed on the authenticat",
-      "recallCount": 5,
+      "recallCount": 9,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 5,
+      "totalScore": 9,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-17T12:13:00.917Z",
-      "lastRecalledAt": "2026-04-20T01:46:11.584Z",
+      "lastRecalledAt": "2026-05-01T18:12:44.815Z",
       "queryHashes": [
         "ddaccd360987",
         "e877cfbc6ac8",
         "98d621700739",
         "534096875ca9",
-        "1155f15c4a1c"
+        "1155f15c4a1c",
+        "b8f1e345ab94",
+        "60cce222f551",
+        "88d64c0c2823",
+        "5e24d5126e0d"
       ],
       "recallDays": [
         "2026-04-17",
-        "2026-04-19"
+        "2026-04-19",
+        "2026-04-26",
+        "2026-04-27",
+        "2026-04-30",
+        "2026-05-01"
       ],
       "conceptTags": [
         "post-build",
@@ -1240,22 +1294,28 @@
       "endLine": 32,
       "source": "memory",
       "snippet": "- Current best next step is a single calm end-to-end validation pass of Add Agent in Mission Control, with minimal dev-server churn, then send Can the local Mission Control link once behavior is confirmed. - User explicitly asked to spend their temporary usage-exhaustion window implementing the two Mission Control follow-up fixes locally: (1) reduce Add Agent runtime slowdown/gateway unavailability without losing the conversational UX, and (2) redesign Trash into a proper confirm flow with comprehensive cleanup. - During the performance investigation, the most likely remaining load source identified was overlapping onboarding finalization work across three paths at once: POST-triggered backg",
-      "recallCount": 3,
+      "recallCount": 6,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3,
+      "totalScore": 6,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-18T01:02:42.999Z",
-      "lastRecalledAt": "2026-04-21T01:46:43.639Z",
+      "lastRecalledAt": "2026-04-29T04:05:34.098Z",
       "queryHashes": [
         "98d621700739",
         "a7dbe2a4baca",
-        "811a4cfee646"
+        "811a4cfee646",
+        "b8f1e345ab94",
+        "60cce222f551",
+        "d1850a80c429"
       ],
       "recallDays": [
         "2026-04-17",
         "2026-04-18",
-        "2026-04-20"
+        "2026-04-20",
+        "2026-04-26",
+        "2026-04-27",
+        "2026-04-29"
       ],
       "conceptTags": [
         "gateway",
@@ -1275,18 +1335,25 @@
       "endLine": 21,
       "source": "memory",
       "snippet": "# 2026-04-08 - Introduced assistant identity as Celine, Chief of Staff. - Learned that Can Ozgel is pronounced like \"Jon\". - Recorded that substantive work should default to sub-agent delegation when practical, with Celine coordinating. - Recorded long-term plan for a permanent multi-agent system with specialist roles. - Recorded near-term plan: secure skill repository, core integrations, then Mission Control. - Set up `topics/` folder for resumable project summaries and created initial `topics/skills-bootstrap.md`. - Confirmed that tiny tasks can stay with Celine for now, while non-trivial work should default to sub-agents. - Confirmed security posture should be balanced, leaning conservat",
-      "recallCount": 1,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 5,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-18T01:09:23.034Z",
-      "lastRecalledAt": "2026-04-18T01:09:23.034Z",
+      "lastRecalledAt": "2026-05-02T17:58:02.849Z",
       "queryHashes": [
-        "cfaec01030d7"
+        "cfaec01030d7",
+        "e68154cbfbe2",
+        "5f004803efcb",
+        "66d49502a71e",
+        "979727a0da3c"
       ],
       "recallDays": [
-        "2026-04-17"
+        "2026-04-17",
+        "2026-04-21",
+        "2026-04-28",
+        "2026-05-02"
       ],
       "conceptTags": [
         "sub-agent",
@@ -1306,18 +1373,23 @@
       "endLine": 108,
       "source": "memory",
       "snippet": "# 2026-04-08 - Introduced assistant identity as Celine, Chief of Staff. - Learned that Can Ozgel is pronounced like \"Jon\". - Recorded that substantive work should default to sub-agent delegation when practical, with Celine coordinating. - Recorded long-term plan for a permanent multi-agent system with specialist roles. - Recorded near-term plan: secure skill repository, core integrations, then Mission Control. - Set up `topics/` folder for resumable project summaries and created initial `topics/skills-bootstrap.md`. - Confirmed that tiny tasks can stay with Celine for now, while non-trivial work should default to sub-agents. - Confirmed security posture should be balanced, leaning conservat",
-      "recallCount": 1,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1,
+      "totalScore": 4,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-18T01:09:23.034Z",
-      "lastRecalledAt": "2026-04-18T01:09:23.034Z",
+      "lastRecalledAt": "2026-05-02T17:58:02.849Z",
       "queryHashes": [
-        "cfaec01030d7"
+        "cfaec01030d7",
+        "5f004803efcb",
+        "66d49502a71e",
+        "979727a0da3c"
       ],
       "recallDays": [
-        "2026-04-17"
+        "2026-04-17",
+        "2026-04-28",
+        "2026-05-02"
       ],
       "conceptTags": [
         "sub-agent",
@@ -1434,20 +1506,22 @@
       "endLine": 14,
       "source": "memory",
       "snippet": "- Implemented Mission Control supervisor AI status feature on `master` in `projects/celine-mission-control`. - Added `/api/ai-status` route at `src/app/api/ai-status/route.ts`. - Design decision: do not hardcode \"Celine\". Resolve the primary supervisor via `getOperationsMode()` / connected supervisor attachment and infer OpenClaw session location from `openclawId`. - Status logic implemented from OpenClaw session files under `~/.openclaw/agents/<openclawId>/sessions` using `sessions.json` metadata plus JSONL `sessionFile` mtime: - `<15s` => `active` - `15-45s` => `thinking` - `45+s` => `idle` - Activity descriptions derived heuristically from session key + metadata, including cron, hea",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2,
+      "totalScore": 3,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-20T01:53:42.474Z",
-      "lastRecalledAt": "2026-04-21T01:48:45.925Z",
+      "lastRecalledAt": "2026-04-29T17:27:26.070Z",
       "queryHashes": [
         "62ea98a5f331",
-        "b7b6571f26e2"
+        "b7b6571f26e2",
+        "0ab148e6438b"
       ],
       "recallDays": [
         "2026-04-19",
-        "2026-04-20"
+        "2026-04-20",
+        "2026-04-29"
       ],
       "conceptTags": [
         "projects/celine-mission-control",
@@ -1530,19 +1604,21 @@
       "endLine": 23,
       "source": "memory",
       "snippet": "- Implemented Mission Control supervisor AI status feature on `master` in `projects/celine-mission-control`. - Added `/api/ai-status` route at `src/app/api/ai-status/route.ts`. - Design decision: do not hardcode \"Celine\". Resolve the primary supervisor via `getOperationsMode()` / connected supervisor attachment and infer OpenClaw session location from `openclawId`. - Status logic implemented from OpenClaw session files under `~/.openclaw/agents/<openclawId>/sessions` using `sessions.json` metadata plus JSONL `sessionFile` mtime: - `<15s` => `active` - `15-45s` => `thinking` - `45+s` => `idle` - Activity descriptions derived heuristically from session key + metadata, including cron, hea",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2,
+      "totalScore": 3,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-21T01:47:19.120Z",
-      "lastRecalledAt": "2026-04-21T01:48:45.925Z",
+      "lastRecalledAt": "2026-04-29T17:27:26.070Z",
       "queryHashes": [
         "0d4e9798f289",
-        "b7b6571f26e2"
+        "b7b6571f26e2",
+        "0ab148e6438b"
       ],
       "recallDays": [
-        "2026-04-20"
+        "2026-04-20",
+        "2026-04-29"
       ],
       "conceptTags": [
         "projects/celine-mission-control",
@@ -1553,6 +1629,458 @@
         "15-45s",
         "implemented",
         "mission"
+      ]
+    },
+    "memory:memory/2026-04-17.md:38:42": {
+      "key": "memory:memory/2026-04-17.md:38:42",
+      "path": "memory/2026-04-17.md",
+      "startLine": 38,
+      "endLine": 42,
+      "source": "memory",
+      "snippet": "- Pushed UI relocation/cleanup for operations controls. Commit: `ff49714` (`Move operations controls into Settings`). - Mission Control archive view follow-up: user wanted all archive filters/sorts consolidated in one place rather than split between toolbar and archive section. Unified archive controls into the top toolbar and pushed commit `f7c999c` (`Unify Workshop archive controls`). - Verified New Task behavior conceptually for user: task creation and relay path are functional, but messaging-style tasks only reach the user when the task is routed to a live messaging-capable session (not just any worker agent). - User tested Mission Control by assigning TASK-012: `Text me \"Hi\" on whatsapp",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-26T05:39:56.355Z",
+      "lastRecalledAt": "2026-04-26T05:46:59.454Z",
+      "queryHashes": [
+        "b8f1e345ab94",
+        "30a66a72a412"
+      ],
+      "recallDays": [
+        "2026-04-26"
+      ],
+      "conceptTags": [
+        "relocation/cleanup",
+        "follow-up",
+        "filters/sorts",
+        "messaging-style",
+        "messaging-capable",
+        "task-012",
+        "pushed",
+        "relocation"
+      ]
+    },
+    "memory:memory/2026-04-21.md:1:10": {
+      "key": "memory:memory/2026-04-21.md:1:10",
+      "path": "memory/2026-04-21.md",
+      "startLine": 1,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "# 2026-04-21 - Mission Control local launch flow was stabilized on the Mac mini: activated pnpm with Corepack, installed deps, rebuilt native/web packages, and switched to background launch with persistent logs. - Patched `celineclaw2002-oss/celine-mission-control` so the active OpenClaw main session is inferred as the supervisor by default when no explicit supervisor agent row exists. - Patched `celineclaw2002-oss/celine-mission-control` so the initial supervisor agent card auto-seeds into Agents from the live main session on first setup. - Pushed Mission Control fixes to `celineclaw2002-oss/celine-mission-control` on `master`. - Created and packaged a local skill `mission-control-launch`",
+      "recallCount": 5,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 5,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-26T05:39:56.355Z",
+      "lastRecalledAt": "2026-05-08T07:52:10.647Z",
+      "queryHashes": [
+        "b8f1e345ab94",
+        "d1850a80c429",
+        "88d64c0c2823",
+        "5e24d5126e0d",
+        "d15058728ad0"
+      ],
+      "recallDays": [
+        "2026-04-26",
+        "2026-04-29",
+        "2026-04-30",
+        "2026-05-01",
+        "2026-05-08"
+      ],
+      "conceptTags": [
+        "native/web",
+        "auto-seeds",
+        "mission-control-launch",
+        "mission",
+        "control",
+        "local",
+        "launch",
+        "flow"
+      ]
+    },
+    "memory:memory/2026-04-26.md:1:7": {
+      "key": "memory:memory/2026-04-26.md:1:7",
+      "path": "memory/2026-04-26.md",
+      "startLine": 1,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "- Continued Vault Phase 3 Slice 3.3 planning discussion. Claude proposed section-level / long-note retrieval refinement using ATX heading parsing and `sectionPath` / `sectionSnippet` annotation on primary matches, with `buildContext` promoted to async for bounded file reads. - Reviewed the plan critically and judged the main concern to be async blast radius, not feasibility. Key stance: the idea is useful long-term and testable, but should be challenged for smallest safe integration rather than rejected outright. - Drafted a short revision request for Claude: keep FTS5 schema and ranking unchanged, make section annotation best-effort, minimize and explicitly enumerate every caller affected i",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-26T05:46:59.454Z",
+      "lastRecalledAt": "2026-04-26T18:41:27.753Z",
+      "queryHashes": [
+        "30a66a72a412",
+        "5ae2c37e7e1d"
+      ],
+      "recallDays": [
+        "2026-04-26"
+      ],
+      "conceptTags": [
+        "3.3",
+        "section-level",
+        "long-note",
+        "long-term",
+        "best-effort",
+        "continued",
+        "vault",
+        "phase"
+      ]
+    },
+    "memory:memory/2026-04-08.md:180:187": {
+      "key": "memory:memory/2026-04-08.md:180:187",
+      "path": "memory/2026-04-08.md",
+      "startLine": 180,
+      "endLine": 187,
+      "source": "memory",
+      "snippet": "- Durable lesson: for local Mission Control UI work, do not report a visual fix as done until the built/restarted review instance is verified to be serving the new layout, because source edits alone are not enough in this flaky preview environment. - The visible issue in the live Agent detail view was a cramped three-card summary row that squeezed the Workshop CTA and model `Adjust` button into awkward positions. - The next concrete fix should be to simplify that section into a less cramped layout, likely two columns with the model area on its own row, then verify against the running review server before replying. - Runtime logs during the session also showed a follow-on connection failure t",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-26T05:46:59.454Z",
+      "lastRecalledAt": "2026-04-26T05:46:59.454Z",
+      "queryHashes": [
+        "30a66a72a412"
+      ],
+      "recallDays": [
+        "2026-04-26"
+      ],
+      "conceptTags": [
+        "built/restarted",
+        "three-card",
+        "follow-on",
+        "durable",
+        "lesson",
+        "local",
+        "mission",
+        "control"
+      ]
+    },
+    "memory:memory/2026-04-25.md:1:6": {
+      "key": "memory:memory/2026-04-25.md:1:6",
+      "path": "memory/2026-04-25.md",
+      "startLine": 1,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "- Mission Control vault validation: confirmed local app had been launched from stale commit `0f8554a` instead of reviewed vault branch tip `0135a5b55d3bbcf3abcd44c7da89edfe69260800`; user report of missing Vault nav/Knowledge tab was consistent with wrong build. - Preserved generated `docs/vault-follow-up-punch-list.md` by moving it aside rather than deleting it, then switched local repo to the correct reviewed branch and relaunched Mission Control from that version. - User confirmed the relaunched UI now shows the Vault tab and vault browser, validating that version mismatch was the main cause of the missing Vault UI. - With filters cleared, vault UI showed no artifacts; working hypothesis",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-26T18:41:27.753Z",
+      "lastRecalledAt": "2026-04-26T18:41:27.753Z",
+      "queryHashes": [
+        "5ae2c37e7e1d"
+      ],
+      "recallDays": [
+        "2026-04-26"
+      ],
+      "conceptTags": [
+        "nav/knowledge",
+        "mission",
+        "control",
+        "vault",
+        "validation",
+        "confirmed",
+        "local",
+        "app"
+      ]
+    },
+    "memory:memory/2026-04-25.md:5:8": {
+      "key": "memory:memory/2026-04-25.md:5:8",
+      "path": "memory/2026-04-25.md",
+      "startLine": 5,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "- Seeded local test tasks for vault validation: Task 2 `Evaluate vault retrieval UX` and Task 3 `Document vault adoption workflow`, intended as anchor entities for subsequent Knowledge-tab and vault-content testing. - Ongoing next step after compaction: verify whether Task 2/3 surface a Knowledge tab and linked vault content; if not, seed actual vault note files/imports directly to test artifact browser, detail view, canonical/supersession, and import flow. - Mission Control vault work: local doc-plan update commit was successfully rebased onto Claude’s newer branch tip and pushed without overwriting Claude’s work. Branch `claude/review-vault-cleanup-wljMk-CWrM1` moved from Claude tip `93ec7",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-26T18:41:27.753Z",
+      "lastRecalledAt": "2026-04-26T18:41:27.753Z",
+      "queryHashes": [
+        "5ae2c37e7e1d"
+      ],
+      "recallDays": [
+        "2026-04-26"
+      ],
+      "conceptTags": [
+        "knowledge-tab",
+        "vault-content",
+        "2/3",
+        "files/imports",
+        "canonical/supersession",
+        "doc-plan",
+        "seeded",
+        "local"
+      ]
+    },
+    "memory:memory/2026-04-25.md:19:26": {
+      "key": "memory:memory/2026-04-25.md:19:26",
+      "path": "memory/2026-04-25.md",
+      "startLine": 19,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "- Confirmed to Can that the latest pushed planning branch before Phase 1 implementation was `claude/review-vault-cleanup-EHIpD` at commit `524f087` (`docs: add implementation slices to vault phase plan`), and advised branch cleanup should wait until the immediate planning loop settles so the active survivor branch is clear. - Claude later reported Phase 1 implementation had landed on a new branch `claude/review-vault-cleanup-48j37` at commit `a9ce7aa` (`feat(vault): upgrade write-side knowledge quality (Phase 1)`), indicating Claude started a fresh branch for implementation rather than continuing on `claude/review-vault-cleanup-EHIpD`. - Critically reviewed the actual Phase 1 commit `a9ce7aa",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-26T18:41:27.753Z",
+      "lastRecalledAt": "2026-04-26T18:41:27.753Z",
+      "queryHashes": [
+        "5ae2c37e7e1d"
+      ],
+      "recallDays": [
+        "2026-04-26"
+      ],
+      "conceptTags": [
+        "write-side",
+        "confirmed",
+        "can",
+        "the",
+        "latest",
+        "pushed",
+        "planning",
+        "branch"
+      ]
+    },
+    "memory:memory/2026-04-25.md:16:19": {
+      "key": "memory:memory/2026-04-25.md:16:19",
+      "path": "memory/2026-04-25.md",
+      "startLine": 16,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "- Add or strengthen plan concepts for: ingestion adapters by source class (generic web, social/thread, PDF/paper, repo/docs, transcript/video, manual import), first-class asset/image localization and provenance, source/extraction quality metadata, and explicit separation between capture frontend intelligence and downstream Mission Control normalization/distillation. - Most important takeaway: Web Clipper is a strong capture frontend, not a trustworthy final knowledge layer; the system should ingest its output, normalize it, and compile it into better knowledge artifacts. - Reviewed Claude’s Phase 1 feasibility answer for the new north-star vault plan and judged it strong: accepted the re",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-26T18:41:27.753Z",
+      "lastRecalledAt": "2026-05-02T17:58:02.849Z",
+      "queryHashes": [
+        "5ae2c37e7e1d",
+        "979727a0da3c"
+      ],
+      "recallDays": [
+        "2026-04-26",
+        "2026-05-02"
+      ],
+      "conceptTags": [
+        "social/thread",
+        "pdf/paper",
+        "repo/docs",
+        "transcript/video",
+        "first-class",
+        "asset/image",
+        "source/extraction",
+        "normalization/distillation"
+      ]
+    },
+    "memory:memory/2026-04-27.md:1:12": {
+      "key": "memory:memory/2026-04-27.md:1:12",
+      "path": "memory/2026-04-27.md",
+      "startLine": 1,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "- Mission Control / Vault rollout state: - Independently re-audited Claude’s Phase 8 Vault claims on `celine-mission-control` branch `claude/approve-phase-6-slice-AnezD`. - Verified local repo updated to commit `9d91420` and local Mission Control dev server restarted successfully. - Local app URL is `http://127.0.0.1:3020`. - Confirmed code-level presence of new Vault-native MCP surfaces including `mc_vault_capture_note`, `mc_vault_search`, `mc_vault_read`, `mc_vault_knowledge`, `mc_vault_retrieval`, and `mc_vault_family`. - Confirmed agent curation tools remain safely off by default unless `MC_MCP_VAULT_CURATION_ENABLED=1` is set. - Updated workspace guidance so agents prefer Mi",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 3,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-28T03:59:34.210Z",
+      "lastRecalledAt": "2026-05-01T18:12:44.815Z",
+      "queryHashes": [
+        "60cce222f551",
+        "d1850a80c429",
+        "5e24d5126e0d"
+      ],
+      "recallDays": [
+        "2026-04-27",
+        "2026-04-29",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "re-audited",
+        "celine-mission-control",
+        "127.0.0.1",
+        "code-level",
+        "vault-native",
+        "mc-vault-capture-note",
+        "mc-vault-search",
+        "mc-vault-read"
+      ]
+    },
+    "memory:memory/2026-04-27.md:10:21": {
+      "key": "memory:memory/2026-04-27.md:10:21",
+      "path": "memory/2026-04-27.md",
+      "startLine": 10,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "- Mission Control Vault runtime hardening: - Created and pushed fallback branch `can/fallback-mission-control-vault-wow-2026-04-27` before deeper fixes. - Traced the live product gap to a runtime split-brain: task execution could still satisfy “save/write to Vault” via the legacy memory/raw note path instead of the structured Phase 8 artifact path. - Implemented a dispatch-layer fix in `celine-mission-control/src/lib/task-dispatch.ts` so Vault-writing tasks now explicitly require `mc_vault_capture_note` and explicitly forbid `mc_write_knowledge_file`, `/api/memory`, and raw `03 Notes/...` drops; also requires honest wording so agents do not claim Vault success unless structured capture",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 2,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-04-29T04:05:34.098Z",
+      "lastRecalledAt": "2026-05-02T17:58:02.849Z",
+      "queryHashes": [
+        "d1850a80c429",
+        "979727a0da3c"
+      ],
+      "recallDays": [
+        "2026-04-29",
+        "2026-05-02"
+      ],
+      "conceptTags": [
+        "split-brain",
+        "save/write",
+        "memory/raw",
+        "dispatch-layer",
+        "vault-writing",
+        "mc-vault-capture-note",
+        "mc-write-knowledge-file",
+        "api/memory"
+      ]
+    },
+    "memory:memory/2026-04-27.md:28:31": {
+      "key": "memory:memory/2026-04-27.md:28:31",
+      "path": "memory/2026-04-27.md",
+      "startLine": 28,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "- Inspected real OpenClaw session store under `/Users/canozgel-macmini/.openclaw/agents/main/sessions` and proved task `11` was contaminated by stale session lineage: task metadata stored `dispatch_session_id = 0cc93114-c003-4260-b89b-559e54c96d99`, while current registry entry `agent:main:main` pointed to `sessionId = 8efedf0a-e726-4905-85a1-a6583b1cde02`; the old `0cc...jsonl` transcript contained unrelated Alphabet/Google earnings content. - Confirmed OpenClaw preserves prior session lineage when reusing a session entry, so fresh assigned tasks inheriting an attached/grounded worker session risk appending into the wrong historical transcript/tool/tooling context. - Patched `resolveG",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-02T17:54:14.435Z",
+      "lastRecalledAt": "2026-05-02T17:54:14.435Z",
+      "queryHashes": [
+        "4c84204839b9"
+      ],
+      "recallDays": [
+        "2026-05-02"
+      ],
+      "conceptTags": [
+        "users/canozgel-macmini",
+        "openclaw/agents/main/sessions",
+        "dispatch-session-id",
+        "alphabet/google",
+        "attached/grounded",
+        "transcript/tool/tooling",
+        "inspected",
+        "real"
+      ]
+    },
+    "memory:memory/2026-04-27.md:25:29": {
+      "key": "memory:memory/2026-04-27.md:25:29",
+      "path": "memory/2026-04-27.md",
+      "startLine": 25,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "- Verified the structured artifact surfaced consistently through on-disk file state, `artifact_links`, `GET /api/vault/artifacts?entity_type=task&entity_id=11`, `GET /api/tasks/11`, and `GET /api/vault/knowledge?entity_type=task&entity_id=11&recent_limit=5`. - Proved the remaining live problem is not `/api/vault/notes` or Vault storage itself, but the real task runtime/session/auth/tooling chain. - Found and fixed live task-dispatch tool exposure gap by explicitly launching assigned task runs with `tools: { profile: 'coding' }` in `celine-mission-control/src/lib/task-dispatch.ts`; added regression coverage and committed `197a2f8` (`fix(vault): expose coding tools in live task dispatch`",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-02T17:54:14.435Z",
+      "lastRecalledAt": "2026-05-02T17:54:14.435Z",
+      "queryHashes": [
+        "4c84204839b9"
+      ],
+      "recallDays": [
+        "2026-05-02"
+      ],
+      "conceptTags": [
+        "on-disk",
+        "artifact-links",
+        "api/vault/artifacts",
+        "entity-type",
+        "entity-id",
+        "api/tasks/11",
+        "api/vault/knowledge",
+        "recent-limit"
+      ]
+    },
+    "memory:memory/2026-04-11.md:16:22": {
+      "key": "memory:memory/2026-04-11.md:16:22",
+      "path": "memory/2026-04-11.md",
+      "startLine": 16,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "- Identified backend root cause for missing broader OpenAI choices: `/api/status?action=models` returned only static `MODEL_CATALOG` plus live Ollama tags, so OpenAI was not live-discovered at all. - Add Agent UI was updated to use a broader provider-target flow, merge provider fallback models with discovered models, surface OAuth button beside API key where supported, and treat local/Ollama as first-class. - Local review app initially appeared unchanged because two servers were present on port 3414; old stale process bound to `127.0.0.1:3414` kept serving old UI. Clean restart required killing both and restarting standalone review app. - After clean restart, localhost `http://127.0.0.1:3414",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-02T17:54:14.435Z",
+      "lastRecalledAt": "2026-05-02T17:54:14.435Z",
+      "queryHashes": [
+        "4c84204839b9"
+      ],
+      "recallDays": [
+        "2026-05-02"
+      ],
+      "conceptTags": [
+        "openai",
+        "api/status",
+        "model-catalog",
+        "live-discovered",
+        "provider-target",
+        "local/ollama",
+        "first-class",
+        "127.0.0.1"
+      ]
+    },
+    "memory:memory/2026-04-25.md:24:32": {
+      "key": "memory:memory/2026-04-25.md:24:32",
+      "path": "memory/2026-04-25.md",
+      "startLine": 24,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "- real empty/whitespace body validation added in `src/lib/vault-curation.ts` for selected knowledge-intent note types, described by Claude as `summary/research/learning/index` - commit stayed scoped to write-side quality rather than drifting into retrieval/topic/LLM work - Carry-forward review cautions for Phase 1 `a9ce7aa`: - accept it as a targeted write-side quality pass, not proof that every automatic Vault write path has been comprehensively audited and cleaned up - the biggest value is suppression of operational exhaust, not the validation rule - improved failure lessons are more readable/actionable but still deterministic template output, not true synthesis - later verify",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-02T17:58:02.849Z",
+      "lastRecalledAt": "2026-05-02T17:58:02.849Z",
+      "queryHashes": [
+        "979727a0da3c"
+      ],
+      "recallDays": [
+        "2026-05-02"
+      ],
+      "conceptTags": [
+        "empty/whitespace",
+        "src/lib/vault-curation.ts",
+        "knowledge-intent",
+        "summary/research/learning/index",
+        "write-side",
+        "retrieval/topic/llm",
+        "carry-forward",
+        "readable/actionable"
       ]
     }
   }
