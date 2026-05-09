@@ -1,3 +1,11 @@
 *.log/*
 */.git/
 *.bin
+
+# Local nested repos
+/celine-mission-control/
+/celine-mission-control-fork/
+/celine-mission-control-phase9-test/
+
+# Local-only dream state
+/memory/.dreams/
