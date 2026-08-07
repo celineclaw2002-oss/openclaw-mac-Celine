@@ -1,0 +1,21 @@
+Section,Category,Monthly Amount (USD),Annual Amount (USD),Notes
+Income,Gross salary (base only),12500.00,150000.00,Based on offer letter base salary
+Income,Estimated net pay (base only),8234.95,98819.36,Approximate after federal + FICA + NY state + NYC tax and before health insurance or 401k
+Income,Gross pay including sign-on + relocation averaged over year 1,16666.67,200000.00,Uses 150k base + 40k sign-on + 10k relocation
+Income,Estimated net pay including sign-on + relocation averaged over year 1,10759.43,129113.16,Approximate and real withholding timing may vary
+Expense,Rent (utilities included),4450.00,53400.00,Fixed cost provided by Can
+Expense,Phone and internet,120.00,1440.00,Fixed cost provided by Can
+Expense,Groceries and basic food,650.00,7800.00,Assumes 150 per week x 52 / 12
+Expense,Going out,1733.33,20800.00,Assumes 400 per weekend x 52 / 12
+Expense,Miscellaneous,500.00,6000.00,Rounded monthly estimate
+Summary,Total monthly expenses,7453.33,89440.00,Current stated spending
+Summary,Base-salary monthly surplus,781.61,9379.36,Estimated net base pay minus current monthly expenses
+Summary,Year-1 monthly surplus with sign-on + relocation averaged,3306.10,39673.16,Estimated net year-1 pay minus current monthly expenses
+Missing Category,Health insurance premium,0.00,0.00,Not included yet and likely deducted from paycheck
+Missing Category,Transportation,0.00,0.00,Subway Uber taxis occasional travel not included
+Missing Category,Subscriptions,0.00,0.00,Streaming software gym cloud storage etc.
+Missing Category,Travel and holidays,0.00,0.00,Easy to miss in monthly planning
+Missing Category,Clothing grooming gifts,0.00,0.00,Not included yet
+Missing Category,Medical out-of-pocket,0.00,0.00,Co-pays prescriptions dental vision extras not included
+Missing Category,401(k) retirement savings,0.00,0.00,Not included yet and would reduce take-home but build savings
+Missing Category,Emergency fund / long-term savings,0.00,0.00,Should probably be an intentional line item
