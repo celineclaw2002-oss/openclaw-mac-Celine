@@ -13,11 +13,13 @@ Custom replacement skill for structured operational discipline, resumable work, 
 - Restored local device pairing so sub-agents work again.
 - Drafted the design for the replacement skill.
 - Created the initial `celine-ops-hygiene` skill structure and reference files.
+- Hardened `scripts/github-sync.sh` so the 8-hour workspace sync silently exits unless `git status` shows actual changes.
 
 ## Relevant Context
 - This skill is tailored to Celine's role as Chief of Staff to Can.
 - It is intended to support future Mission Control work.
 - It should remain compatible with later Mac mini migration.
+- Current cron still wakes every 8 hours, but the sync script now no-ops immediately when the repo is unchanged.
 
 ## Open Questions
 - Whether to add a lightweight lesson-log file in the workspace now or only when first needed.

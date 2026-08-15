@@ -8,12 +8,12 @@ TIMESTAMP="$(date '+%Y-%m-%d %H:%M:%S %Z')"
 mkdir -p "$LOG_DIR"
 cd "$REPO_DIR"
 
-# Refresh index and exit early if nothing changed.
-git add -A
-if git diff --cached --quiet; then
-  echo "[$TIMESTAMP] No changes to sync."
+# Skip the whole sync when the workspace is unchanged.
+if [[ -z "$(git status --porcelain=v1 --untracked-files=all)" ]]; then
   exit 0
 fi
+
+git add -A
 
 GIT_AUTHOR_NAME="Celine"
 GIT_AUTHOR_EMAIL="celine@local"
