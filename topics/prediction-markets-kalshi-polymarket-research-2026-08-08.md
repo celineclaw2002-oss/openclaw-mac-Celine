@@ -187,3 +187,483 @@ Built a reusable venue primer on Kalshi and Polymarket for future prediction-mar
 - Added a deterministic example pipeline:
   - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/src/examples/kalshi-btc-threshold-demo.ts`
 - The demo currently proves an end-to-end slice from Kalshi-style payload capture through staging, normalization, graph generation, and summary output.
+
+## 2026-08-16 Live capture and first anchor-input phase
+
+- Moved beyond the deterministic demo into a public-API Kalshi live-capture slice inside:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack`
+- Added live runtime pieces:
+  - `src/runtime/kalshi-api.ts`
+  - `src/runtime/filesystem-store.ts`
+  - `src/pipelines/kalshi-live-capture.ts`
+- Added a CLI entrypoint:
+  - `npm run capture:kalshi`
+- Added a replay-control CLI entrypoint:
+  - `npm run audit:semantic`
+- Added first external-anchor capture entrypoints:
+  - `npm run capture:coinbase-btc`
+  - `npm run capture:deribit-btc`
+  - `npm run audit:btc-anchor-mapping`
+  - `npm run audit:anchor-input`
+  - `npm run build:btc-raw-anchor`
+  - `npm run session:btc-observation`
+- Extended the scaffold so the live path now covers:
+  - public discovery from `/markets`
+  - market metadata capture
+  - orderbook capture
+  - trade-ticker extraction
+  - lifecycle / fee extraction
+  - canonical normalization into contracts / thresholds / buckets / rules
+  - deterministic graph generation
+  - deterministic quote / lifecycle / fee / execution state views
+  - internal-consistency observations
+  - first-pass simulations
+- Important semantic fixes made during the live phase:
+  - per-series candidate caps now allow the live capture to reach multiple target families instead of stopping after BTC
+  - raw discovery capture is now stored as page-native `/markets` payloads, not mislabeled per-market detail payloads
+  - threshold records now carry `evaluationTimestampMs`
+  - threshold ladders no longer create monotonicity edges across opposite operator families
+  - bucket observation-window extraction preserves decimal upper bounds like `72299.99`
+  - incomplete bucket subsets no longer emit false `partition_sum` / `sum_to_one` edges
+- Latest validated and audited live output folder:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live/20260816T155301013Z`
+- Latest validated live summary:
+  - `pagesFetched: 2`
+  - `candidateMarkets: 68`
+  - `sourceEventsCaptured: 274`
+  - `normalizedContracts: 68`
+  - `thresholds: 20`
+  - `buckets: 48`
+  - `graphEdges: 65`
+  - `quoteStates: 68`
+  - `internalObservations: 65`
+  - `internalSimulations: 10`
+- Latest semantic-audit result on that folder:
+  - `0 findings`
+  - `2 discovery events`
+  - audit output written to:
+    `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live/20260816T155301013Z/summaries/semantic-audit.json`
+- The current live family mix now includes:
+  - `KXBTC`
+  - `KXFED`
+
+## First anchor-input layer now live
+
+- Coinbase spot snapshots are now captured into the replay folder as the first practical spot sanity layer:
+  - `anchors/coinbase-btc-spot-raw.json`
+  - `anchors/coinbase-btc-spot-snapshot.json`
+  - `anchors/coinbase-btc-spot-summary.json`
+- Deribit BTC futures/options inputs are now captured into the same replay folder as the first practical forward / options anchor layer:
+  - `anchors/deribit-btc-anchor-raw.json`
+  - `anchors/deribit-btc-anchor-snapshot.json`
+  - `anchors/deribit-btc-anchor-summary.json`
+  - `anchors/deribit-btc-futures-selected.json`
+  - `anchors/deribit-btc-options-selected.json`
+- Current Deribit capture summary on the latest replay slice:
+  - `futuresUniverse: 13`
+  - `optionsUniverse: 818`
+  - `selectedFutures: 3`
+  - `selectedOptions: 124`
+  - `referenceSpotPrice: 63055.52`
+- First BTC threshold mapping audit now exists at:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live/20260816T155301013Z/anchors/btc-anchor-mapping-audit.json`
+- Current mapping-audit conclusion on the two BTC threshold binaries:
+  - both map to `CF Benchmarks BRTI`
+  - both align to the nearest Deribit future `BTC-18AUG26`
+  - nearest-future timing gap is `4` hours
+  - relevant selected Deribit option counts are `20` and `18`
+  - current mapping-confidence score is `0.9` for both contracts
+
+## First coherent BTC observation session
+
+- The earlier stitched `155301013Z` folder is no longer the best reference artifact for cross-source work.
+- A repaired end-to-end BTC observation session now exists at:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live/20260816T161815454Z`
+- This session now includes:
+  - Kalshi live capture
+  - semantic audit
+  - Coinbase spot snapshot
+  - Deribit futures/options capture
+  - anchor-input audit
+  - BTC threshold mapping audit
+  - first raw BTC threshold probability baseline
+- Current session-level results:
+  - `kalshiContracts: 68`
+  - `semanticAuditFindings: 0`
+  - `anchorInputAuditFindings: 0`
+  - `btcAnchorMappings: 2`
+  - `rawAnchorProbabilities: 2`
+- Important coherence improvement:
+  - Deribit now records the exact Coinbase payload ref and observation timestamp used for option selection
+  - lineage refs are now session-relative rather than machine-absolute
+  - the current Deribit spot-reference age is only `3 ms`
+  - selected Deribit futures now carry embedded replayable book state
+
+## Current implementation frontier
+
+- The stack is now past abstract module planning and past deterministic mocks.
+- The current frontier is a replayable `Kalshi-first` live research loop with:
+  - raw immutable capture
+  - staging
+  - normalization
+  - graphing
+  - state views
+  - observations
+  - first-pass simulation outputs
+- The most important remaining build gaps are now higher-order, not foundational:
+  1. richer live family coverage and cadence policy
+  2. stronger complement / partition family harvesting
+  3. better execution-state realism from trade and quote evolution
+  4. BTC external-anchor ingestion and alignment
+  5. formal semantic audit and detection-study runners over replayed slices
+
+## 2026-08-16 BTC external-anchor phase tightened
+
+- Repaired the BTC external-anchor phase after independent review found point-in-time and replay issues.
+- Latest clean reference session is now:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live/20260816T162545636Z`
+- Important coherence fixes made:
+  - Deribit source timing now uses selected-book timestamps instead of synthetic pre-fetch local time.
+  - Coinbase-vs-Deribit source gap is now recorded explicitly:
+    - `referenceSpotGapMs: 307`
+    - `referenceSpotAgeMs: 307`
+  - anchor-input audit, mapping audit, raw-anchor summary, and residual summary now replay deterministically under fixed code
+  - BTC option relevance now requires post-event maturities rather than accidentally using options that expire before the Kalshi event
+  - nearest-future selection now prefers expiries that survive the Kalshi event horizon
+  - selected Deribit options are now included in anchor-input replayability checks
+- Determinism verification:
+  - rerunning the fixed audit / mapping / raw-anchor / residual builders twice on `20260816T162545636Z` now leaves artifact hashes unchanged
+- Current session-level results on `20260816T162545636Z`:
+  - `kalshiContracts: 68`
+  - `semanticAuditFindings: 0`
+  - `anchorInputAuditFindings: 0`
+  - `btcAnchorMappings: 2`
+  - `rawAnchorProbabilities: 2`
+- Latest mapping-audit conclusions:
+  - both BTC threshold binaries map to `CF Benchmarks BRTI`
+  - nearest surviving Deribit future is `BTC-18AUG26`
+  - nearest-future timing gap remains `4` hours
+  - post-event relevant Deribit option counts are now `12` and `12`
+- Added the first external-anchor experiment runner:
+  - `prediction-markets-stack/src/pipelines/btc-anchor-experiment-runner.ts`
+  - CLI: `npm run run:btc-anchor-experiments`
+- The experiment runner now produces:
+  - trade-level outputs at `simulations/external-anchor-btc-experiments.json`
+  - family scorecard at `summaries/external-anchor-btc-scorecard.json`
+- First result on the current live slice:
+  - the earlier scorecard exposed a real issue:
+    - zero / zero placeholder books were being treated as tradable quotes
+    - anchor PnL sign handling was wrong for `buy_yes` cases
+- Repaired experiment semantics:
+  - external-anchor observations now reject locked / zero placeholder quotes
+  - anchor trade PnL now uses residual magnitude instead of the raw signed residual
+  - residual observations are timestamped at anchor time rather than the later quote time
+  - zero-threshold scorecards no longer force trades when the residual signal is exactly `0`
+- Latest post-fix session is now:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live/20260816T164521075Z`
+- Latest post-fix experiment semantics are now more precise:
+  - `mappedAnchors: 2`
+  - `observationsBuilt: 2`
+  - `tradableObservations: 0`
+  - `nonTradableAnchors: 2`
+  - inactive reason breakdown:
+    - `pre_open_market: 2`
+- Latest scorecard now explicitly states:
+  - mapped-but-nontradable BTC contracts are counted and excluded from simulated trades
+  - `mappedObservations: 50`
+  - `tradableObservations: 0`
+  - `nonTradableObservations: 50`
+  - `experimentRuns: 0`
+- Practical conclusion is now narrower and more honest:
+  - the current live BTC anchor slice did not fail because of bad residuals
+  - it produced `0` tradable external-anchor opportunities because all `50` mapped BTC contracts in scope were still pre-open at capture time
+  - the bucket/range family is now inside the anchor path rather than merely noted as future scope
+
+## 2026-08-16 BTC bucket/range expansion
+
+- Expanded the BTC external-anchor path from threshold tails only into the broader BTC bucket/range family.
+- Latest expanded session:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live/20260816T165818402Z`
+- Expanded session-level results:
+  - `kalshiContracts: 359`
+  - `semanticAuditFindings: 0`
+  - `anchorInputAuditFindings: 0`
+  - `btcAnchorMappings: 250`
+  - `rawAnchorProbabilities: 250`
+- Expanded residual-layer results:
+  - `mappedAnchors: 250`
+  - `diagnosticRows: 250`
+  - `observationsBuilt: 0`
+  - `tradableObservations: 0`
+  - `nonTradableAnchors: 250`
+  - inactive reason breakdown:
+    - `pre_open_market: 250`
+- Interpretation:
+  - the missing breadth issue is materially reduced at the BTC-series level rather than only a single retained family
+  - the remaining blocker for real external-anchor testing on this live slice is market state, not anchor coverage
+  - the latest capture now holds the discovered BTC families in-series rather than just the single largest family
+  - a deeper direct venue scan plus the latest full-series capture both indicate the BTC families visible in the live series snapshot are still `initialized` / pre-open, so the no-trade result appears to be a venue-state fact rather than a shallow capture artifact
+- Practical interpretation:
+  - the current BTC external-anchor sleeve is now honest enough to reject bad evidence instead of manufacturing weak backtests
+  - the next edge, if any, depends on either better quote quality / depth or a richer capture cadence rather than looser filtering
+
+## 2026-08-16 Internal-consistency scorecard layer and refreshed live slice
+
+- Added a new reproducible internal-consistency experiment / scorecard pipeline:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/src/pipelines/internal-consistency-experiment-runner.ts`
+  - CLI: `npm run run:internal-consistency-experiments`
+- Widened the live-capture simulation layer so internal-consistency simulations now run across the full observation set under all three execution templates rather than a tiny aggressive-only fragment.
+- Latest refreshed end-to-end slice:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live/20260816T170905790Z`
+- Refreshed slice headline outputs:
+  - `kalshiContracts: 359`
+  - `semanticAuditFindings: 0`
+  - `anchorInputAuditFindings: 0`
+  - `btcAnchorMappings: 250`
+  - `rawAnchorProbabilities: 250`
+- BTC external-anchor status on the refreshed slice:
+  - `mappedAnchors: 250`
+  - `diagnosticRows: 250`
+  - `observationsBuilt: 250`
+  - `tradableObservations: 0`
+  - `nonTradableAnchors: 250`
+  - inactive reason:
+    - `pre_open_market: 250`
+- Internal-consistency scorecard output:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live/20260816T170905790Z/summaries/internal-consistency-scorecard.json`
+- Internal-consistency baseline readout on that slice:
+  - `observations: 377`
+  - `simulations: 1131`
+  - edge mix:
+    - `temporal_nested: 269`
+    - `threshold_monotone: 108`
+  - hardness mix:
+    - `conditional: 269`
+    - `hard: 108`
+  - structural opportunity:
+    - `grossPositive: 64`
+    - `feeAdjustedPositive: 1`
+    - `depthAdjustedPositive: 1`
+- Current interpretation:
+  - the stack now has a real internal-consistency scorecard layer rather than just raw observation rows plus a toy simulation subset
+  - the refreshed live slice is still better for honest measurement than for claiming alpha: the BTC sleeve remains pre-open, and the internal-consistency sleeve is still mostly friction-negative under the current deterministic baseline
+- Immediate remaining frontier after this step:
+  - improve internal-consistency economic realism and family-specific diagnostics
+  - obtain tradable BTC live slices before taking any external-anchor economic result seriously
+
+## 2026-08-16 Stricter internal-consistency honesty pass
+
+- Tightened the observation and simulation layers again so the internal-consistency sleeve stops overstating execution cleanliness:
+  - placeholder fee-model usage now surfaces in observation quality flags
+  - theoretical target substitution is now flagged explicitly
+  - execution-safe status is no longer auto-granted when the fee model is only placeholder-level
+  - template economics now change with the chosen execution template rather than only changing reported fill/slippage fields
+- Latest stricter rerun:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live/20260816T171250249Z`
+- Latest stricter external-anchor status:
+  - still `250` mapped BTC anchors
+  - still `0` tradable observations
+  - still entirely `pre_open_market`
+- Latest stricter internal-consistency scorecard:
+  - `observations: 377`
+  - `simulations: 1131`
+  - `semanticSafeObservations: 377`
+  - `executionSafeObservations: 0`
+  - `observationsWithQualityFlags: 377`
+  - template economics now separate:
+    - `aggressive_all_legs` mean PnL to resolution about `-1.35`
+    - `hybrid_edge_tiered` mean PnL to resolution about `-1.03`
+    - `passive_first` mean PnL to resolution about `-0.81`
+- Current research interpretation:
+  - the internal-consistency sleeve is now materially more honest about the fact that fee/execution modeling is still placeholder-heavy
+  - passive-first currently looks least bad under the deterministic baseline, but the sleeve is still negative overall on this slice
+  - the BTC external-anchor sleeve remains blocked by venue state rather than by mapping breadth
+
+## 2026-08-16 Threshold-monotonicity graph fix
+
+- Fixed a real semantic graph bug in:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/src/modules/module-4-graph.ts`
+- Threshold-ladder grouping now includes:
+  - `evaluationTimestampMs`
+  - `referencePriceDefinition`
+  in addition to variable / timezone / operator family.
+- This prevents false `threshold_monotone` edges across different expiries / settlement times that happen to share the same threshold value.
+- Latest post-fix rerun:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live/20260816T171759450Z`
+- Post-fix internal-consistency readout:
+  - `observations: 370`
+  - `simulations: 1110`
+  - `threshold_monotone` observations reduced from `108` to `101`
+  - `hard` observations reduced from `108` to `101`
+- Post-fix interpretation:
+  - the internal-consistency slice is materially cleaner semantically than the prior strict run
+  - the remaining dominant internal limitation is placeholder fee / execution modeling, not graph contamination
+
+## 2026-08-16 Execution realism and tradable-only capture pass
+
+- Advanced the stack materially on three fronts:
+  - live capture is now tradable-only by default at the series-selection boundary
+  - quote-state construction now uses the real top of book from the ticker feed instead of reading the worst bid from unsorted depth arrays
+  - internal-consistency simulations now run only on `executionSafe` observations rather than on every observed edge
+- Key files updated in this pass:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/src/modules/module-5-state-views.ts`
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/src/modules/module-6-observations.ts`
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/src/modules/module-8-simulation.ts`
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/src/pipelines/kalshi-live-capture.ts`
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/src/pipelines/internal-consistency-experiment-runner.ts`
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/src/pipelines/semantic-audit.ts`
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/src/pipelines/btc-anchor-residuals.ts`
+- Latest full rerun root:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live/20260816T182628325Z`
+- Latest internal-consistency state on that root:
+  - `observations: 231`
+  - `executionSafeObservations: 3`
+  - `internal simulations: 9`
+  - `simulationCoverage.expectedSimulations: 9`
+  - `simulationCoverage.actualSimulations: 9`
+  - execution scorecard now reflects only the `3` execution-safe observations instead of all `231`
+- Latest external-anchor state on that root:
+  - `KXBTC` scanned candidates: `250`
+  - selected tradable candidates: `0`
+  - `mappedAnchors: 0`
+  - `coverageStatus: "no_anchor_contracts_captured"`
+  - blocker reason:
+    - `No tradable BTC contracts were captured for the current slice, so the anchor sleeve has no evaluable coverage.`
+- Latest semantic-audit output now honestly surfaces the two real blockers:
+  - the requested BTC target series had no tradable candidates in the live window
+  - the BTC anchor sleeve therefore has no contract coverage in this slice
+  - all internal observations are still flagged, so the slice is not yet decision-ready
+- Current interpretation:
+  - the internal-consistency sleeve is now much more honest than before: economics are no longer being reported on the full observed set, only on the tiny execution-admissible subset
+  - the BTC external-anchor sleeve is now blocked by live venue state rather than by silent pipeline contamination
+  - the next frontier is no longer basic plumbing; it is deciding whether to wait for live tradable BTC contracts, switch the external-anchor sleeve to another family temporarily, or continue deepening the internal-consistency sleeve alone
+
+## 2026-08-16 BTC readiness audit and cleaner slice diagnostics
+
+- Added an explicit BTC market-readiness audit so the system can distinguish:
+  - `tradable_ready`
+  - `pre_open`
+  - `live_but_empty`
+  - `inactive`
+  at the event-family level instead of failing with a vague zero-coverage result.
+- New file added:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/src/pipelines/btc-market-readiness-audit.ts`
+- Also refined observation quality handling:
+  - fee-model metadata is no longer injected as a universal quality flag on every internal observation
+  - the readiness audit now infers the BTC series correctly from `event_ticker` / page context instead of relying on a missing `series_ticker` field inside each saved market row
+- Latest full rerun root after these fixes:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live/20260816T192823632Z`
+- Latest BTC readiness result on that root:
+  - `visibleFamilies: 2`
+  - `tradableFamilies: 0`
+  - `nextOpenFamily: KXBTC-26AUG1723`
+  - `nextOpenTimeMs: 1787018400000`
+  - family details:
+    - `KXBTC-26AUG1723`: `62` contracts, all `initialized`, all `pre_open`, zero liquidity/volume
+    - `KXBTC-26AUG1800`: `188` contracts, all `initialized`, all `pre_open`, zero liquidity/volume
+- Latest internal-consistency state on that root:
+  - `observations: 231`
+  - `executionSafeObservations: 3`
+  - `simulations: 9`
+  - `coverageComplete: true`
+  - `observationsWithQualityFlags: 230`
+  - `flaggedObservationRate` fell slightly below the prior artificial `100%` level and is now `~99.57%`
+- Latest semantic-audit state on that root:
+  - it now reports the BTC blocker with concrete evidence:
+    - target series skipped because `tradableCandidates: 0`
+    - `nextOpenFamily` and `nextOpenTimeMs` included in the finding
+  - it also reports:
+    - `anchor_slice_without_contract_coverage`
+    with the same next-open evidence
+- Current interpretation:
+  - this is now the correct operational diagnosis for the BTC sleeve:
+    - the issue is not low volume in already-open BTC contracts
+    - the issue is that the visible BTC families in the current Kalshi slice are not open for trading yet
+  - the internal-consistency sleeve is materially cleaner and more honest than before, but still highly selective on what qualifies as execution-safe
+  - the proper next move is to build around readiness-aware scheduling / family selection for BTC rather than forcing evaluation on non-live contracts
+
+## 2026-08-16 Independent phase review outcome
+
+- An independent review pass on the latest root confirmed:
+  - no new blocker-grade code bug remains in the current internal-consistency path
+  - the remaining blocker is genuine market availability for the BTC sleeve
+- Reviewed latest root:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live/20260816T192823632Z`
+- Review conclusion:
+  - the BTC external-anchor phase cannot advance on this slice because `KXBTC` had `0` tradable candidates, so the sleeve correctly produced:
+    - `mappedAnchors: 0`
+    - `coverageStatus: "no_anchor_contracts_captured"`
+  - this is now an honest operational blocker, not a silent semantic or reporting bug
+- Practical implication:
+  - to advance the BTC sleeve meaningfully, the next run must happen in a window where a BTC family is actually open and tradable
+  - the internal-consistency sleeve can continue improving in parallel, but the BTC sleeve now needs either:
+    - readiness-aware waiting / scheduled capture around the next open family
+    - or a deliberate venue / family pivot if we want continuous crypto-linked tradability instead of Kalshi-timed windows
+
+## 2026-08-16 BTC capture-window planner and pre-open short-circuit
+
+- Added a dedicated capture-window planner:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/src/pipelines/btc-capture-window-plan.ts`
+- Added npm entrypoint:
+  - `plan:btc-capture-window`
+- Session wrapper improvements:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/src/pipelines/btc-observation-session.ts`
+  - session summary now includes:
+    - `btcCaptureAction`
+    - `btcNextOpenFamily`
+    - `btcNextOpenTimeIso`
+    - `btcRecommendedCaptureStartIso`
+    - `btcRecommendedCaptureEndIso`
+    - `btcAnchorStageStatus`
+  - if BTC is pre-open / not tradable, the session now:
+    - skips Coinbase / Deribit / anchor-mapping work
+    - returns a clean `skipped_pre_open` status instead of doing pointless anchor work
+- Latest session root after planner/short-circuit pass:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live/20260816T194330976Z`
+- Latest BTC session summary on that root:
+  - `btcTradableFamilies: 0`
+  - `btcCaptureAction: "wait_for_open"`
+  - `btcNextOpenFamily: "KXBTC-26AUG1723"`
+  - `btcNextOpenTimeIso: "2026-08-18T02:00:00.000Z"`
+  - `btcRecommendedCaptureStartIso: "2026-08-18T02:05:00.000Z"`
+  - `btcRecommendedCaptureEndIso: "2026-08-18T04:05:00.000Z"`
+  - `btcAnchorStageStatus: "skipped_pre_open"`
+- Current interpretation:
+  - this is the first fully operational answer for the BTC sleeve
+  - the proper next run is no longer ambiguous:
+    - start shortly after the next BTC family opens
+    - monitor for roughly two hours while tradable quotes form
+  - this is a materially cleaner solution than forcing external-anchor work on pre-open contracts
+
+## 2026-08-16 Reserve venue pivot research for BTC external-anchor
+
+- Public venue checks performed:
+  - Kalshi `KXBTC` discovery currently shows visible BTC families, but all sampled families in the current window are still `initialized` / pre-open
+  - Polymarket public event data currently shows live BTC-related events, but not the same short-horizon terminal threshold family structure as Kalshi
+- Most useful reserve-path finding:
+  - Polymarket currently has an active BTC milestone event:
+    - `when-will-bitcoin-hit-150k`
+  - This event contains a ladder of contracts such as:
+    - `Will Bitcoin hit $150k by September 30?`
+    - `... by December 31?`
+    - `... by March 31, 2026?`
+    - `... by December 31, 2026?`
+  - The live contract is continuously tradable and uses Binance one-minute candle highs as the resolution source
+- Important interpretation:
+  - this is **not** the same semantic object as the Kalshi BTC family
+  - Kalshi BTC sleeve:
+    - terminal / settlement-time threshold distribution
+  - Polymarket BTC milestone sleeve:
+    - first-passage / hitting-time probability
+- Why this matters:
+  - it is a **clean pivot**, not a hack
+  - it preserves the core BTC external-anchor concept while switching from:
+    - `P(S_T > K)` / bucket probabilities
+    to:
+    - `P(max_{t<=T} S_t >= K)`
+  - the model stack would therefore change from terminal-distribution anchoring toward barrier / hitting-probability anchoring
+- Current strategic conclusion:
+  - **primary path:** keep Kalshi BTC external-anchor and use readiness-aware scheduled capture around live openings
+  - **reserve path:** build a second BTC external-anchor sleeve for continuously tradable milestone-by-date contracts on Polymarket if we want ongoing crypto-linked live evaluation even when Kalshi BTC is pre-open
+- Durable memo saved to Vault:
+  - `/Users/canozgel-macmini/.openclaw/MissionControlVault/10 Research/Prediction Markets/prediction-markets-btc-external-anchor-live-path-decision-2026-08-16.md`

@@ -1,0 +1,27 @@
+{
+  "outputRoot": "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live/20260816T194245488Z",
+  "checkedAtIso": "2026-08-16T19:43:01.227Z",
+  "findings": [
+    {
+      "severity": "high",
+      "code": "target_series_skipped_no_tradable_candidates",
+      "message": "A requested target series had no tradable candidates and was intentionally excluded from capture.",
+      "evidence": {
+        "seriesTicker": "KXBTC",
+        "tradableCandidates": 0,
+        "nextOpenFamily": "KXBTC-26AUG1723",
+        "nextOpenTimeMs": 1787018400000
+      }
+    }
+  ],
+  "metrics": {
+    "contracts": 87,
+    "thresholds": 87,
+    "buckets": 0,
+    "edges": 231,
+    "discoveryEvents": 8,
+    "findingsHigh": 1,
+    "findingsMedium": 0,
+    "findingsLow": 0
+  }
+}

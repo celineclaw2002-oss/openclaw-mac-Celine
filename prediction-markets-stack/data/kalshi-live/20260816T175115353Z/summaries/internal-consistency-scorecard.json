@@ -1,0 +1,182 @@
+{
+  "outputRoot": "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live/20260816T175115353Z",
+  "scopeNote": "This baseline summarizes live internal-consistency observations and deterministic execution-template simulations from the latest replay slice. Probability calibration remains unavailable here because the slice contains unresolved markets rather than realized outcomes.",
+  "observations": 231,
+  "simulations": 693,
+  "semanticQuality": {
+    "observations": 231,
+    "semanticSafeObservations": 231,
+    "executionSafeObservations": 0,
+    "observationsWithQualityFlags": 231,
+    "semanticSafeRate": 1,
+    "executionSafeRate": 0,
+    "flaggedObservationRate": 1,
+    "hardEdgeRate": 0.35064935064935066,
+    "edgeTypeCounts": {
+      "temporal_nested": 150,
+      "threshold_monotone": 81
+    },
+    "hardnessCounts": {
+      "conditional": 150,
+      "hard": 81
+    }
+  },
+  "structuralOpportunity": [
+    {
+      "groupId": "conditional",
+      "groupType": "hardness_class",
+      "observations": 150,
+      "grossPositive": 28,
+      "feeAdjustedPositive": 1,
+      "depthAdjustedPositive": 1,
+      "grossPositiveRate": 0.18666666666666668,
+      "feeAdjustedPositiveRate": 0.006666666666666667,
+      "depthAdjustedPositiveRate": 0.006666666666666667,
+      "meanGrossResidual": -0.02,
+      "meanNetFeeAdjustedResidual": -0.52,
+      "meanDepthAdjustedResidual": -0.645
+    },
+    {
+      "groupId": "hard",
+      "groupType": "hardness_class",
+      "observations": 81,
+      "grossPositive": 7,
+      "feeAdjustedPositive": 1,
+      "depthAdjustedPositive": 1,
+      "grossPositiveRate": 0.08641975308641975,
+      "feeAdjustedPositiveRate": 0.012345679012345678,
+      "depthAdjustedPositiveRate": 0.012345679012345678,
+      "meanGrossResidual": 0.024691358024691357,
+      "meanNetFeeAdjustedResidual": -0.47530864197530864,
+      "meanDepthAdjustedResidual": -0.6003086419753086
+    },
+    {
+      "groupId": "overall",
+      "groupType": "overall",
+      "observations": 231,
+      "grossPositive": 35,
+      "feeAdjustedPositive": 2,
+      "depthAdjustedPositive": 2,
+      "grossPositiveRate": 0.15151515151515152,
+      "feeAdjustedPositiveRate": 0.008658008658008658,
+      "depthAdjustedPositiveRate": 0.008658008658008658,
+      "meanGrossResidual": -0.004329004329004329,
+      "meanNetFeeAdjustedResidual": -0.5043290043290043,
+      "meanDepthAdjustedResidual": -0.6293290043290043
+    },
+    {
+      "groupId": "temporal_nested",
+      "groupType": "edge_type",
+      "observations": 150,
+      "grossPositive": 28,
+      "feeAdjustedPositive": 1,
+      "depthAdjustedPositive": 1,
+      "grossPositiveRate": 0.18666666666666668,
+      "feeAdjustedPositiveRate": 0.006666666666666667,
+      "depthAdjustedPositiveRate": 0.006666666666666667,
+      "meanGrossResidual": -0.02,
+      "meanNetFeeAdjustedResidual": -0.52,
+      "meanDepthAdjustedResidual": -0.645
+    },
+    {
+      "groupId": "threshold_monotone",
+      "groupType": "edge_type",
+      "observations": 81,
+      "grossPositive": 7,
+      "feeAdjustedPositive": 1,
+      "depthAdjustedPositive": 1,
+      "grossPositiveRate": 0.08641975308641975,
+      "feeAdjustedPositiveRate": 0.012345679012345678,
+      "depthAdjustedPositiveRate": 0.012345679012345678,
+      "meanGrossResidual": 0.024691358024691357,
+      "meanNetFeeAdjustedResidual": -0.47530864197530864,
+      "meanDepthAdjustedResidual": -0.6003086419753086
+    }
+  ],
+  "executionScorecard": [
+    {
+      "executionTemplateId": "aggressive_all_legs",
+      "simulations": 231,
+      "meanEntryFillProbability": 0.9499999999999964,
+      "meanFullCompletionProbability": 0.9000000000000036,
+      "meanExpectedSlippage": 1,
+      "meanPnlToClose": -1.4663961038961006,
+      "meanPnlToResolution": -0.9038961038961062,
+      "medianPnlToClose": -1.4625,
+      "medianPnlToResolution": -0.8999999999999999,
+      "positivePnlToCloseRate": 0.004329004329004329,
+      "positivePnlToResolutionRate": 0.004329004329004329
+    },
+    {
+      "executionTemplateId": "hybrid_edge_tiered",
+      "simulations": 231,
+      "meanEntryFillProbability": 0.800000000000002,
+      "meanFullCompletionProbability": 0.75,
+      "meanExpectedSlippage": 0.75,
+      "meanPnlToClose": -1.0344967532467533,
+      "meanPnlToResolution": -0.6594967532467533,
+      "medianPnlToClose": -1.03125,
+      "medianPnlToResolution": -0.65625,
+      "positivePnlToCloseRate": 0.004329004329004329,
+      "positivePnlToResolutionRate": 0.008658008658008658
+    },
+    {
+      "executionTemplateId": "passive_first",
+      "simulations": 231,
+      "meanEntryFillProbability": 0.6999999999999992,
+      "meanFullCompletionProbability": 0.6500000000000029,
+      "meanExpectedSlippage": 0.5,
+      "meanPnlToClose": -0.7340638528138519,
+      "meanPnlToResolution": -0.4903138528138516,
+      "medianPnlToClose": -0.73125,
+      "medianPnlToResolution": -0.48749999999999993,
+      "positivePnlToCloseRate": 0.004329004329004329,
+      "positivePnlToResolutionRate": 0.008658008658008658
+    }
+  ],
+  "probabilityScorecard": {
+    "available": false,
+    "reason": "Live replay slices do not yet include realized-resolution labels for Brier/log-loss calibration."
+  },
+  "economicScorecard": [
+    {
+      "executionTemplateId": "aggressive_all_legs",
+      "simulations": 231,
+      "meanEntryFillProbability": 0.9499999999999964,
+      "meanFullCompletionProbability": 0.9000000000000036,
+      "meanExpectedSlippage": 1,
+      "meanPnlToClose": -1.4663961038961006,
+      "meanPnlToResolution": -0.9038961038961062,
+      "medianPnlToClose": -1.4625,
+      "medianPnlToResolution": -0.8999999999999999,
+      "positivePnlToCloseRate": 0.004329004329004329,
+      "positivePnlToResolutionRate": 0.004329004329004329
+    },
+    {
+      "executionTemplateId": "hybrid_edge_tiered",
+      "simulations": 231,
+      "meanEntryFillProbability": 0.800000000000002,
+      "meanFullCompletionProbability": 0.75,
+      "meanExpectedSlippage": 0.75,
+      "meanPnlToClose": -1.0344967532467533,
+      "meanPnlToResolution": -0.6594967532467533,
+      "medianPnlToClose": -1.03125,
+      "medianPnlToResolution": -0.65625,
+      "positivePnlToCloseRate": 0.004329004329004329,
+      "positivePnlToResolutionRate": 0.008658008658008658
+    },
+    {
+      "executionTemplateId": "passive_first",
+      "simulations": 231,
+      "meanEntryFillProbability": 0.6999999999999992,
+      "meanFullCompletionProbability": 0.6500000000000029,
+      "meanExpectedSlippage": 0.5,
+      "meanPnlToClose": -0.7340638528138519,
+      "meanPnlToResolution": -0.4903138528138516,
+      "medianPnlToClose": -0.73125,
+      "medianPnlToResolution": -0.48749999999999993,
+      "positivePnlToCloseRate": 0.004329004329004329,
+      "positivePnlToResolutionRate": 0.008658008658008658
+    }
+  ]
+}

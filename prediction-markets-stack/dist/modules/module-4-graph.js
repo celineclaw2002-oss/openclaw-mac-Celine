@@ -87,8 +87,10 @@ export class DeterministicGraphModule {
             const operatorFamily = threshold.comparisonOperator === ">" || threshold.comparisonOperator === ">=" ? "upper" : "lower";
             const key = deterministicKey([
                 threshold.referenceVariable,
+                threshold.evaluationTimestampMs ?? "unknown_eval_ts",
                 threshold.evaluationTimezone ?? "UTC",
-                operatorFamily
+                operatorFamily,
+                threshold.referencePriceDefinition ?? "unknown_reference_price"
             ]);
             const group = grouped.get(key) ?? [];
             group.push(threshold);
@@ -115,6 +117,7 @@ export class DeterministicGraphModule {
                     graphVersion,
                     supportingEvidence: {
                         referenceVariable: left.referenceVariable,
+                        evaluationTimestampMs: left.evaluationTimestampMs,
                         leftThreshold: left.thresholdValue,
                         rightThreshold: right.thresholdValue
                     }

@@ -1,0 +1,34 @@
+[
+  {
+    "anchorFamily": "btc_thresholds",
+    "contractId": "contract::KXBTC-26AUG1800-T72299.99",
+    "observationTimeMs": 1786897425986,
+    "rawProbability": 0,
+    "uncertaintyBandLow": 0,
+    "uncertaintyBandHigh": 0.03,
+    "mappingConfidenceScore": 0.9,
+    "latencyConfidenceScore": 0.85,
+    "normalizationVersion": "norm-v1",
+    "ruleParserVersion": "rule-v1",
+    "feeModelVersion": "fee-v1",
+    "parseVersion": "btc-raw-anchor-v1",
+    "anchorModelVersion": "btc-lognormal-proxy-v1",
+    "calibrationVersion": "uncalibrated"
+  },
+  {
+    "anchorFamily": "btc_thresholds",
+    "contractId": "contract::KXBTC-26AUG1800-T53700",
+    "observationTimeMs": 1786897425986,
+    "rawProbability": 0,
+    "uncertaintyBandLow": 0,
+    "uncertaintyBandHigh": 0.03,
+    "mappingConfidenceScore": 0.9,
+    "latencyConfidenceScore": 0.85,
+    "normalizationVersion": "norm-v1",
+    "ruleParserVersion": "rule-v1",
+    "feeModelVersion": "fee-v1",
+    "parseVersion": "btc-raw-anchor-v1",
+    "anchorModelVersion": "btc-lognormal-proxy-v1",
+    "calibrationVersion": "uncalibrated"
+  }
+]

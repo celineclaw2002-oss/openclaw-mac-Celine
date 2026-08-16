@@ -1,0 +1,19 @@
+{
+  "outputRoot": "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live/20260816T164220924Z",
+  "currency": "BTC",
+  "observationTimeMs": 1786898553803,
+  "recordedAtMs": 1786898554894,
+  "payloadRef": "anchors/deribit-btc-anchor-raw.json",
+  "nearExpiryCount": 3,
+  "strikeDistanceFraction": 0.2,
+  "futuresUniverse": 13,
+  "optionsUniverse": 818,
+  "selectedFutures": 3,
+  "selectedOptions": 124,
+  "referenceSpotPrice": 63225.67,
+  "referenceSpotObservationTimeMs": 1786898553173,
+  "referenceSpotRecordedAtMs": 1786898554251,
+  "referenceSpotPayloadRef": "anchors/coinbase-btc-spot-raw.json",
+  "referenceSpotGapMs": 630,
+  "referenceSpotAgeMs": 630
+}

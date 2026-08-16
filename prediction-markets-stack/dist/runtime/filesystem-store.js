@@ -16,6 +16,7 @@ export class FilesystemResearchStore {
             "staging",
             "normalized",
             "graphs",
+            "anchors",
             "summaries",
             "state",
             "observations",

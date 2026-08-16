@@ -1,0 +1,89 @@
+{
+  "outputRoot": "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live/20260816T162545636Z",
+  "observationTimeMs": 1786897558858,
+  "totalObservations": 2,
+  "experimentRuns": 6,
+  "scorecard": [
+    {
+      "executionTemplateId": "aggressive_all_legs",
+      "residualThreshold": 0,
+      "eligibleObservations": 2,
+      "simulatedTrades": 2,
+      "meanResidualSignal": 0,
+      "meanPnlToClose": -0.012,
+      "medianPnlToClose": -0.012,
+      "meanPnlToResolution": -0.012,
+      "medianPnlToResolution": -0.012,
+      "hitRateToClose": 0,
+      "hitRateToResolution": 0
+    },
+    {
+      "executionTemplateId": "passive_first",
+      "residualThreshold": 0,
+      "eligibleObservations": 2,
+      "simulatedTrades": 2,
+      "meanResidualSignal": 0,
+      "meanPnlToClose": -0.006,
+      "medianPnlToClose": -0.006,
+      "meanPnlToResolution": -0.006,
+      "medianPnlToResolution": -0.006,
+      "hitRateToClose": 0,
+      "hitRateToResolution": 0
+    },
+    {
+      "executionTemplateId": "hybrid_edge_tiered",
+      "residualThreshold": 0,
+      "eligibleObservations": 2,
+      "simulatedTrades": 2,
+      "meanResidualSignal": 0,
+      "meanPnlToClose": -0.006,
+      "medianPnlToClose": -0.006,
+      "meanPnlToResolution": -0.006,
+      "medianPnlToResolution": -0.006,
+      "hitRateToClose": 0,
+      "hitRateToResolution": 0
+    },
+    {
+      "executionTemplateId": "aggressive_all_legs",
+      "residualThreshold": 0.01,
+      "eligibleObservations": 0,
+      "simulatedTrades": 0,
+      "meanResidualSignal": 0
+    },
+    {
+      "executionTemplateId": "passive_first",
+      "residualThreshold": 0.01,
+      "eligibleObservations": 0,
+      "simulatedTrades": 0,
+      "meanResidualSignal": 0
+    },
+    {
+      "executionTemplateId": "hybrid_edge_tiered",
+      "residualThreshold": 0.01,
+      "eligibleObservations": 0,
+      "simulatedTrades": 0,
+      "meanResidualSignal": 0
+    },
+    {
+      "executionTemplateId": "aggressive_all_legs",
+      "residualThreshold": 0.02,
+      "eligibleObservations": 0,
+      "simulatedTrades": 0,
+      "meanResidualSignal": 0
+    },
+    {
+      "executionTemplateId": "passive_first",
+      "residualThreshold": 0.02,
+      "eligibleObservations": 0,
+      "simulatedTrades": 0,
+      "meanResidualSignal": 0
+    },
+    {
+      "executionTemplateId": "hybrid_edge_tiered",
+      "residualThreshold": 0.02,
+      "eligibleObservations": 0,
+      "simulatedTrades": 0,
+      "meanResidualSignal": 0
+    }
+  ]
+}

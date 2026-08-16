@@ -1,0 +1,44 @@
+[
+  {
+    "observationId": "obs::anchor::inactive::contract::KXBTC-26AUG1800-T72299.99::1786898554894",
+    "contractId": "contract::KXBTC-26AUG1800-T72299.99",
+    "anchorFamily": "btc_thresholds",
+    "observationTimeMs": 1786898554894,
+    "mappingSafeFlag": true,
+    "tradableFlag": false,
+    "marketStatus": "listed",
+    "openTimeMs": 1787022000000,
+    "eligibilityReason": "pre_open_market",
+    "qualityFlags": [
+      "pre_open_market"
+    ],
+    "normalizationVersion": "norm-v1",
+    "ruleParserVersion": "rule-v1",
+    "feeModelVersion": "fee-v1",
+    "parseVersion": "obs-v1",
+    "anchorModelVersion": "btc-lognormal-proxy-v1",
+    "calibrationVersion": "uncalibrated",
+    "simulationVersion": "sim-v1"
+  },
+  {
+    "observationId": "obs::anchor::inactive::contract::KXBTC-26AUG1800-T53700::1786898554894",
+    "contractId": "contract::KXBTC-26AUG1800-T53700",
+    "anchorFamily": "btc_thresholds",
+    "observationTimeMs": 1786898554894,
+    "mappingSafeFlag": true,
+    "tradableFlag": false,
+    "marketStatus": "listed",
+    "openTimeMs": 1787022000000,
+    "eligibilityReason": "pre_open_market",
+    "qualityFlags": [
+      "pre_open_market"
+    ],
+    "normalizationVersion": "norm-v1",
+    "ruleParserVersion": "rule-v1",
+    "feeModelVersion": "fee-v1",
+    "parseVersion": "obs-v1",
+    "anchorModelVersion": "btc-lognormal-proxy-v1",
+    "calibrationVersion": "uncalibrated",
+    "simulationVersion": "sim-v1"
+  }
+]

@@ -1,7 +1,9 @@
 import type {
+  KalshiApiEventResponse,
   KalshiApiMarketResponse,
   KalshiApiMarketsResponse,
-  KalshiApiOrderbookResponse
+  KalshiApiOrderbookResponse,
+  KalshiApiSeriesResponse
 } from "../venues/kalshi.js";
 
 export interface KalshiListMarketsOptions {
@@ -38,6 +40,18 @@ export class KalshiHttpClient {
   async getOrderbook(ticker: string): Promise<KalshiApiOrderbookResponse> {
     return this.fetchJson<KalshiApiOrderbookResponse>(
       `${this.baseUrl}/markets/${encodeURIComponent(ticker)}/orderbook`
+    );
+  }
+
+  async getSeries(seriesTicker: string): Promise<KalshiApiSeriesResponse> {
+    return this.fetchJson<KalshiApiSeriesResponse>(
+      `${this.baseUrl}/series/${encodeURIComponent(seriesTicker)}`
+    );
+  }
+
+  async getEvent(eventTicker: string): Promise<KalshiApiEventResponse> {
+    return this.fetchJson<KalshiApiEventResponse>(
+      `${this.baseUrl}/events/${encodeURIComponent(eventTicker)}`
     );
   }
 

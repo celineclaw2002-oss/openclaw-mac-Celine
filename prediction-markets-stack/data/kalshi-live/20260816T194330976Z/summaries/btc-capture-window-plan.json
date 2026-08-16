@@ -1,0 +1,24 @@
+{
+  "outputRoot": "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live/20260816T194330976Z",
+  "generatedAtIso": "2026-08-16T19:43:46.212Z",
+  "openWarmupMinutes": 5,
+  "monitoringWindowMinutes": 120,
+  "readiness": {
+    "visibleFamilies": 2,
+    "tradableFamilies": 0,
+    "nextOpenFamily": "KXBTC-26AUG1723",
+    "nextOpenTimeMs": 1787018400000,
+    "nextOpenTimeIso": "2026-08-18T02:00:00.000Z"
+  },
+  "recommendation": {
+    "action": "wait_for_open",
+    "reason": "Visible BTC families are still pre-open. The next meaningful anchor run should start shortly after the next family opens, once live tradable quotes can form.",
+    "nextFamily": "KXBTC-26AUG1723",
+    "nextOpenTimeMs": 1787018400000,
+    "nextOpenTimeIso": "2026-08-18T02:00:00.000Z",
+    "recommendedCaptureStartMs": 1787018700000,
+    "recommendedCaptureStartIso": "2026-08-18T02:05:00.000Z",
+    "recommendedCaptureEndMs": 1787025900000,
+    "recommendedCaptureEndIso": "2026-08-18T04:05:00.000Z"
+  }
+}

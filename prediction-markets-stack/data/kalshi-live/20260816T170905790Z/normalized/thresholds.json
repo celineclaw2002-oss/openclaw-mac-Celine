@@ -1,0 +1,1697 @@
+[
+  {
+    "thresholdId": "threshold::contract::KXBTC-26AUG1723-T53700",
+    "contractId": "contract::KXBTC-26AUG1723-T53700",
+    "referenceVariable": "btc_usd",
+    "comparisonOperator": "<",
+    "thresholdValue": 53700,
+    "evaluationTimestampMs": 1787022000000,
+    "evaluationTimezone": "EDT",
+    "settlementTimestampConvention": "11 PM",
+    "referencePriceDefinition": "CF Benchmarks BRTI",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXBTC-26AUG1723-T72299.99",
+    "contractId": "contract::KXBTC-26AUG1723-T72299.99",
+    "referenceVariable": "btc_usd",
+    "comparisonOperator": ">",
+    "thresholdValue": 72299.99,
+    "evaluationTimestampMs": 1787022000000,
+    "evaluationTimezone": "EDT",
+    "settlementTimestampConvention": "11 PM",
+    "referencePriceDefinition": "CF Benchmarks BRTI",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXBTC-26AUG1800-T53700",
+    "contractId": "contract::KXBTC-26AUG1800-T53700",
+    "referenceVariable": "btc_usd",
+    "comparisonOperator": "<",
+    "thresholdValue": 53700,
+    "evaluationTimestampMs": 1787025600000,
+    "evaluationTimezone": "EDT",
+    "settlementTimestampConvention": "12 AM",
+    "referencePriceDefinition": "CF Benchmarks BRTI",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXBTC-26AUG1800-T72299.99",
+    "contractId": "contract::KXBTC-26AUG1800-T72299.99",
+    "referenceVariable": "btc_usd",
+    "comparisonOperator": ">",
+    "thresholdValue": 72299.99,
+    "evaluationTimestampMs": 1787025600000,
+    "evaluationTimezone": "EDT",
+    "settlementTimestampConvention": "12 AM",
+    "referencePriceDefinition": "CF Benchmarks BRTI",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26DEC-T2.75",
+    "contractId": "contract::KXFED-26DEC-T2.75",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 2.75,
+    "evaluationTimestampMs": 1796842500000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26DEC-T3.00",
+    "contractId": "contract::KXFED-26DEC-T3.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3,
+    "evaluationTimestampMs": 1796842500000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26DEC-T3.25",
+    "contractId": "contract::KXFED-26DEC-T3.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3.25,
+    "evaluationTimestampMs": 1796842500000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26DEC-T3.50",
+    "contractId": "contract::KXFED-26DEC-T3.50",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3.5,
+    "evaluationTimestampMs": 1796842500000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26DEC-T3.75",
+    "contractId": "contract::KXFED-26DEC-T3.75",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3.75,
+    "evaluationTimestampMs": 1796842500000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26DEC-T4.00",
+    "contractId": "contract::KXFED-26DEC-T4.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 4,
+    "evaluationTimestampMs": 1796842500000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26DEC-T4.25",
+    "contractId": "contract::KXFED-26DEC-T4.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 4.25,
+    "evaluationTimestampMs": 1796842500000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26DEC-T4.50",
+    "contractId": "contract::KXFED-26DEC-T4.50",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 4.5,
+    "evaluationTimestampMs": 1796842500000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26DEC-T4.75",
+    "contractId": "contract::KXFED-26DEC-T4.75",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 4.75,
+    "evaluationTimestampMs": 1796842500000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26DEC-T5.00",
+    "contractId": "contract::KXFED-26DEC-T5.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 5,
+    "evaluationTimestampMs": 1796842500000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26DEC-T5.25",
+    "contractId": "contract::KXFED-26DEC-T5.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 5.25,
+    "evaluationTimestampMs": 1796842500000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26OCT-T2.75",
+    "contractId": "contract::KXFED-26OCT-T2.75",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 2.75,
+    "evaluationTimestampMs": 1793210100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26OCT-T3.00",
+    "contractId": "contract::KXFED-26OCT-T3.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3,
+    "evaluationTimestampMs": 1793210100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26OCT-T3.25",
+    "contractId": "contract::KXFED-26OCT-T3.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3.25,
+    "evaluationTimestampMs": 1793210100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26OCT-T3.50",
+    "contractId": "contract::KXFED-26OCT-T3.50",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3.5,
+    "evaluationTimestampMs": 1793210100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26OCT-T3.75",
+    "contractId": "contract::KXFED-26OCT-T3.75",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3.75,
+    "evaluationTimestampMs": 1793210100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26OCT-T4.00",
+    "contractId": "contract::KXFED-26OCT-T4.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 4,
+    "evaluationTimestampMs": 1793210100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26OCT-T4.25",
+    "contractId": "contract::KXFED-26OCT-T4.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 4.25,
+    "evaluationTimestampMs": 1793210100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26OCT-T4.50",
+    "contractId": "contract::KXFED-26OCT-T4.50",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 4.5,
+    "evaluationTimestampMs": 1793210100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26OCT-T4.75",
+    "contractId": "contract::KXFED-26OCT-T4.75",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 4.75,
+    "evaluationTimestampMs": 1793210100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26OCT-T5.00",
+    "contractId": "contract::KXFED-26OCT-T5.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 5,
+    "evaluationTimestampMs": 1793210100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26OCT-T5.25",
+    "contractId": "contract::KXFED-26OCT-T5.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 5.25,
+    "evaluationTimestampMs": 1793210100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26SEP-T2.75",
+    "contractId": "contract::KXFED-26SEP-T2.75",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 2.75,
+    "evaluationTimestampMs": 1789581300000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26SEP-T3.00",
+    "contractId": "contract::KXFED-26SEP-T3.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3,
+    "evaluationTimestampMs": 1789581300000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26SEP-T3.25",
+    "contractId": "contract::KXFED-26SEP-T3.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3.25,
+    "evaluationTimestampMs": 1789581300000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26SEP-T3.50",
+    "contractId": "contract::KXFED-26SEP-T3.50",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3.5,
+    "evaluationTimestampMs": 1789581300000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26SEP-T3.75",
+    "contractId": "contract::KXFED-26SEP-T3.75",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3.75,
+    "evaluationTimestampMs": 1789581300000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26SEP-T4.00",
+    "contractId": "contract::KXFED-26SEP-T4.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 4,
+    "evaluationTimestampMs": 1789581300000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26SEP-T4.25",
+    "contractId": "contract::KXFED-26SEP-T4.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 4.25,
+    "evaluationTimestampMs": 1789581300000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26SEP-T4.50",
+    "contractId": "contract::KXFED-26SEP-T4.50",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 4.5,
+    "evaluationTimestampMs": 1789581300000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26SEP-T4.75",
+    "contractId": "contract::KXFED-26SEP-T4.75",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 4.75,
+    "evaluationTimestampMs": 1789581300000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26SEP-T5.00",
+    "contractId": "contract::KXFED-26SEP-T5.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 5,
+    "evaluationTimestampMs": 1789581300000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26SEP-T5.25",
+    "contractId": "contract::KXFED-26SEP-T5.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 5.25,
+    "evaluationTimestampMs": 1789581300000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27APR-T0.00",
+    "contractId": "contract::KXFED-27APR-T0.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 0,
+    "evaluationTimestampMs": 1808934900000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27APR-T0.25",
+    "contractId": "contract::KXFED-27APR-T0.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 0.25,
+    "evaluationTimestampMs": 1808934900000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27APR-T0.50",
+    "contractId": "contract::KXFED-27APR-T0.50",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 0.5,
+    "evaluationTimestampMs": 1808934900000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27APR-T0.75",
+    "contractId": "contract::KXFED-27APR-T0.75",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 0.75,
+    "evaluationTimestampMs": 1808934900000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27APR-T1.00",
+    "contractId": "contract::KXFED-27APR-T1.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 1,
+    "evaluationTimestampMs": 1808934900000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27APR-T1.25",
+    "contractId": "contract::KXFED-27APR-T1.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 1.25,
+    "evaluationTimestampMs": 1808934900000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27APR-T1.50",
+    "contractId": "contract::KXFED-27APR-T1.50",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 1.5,
+    "evaluationTimestampMs": 1808934900000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27APR-T1.75",
+    "contractId": "contract::KXFED-27APR-T1.75",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 1.75,
+    "evaluationTimestampMs": 1808934900000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27APR-T2.00",
+    "contractId": "contract::KXFED-27APR-T2.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 2,
+    "evaluationTimestampMs": 1808934900000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27APR-T2.25",
+    "contractId": "contract::KXFED-27APR-T2.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 2.25,
+    "evaluationTimestampMs": 1808934900000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27APR-T2.50",
+    "contractId": "contract::KXFED-27APR-T2.50",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 2.5,
+    "evaluationTimestampMs": 1808934900000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27APR-T2.75",
+    "contractId": "contract::KXFED-27APR-T2.75",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 2.75,
+    "evaluationTimestampMs": 1808934900000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27APR-T3.00",
+    "contractId": "contract::KXFED-27APR-T3.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3,
+    "evaluationTimestampMs": 1808934900000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27APR-T3.25",
+    "contractId": "contract::KXFED-27APR-T3.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3.25,
+    "evaluationTimestampMs": 1808934900000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27APR-T3.50",
+    "contractId": "contract::KXFED-27APR-T3.50",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3.5,
+    "evaluationTimestampMs": 1808934900000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27APR-T3.75",
+    "contractId": "contract::KXFED-27APR-T3.75",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3.75,
+    "evaluationTimestampMs": 1808934900000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27APR-T4.00",
+    "contractId": "contract::KXFED-27APR-T4.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 4,
+    "evaluationTimestampMs": 1808934900000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27APR-T4.25",
+    "contractId": "contract::KXFED-27APR-T4.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 4.25,
+    "evaluationTimestampMs": 1808934900000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27JAN-T0.00",
+    "contractId": "contract::KXFED-27JAN-T0.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 0,
+    "evaluationTimestampMs": 1801076100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27JAN-T0.25",
+    "contractId": "contract::KXFED-27JAN-T0.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 0.25,
+    "evaluationTimestampMs": 1801076100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27JAN-T0.50",
+    "contractId": "contract::KXFED-27JAN-T0.50",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 0.5,
+    "evaluationTimestampMs": 1801076100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27JAN-T0.75",
+    "contractId": "contract::KXFED-27JAN-T0.75",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 0.75,
+    "evaluationTimestampMs": 1801076100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27JAN-T1.00",
+    "contractId": "contract::KXFED-27JAN-T1.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 1,
+    "evaluationTimestampMs": 1801076100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27JAN-T1.25",
+    "contractId": "contract::KXFED-27JAN-T1.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 1.25,
+    "evaluationTimestampMs": 1801076100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27JAN-T1.50",
+    "contractId": "contract::KXFED-27JAN-T1.50",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 1.5,
+    "evaluationTimestampMs": 1801076100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27JAN-T1.75",
+    "contractId": "contract::KXFED-27JAN-T1.75",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 1.75,
+    "evaluationTimestampMs": 1801076100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27JAN-T2.00",
+    "contractId": "contract::KXFED-27JAN-T2.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 2,
+    "evaluationTimestampMs": 1801076100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27JAN-T2.25",
+    "contractId": "contract::KXFED-27JAN-T2.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 2.25,
+    "evaluationTimestampMs": 1801076100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27JAN-T2.50",
+    "contractId": "contract::KXFED-27JAN-T2.50",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 2.5,
+    "evaluationTimestampMs": 1801076100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27JAN-T2.75",
+    "contractId": "contract::KXFED-27JAN-T2.75",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 2.75,
+    "evaluationTimestampMs": 1801076100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27JAN-T3.00",
+    "contractId": "contract::KXFED-27JAN-T3.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3,
+    "evaluationTimestampMs": 1801076100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27JAN-T3.25",
+    "contractId": "contract::KXFED-27JAN-T3.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3.25,
+    "evaluationTimestampMs": 1801076100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27JAN-T3.50",
+    "contractId": "contract::KXFED-27JAN-T3.50",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3.5,
+    "evaluationTimestampMs": 1801076100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27JAN-T3.75",
+    "contractId": "contract::KXFED-27JAN-T3.75",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3.75,
+    "evaluationTimestampMs": 1801076100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27JAN-T4.00",
+    "contractId": "contract::KXFED-27JAN-T4.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 4,
+    "evaluationTimestampMs": 1801076100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27JAN-T4.25",
+    "contractId": "contract::KXFED-27JAN-T4.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 4.25,
+    "evaluationTimestampMs": 1801076100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27MAR-T0.00",
+    "contractId": "contract::KXFED-27MAR-T0.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 0,
+    "evaluationTimestampMs": 1805306100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27MAR-T0.25",
+    "contractId": "contract::KXFED-27MAR-T0.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 0.25,
+    "evaluationTimestampMs": 1805306100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27MAR-T0.50",
+    "contractId": "contract::KXFED-27MAR-T0.50",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 0.5,
+    "evaluationTimestampMs": 1805306100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27MAR-T0.75",
+    "contractId": "contract::KXFED-27MAR-T0.75",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 0.75,
+    "evaluationTimestampMs": 1805306100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27MAR-T1.00",
+    "contractId": "contract::KXFED-27MAR-T1.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 1,
+    "evaluationTimestampMs": 1805306100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27MAR-T1.25",
+    "contractId": "contract::KXFED-27MAR-T1.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 1.25,
+    "evaluationTimestampMs": 1805306100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27MAR-T1.50",
+    "contractId": "contract::KXFED-27MAR-T1.50",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 1.5,
+    "evaluationTimestampMs": 1805306100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27MAR-T1.75",
+    "contractId": "contract::KXFED-27MAR-T1.75",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 1.75,
+    "evaluationTimestampMs": 1805306100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27MAR-T2.00",
+    "contractId": "contract::KXFED-27MAR-T2.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 2,
+    "evaluationTimestampMs": 1805306100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27MAR-T2.25",
+    "contractId": "contract::KXFED-27MAR-T2.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 2.25,
+    "evaluationTimestampMs": 1805306100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27MAR-T2.50",
+    "contractId": "contract::KXFED-27MAR-T2.50",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 2.5,
+    "evaluationTimestampMs": 1805306100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27MAR-T2.75",
+    "contractId": "contract::KXFED-27MAR-T2.75",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 2.75,
+    "evaluationTimestampMs": 1805306100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27MAR-T3.00",
+    "contractId": "contract::KXFED-27MAR-T3.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3,
+    "evaluationTimestampMs": 1805306100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27MAR-T3.25",
+    "contractId": "contract::KXFED-27MAR-T3.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3.25,
+    "evaluationTimestampMs": 1805306100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27MAR-T3.50",
+    "contractId": "contract::KXFED-27MAR-T3.50",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3.5,
+    "evaluationTimestampMs": 1805306100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27MAR-T3.75",
+    "contractId": "contract::KXFED-27MAR-T3.75",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3.75,
+    "evaluationTimestampMs": 1805306100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27MAR-T4.00",
+    "contractId": "contract::KXFED-27MAR-T4.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 4,
+    "evaluationTimestampMs": 1805306100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-27MAR-T4.25",
+    "contractId": "contract::KXFED-27MAR-T4.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 4.25,
+    "evaluationTimestampMs": 1805306100000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26JUL-T2.75",
+    "contractId": "contract::KXFED-26JUL-T2.75",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 2.75,
+    "evaluationTimestampMs": 1785347700000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26JUL-T3.00",
+    "contractId": "contract::KXFED-26JUL-T3.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3,
+    "evaluationTimestampMs": 1785347700000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26JUL-T3.25",
+    "contractId": "contract::KXFED-26JUL-T3.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3.25,
+    "evaluationTimestampMs": 1785347700000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26JUL-T3.50",
+    "contractId": "contract::KXFED-26JUL-T3.50",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3.5,
+    "evaluationTimestampMs": 1785347700000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26JUL-T3.75",
+    "contractId": "contract::KXFED-26JUL-T3.75",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3.75,
+    "evaluationTimestampMs": 1785347700000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26JUL-T4.00",
+    "contractId": "contract::KXFED-26JUL-T4.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 4,
+    "evaluationTimestampMs": 1785347700000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26JUL-T4.25",
+    "contractId": "contract::KXFED-26JUL-T4.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 4.25,
+    "evaluationTimestampMs": 1785347700000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26JUL-T4.50",
+    "contractId": "contract::KXFED-26JUL-T4.50",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 4.5,
+    "evaluationTimestampMs": 1785347700000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26JUL-T4.75",
+    "contractId": "contract::KXFED-26JUL-T4.75",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 4.75,
+    "evaluationTimestampMs": 1785347700000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26JUL-T5.00",
+    "contractId": "contract::KXFED-26JUL-T5.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 5,
+    "evaluationTimestampMs": 1785347700000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26JUL-T5.25",
+    "contractId": "contract::KXFED-26JUL-T5.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 5.25,
+    "evaluationTimestampMs": 1785347700000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26JUN-T2.75",
+    "contractId": "contract::KXFED-26JUN-T2.75",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 2.75,
+    "evaluationTimestampMs": 1781718900000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26JUN-T3.00",
+    "contractId": "contract::KXFED-26JUN-T3.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3,
+    "evaluationTimestampMs": 1781718900000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26JUN-T3.25",
+    "contractId": "contract::KXFED-26JUN-T3.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3.25,
+    "evaluationTimestampMs": 1781718900000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26JUN-T3.50",
+    "contractId": "contract::KXFED-26JUN-T3.50",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3.5,
+    "evaluationTimestampMs": 1781718900000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26JUN-T3.75",
+    "contractId": "contract::KXFED-26JUN-T3.75",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 3.75,
+    "evaluationTimestampMs": 1781718900000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26JUN-T4.00",
+    "contractId": "contract::KXFED-26JUN-T4.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 4,
+    "evaluationTimestampMs": 1781718900000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26JUN-T4.25",
+    "contractId": "contract::KXFED-26JUN-T4.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 4.25,
+    "evaluationTimestampMs": 1781718900000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26JUN-T4.50",
+    "contractId": "contract::KXFED-26JUN-T4.50",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 4.5,
+    "evaluationTimestampMs": 1781718900000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26JUN-T4.75",
+    "contractId": "contract::KXFED-26JUN-T4.75",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 4.75,
+    "evaluationTimestampMs": 1781718900000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26JUN-T5.00",
+    "contractId": "contract::KXFED-26JUN-T5.00",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 5,
+    "evaluationTimestampMs": 1781718900000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXFED-26JUN-T5.25",
+    "contractId": "contract::KXFED-26JUN-T5.25",
+    "referenceVariable": "fed_target_rate",
+    "comparisonOperator": ">",
+    "thresholdValue": 5.25,
+    "evaluationTimestampMs": 1781718900000,
+    "evaluationTimezone": "ET",
+    "referencePriceDefinition": "Federal Reserve target range",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source",
+      "missing_settlement_timestamp_convention"
+    ]
+  }
+]

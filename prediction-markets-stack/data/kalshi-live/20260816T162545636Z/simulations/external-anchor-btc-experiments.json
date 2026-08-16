@@ -1,0 +1,68 @@
+[
+  {
+    "observationId": "obs::anchor::contract::KXBTC-26AUG1800-T72299.99::1786897558858",
+    "contractId": "contract::KXBTC-26AUG1800-T72299.99",
+    "executionTemplateId": "aggressive_all_legs",
+    "residualThreshold": 0,
+    "signalDirection": "buy_no",
+    "residualSignal": 0,
+    "simulatedPnlToClose": -0.012,
+    "simulatedPnlToResolution": -0.012,
+    "expectedSlippage": 0.012
+  },
+  {
+    "observationId": "obs::anchor::contract::KXBTC-26AUG1800-T53700::1786897558858",
+    "contractId": "contract::KXBTC-26AUG1800-T53700",
+    "executionTemplateId": "aggressive_all_legs",
+    "residualThreshold": 0,
+    "signalDirection": "buy_no",
+    "residualSignal": 0,
+    "simulatedPnlToClose": -0.012,
+    "simulatedPnlToResolution": -0.012,
+    "expectedSlippage": 0.012
+  },
+  {
+    "observationId": "obs::anchor::contract::KXBTC-26AUG1800-T72299.99::1786897558858",
+    "contractId": "contract::KXBTC-26AUG1800-T72299.99",
+    "executionTemplateId": "passive_first",
+    "residualThreshold": 0,
+    "signalDirection": "buy_no",
+    "residualSignal": 0,
+    "simulatedPnlToClose": -0.006,
+    "simulatedPnlToResolution": -0.006,
+    "expectedSlippage": 0.006
+  },
+  {
+    "observationId": "obs::anchor::contract::KXBTC-26AUG1800-T53700::1786897558858",
+    "contractId": "contract::KXBTC-26AUG1800-T53700",
+    "executionTemplateId": "passive_first",
+    "residualThreshold": 0,
+    "signalDirection": "buy_no",
+    "residualSignal": 0,
+    "simulatedPnlToClose": -0.006,
+    "simulatedPnlToResolution": -0.006,
+    "expectedSlippage": 0.006
+  },
+  {
+    "observationId": "obs::anchor::contract::KXBTC-26AUG1800-T72299.99::1786897558858",
+    "contractId": "contract::KXBTC-26AUG1800-T72299.99",
+    "executionTemplateId": "hybrid_edge_tiered",
+    "residualThreshold": 0,
+    "signalDirection": "buy_no",
+    "residualSignal": 0,
+    "simulatedPnlToClose": -0.006,
+    "simulatedPnlToResolution": -0.006,
+    "expectedSlippage": 0.006
+  },
+  {
+    "observationId": "obs::anchor::contract::KXBTC-26AUG1800-T53700::1786897558858",
+    "contractId": "contract::KXBTC-26AUG1800-T53700",
+    "executionTemplateId": "hybrid_edge_tiered",
+    "residualThreshold": 0,
+    "signalDirection": "buy_no",
+    "residualSignal": 0,
+    "simulatedPnlToClose": -0.006,
+    "simulatedPnlToResolution": -0.006,
+    "expectedSlippage": 0.006
+  }
+]

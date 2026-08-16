@@ -1,0 +1,42 @@
+{
+  "outputRoot": "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live/20260816T192611821Z",
+  "checkedAtIso": "2026-08-16T19:26:28.920Z",
+  "findings": [
+    {
+      "severity": "high",
+      "code": "target_series_skipped_no_tradable_candidates",
+      "message": "A requested target series had no tradable candidates and was intentionally excluded from capture.",
+      "evidence": {
+        "seriesTicker": "KXBTC",
+        "tradableCandidates": 0
+      }
+    },
+    {
+      "severity": "high",
+      "code": "all_internal_observations_flagged",
+      "message": "Every internal-consistency observation carries quality flags, so the slice is not decision-ready.",
+      "evidence": {
+        "observations": 231
+      }
+    },
+    {
+      "severity": "high",
+      "code": "anchor_slice_without_contract_coverage",
+      "message": "The BTC anchor sleeve captured no evaluable BTC contracts for this slice.",
+      "evidence": {
+        "blockerReason": "No tradable BTC contracts were captured for the current slice, so the anchor sleeve has no evaluable coverage.",
+        "targetSeriesTicker": "KXBTC"
+      }
+    }
+  ],
+  "metrics": {
+    "contracts": 87,
+    "thresholds": 87,
+    "buckets": 0,
+    "edges": 231,
+    "discoveryEvents": 8,
+    "findingsHigh": 3,
+    "findingsMedium": 0,
+    "findingsLow": 0
+  }
+}

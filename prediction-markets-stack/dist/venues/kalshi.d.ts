@@ -10,6 +10,8 @@ export interface KalshiRangeRecord {
 export interface KalshiMarketRecord {
     ticker: string;
     title: string;
+    event_ticker?: string | null;
+    series_ticker?: string | null;
     subtitle?: string | null;
     category?: string | null;
     status?: string | null;
@@ -35,6 +37,10 @@ export interface KalshiMarketRecord {
     open_interest?: number | null;
     ranges?: KalshiRangeRecord[] | null;
     fee_config?: Record<string, unknown> | null;
+    fee_type?: string | null;
+    fee_multiplier?: number | null;
+    fee_type_override?: string | null;
+    fee_multiplier_override?: number | null;
     can_close_early?: boolean | null;
 }
 export interface KalshiBookLevel {
@@ -49,6 +55,8 @@ export interface KalshiBookRecord {
 export interface KalshiApiMarket {
     ticker: string;
     title: string;
+    event_ticker?: string;
+    series_ticker?: string;
     yes_bid_dollars?: string | null;
     yes_ask_dollars?: string | null;
     no_bid_dollars?: string | null;
@@ -77,7 +85,25 @@ export interface KalshiApiMarket {
         step?: string;
     }> | null;
     fee_config?: Record<string, unknown> | null;
+    fee_type?: string | null;
+    fee_multiplier?: number | null;
+    fee_type_override?: string | null;
+    fee_multiplier_override?: number | null;
     can_close_early?: boolean | null;
+}
+export interface KalshiApiSeries {
+    ticker: string;
+    fee_type?: string | null;
+    fee_multiplier?: number | null;
+    title?: string | null;
+    category?: string | null;
+}
+export interface KalshiApiEvent {
+    event_ticker: string;
+    series_ticker?: string | null;
+    fee_type_override?: string | null;
+    fee_multiplier_override?: number | null;
+    title?: string | null;
 }
 export interface KalshiApiMarketsResponse {
     cursor?: string;
@@ -85,6 +111,13 @@ export interface KalshiApiMarketsResponse {
 }
 export interface KalshiApiMarketResponse {
     market: KalshiApiMarket;
+}
+export interface KalshiApiSeriesResponse {
+    series: KalshiApiSeries;
+}
+export interface KalshiApiEventResponse {
+    event: KalshiApiEvent;
+    markets?: KalshiApiMarket[] | null;
 }
 export interface KalshiApiOrderbookResponse {
     orderbook_fp: {

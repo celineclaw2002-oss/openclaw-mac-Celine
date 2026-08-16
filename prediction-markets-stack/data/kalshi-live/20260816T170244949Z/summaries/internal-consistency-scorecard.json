@@ -1,0 +1,130 @@
+{
+  "outputRoot": "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live/20260816T170244949Z",
+  "scopeNote": "This baseline summarizes live internal-consistency observations and deterministic execution-template simulations from the latest replay slice. Probability calibration remains unavailable here because the slice contains unresolved markets rather than realized outcomes.",
+  "observations": 377,
+  "simulations": 10,
+  "semanticQuality": {
+    "observations": 377,
+    "semanticSafeObservations": 377,
+    "executionSafeObservations": 377,
+    "observationsWithQualityFlags": 0,
+    "semanticSafeRate": 1,
+    "executionSafeRate": 1,
+    "flaggedObservationRate": 0,
+    "hardEdgeRate": 0.2864721485411141,
+    "edgeTypeCounts": {
+      "temporal_nested": 269,
+      "threshold_monotone": 108
+    },
+    "hardnessCounts": {
+      "conditional": 269,
+      "hard": 108
+    }
+  },
+  "structuralOpportunity": [
+    {
+      "groupId": "conditional",
+      "groupType": "hardness_class",
+      "observations": 269,
+      "grossPositive": 52,
+      "feeAdjustedPositive": 0,
+      "depthAdjustedPositive": 0,
+      "grossPositiveRate": 0.19330855018587362,
+      "feeAdjustedPositiveRate": 0,
+      "depthAdjustedPositiveRate": 0,
+      "meanGrossResidual": 0,
+      "meanNetFeeAdjustedResidual": -1,
+      "meanDepthAdjustedResidual": -1.25
+    },
+    {
+      "groupId": "hard",
+      "groupType": "hardness_class",
+      "observations": 108,
+      "grossPositive": 12,
+      "feeAdjustedPositive": 1,
+      "depthAdjustedPositive": 1,
+      "grossPositiveRate": 0.1111111111111111,
+      "feeAdjustedPositiveRate": 0.009259259259259259,
+      "depthAdjustedPositiveRate": 0.009259259259259259,
+      "meanGrossResidual": 0,
+      "meanNetFeeAdjustedResidual": -1,
+      "meanDepthAdjustedResidual": -1.25
+    },
+    {
+      "groupId": "overall",
+      "groupType": "overall",
+      "observations": 377,
+      "grossPositive": 64,
+      "feeAdjustedPositive": 1,
+      "depthAdjustedPositive": 1,
+      "grossPositiveRate": 0.16976127320954906,
+      "feeAdjustedPositiveRate": 0.002652519893899204,
+      "depthAdjustedPositiveRate": 0.002652519893899204,
+      "meanGrossResidual": 0,
+      "meanNetFeeAdjustedResidual": -1,
+      "meanDepthAdjustedResidual": -1.25
+    },
+    {
+      "groupId": "temporal_nested",
+      "groupType": "edge_type",
+      "observations": 269,
+      "grossPositive": 52,
+      "feeAdjustedPositive": 0,
+      "depthAdjustedPositive": 0,
+      "grossPositiveRate": 0.19330855018587362,
+      "feeAdjustedPositiveRate": 0,
+      "depthAdjustedPositiveRate": 0,
+      "meanGrossResidual": 0,
+      "meanNetFeeAdjustedResidual": -1,
+      "meanDepthAdjustedResidual": -1.25
+    },
+    {
+      "groupId": "threshold_monotone",
+      "groupType": "edge_type",
+      "observations": 108,
+      "grossPositive": 12,
+      "feeAdjustedPositive": 1,
+      "depthAdjustedPositive": 1,
+      "grossPositiveRate": 0.1111111111111111,
+      "feeAdjustedPositiveRate": 0.009259259259259259,
+      "depthAdjustedPositiveRate": 0.009259259259259259,
+      "meanGrossResidual": 0,
+      "meanNetFeeAdjustedResidual": -1,
+      "meanDepthAdjustedResidual": -1.25
+    }
+  ],
+  "executionScorecard": [
+    {
+      "executionTemplateId": "aggressive_all_legs",
+      "simulations": 10,
+      "meanEntryFillProbability": 0.95,
+      "meanFullCompletionProbability": 0.9000000000000001,
+      "meanExpectedSlippage": 1,
+      "meanPnlToClose": -0.625,
+      "meanPnlToResolution": -0.7999999999999999,
+      "medianPnlToClose": -0.625,
+      "medianPnlToResolution": -0.8,
+      "positivePnlToCloseRate": 0,
+      "positivePnlToResolutionRate": 0
+    }
+  ],
+  "probabilityScorecard": {
+    "available": false,
+    "reason": "Live replay slices do not yet include realized-resolution labels for Brier/log-loss calibration."
+  },
+  "economicScorecard": [
+    {
+      "executionTemplateId": "aggressive_all_legs",
+      "simulations": 10,
+      "meanEntryFillProbability": 0.95,
+      "meanFullCompletionProbability": 0.9000000000000001,
+      "meanExpectedSlippage": 1,
+      "meanPnlToClose": -0.625,
+      "meanPnlToResolution": -0.7999999999999999,
+      "medianPnlToClose": -0.625,
+      "medianPnlToResolution": -0.8,
+      "positivePnlToCloseRate": 0,
+      "positivePnlToResolutionRate": 0
+    }
+  ]
+}

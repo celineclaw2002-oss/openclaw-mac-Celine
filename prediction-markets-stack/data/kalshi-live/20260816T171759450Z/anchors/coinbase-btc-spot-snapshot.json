@@ -1,0 +1,11 @@
+{
+  "anchorFamily": "btc_thresholds",
+  "observationTimeMs": 1786900738408,
+  "sourceName": "coinbase:BTC-USD",
+  "payloadRef": "anchors/coinbase-btc-spot-raw.json",
+  "dataQualityScore": 0.8,
+  "normalizationVersion": "norm-v1",
+  "ruleParserVersion": "rule-v1",
+  "feeModelVersion": "fee-v1",
+  "parseVersion": "coinbase-spot-v1"
+}

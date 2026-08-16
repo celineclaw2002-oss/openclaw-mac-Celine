@@ -8,15 +8,29 @@ export class DeterministicSimulationModule {
         if (!observation) {
             return null;
         }
-        const fillProbability = template === "aggressive_all_legs" ? 0.95 : 0.7;
+        const edgeMagnitude = Math.abs(observation.grossResidual);
+        const baseFillProbability = observation.modeledEntryFillProbability ?? 0.55;
+        const fillProbability = Math.max(0.05, Math.min(0.99, baseFillProbability +
+            (template === "aggressive_all_legs" ? 0.15 : template === "hybrid_edge_tiered" ? 0.05 : -0.05)));
+        const completionProbability = Math.max(0, Math.min(0.99, fillProbability - (template === "aggressive_all_legs" ? 0.03 : 0.08)));
+        const feeEstimate = Math.max(0, edgeMagnitude - observation.netFeeAdjustedResidual);
+        const executionPenalty = observation.modeledExecutionPenalty ??
+            Math.max(0, observation.netFeeAdjustedResidual - observation.depthAdjustedResidual);
+        const feeScale = template === "aggressive_all_legs" ? 1 : template === "hybrid_edge_tiered" ? 0.85 : 0.7;
+        const executionScale = template === "aggressive_all_legs" ? 1.15 : template === "hybrid_edge_tiered" ? 0.95 : 0.75;
+        const expectedSlippage = Math.max(0.05, executionPenalty * (template === "aggressive_all_legs" ? 0.7 : template === "hybrid_edge_tiered" ? 0.55 : 0.4));
+        const closePnl = (edgeMagnitude - feeEstimate * feeScale - executionPenalty * executionScale - expectedSlippage) *
+            completionProbability;
+        const resolutionPnl = (edgeMagnitude - feeEstimate * feeScale - executionPenalty * executionScale * 0.5 - expectedSlippage * 0.5) *
+            completionProbability;
         return {
             observationId,
             executionTemplateId: template,
             entryFillProbability: fillProbability,
-            fullCompletionProbability: fillProbability - 0.05,
-            expectedSlippage: template === "passive_first" ? 0.5 : 1.0,
-            simulatedPnlToClose: observation.depthAdjustedResidual * 0.5,
-            simulatedPnlToResolution: observation.netFeeAdjustedResidual * 0.8,
+            fullCompletionProbability: completionProbability,
+            expectedSlippage,
+            simulatedPnlToClose: closePnl,
+            simulatedPnlToResolution: resolutionPnl,
             normalizationVersion: "norm-v1",
             ruleParserVersion: "rule-v1",
             feeModelVersion: "fee-v1",
@@ -30,13 +44,21 @@ export class DeterministicSimulationModule {
         if (!observation) {
             return null;
         }
+        if (!observation.tradableFlag) {
+            return null;
+        }
+        const signal = observation.calibratedResidual ?? observation.rawResidual;
+        if (signal === undefined) {
+            return null;
+        }
         const slippage = template === "aggressive_all_legs" ? 0.012 : 0.006;
+        const edgeAfterSlippage = Math.abs(signal) - slippage;
         return {
             observationId,
             executionTemplateId: template,
             expectedSlippage: slippage,
-            simulatedPnlToClose: observation.rawResidual - slippage,
-            simulatedPnlToResolution: (observation.calibratedResidual ?? observation.rawResidual) - slippage,
+            simulatedPnlToClose: edgeAfterSlippage * 0.5,
+            simulatedPnlToResolution: edgeAfterSlippage,
             normalizationVersion: "norm-v1",
             ruleParserVersion: "rule-v1",
             feeModelVersion: "fee-v1",

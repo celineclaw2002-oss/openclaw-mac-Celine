@@ -53,6 +53,8 @@ export interface KalshiLiveCaptureOptions {
 }
 
 export interface KalshiLiveCaptureSummary {
+  captureStartedAtMs: number;
+  captureCompletedAtMs: number;
   pagesFetched: number;
   marketsScanned: number;
   candidateMarkets: number;
@@ -66,14 +68,26 @@ export interface KalshiLiveCaptureSummary {
   outputRoot: string;
 }
 
+interface SeriesSelectionDiagnostic {
+  seriesTicker: string;
+  scannedCandidates: number;
+  tradableCandidates: number;
+  selectedCandidates: number;
+  selectionMode: "tradable_only" | "skipped_no_tradable_candidates";
+  chosenFamilyKey?: string;
+  visibleFamilies?: number;
+  tradableFamilies?: number;
+}
+
 export async function runKalshiLiveCapture(
   options: KalshiLiveCaptureOptions = {}
 ): Promise<KalshiLiveCaptureSummary> {
+  const captureStartedAtMs = Date.now();
   const maxPages = options.maxPages ?? 5;
   const pageLimit = options.pageLimit ?? 50;
-  const maxCandidatesPerSeries = options.maxCandidatesPerSeries ?? 10;
-  const targetSeriesTickers = options.targetSeriesTickers ?? ["KXBTC", "KXFED", "KXUSCPIYEAR"];
-  const maxCandidates = options.maxCandidates ?? targetSeriesTickers.length * maxCandidatesPerSeries;
+  const maxCandidatesPerSeries = options.maxCandidatesPerSeries ?? pageLimit * maxPages;
+  const targetSeriesTickers = options.targetSeriesTickers ?? ["KXBTC", "KXFED"];
+  const maxCandidates = options.maxCandidates ?? targetSeriesTickers.length * pageLimit * maxPages;
   const outputRoot =
     options.outputRoot ??
     path.resolve(process.cwd(), "data", "kalshi-live", timestampId(new Date()));
@@ -92,6 +106,7 @@ export async function runKalshiLiveCapture(
   await store.ensureLayout();
 
   let pagesFetched = 0;
+  let marketsScanned = 0;
   const candidateMarkets: Array<{ ticker: string; title: string; familyClass: string }> = [];
   const discoveryPages: Array<{
     seriesTicker: string;
@@ -101,6 +116,7 @@ export async function runKalshiLiveCapture(
     marketCount: number;
     payload: unknown;
   }> = [];
+  const seriesSelectionDiagnostics: SeriesSelectionDiagnostic[] = [];
   const candidateDiscoveryMarkets = new Map<
     string,
     {
@@ -121,7 +137,15 @@ export async function runKalshiLiveCapture(
 
   for (const seriesTicker of targetSeriesTickers) {
     let cursor: string | undefined;
-    let candidatesForSeries = 0;
+    const seriesCandidates: Array<{
+      ticker: string;
+      title: string;
+      familyClass: string;
+      familyKey: string;
+      marketPayload: unknown;
+      sourceEventId: string;
+      familyScore: number;
+    }> = [];
     for (let page = 0; page < maxPages && candidateMarkets.length < maxCandidates; page += 1) {
       const cursorIn = cursor;
       const pageResponse = await client.listMarkets({
@@ -130,6 +154,7 @@ export async function runKalshiLiveCapture(
         seriesTicker
       });
       pagesFetched += 1;
+      marketsScanned += pageResponse.markets.length;
       cursor = pageResponse.cursor || undefined;
       discoveryPages.push({
         seriesTicker,
@@ -144,7 +169,7 @@ export async function runKalshiLiveCapture(
         {
           captureSessionId,
           collectorVersion: "live-kalshi-v1",
-          endpointOrStream: `/markets?series_ticker=${seriesTicker}&page=${page + 1}`,
+          endpointOrStream: buildMarketsEndpoint(seriesTicker, pageLimit, cursorIn),
           sourceClass: "discovery",
           normalizedTimestampMs: discoveryPageTimestampMs,
           receiptTimestampMs: discoveryPageTimestampMs
@@ -158,31 +183,120 @@ export async function runKalshiLiveCapture(
         if (familyClass === "excluded_v1") {
           continue;
         }
-        candidateMarkets.push({
+        const familyKey = market.event_ticker ?? market.title;
+        seriesCandidates.push({
           ticker: market.ticker,
           title: market.title,
-          familyClass
-        });
-        candidateDiscoveryMarkets.set(market.ticker, {
+          familyClass,
+          familyKey,
           marketPayload: market,
-          sourceEventId: discoveryPageEvent.sourceEventId
+          sourceEventId: discoveryPageEvent.sourceEventId,
+          familyScore: scoreCandidateMarket(market, discoveryPageTimestampMs)
         });
-        candidatesForSeries += 1;
-        if (candidateMarkets.length >= maxCandidates) {
-          break;
-        }
-        if (candidatesForSeries >= maxCandidatesPerSeries) {
-          break;
-        }
       }
-      if (!cursor || candidateMarkets.length >= maxCandidates || candidatesForSeries >= maxCandidatesPerSeries) {
+      if (!cursor || candidateMarkets.length >= maxCandidates) {
         break;
       }
     }
-    if (candidateMarkets.length >= maxCandidates) {
+
+    const tradableCandidates = seriesCandidates.filter((candidate) =>
+      isObject(candidate.marketPayload) &&
+      isMarketTradableCandidate(
+        {
+          status: typeof candidate.marketPayload.status === "string" ? candidate.marketPayload.status : null,
+          open_time:
+            typeof candidate.marketPayload.open_time === "string" ? candidate.marketPayload.open_time : null
+        },
+        Date.now()
+      )
+    );
+    if (tradableCandidates.length === 0) {
+      seriesSelectionDiagnostics.push({
+        seriesTicker,
+        scannedCandidates: seriesCandidates.length,
+        tradableCandidates: 0,
+        selectedCandidates: 0,
+        selectionMode: "skipped_no_tradable_candidates"
+      });
+      continue;
+    }
+
+    const tradableFamilyCount = new Set(tradableCandidates.map((candidate) => candidate.familyKey)).size;
+    const visibleFamilyCount = new Set(seriesCandidates.map((candidate) => candidate.familyKey)).size;
+    const chosenFamilyKey =
+      seriesTicker === "KXBTC" ? chooseBestTradableFamilyKey(tradableCandidates) : undefined;
+    const chosenPool = chosenFamilyKey
+      ? tradableCandidates.filter((candidate) => candidate.familyKey === chosenFamilyKey)
+      : tradableCandidates;
+    const chosen = chosenPool.sort((left, right) => {
+      if (right.familyScore !== left.familyScore) {
+        return right.familyScore - left.familyScore;
+      }
+      if (left.familyKey !== right.familyKey) {
+        return left.familyKey.localeCompare(right.familyKey);
+      }
+      return left.ticker.localeCompare(right.ticker);
+    });
+    let acceptedForSeries = 0;
+    for (const candidate of chosen) {
+      if (acceptedForSeries >= maxCandidatesPerSeries) {
+        break;
+      }
+      candidateMarkets.push({
+        ticker: candidate.ticker,
+        title: candidate.title,
+        familyClass: candidate.familyClass
+      });
+      candidateDiscoveryMarkets.set(candidate.ticker, {
+        marketPayload: candidate.marketPayload,
+        sourceEventId: candidate.sourceEventId
+      });
+      acceptedForSeries += 1;
+      if (candidateMarkets.length >= maxCandidates) {
+        break;
+      }
+    }
+    seriesSelectionDiagnostics.push({
+      seriesTicker,
+      scannedCandidates: seriesCandidates.length,
+      tradableCandidates: tradableCandidates.length,
+      selectedCandidates: acceptedForSeries,
+      selectionMode: "tradable_only",
+      ...(chosenFamilyKey ? { chosenFamilyKey } : {}),
+      visibleFamilies: visibleFamilyCount,
+      tradableFamilies: tradableFamilyCount
+    });
+
+  if (candidateMarkets.length >= maxCandidates) {
       break;
     }
   }
+
+  const uniqueSeriesTickers = [...new Set(targetSeriesTickers)];
+  const uniqueEventTickers = [...new Set(
+    candidateMarkets
+      .map((candidate) => candidateDiscoveryMarkets.get(candidate.ticker)?.marketPayload)
+      .map((payload) => (isObject(payload) && typeof payload.event_ticker === "string" ? payload.event_ticker : undefined))
+      .filter((ticker): ticker is string => ticker !== undefined)
+  )];
+  const [seriesDetails, eventDetails] = await Promise.all([
+    Promise.all(
+      uniqueSeriesTickers.map(async (seriesTicker) => {
+        const response = await client.getSeries(seriesTicker);
+        return [seriesTicker, response.series] as const;
+      })
+    ),
+    Promise.all(
+      uniqueEventTickers.map(async (eventTicker) => {
+        const response = await client.getEvent(eventTicker);
+        return [eventTicker, response.event] as const;
+      })
+    )
+  ]);
+  const seriesByTicker = new Map(seriesDetails);
+  const eventByTicker = new Map(eventDetails);
+  const selectedBySeries = summarizeSelectedBySeries(candidateMarkets);
+  const tradableSelectedBySeries = summarizeTradableSelectedBySeries(candidateMarkets, candidateDiscoveryMarkets);
 
   for (const candidate of candidateMarkets) {
     const detail = await client.getMarket(candidate.ticker);
@@ -224,6 +338,27 @@ export async function runKalshiLiveCapture(
       },
       detail
     );
+    const marketPayload = detail.market;
+    const eventDetails = marketPayload.event_ticker ? eventByTicker.get(marketPayload.event_ticker) : undefined;
+    const seriesDetails = eventDetails?.series_ticker
+      ? seriesByTicker.get(eventDetails.series_ticker)
+      : marketPayload.series_ticker
+        ? seriesByTicker.get(marketPayload.series_ticker)
+        : undefined;
+    const enrichedLifecyclePayload = {
+      market: {
+        ...marketPayload,
+        ...(eventDetails?.series_ticker ? { series_ticker: eventDetails.series_ticker } : {}),
+        ...(seriesDetails?.fee_type ? { fee_type: seriesDetails.fee_type } : {}),
+        ...(seriesDetails?.fee_multiplier === undefined || seriesDetails.fee_multiplier === null
+          ? {}
+          : { fee_multiplier: seriesDetails.fee_multiplier }),
+        ...(eventDetails?.fee_type_override ? { fee_type_override: eventDetails.fee_type_override } : {}),
+        ...(eventDetails?.fee_multiplier_override === undefined || eventDetails.fee_multiplier_override === null
+          ? {}
+          : { fee_multiplier_override: eventDetails.fee_multiplier_override })
+      }
+    };
     const lifecycleFeeEvent = factory.buildEvent(
       {
         captureSessionId,
@@ -233,7 +368,7 @@ export async function runKalshiLiveCapture(
         normalizedTimestampMs: nowMs,
         receiptTimestampMs: nowMs
       },
-      detail
+      enrichedLifecyclePayload
     );
 
     await acquisition.recordMetadata(metadataEvent);
@@ -340,6 +475,7 @@ export async function runKalshiLiveCapture(
   const observationModule = new DeterministicObservationModule({
     anchorsByContractId: new Map(),
     edgesById: new Map(edges.map((edge) => [edge.edgeId, edge])),
+    executionByContractId: new Map(executionStates.map((state) => [state.contractId, state])),
     feeByContractId: new Map(feeStates.map((state) => [state.contractId, state])),
     quotesByContractId: new Map(quoteStates.map((state) => [state.contractId, state]))
   });
@@ -358,22 +494,28 @@ export async function runKalshiLiveCapture(
     )
   });
   const internalSimulations: InternalConsistencyTradeSimulation[] = [];
-  for (const observation of internalObservations.slice(0, 10)) {
-    const simulation = await simulationModule.simulateInternal(
-      observation.observationId,
-      "aggressive_all_legs"
-    );
-    if (simulation) {
-      internalSimulations.push(simulation);
+  for (const observation of internalObservations.filter((row) => row.executionSafeFlag)) {
+    for (const template of ["aggressive_all_legs", "passive_first", "hybrid_edge_tiered"] as const) {
+      const simulation = await simulationModule.simulateInternal(observation.observationId, template);
+      if (simulation) {
+        internalSimulations.push(simulation);
+      }
     }
   }
 
+  const captureCompletedAtMs = Date.now();
+
   await Promise.all([
     store.writeSnapshot("summaries/capture-summary.json", {
+      captureStartedAtMs,
+      captureCompletedAtMs,
       pagesFetched,
-      marketsScanned: candidateMarkets.length,
+      marketsScanned,
       targetSeriesTickers,
       maxCandidatesPerSeries,
+      selectedBySeries,
+      seriesSelectionDiagnostics,
+      tradableSelectedBySeries,
       candidateMarkets: candidateMarkets.length,
       sourceEventsCaptured: sink.events.length,
       normalizedContracts: contracts.length,
@@ -386,6 +528,26 @@ export async function runKalshiLiveCapture(
     }),
     store.writeSnapshot("summaries/discovery-pages.json", discoveryPages),
     store.writeSnapshot("summaries/candidate-markets.json", candidateMarkets),
+    store.writeSnapshot(
+      "summaries/series-fee-metadata.json",
+      [...seriesByTicker.entries()].map(([seriesTicker, series]) => ({
+        seriesTicker,
+        feeType: series.fee_type ?? null,
+        feeMultiplier: series.fee_multiplier ?? null,
+        title: series.title ?? null,
+        category: series.category ?? null
+      }))
+    ),
+    store.writeSnapshot(
+      "summaries/event-fee-metadata.json",
+      [...eventByTicker.entries()].map(([eventTicker, event]) => ({
+        eventTicker,
+        seriesTicker: event.series_ticker ?? null,
+        feeTypeOverride: event.fee_type_override ?? null,
+        feeMultiplierOverride: event.fee_multiplier_override ?? null,
+        title: event.title ?? null
+      }))
+    ),
     store.writeSnapshot("staging/discovery-records.json", discoveryRecords),
     store.writeSnapshot("staging/metadata-records.json", metadataRecords),
     store.writeSnapshot("staging/book-records.json", bookRecords),
@@ -404,10 +566,11 @@ export async function runKalshiLiveCapture(
     store.writeSnapshot("observations/internal-consistency.json", internalObservations),
     store.writeSnapshot("simulations/internal-consistency.json", internalSimulations)
   ]);
-
   return {
+    captureStartedAtMs,
+    captureCompletedAtMs,
     pagesFetched,
-    marketsScanned: candidateMarkets.length,
+    marketsScanned,
     candidateMarkets: candidateMarkets.length,
     sourceEventsCaptured: sink.events.length,
     discoveryRecords: discoveryRecords.length,
@@ -422,4 +585,131 @@ export async function runKalshiLiveCapture(
 
 function timestampId(now: Date): string {
   return now.toISOString().replaceAll(":", "").replaceAll(".", "").replaceAll("-", "");
+}
+
+function buildMarketsEndpoint(seriesTicker: string, limit: number, cursor?: string): string {
+  const params = new URLSearchParams({
+    limit: String(limit),
+    series_ticker: seriesTicker
+  });
+  if (cursor) {
+    params.set("cursor", cursor);
+  }
+  return `/markets?${params.toString()}`;
+}
+
+function isObject(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null;
+}
+
+function isMarketTradableCandidate(
+  market: {
+    status?: string | null;
+    open_time?: string | null;
+  },
+  nowMs: number
+): boolean {
+  const status = market.status?.toLowerCase();
+  const openTimeMs = market.open_time ? Date.parse(market.open_time) : undefined;
+  const openByTime = openTimeMs === undefined || openTimeMs <= nowMs;
+  return (status === "active" || status === "open" || status === "listed") && openByTime;
+}
+
+function scoreCandidateMarket(
+  market: {
+    status?: string | null;
+    open_time?: string | null;
+    liquidity_dollars?: string | null;
+    volume_fp?: string | null;
+  },
+  nowMs: number
+): number {
+  const status = market.status?.toLowerCase();
+  const openTimeMs = market.open_time ? Date.parse(market.open_time) : undefined;
+  const liquidity = Number(market.liquidity_dollars ?? "0");
+  const volume = Number(market.volume_fp ?? "0");
+  const isOpenByTime = openTimeMs === undefined || openTimeMs <= nowMs;
+
+  let score = 0;
+  if (status === "active" || status === "open") {
+    score += 100;
+  } else if (status === "listed" && isOpenByTime) {
+    score += 80;
+  } else if (status === "listed") {
+    score += 40;
+  } else if (status === "initialized") {
+    score += 10;
+  }
+  if (isOpenByTime) {
+    score += 20;
+  }
+  score += Math.min(liquidity, 50);
+  score += Math.min(volume, 25);
+  return score;
+}
+
+function chooseBestTradableFamilyKey(
+  candidates: Array<{
+    familyKey: string;
+    familyScore: number;
+  }>
+): string | undefined {
+  if (candidates.length === 0) {
+    return undefined;
+  }
+  const stats = new Map<string, { count: number; score: number }>();
+  for (const candidate of candidates) {
+    const row = stats.get(candidate.familyKey);
+    if (row) {
+      row.count += 1;
+      row.score += candidate.familyScore;
+    } else {
+      stats.set(candidate.familyKey, { count: 1, score: candidate.familyScore });
+    }
+  }
+  return [...stats.entries()]
+    .sort((left, right) => {
+      const leftRank = left[1].count * 10 + left[1].score / left[1].count;
+      const rightRank = right[1].count * 10 + right[1].score / right[1].count;
+      if (rightRank !== leftRank) {
+        return rightRank - leftRank;
+      }
+      return left[0].localeCompare(right[0]);
+    })[0]?.[0];
+}
+
+function summarizeSelectedBySeries(
+  candidates: Array<{ ticker: string }>
+): Record<string, number> {
+  const counts = new Map<string, number>();
+  for (const candidate of candidates) {
+    const series = candidate.ticker.split("-")[0] ?? candidate.ticker;
+    counts.set(series, (counts.get(series) ?? 0) + 1);
+  }
+  return Object.fromEntries([...counts.entries()].sort(([left], [right]) => left.localeCompare(right)));
+}
+
+function summarizeTradableSelectedBySeries(
+  candidates: Array<{ ticker: string }>,
+  candidateDiscoveryMarkets: Map<string, { marketPayload: unknown; sourceEventId: string }>
+): Record<string, number> {
+  const counts = new Map<string, number>();
+  for (const candidate of candidates) {
+    const marketPayload = candidateDiscoveryMarkets.get(candidate.ticker)?.marketPayload;
+    if (
+      !isObject(marketPayload) ||
+      !isMarketTradableCandidate(
+        {
+          status: typeof marketPayload.status === "string" ? marketPayload.status : null,
+          open_time: typeof marketPayload.open_time === "string" ? marketPayload.open_time : null
+        },
+        Date.now()
+      )
+    ) {
+      continue;
+    }
+    const series = candidate.ticker.split("-")[0] ?? candidate.ticker;
+    counts.set(series, (counts.get(series) ?? 0) + 1);
+  }
+  return Object.fromEntries([...counts.entries()].sort(([left], [right]) => left.localeCompare(right)));
 }

@@ -1,4 +1,4 @@
-import type { KalshiApiMarketResponse, KalshiApiMarketsResponse, KalshiApiOrderbookResponse } from "../venues/kalshi.js";
+import type { KalshiApiEventResponse, KalshiApiMarketResponse, KalshiApiMarketsResponse, KalshiApiOrderbookResponse, KalshiApiSeriesResponse } from "../venues/kalshi.js";
 export interface KalshiListMarketsOptions {
     cursor?: string;
     limit?: number;
@@ -11,5 +11,7 @@ export declare class KalshiHttpClient {
     listMarkets(options?: KalshiListMarketsOptions): Promise<KalshiApiMarketsResponse>;
     getMarket(ticker: string): Promise<KalshiApiMarketResponse>;
     getOrderbook(ticker: string): Promise<KalshiApiOrderbookResponse>;
+    getSeries(seriesTicker: string): Promise<KalshiApiSeriesResponse>;
+    getEvent(eventTicker: string): Promise<KalshiApiEventResponse>;
     private fetchJson;
 }

@@ -7,6 +7,8 @@ export interface KalshiLiveCaptureOptions {
     targetSeriesTickers?: string[];
 }
 export interface KalshiLiveCaptureSummary {
+    captureStartedAtMs: number;
+    captureCompletedAtMs: number;
     pagesFetched: number;
     marketsScanned: number;
     candidateMarkets: number;

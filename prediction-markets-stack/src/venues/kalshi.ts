@@ -13,6 +13,8 @@ export interface KalshiRangeRecord {
 export interface KalshiMarketRecord {
   ticker: string;
   title: string;
+  event_ticker?: string | null;
+  series_ticker?: string | null;
   subtitle?: string | null;
   category?: string | null;
   status?: string | null;
@@ -38,6 +40,10 @@ export interface KalshiMarketRecord {
   open_interest?: number | null;
   ranges?: KalshiRangeRecord[] | null;
   fee_config?: Record<string, unknown> | null;
+  fee_type?: string | null;
+  fee_multiplier?: number | null;
+  fee_type_override?: string | null;
+  fee_multiplier_override?: number | null;
   can_close_early?: boolean | null;
 }
 
@@ -55,6 +61,8 @@ export interface KalshiBookRecord {
 export interface KalshiApiMarket {
   ticker: string;
   title: string;
+  event_ticker?: string;
+  series_ticker?: string;
   yes_bid_dollars?: string | null;
   yes_ask_dollars?: string | null;
   no_bid_dollars?: string | null;
@@ -79,7 +87,27 @@ export interface KalshiApiMarket {
   strike_type?: "greater" | "greater_or_equal" | "less" | "less_or_equal" | string | null;
   price_ranges?: Array<{ start?: string; end?: string; step?: string }> | null;
   fee_config?: Record<string, unknown> | null;
+  fee_type?: string | null;
+  fee_multiplier?: number | null;
+  fee_type_override?: string | null;
+  fee_multiplier_override?: number | null;
   can_close_early?: boolean | null;
+}
+
+export interface KalshiApiSeries {
+  ticker: string;
+  fee_type?: string | null;
+  fee_multiplier?: number | null;
+  title?: string | null;
+  category?: string | null;
+}
+
+export interface KalshiApiEvent {
+  event_ticker: string;
+  series_ticker?: string | null;
+  fee_type_override?: string | null;
+  fee_multiplier_override?: number | null;
+  title?: string | null;
 }
 
 export interface KalshiApiMarketsResponse {
@@ -89,6 +117,15 @@ export interface KalshiApiMarketsResponse {
 
 export interface KalshiApiMarketResponse {
   market: KalshiApiMarket;
+}
+
+export interface KalshiApiSeriesResponse {
+  series: KalshiApiSeries;
+}
+
+export interface KalshiApiEventResponse {
+  event: KalshiApiEvent;
+  markets?: KalshiApiMarket[] | null;
 }
 
 export interface KalshiApiOrderbookResponse {
@@ -243,6 +280,8 @@ function mapKalshiApiMarket(market: KalshiApiMarket): KalshiMarketRecord {
   return {
     ticker: market.ticker,
     title: market.title,
+    ...(market.event_ticker === undefined ? {} : { event_ticker: market.event_ticker }),
+    ...(market.series_ticker === undefined ? {} : { series_ticker: market.series_ticker }),
     ...(market.subtitle === undefined ? {} : { subtitle: market.subtitle }),
     ...(market.category === undefined ? {} : { category: market.category }),
     ...(market.status === undefined ? {} : { status: market.status }),
@@ -267,6 +306,12 @@ function mapKalshiApiMarket(market: KalshiApiMarket): KalshiMarketRecord {
     ...(openInterest === null ? {} : { open_interest: openInterest }),
     ...(inferredRanges === null ? {} : { ranges: inferredRanges }),
     ...(market.fee_config === undefined ? {} : { fee_config: market.fee_config }),
+    ...(market.fee_type === undefined ? {} : { fee_type: market.fee_type }),
+    ...(market.fee_multiplier === undefined ? {} : { fee_multiplier: market.fee_multiplier }),
+    ...(market.fee_type_override === undefined ? {} : { fee_type_override: market.fee_type_override }),
+    ...(market.fee_multiplier_override === undefined
+      ? {}
+      : { fee_multiplier_override: market.fee_multiplier_override }),
     ...(market.can_close_early === undefined ? {} : { can_close_early: market.can_close_early })
   };
 }

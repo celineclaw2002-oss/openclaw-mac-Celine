@@ -25,6 +25,12 @@ export class KalshiHttpClient {
     async getOrderbook(ticker) {
         return this.fetchJson(`${this.baseUrl}/markets/${encodeURIComponent(ticker)}/orderbook`);
     }
+    async getSeries(seriesTicker) {
+        return this.fetchJson(`${this.baseUrl}/series/${encodeURIComponent(seriesTicker)}`);
+    }
+    async getEvent(eventTicker) {
+        return this.fetchJson(`${this.baseUrl}/events/${encodeURIComponent(eventTicker)}`);
+    }
     async fetchJson(url) {
         const response = await fetch(url, {
             headers: {

@@ -1,0 +1,45 @@
+{
+  "outputRoot": "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live/20260816T163326693Z",
+  "checkedAtIso": "2026-08-18T04:00:00.000Z",
+  "btcThresholdContracts": 2,
+  "rows": [
+    {
+      "contractId": "contract::KXBTC-26AUG1800-T72299.99",
+      "venueContractId": "KXBTC-26AUG1800-T72299.99",
+      "comparisonOperator": ">",
+      "thresholdValue": 72299.99,
+      "evaluationTimestampMs": 1787025600000,
+      "evaluationTimezone": "EDT",
+      "referencePriceDefinition": "CF Benchmarks BRTI",
+      "settlementTimestampConvention": "12 AM",
+      "referenceSpotPrice": 63280.41,
+      "thresholdDistanceFromSpot": 9019.580000000002,
+      "thresholdDistancePctFromSpot": 0.14253352656849097,
+      "nearestDeribitFuture": "BTC-18AUG26",
+      "nearestDeribitFutureExpiryMs": 1787040000000,
+      "nearestFutureTimeGapHours": 4,
+      "relevantDeribitOptionCount": 12,
+      "mappingConfidenceScore": 0.9,
+      "qualityFlags": []
+    },
+    {
+      "contractId": "contract::KXBTC-26AUG1800-T53700",
+      "venueContractId": "KXBTC-26AUG1800-T53700",
+      "comparisonOperator": "<",
+      "thresholdValue": 53700,
+      "evaluationTimestampMs": 1787025600000,
+      "evaluationTimezone": "EDT",
+      "referencePriceDefinition": "CF Benchmarks BRTI",
+      "settlementTimestampConvention": "12 AM",
+      "referenceSpotPrice": 63280.41,
+      "thresholdDistanceFromSpot": -9580.410000000003,
+      "thresholdDistancePctFromSpot": -0.15139614297694978,
+      "nearestDeribitFuture": "BTC-18AUG26",
+      "nearestDeribitFutureExpiryMs": 1787040000000,
+      "nearestFutureTimeGapHours": 4,
+      "relevantDeribitOptionCount": 12,
+      "mappingConfidenceScore": 0.9,
+      "qualityFlags": []
+    }
+  ]
+}

@@ -7,7 +7,18 @@
     "build": "tsc -p tsconfig.json",
     "check": "tsc -p tsconfig.json --noEmit",
     "demo": "node --input-type=module -e \"import('./dist/index.js').then(async (m) => { const out = await m.runKalshiBtcThresholdDemo(); console.log(JSON.stringify(out, null, 2)); })\"",
-    "capture:kalshi": "node --input-type=module -e \"import('./dist/index.js').then(async (m) => { const out = await m.runKalshiLiveCapture(); console.log(JSON.stringify(out, null, 2)); })\""
+    "capture:kalshi": "node --input-type=module -e \"import('./dist/index.js').then(async (m) => { const out = await m.runKalshiLiveCapture(); console.log(JSON.stringify(out, null, 2)); })\"",
+    "audit:semantic": "node --input-type=module -e \"import('./dist/index.js').then(async (m) => { const out = await m.runSemanticAudit(); console.log(JSON.stringify(out, null, 2)); })\"",
+    "capture:coinbase-btc": "node --input-type=module -e \"import('./dist/index.js').then(async (m) => { const out = await m.runCoinbaseBtcSpotCapture(); console.log(JSON.stringify(out, null, 2)); })\"",
+    "capture:deribit-btc": "node --input-type=module -e \"import('./dist/index.js').then(async (m) => { const out = await m.runDeribitBtcAnchorCapture(); console.log(JSON.stringify(out, null, 2)); })\"",
+    "audit:btc-anchor-mapping": "node --input-type=module -e \"import('./dist/index.js').then(async (m) => { const out = await m.runBtcAnchorMappingAudit(); console.log(JSON.stringify(out, null, 2)); })\"",
+    "plan:btc-capture-window": "node --input-type=module -e \"import('./dist/index.js').then(async (m) => { const out = await m.runBtcCaptureWindowPlan(); console.log(JSON.stringify(out, null, 2)); })\"",
+    "audit:anchor-input": "node --input-type=module -e \"import('./dist/index.js').then(async (m) => { const out = await m.runAnchorInputAudit(); console.log(JSON.stringify(out, null, 2)); })\"",
+    "build:btc-raw-anchor": "node --input-type=module -e \"import('./dist/index.js').then(async (m) => { const out = await m.runBtcRawAnchorProbability(); console.log(JSON.stringify(out, null, 2)); })\"",
+    "session:btc-observation": "node --input-type=module -e \"import('./dist/index.js').then(async (m) => { const out = await m.runBtcObservationSession(); console.log(JSON.stringify(out, null, 2)); })\"",
+    "build:btc-anchor-residuals": "node --input-type=module -e \"import('./dist/index.js').then(async (m) => { const out = await m.runBtcAnchorResiduals(); console.log(JSON.stringify(out, null, 2)); })\"",
+    "run:btc-anchor-experiments": "node --input-type=module -e \"import('./dist/index.js').then(async (m) => { const out = await m.runBtcAnchorExperimentRunner(); console.log(JSON.stringify(out, null, 2)); })\"",
+    "run:internal-consistency-experiments": "node --input-type=module -e \"import('./dist/index.js').then(async (m) => { const out = await m.runInternalConsistencyExperimentRunner(); console.log(JSON.stringify(out, null, 2)); })\""
   },
   "devDependencies": {
     "@types/node": "^26.2.0",

@@ -1,0 +1,78 @@
+{
+  "outputRoot": "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live/20260816T171759450Z",
+  "scopeNote": "This scorecard only evaluates tradable external-anchor observations admitted by the current BTC anchor path. Mapped-but-nontradable BTC contracts are counted but excluded from simulated trades.",
+  "mappedObservations": 250,
+  "diagnosticRows": 250,
+  "observationTimeMs": 1786900740321,
+  "totalObservations": 250,
+  "evaluatedTradableObservations": 0,
+  "tradableObservations": 0,
+  "nonTradableObservations": 250,
+  "skippedIneligibleObservations": 250,
+  "experimentRuns": 0,
+  "scorecard": [
+    {
+      "executionTemplateId": "aggressive_all_legs",
+      "residualThreshold": 0,
+      "eligibleObservations": 0,
+      "simulatedTrades": 0,
+      "meanResidualSignal": 0
+    },
+    {
+      "executionTemplateId": "passive_first",
+      "residualThreshold": 0,
+      "eligibleObservations": 0,
+      "simulatedTrades": 0,
+      "meanResidualSignal": 0
+    },
+    {
+      "executionTemplateId": "hybrid_edge_tiered",
+      "residualThreshold": 0,
+      "eligibleObservations": 0,
+      "simulatedTrades": 0,
+      "meanResidualSignal": 0
+    },
+    {
+      "executionTemplateId": "aggressive_all_legs",
+      "residualThreshold": 0.01,
+      "eligibleObservations": 0,
+      "simulatedTrades": 0,
+      "meanResidualSignal": 0
+    },
+    {
+      "executionTemplateId": "passive_first",
+      "residualThreshold": 0.01,
+      "eligibleObservations": 0,
+      "simulatedTrades": 0,
+      "meanResidualSignal": 0
+    },
+    {
+      "executionTemplateId": "hybrid_edge_tiered",
+      "residualThreshold": 0.01,
+      "eligibleObservations": 0,
+      "simulatedTrades": 0,
+      "meanResidualSignal": 0
+    },
+    {
+      "executionTemplateId": "aggressive_all_legs",
+      "residualThreshold": 0.02,
+      "eligibleObservations": 0,
+      "simulatedTrades": 0,
+      "meanResidualSignal": 0
+    },
+    {
+      "executionTemplateId": "passive_first",
+      "residualThreshold": 0.02,
+      "eligibleObservations": 0,
+      "simulatedTrades": 0,
+      "meanResidualSignal": 0
+    },
+    {
+      "executionTemplateId": "hybrid_edge_tiered",
+      "residualThreshold": 0.02,
+      "eligibleObservations": 0,
+      "simulatedTrades": 0,
+      "meanResidualSignal": 0
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "outputRoot": "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live/20260816T164220924Z",
+  "checkedAtIso": "2026-08-18T04:00:00.000Z",
+  "btcContractsInCapture": 50,
+  "btcThresholdContractsInScope": 2,
+  "btcBucketContractsExcluded": 48,
+  "btcThresholdContracts": 2,
+  "scopeNote": "This audit currently covers only BTC threshold binaries. BTC bucket/range contracts are excluded from the anchor audit in this phase.",
+  "rows": [
+    {
+      "contractId": "contract::KXBTC-26AUG1800-T72299.99",
+      "venueContractId": "KXBTC-26AUG1800-T72299.99",
+      "comparisonOperator": ">",
+      "thresholdValue": 72299.99,
+      "evaluationTimestampMs": 1787025600000,
+      "evaluationTimezone": "EDT",
+      "referencePriceDefinition": "CF Benchmarks BRTI",
+      "settlementTimestampConvention": "12 AM",
+      "referenceSpotPrice": 63225.67,
+      "thresholdDistanceFromSpot": 9074.320000000007,
+      "thresholdDistancePctFromSpot": 0.14352271790872295,
+      "nearestDeribitFuture": "BTC-18AUG26",
+      "nearestDeribitFutureExpiryMs": 1787040000000,
+      "nearestFutureTimeGapHours": 4,
+      "relevantDeribitOptionCount": 12,
+      "mappingConfidenceScore": 0.9,
+      "qualityFlags": []
+    },
+    {
+      "contractId": "contract::KXBTC-26AUG1800-T53700",
+      "venueContractId": "KXBTC-26AUG1800-T53700",
+      "comparisonOperator": "<",
+      "thresholdValue": 53700,
+      "evaluationTimestampMs": 1787025600000,
+      "evaluationTimezone": "EDT",
+      "referencePriceDefinition": "CF Benchmarks BRTI",
+      "settlementTimestampConvention": "12 AM",
+      "referenceSpotPrice": 63225.67,
+      "thresholdDistanceFromSpot": -9525.669999999998,
+      "thresholdDistancePctFromSpot": -0.1506614322948258,
+      "nearestDeribitFuture": "BTC-18AUG26",
+      "nearestDeribitFutureExpiryMs": 1787040000000,
+      "nearestFutureTimeGapHours": 4,
+      "relevantDeribitOptionCount": 12,
+      "mappingConfidenceScore": 0.9,
+      "qualityFlags": []
+    }
+  ]
+}

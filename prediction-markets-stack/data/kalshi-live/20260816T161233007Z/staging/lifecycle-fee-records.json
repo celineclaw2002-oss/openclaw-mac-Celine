@@ -1,0 +1,818 @@
+[
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-T72299.99::1786896753670::615d8aac",
+    "venueContractId": "KXBTC-26AUG1800-T72299.99",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-T53700::1786896753820::7f9f3987",
+    "venueContractId": "KXBTC-26AUG1800-T53700",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B72250::1786896753961::c44b0a15",
+    "venueContractId": "KXBTC-26AUG1800-B72250",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B72150::1786896754089::76393714",
+    "venueContractId": "KXBTC-26AUG1800-B72150",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B72050::1786896754241::15c2b1af",
+    "venueContractId": "KXBTC-26AUG1800-B72050",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B71950::1786896754378::9fd26beb",
+    "venueContractId": "KXBTC-26AUG1800-B71950",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B71850::1786896754534::58862248",
+    "venueContractId": "KXBTC-26AUG1800-B71850",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B71750::1786896754745::6ab8225d",
+    "venueContractId": "KXBTC-26AUG1800-B71750",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B71650::1786896754874::dc8f3d72",
+    "venueContractId": "KXBTC-26AUG1800-B71650",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B71550::1786896755034::58ce1567",
+    "venueContractId": "KXBTC-26AUG1800-B71550",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B71450::1786896755253::a34f9794",
+    "venueContractId": "KXBTC-26AUG1800-B71450",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B71350::1786896755404::93f315d9",
+    "venueContractId": "KXBTC-26AUG1800-B71350",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B71250::1786896755536::59e03a1e",
+    "venueContractId": "KXBTC-26AUG1800-B71250",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B71150::1786896755686::d48472a3",
+    "venueContractId": "KXBTC-26AUG1800-B71150",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B71050::1786896755819::7d8d0800",
+    "venueContractId": "KXBTC-26AUG1800-B71050",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B70950::1786896755954::dcd07216",
+    "venueContractId": "KXBTC-26AUG1800-B70950",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B70850::1786896756233::0a953869",
+    "venueContractId": "KXBTC-26AUG1800-B70850",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B70750::1786896756384::58a40964",
+    "venueContractId": "KXBTC-26AUG1800-B70750",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B70650::1786896756521::edf380df",
+    "venueContractId": "KXBTC-26AUG1800-B70650",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B70550::1786896756740::ee88de0a",
+    "venueContractId": "KXBTC-26AUG1800-B70550",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B70450::1786896756942::7bdc629d",
+    "venueContractId": "KXBTC-26AUG1800-B70450",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B70350::1786896757187::2f715c38",
+    "venueContractId": "KXBTC-26AUG1800-B70350",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B70250::1786896757333::4090cab3",
+    "venueContractId": "KXBTC-26AUG1800-B70250",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B70150::1786896757474::d8a8ccae",
+    "venueContractId": "KXBTC-26AUG1800-B70150",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B70050::1786896757626::f4307be1",
+    "venueContractId": "KXBTC-26AUG1800-B70050",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B69950::1786896757762::ced3cf0c",
+    "venueContractId": "KXBTC-26AUG1800-B69950",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B69850::1786896757901::f777720b",
+    "venueContractId": "KXBTC-26AUG1800-B69850",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B69750::1786896758043::6c19f4e2",
+    "venueContractId": "KXBTC-26AUG1800-B69750",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B69650::1786896758195::7003a479",
+    "venueContractId": "KXBTC-26AUG1800-B69650",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B69550::1786896758345::24a90138",
+    "venueContractId": "KXBTC-26AUG1800-B69550",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B69450::1786896758475::183254c7",
+    "venueContractId": "KXBTC-26AUG1800-B69450",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B69350::1786896758619::ad8660ee",
+    "venueContractId": "KXBTC-26AUG1800-B69350",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B69250::1786896758764::8ff84d95",
+    "venueContractId": "KXBTC-26AUG1800-B69250",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B69150::1786896758896::36a9ecc4",
+    "venueContractId": "KXBTC-26AUG1800-B69150",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B69050::1786896759042::430b2b63",
+    "venueContractId": "KXBTC-26AUG1800-B69050",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B68950::1786896759185::f7d3fabd",
+    "venueContractId": "KXBTC-26AUG1800-B68950",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B68850::1786896759324::941874ae",
+    "venueContractId": "KXBTC-26AUG1800-B68850",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B68750::1786896759547::0cdca1d7",
+    "venueContractId": "KXBTC-26AUG1800-B68750",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B68650::1786896759689::e881cd40",
+    "venueContractId": "KXBTC-26AUG1800-B68650",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B68550::1786896759835::79f97331",
+    "venueContractId": "KXBTC-26AUG1800-B68550",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B68450::1786896759974::41cdcd82",
+    "venueContractId": "KXBTC-26AUG1800-B68450",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B68350::1786896760180::60d5a8bb",
+    "venueContractId": "KXBTC-26AUG1800-B68350",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B68250::1786896760320::5071c334",
+    "venueContractId": "KXBTC-26AUG1800-B68250",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B68150::1786896760567::0dff23a5",
+    "venueContractId": "KXBTC-26AUG1800-B68150",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B68050::1786896760719::33400646",
+    "venueContractId": "KXBTC-26AUG1800-B68050",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B67950::1786896760848::26bb68b6",
+    "venueContractId": "KXBTC-26AUG1800-B67950",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B67850::1786896760995::214444ed",
+    "venueContractId": "KXBTC-26AUG1800-B67850",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B67750::1786896761139::7c69fea0",
+    "venueContractId": "KXBTC-26AUG1800-B67750",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B67650::1786896761273::116bdbbf",
+    "venueContractId": "KXBTC-26AUG1800-B67650",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXBTC-26AUG1800-B67550::1786896761413::55a92fca",
+    "venueContractId": "KXBTC-26AUG1800-B67550",
+    "rawStatus": "initialized",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXFED-27APR-T4.25::1786896761630::b5f89c43",
+    "venueContractId": "KXFED-27APR-T4.25",
+    "rawStatus": "active",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXFED-27APR-T4.00::1786896761764::762b1704",
+    "venueContractId": "KXFED-27APR-T4.00",
+    "rawStatus": "active",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXFED-27APR-T3.75::1786896761906::817a0422",
+    "venueContractId": "KXFED-27APR-T3.75",
+    "rawStatus": "active",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXFED-27APR-T3.50::1786896762049::238110b1",
+    "venueContractId": "KXFED-27APR-T3.50",
+    "rawStatus": "active",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXFED-27APR-T3.25::1786896762182::4f001fb7",
+    "venueContractId": "KXFED-27APR-T3.25",
+    "rawStatus": "active",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXFED-27APR-T3.00::1786896762326::b0960649",
+    "venueContractId": "KXFED-27APR-T3.00",
+    "rawStatus": "active",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXFED-27APR-T2.75::1786896762543::2fe8fbcb",
+    "venueContractId": "KXFED-27APR-T2.75",
+    "rawStatus": "active",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXFED-27APR-T2.50::1786896762699::26be2ea4",
+    "venueContractId": "KXFED-27APR-T2.50",
+    "rawStatus": "active",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXFED-27APR-T2.25::1786896762849::b3991493",
+    "venueContractId": "KXFED-27APR-T2.25",
+    "rawStatus": "active",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXFED-27APR-T2.00::1786896762988::a686b7e0",
+    "venueContractId": "KXFED-27APR-T2.00",
+    "rawStatus": "active",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXFED-27APR-T1.75::1786896763139::4c363dbc",
+    "venueContractId": "KXFED-27APR-T1.75",
+    "rawStatus": "active",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXFED-27APR-T1.50::1786896763289::b2419691",
+    "venueContractId": "KXFED-27APR-T1.50",
+    "rawStatus": "active",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXFED-27APR-T1.25::1786896763415::66386253",
+    "venueContractId": "KXFED-27APR-T1.25",
+    "rawStatus": "active",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXFED-27APR-T1.00::1786896763550::6618653f",
+    "venueContractId": "KXFED-27APR-T1.00",
+    "rawStatus": "active",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXFED-27APR-T0.75::1786896763695::13357795",
+    "venueContractId": "KXFED-27APR-T0.75",
+    "rawStatus": "active",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXFED-27APR-T0.50::1786896763835::1166a1a5",
+    "venueContractId": "KXFED-27APR-T0.50",
+    "rawStatus": "active",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXFED-27APR-T0.25::1786896763954::44e0f70a",
+    "venueContractId": "KXFED-27APR-T0.25",
+    "rawStatus": "active",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::lifecycle_fee::/markets/KXFED-27APR-T0.00::1786896764274::0d136406",
+    "venueContractId": "KXFED-27APR-T0.00",
+    "rawStatus": "active",
+    "canCloseEarly": true,
+    "feeConfig": {},
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "outputRoot": "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live/20260816T154401660Z",
+  "checkedAtIso": "2026-08-16T15:49:38.351Z",
+  "findings": [
+    {
+      "severity": "medium",
+      "code": "target_series_not_covered",
+      "message": "A target series ticker was requested but did not appear in candidate markets.",
+      "evidence": {
+        "seriesTicker": "KXUSCPIYEAR"
+      }
+    }
+  ],
+  "metrics": {
+    "contracts": 20,
+    "thresholds": 12,
+    "buckets": 8,
+    "edges": 17,
+    "discoveryEvents": 5,
+    "findingsHigh": 0,
+    "findingsMedium": 1,
+    "findingsLow": 0
+  }
+}

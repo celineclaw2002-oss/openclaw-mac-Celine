@@ -22,6 +22,7 @@ export type OutcomeType =
   | "range_exclusive";
 
 export type NormalizedStatus =
+  | "initialized"
   | "listed"
   | "active"
   | "paused"
@@ -44,7 +45,7 @@ export type EdgeType =
 
 export type HardnessClass = "hard" | "conditional" | "soft";
 
-export type AnchorFamily = "btc_thresholds" | "fed_decisions" | "macro_ranges";
+export type AnchorFamily = "btc_thresholds" | "btc_ranges" | "fed_decisions" | "macro_ranges";
 
 export type ExecutionTemplateId =
   | "aggressive_all_legs"

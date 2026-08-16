@@ -1,0 +1,16 @@
+[
+  {
+    "seriesTicker": "KXBTC",
+    "feeType": "quadratic",
+    "feeMultiplier": 1,
+    "title": "Bitcoin range",
+    "category": "Crypto"
+  },
+  {
+    "seriesTicker": "KXFED",
+    "feeType": "quadratic_with_maker_fees",
+    "feeMultiplier": 1,
+    "title": "Fed funds rate",
+    "category": "Economics"
+  }
+]

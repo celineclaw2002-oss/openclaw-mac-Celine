@@ -8,6 +8,9 @@ export interface InternalConsistencyEdgeObservation extends ReplayLineage {
     grossResidual: number;
     netFeeAdjustedResidual: number;
     depthAdjustedResidual: number;
+    averageQuoteQuality?: number;
+    modeledEntryFillProbability?: number;
+    modeledExecutionPenalty?: number;
     semanticSafeFlag: boolean;
     executionSafeFlag: boolean;
     qualityFlags: string[];
@@ -26,11 +29,15 @@ export interface ExternalAnchorContractObservation extends ReplayLineage {
     contractId: string;
     anchorFamily: string;
     observationTimeMs: number;
-    marketProbabilityMid: number;
-    rawResidual: number;
+    marketProbabilityMid?: number;
+    rawResidual?: number;
     calibratedResidual?: number;
     uncertaintyAdjustedResidual?: number;
     mappingSafeFlag: boolean;
+    tradableFlag: boolean;
+    marketStatus?: string;
+    openTimeMs?: number;
+    eligibilityReason?: string;
     qualityFlags: string[];
 }
 export interface ExternalAnchorTradeSimulation extends ReplayLineage {

@@ -59,14 +59,24 @@ export class KalshiStagingParser {
     parseLifecycleFee(event) {
         this.assertSourceClass(event, "lifecycle_fee");
         const market = extractSingleMarketRecord(parseKalshiPayload(event));
+        const feeType = market.fee_type_override ?? market.fee_type;
+        const feeMultiplier = market.fee_multiplier_override ?? market.fee_multiplier;
         return {
             sourceEventId: event.sourceEventId,
             venueContractId: market.ticker,
+            ...(market.series_ticker ? { seriesTicker: market.series_ticker } : {}),
+            ...(market.event_ticker ? { eventTicker: market.event_ticker } : {}),
             ...(market.status ? { rawStatus: market.status } : {}),
             ...(market.can_close_early === null || market.can_close_early === undefined
                 ? {}
                 : { canCloseEarly: market.can_close_early }),
-            ...(market.fee_config ? { feeScheduleId: "kalshi-default" } : {}),
+            ...((feeType || feeMultiplier !== undefined || market.fee_config)
+                ? { feeScheduleId: "kalshi-default" }
+                : {}),
+            ...(feeType ? { feeType } : {}),
+            ...(feeMultiplier === null || feeMultiplier === undefined
+                ? {}
+                : { feeMultiplier }),
             feeConfig: market.fee_config ?? {},
             parseVersion: KALSHI_PARSE_VERSION,
             parseSuccess: true,
@@ -114,11 +124,11 @@ function classifyFromPayload(market) {
     if (lower.includes("btc") || lower.includes("bitcoin")) {
         return "btc_threshold_primary";
     }
-    if ((market.ranges?.length ?? 0) > 1 || market.floor_strike !== null || market.cap_strike !== null) {
-        return "bucket_partition_candidate";
-    }
     if (lower.includes("fed") || lower.includes("fomc") || lower.includes("rate")) {
         return "fed_policy_candidate";
+    }
+    if ((market.ranges?.length ?? 0) > 1 || market.floor_strike != null || market.cap_strike != null) {
+        return "bucket_partition_candidate";
     }
     return "excluded_v1";
 }

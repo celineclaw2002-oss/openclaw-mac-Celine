@@ -1,0 +1,1188 @@
+[
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-T72299.99::1786898827211::615d8aac",
+    "venueContractId": "KXBTC-26AUG1800-T72299.99",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is above 72299.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "615d8aac",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-T53700::1786898827426::7f9f3987",
+    "venueContractId": "KXBTC-26AUG1800-T53700",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is below 53700 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "7f9f3987",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B72250::1786898827632::c44b0a15",
+    "venueContractId": "KXBTC-26AUG1800-B72250",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 72200-72299.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "c44b0a15",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 72200-72299.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B72150::1786898827857::76393714",
+    "venueContractId": "KXBTC-26AUG1800-B72150",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 72100-72199.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "76393714",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 72100-72199.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B72050::1786898828041::15c2b1af",
+    "venueContractId": "KXBTC-26AUG1800-B72050",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 72000-72099.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "15c2b1af",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 72000-72099.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B71950::1786898828195::9fd26beb",
+    "venueContractId": "KXBTC-26AUG1800-B71950",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 71900-71999.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "9fd26beb",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 71900-71999.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B71850::1786898828335::58862248",
+    "venueContractId": "KXBTC-26AUG1800-B71850",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 71800-71899.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "58862248",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 71800-71899.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B71750::1786898828510::6ab8225d",
+    "venueContractId": "KXBTC-26AUG1800-B71750",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 71700-71799.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "6ab8225d",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 71700-71799.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B71650::1786898828642::dc8f3d72",
+    "venueContractId": "KXBTC-26AUG1800-B71650",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 71600-71699.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "dc8f3d72",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 71600-71699.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B71550::1786898828821::58ce1567",
+    "venueContractId": "KXBTC-26AUG1800-B71550",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 71500-71599.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "58ce1567",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 71500-71599.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B71450::1786898829130::a34f9794",
+    "venueContractId": "KXBTC-26AUG1800-B71450",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 71400-71499.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "a34f9794",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 71400-71499.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B71350::1786898829269::93f315d9",
+    "venueContractId": "KXBTC-26AUG1800-B71350",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 71300-71399.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "93f315d9",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 71300-71399.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B71250::1786898829427::59e03a1e",
+    "venueContractId": "KXBTC-26AUG1800-B71250",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 71200-71299.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "59e03a1e",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 71200-71299.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B71150::1786898829552::d48472a3",
+    "venueContractId": "KXBTC-26AUG1800-B71150",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 71100-71199.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "d48472a3",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 71100-71199.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B71050::1786898829754::7d8d0800",
+    "venueContractId": "KXBTC-26AUG1800-B71050",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 71000-71099.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "7d8d0800",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 71000-71099.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B70950::1786898829895::dcd07216",
+    "venueContractId": "KXBTC-26AUG1800-B70950",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 70900-70999.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "dcd07216",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 70900-70999.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B70850::1786898830050::0a953869",
+    "venueContractId": "KXBTC-26AUG1800-B70850",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 70800-70899.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "0a953869",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 70800-70899.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B70750::1786898830185::58a40964",
+    "venueContractId": "KXBTC-26AUG1800-B70750",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 70700-70799.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "58a40964",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 70700-70799.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B70650::1786898830325::edf380df",
+    "venueContractId": "KXBTC-26AUG1800-B70650",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 70600-70699.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "edf380df",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 70600-70699.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B70550::1786898830479::ee88de0a",
+    "venueContractId": "KXBTC-26AUG1800-B70550",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 70500-70599.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "ee88de0a",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 70500-70599.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B70450::1786898830685::7bdc629d",
+    "venueContractId": "KXBTC-26AUG1800-B70450",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 70400-70499.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "7bdc629d",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 70400-70499.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B70350::1786898830848::2f715c38",
+    "venueContractId": "KXBTC-26AUG1800-B70350",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 70300-70399.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "2f715c38",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 70300-70399.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B70250::1786898831055::4090cab3",
+    "venueContractId": "KXBTC-26AUG1800-B70250",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 70200-70299.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "4090cab3",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 70200-70299.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B70150::1786898831213::d8a8ccae",
+    "venueContractId": "KXBTC-26AUG1800-B70150",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 70100-70199.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "d8a8ccae",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 70100-70199.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B70050::1786898831395::f4307be1",
+    "venueContractId": "KXBTC-26AUG1800-B70050",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 70000-70099.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "f4307be1",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 70000-70099.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B69950::1786898831567::ced3cf0c",
+    "venueContractId": "KXBTC-26AUG1800-B69950",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 69900-69999.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "ced3cf0c",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 69900-69999.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B69850::1786898831698::f777720b",
+    "venueContractId": "KXBTC-26AUG1800-B69850",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 69800-69899.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "f777720b",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 69800-69899.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B69750::1786898831839::6c19f4e2",
+    "venueContractId": "KXBTC-26AUG1800-B69750",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 69700-69799.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "6c19f4e2",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 69700-69799.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B69650::1786898831988::7003a479",
+    "venueContractId": "KXBTC-26AUG1800-B69650",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 69600-69699.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "7003a479",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 69600-69699.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B69550::1786898832195::24a90138",
+    "venueContractId": "KXBTC-26AUG1800-B69550",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 69500-69599.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "24a90138",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 69500-69599.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B69450::1786898832341::183254c7",
+    "venueContractId": "KXBTC-26AUG1800-B69450",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 69400-69499.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "183254c7",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 69400-69499.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B69350::1786898832481::ad8660ee",
+    "venueContractId": "KXBTC-26AUG1800-B69350",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 69300-69399.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "ad8660ee",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 69300-69399.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B69250::1786898832607::8ff84d95",
+    "venueContractId": "KXBTC-26AUG1800-B69250",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 69200-69299.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "8ff84d95",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 69200-69299.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B69150::1786898832738::36a9ecc4",
+    "venueContractId": "KXBTC-26AUG1800-B69150",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 69100-69199.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "36a9ecc4",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 69100-69199.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B69050::1786898832909::430b2b63",
+    "venueContractId": "KXBTC-26AUG1800-B69050",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 69000-69099.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "430b2b63",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 69000-69099.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B68950::1786898833051::f7d3fabd",
+    "venueContractId": "KXBTC-26AUG1800-B68950",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 68900-68999.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "f7d3fabd",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 68900-68999.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B68850::1786898833186::941874ae",
+    "venueContractId": "KXBTC-26AUG1800-B68850",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 68800-68899.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "941874ae",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 68800-68899.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B68750::1786898833360::0cdca1d7",
+    "venueContractId": "KXBTC-26AUG1800-B68750",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 68700-68799.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "0cdca1d7",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 68700-68799.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B68650::1786898833523::e881cd40",
+    "venueContractId": "KXBTC-26AUG1800-B68650",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 68600-68699.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "e881cd40",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 68600-68699.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B68550::1786898833687::79f97331",
+    "venueContractId": "KXBTC-26AUG1800-B68550",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 68500-68599.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "79f97331",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 68500-68599.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B68450::1786898833832::41cdcd82",
+    "venueContractId": "KXBTC-26AUG1800-B68450",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 68400-68499.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "41cdcd82",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 68400-68499.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B68350::1786898833975::60d5a8bb",
+    "venueContractId": "KXBTC-26AUG1800-B68350",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 68300-68399.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "60d5a8bb",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 68300-68399.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B68250::1786898834121::5071c334",
+    "venueContractId": "KXBTC-26AUG1800-B68250",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 68200-68299.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "5071c334",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 68200-68299.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B68150::1786898834257::0dff23a5",
+    "venueContractId": "KXBTC-26AUG1800-B68150",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 68100-68199.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "0dff23a5",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 68100-68199.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B68050::1786898834402::33400646",
+    "venueContractId": "KXBTC-26AUG1800-B68050",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 68000-68099.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "33400646",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 68000-68099.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B67950::1786898834529::26bb68b6",
+    "venueContractId": "KXBTC-26AUG1800-B67950",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 67900-67999.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "26bb68b6",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 67900-67999.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B67850::1786898834670::214444ed",
+    "venueContractId": "KXBTC-26AUG1800-B67850",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 67800-67899.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "214444ed",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 67800-67899.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B67750::1786898834826::7c69fea0",
+    "venueContractId": "KXBTC-26AUG1800-B67750",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 67700-67799.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "7c69fea0",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 67700-67799.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B67650::1786898835027::116bdbbf",
+    "venueContractId": "KXBTC-26AUG1800-B67650",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 67600-67699.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "116bdbbf",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 67600-67699.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXBTC-26AUG1800-B67550::1786898835167::55a92fca",
+    "venueContractId": "KXBTC-26AUG1800-B67550",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rulesText": "If the simple average of the sixty seconds of CF Benchmarks' Bitcoin Real-Time Index (BRTI) before 12 AM EDT is between 67500-67599.99 at 12 AM EDT on Aug 18, 2026, then the market resolves to Yes.\n\nNot all cryptocurrency price data is the same. While checking a source like Google or Coinbase may help guide your decision, the price used to determine this market is based on CF Benchmarks' corresponding Real Time Index (RTI). At the last minute before expiration, 60 RTI prices are collected. The official and final value is the average of these prices.",
+    "rulesHash": "55a92fca",
+    "resolutionSourceText": "CF Benchmarks BRTI",
+    "settlementTimestampConvention": "12 AM",
+    "settlementTimezone": "EDT",
+    "observationWindowText": "between 67500-67599.99",
+    "evaluationTimestampMs": 1787025600000,
+    "rawStatus": "initialized",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXFED-27APR-T4.25::1786898835315::b5f89c43",
+    "venueContractId": "KXFED-27APR-T4.25",
+    "questionText": "Will the upper bound of the federal funds rate be above 4.25% following the Fed's Apr 28, 2027 meeting?",
+    "rulesText": "If the upper bound of the target federal funds rate published on the Federal Reserve's official website is greater than 4.25% following the Federal Reserve's Apr 28, 2027 meeting, then the market resolves to Yes.\n\nThis market will expire the first 2:05 PM ET following the release of a Federal Reserve statement for their Apr 28, 2027 meeting or one week following the last day of that meeting.",
+    "rulesHash": "b5f89c43",
+    "resolutionSourceText": "Federal Reserve target range",
+    "settlementTimezone": "ET",
+    "evaluationTimestampMs": 1808934900000,
+    "rawStatus": "active",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXFED-27APR-T4.00::1786898835575::762b1704",
+    "venueContractId": "KXFED-27APR-T4.00",
+    "questionText": "Will the upper bound of the federal funds rate be above 4.00% following the Fed's Apr 28, 2027 meeting?",
+    "rulesText": "If the upper bound of the target federal funds rate published on the Federal Reserve's official website is greater than 4.00% following the Federal Reserve's Apr 28, 2027 meeting, then the market resolves to Yes.\n\nThis market will expire the first 2:05 PM ET following the release of a Federal Reserve statement for their Apr 28, 2027 meeting or one week following the last day of that meeting.",
+    "rulesHash": "762b1704",
+    "resolutionSourceText": "Federal Reserve target range",
+    "settlementTimezone": "ET",
+    "evaluationTimestampMs": 1808934900000,
+    "rawStatus": "active",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXFED-27APR-T3.75::1786898835746::817a0422",
+    "venueContractId": "KXFED-27APR-T3.75",
+    "questionText": "Will the upper bound of the federal funds rate be above 3.75% following the Fed's Apr 28, 2027 meeting?",
+    "rulesText": "If the upper bound of the target federal funds rate published on the Federal Reserve's official website is greater than 3.75% following the Federal Reserve's Apr 28, 2027 meeting, then the market resolves to Yes.\n\nThis market will expire the first 2:05 PM ET following the release of a Federal Reserve statement for their Apr 28, 2027 meeting or one week following the last day of that meeting.",
+    "rulesHash": "817a0422",
+    "resolutionSourceText": "Federal Reserve target range",
+    "settlementTimezone": "ET",
+    "evaluationTimestampMs": 1808934900000,
+    "rawStatus": "active",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXFED-27APR-T3.50::1786898835885::2b144727",
+    "venueContractId": "KXFED-27APR-T3.50",
+    "questionText": "Will the upper bound of the federal funds rate be above 3.50% following the Fed's Apr 28, 2027 meeting?",
+    "rulesText": "If the upper bound of the target federal funds rate published on the Federal Reserve's official website is greater than 3.50% following the Federal Reserve's Apr 28, 2027 meeting, then the market resolves to Yes.\n\nThis market will expire the first 2:05 PM ET following the release of a Federal Reserve statement for their Apr 28, 2027 meeting or one week following the last day of that meeting.",
+    "rulesHash": "2b144727",
+    "resolutionSourceText": "Federal Reserve target range",
+    "settlementTimezone": "ET",
+    "evaluationTimestampMs": 1808934900000,
+    "rawStatus": "active",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXFED-27APR-T3.25::1786898836049::4f001fb7",
+    "venueContractId": "KXFED-27APR-T3.25",
+    "questionText": "Will the upper bound of the federal funds rate be above 3.25% following the Fed's Apr 28, 2027 meeting?",
+    "rulesText": "If the upper bound of the target federal funds rate published on the Federal Reserve's official website is greater than 3.25% following the Federal Reserve's Apr 28, 2027 meeting, then the market resolves to Yes.\n\nThis market will expire the first 2:05 PM ET following the release of a Federal Reserve statement for their Apr 28, 2027 meeting or one week following the last day of that meeting.",
+    "rulesHash": "4f001fb7",
+    "resolutionSourceText": "Federal Reserve target range",
+    "settlementTimezone": "ET",
+    "evaluationTimestampMs": 1808934900000,
+    "rawStatus": "active",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXFED-27APR-T3.00::1786898836169::b0960649",
+    "venueContractId": "KXFED-27APR-T3.00",
+    "questionText": "Will the upper bound of the federal funds rate be above 3.00% following the Fed's Apr 28, 2027 meeting?",
+    "rulesText": "If the upper bound of the target federal funds rate published on the Federal Reserve's official website is greater than 3.00% following the Federal Reserve's Apr 28, 2027 meeting, then the market resolves to Yes.\n\nThis market will expire the first 2:05 PM ET following the release of a Federal Reserve statement for their Apr 28, 2027 meeting or one week following the last day of that meeting.",
+    "rulesHash": "b0960649",
+    "resolutionSourceText": "Federal Reserve target range",
+    "settlementTimezone": "ET",
+    "evaluationTimestampMs": 1808934900000,
+    "rawStatus": "active",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXFED-27APR-T2.75::1786898836466::3d35b994",
+    "venueContractId": "KXFED-27APR-T2.75",
+    "questionText": "Will the upper bound of the federal funds rate be above 2.75% following the Fed's Apr 28, 2027 meeting?",
+    "rulesText": "If the upper bound of the target federal funds rate published on the Federal Reserve's official website is greater than 2.75% following the Federal Reserve's Apr 28, 2027 meeting, then the market resolves to Yes.\n\nThis market will expire the first 2:05 PM ET following the release of a Federal Reserve statement for their Apr 28, 2027 meeting or one week following the last day of that meeting.",
+    "rulesHash": "3d35b994",
+    "resolutionSourceText": "Federal Reserve target range",
+    "settlementTimezone": "ET",
+    "evaluationTimestampMs": 1808934900000,
+    "rawStatus": "active",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXFED-27APR-T2.50::1786898836602::82e11f7e",
+    "venueContractId": "KXFED-27APR-T2.50",
+    "questionText": "Will the upper bound of the federal funds rate be above 2.50% following the Fed's Apr 28, 2027 meeting?",
+    "rulesText": "If the upper bound of the target federal funds rate published on the Federal Reserve's official website is greater than 2.50% following the Federal Reserve's Apr 28, 2027 meeting, then the market resolves to Yes.\n\nThis market will expire the first 2:05 PM ET following the release of a Federal Reserve statement for their Apr 28, 2027 meeting or one week following the last day of that meeting.",
+    "rulesHash": "82e11f7e",
+    "resolutionSourceText": "Federal Reserve target range",
+    "settlementTimezone": "ET",
+    "evaluationTimestampMs": 1808934900000,
+    "rawStatus": "active",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXFED-27APR-T2.25::1786898836778::b3991493",
+    "venueContractId": "KXFED-27APR-T2.25",
+    "questionText": "Will the upper bound of the federal funds rate be above 2.25% following the Fed's Apr 28, 2027 meeting?",
+    "rulesText": "If the upper bound of the target federal funds rate published on the Federal Reserve's official website is greater than 2.25% following the Federal Reserve's Apr 28, 2027 meeting, then the market resolves to Yes.\n\nThis market will expire the first 2:05 PM ET following the release of a Federal Reserve statement for their Apr 28, 2027 meeting or one week following the last day of that meeting.",
+    "rulesHash": "b3991493",
+    "resolutionSourceText": "Federal Reserve target range",
+    "settlementTimezone": "ET",
+    "evaluationTimestampMs": 1808934900000,
+    "rawStatus": "active",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXFED-27APR-T2.00::1786898836951::a686b7e0",
+    "venueContractId": "KXFED-27APR-T2.00",
+    "questionText": "Will the upper bound of the federal funds rate be above 2.00% following the Fed's Apr 28, 2027 meeting?",
+    "rulesText": "If the upper bound of the target federal funds rate published on the Federal Reserve's official website is greater than 2.00% following the Federal Reserve's Apr 28, 2027 meeting, then the market resolves to Yes.\n\nThis market will expire the first 2:05 PM ET following the release of a Federal Reserve statement for their Apr 28, 2027 meeting or one week following the last day of that meeting.",
+    "rulesHash": "a686b7e0",
+    "resolutionSourceText": "Federal Reserve target range",
+    "settlementTimezone": "ET",
+    "evaluationTimestampMs": 1808934900000,
+    "rawStatus": "active",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXFED-27APR-T1.75::1786898837053::4c363dbc",
+    "venueContractId": "KXFED-27APR-T1.75",
+    "questionText": "Will the upper bound of the federal funds rate be above 1.75% following the Fed's Apr 28, 2027 meeting?",
+    "rulesText": "If the upper bound of the target federal funds rate published on the Federal Reserve's official website is greater than 1.75% following the Federal Reserve's Apr 28, 2027 meeting, then the market resolves to Yes.\n\nThis market will expire the first 2:05 PM ET following the release of a Federal Reserve statement for their Apr 28, 2027 meeting or one week following the last day of that meeting.",
+    "rulesHash": "4c363dbc",
+    "resolutionSourceText": "Federal Reserve target range",
+    "settlementTimezone": "ET",
+    "evaluationTimestampMs": 1808934900000,
+    "rawStatus": "active",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXFED-27APR-T1.50::1786898837206::b2419691",
+    "venueContractId": "KXFED-27APR-T1.50",
+    "questionText": "Will the upper bound of the federal funds rate be above 1.50% following the Fed's Apr 28, 2027 meeting?",
+    "rulesText": "If the upper bound of the target federal funds rate published on the Federal Reserve's official website is greater than 1.50% following the Federal Reserve's Apr 28, 2027 meeting, then the market resolves to Yes.\n\nThis market will expire the first 2:05 PM ET following the release of a Federal Reserve statement for their Apr 28, 2027 meeting or one week following the last day of that meeting.",
+    "rulesHash": "b2419691",
+    "resolutionSourceText": "Federal Reserve target range",
+    "settlementTimezone": "ET",
+    "evaluationTimestampMs": 1808934900000,
+    "rawStatus": "active",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXFED-27APR-T1.25::1786898837339::66386253",
+    "venueContractId": "KXFED-27APR-T1.25",
+    "questionText": "Will the upper bound of the federal funds rate be above 1.25% following the Fed's Apr 28, 2027 meeting?",
+    "rulesText": "If the upper bound of the target federal funds rate published on the Federal Reserve's official website is greater than 1.25% following the Federal Reserve's Apr 28, 2027 meeting, then the market resolves to Yes.\n\nThis market will expire the first 2:05 PM ET following the release of a Federal Reserve statement for their Apr 28, 2027 meeting or one week following the last day of that meeting.",
+    "rulesHash": "66386253",
+    "resolutionSourceText": "Federal Reserve target range",
+    "settlementTimezone": "ET",
+    "evaluationTimestampMs": 1808934900000,
+    "rawStatus": "active",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXFED-27APR-T1.00::1786898837474::f888f9d2",
+    "venueContractId": "KXFED-27APR-T1.00",
+    "questionText": "Will the upper bound of the federal funds rate be above 1.00% following the Fed's Apr 28, 2027 meeting?",
+    "rulesText": "If the upper bound of the target federal funds rate published on the Federal Reserve's official website is greater than 1.00% following the Federal Reserve's Apr 28, 2027 meeting, then the market resolves to Yes.\n\nThis market will expire the first 2:05 PM ET following the release of a Federal Reserve statement for their Apr 28, 2027 meeting or one week following the last day of that meeting.",
+    "rulesHash": "f888f9d2",
+    "resolutionSourceText": "Federal Reserve target range",
+    "settlementTimezone": "ET",
+    "evaluationTimestampMs": 1808934900000,
+    "rawStatus": "active",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXFED-27APR-T0.75::1786898837615::13357795",
+    "venueContractId": "KXFED-27APR-T0.75",
+    "questionText": "Will the upper bound of the federal funds rate be above 0.75% following the Fed's Apr 28, 2027 meeting?",
+    "rulesText": "If the upper bound of the target federal funds rate published on the Federal Reserve's official website is greater than 0.75% following the Federal Reserve's Apr 28, 2027 meeting, then the market resolves to Yes.\n\nThis market will expire the first 2:05 PM ET following the release of a Federal Reserve statement for their Apr 28, 2027 meeting or one week following the last day of that meeting.",
+    "rulesHash": "13357795",
+    "resolutionSourceText": "Federal Reserve target range",
+    "settlementTimezone": "ET",
+    "evaluationTimestampMs": 1808934900000,
+    "rawStatus": "active",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXFED-27APR-T0.50::1786898837759::1166a1a5",
+    "venueContractId": "KXFED-27APR-T0.50",
+    "questionText": "Will the upper bound of the federal funds rate be above 0.50% following the Fed's Apr 28, 2027 meeting?",
+    "rulesText": "If the upper bound of the target federal funds rate published on the Federal Reserve's official website is greater than 0.50% following the Federal Reserve's Apr 28, 2027 meeting, then the market resolves to Yes.\n\nThis market will expire the first 2:05 PM ET following the release of a Federal Reserve statement for their Apr 28, 2027 meeting or one week following the last day of that meeting.",
+    "rulesHash": "1166a1a5",
+    "resolutionSourceText": "Federal Reserve target range",
+    "settlementTimezone": "ET",
+    "evaluationTimestampMs": 1808934900000,
+    "rawStatus": "active",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXFED-27APR-T0.25::1786898837896::44e0f70a",
+    "venueContractId": "KXFED-27APR-T0.25",
+    "questionText": "Will the upper bound of the federal funds rate be above 0.25% following the Fed's Apr 28, 2027 meeting?",
+    "rulesText": "If the upper bound of the target federal funds rate published on the Federal Reserve's official website is greater than 0.25% following the Federal Reserve's Apr 28, 2027 meeting, then the market resolves to Yes.\n\nThis market will expire the first 2:05 PM ET following the release of a Federal Reserve statement for their Apr 28, 2027 meeting or one week following the last day of that meeting.",
+    "rulesHash": "44e0f70a",
+    "resolutionSourceText": "Federal Reserve target range",
+    "settlementTimezone": "ET",
+    "evaluationTimestampMs": 1808934900000,
+    "rawStatus": "active",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::metadata::/markets/KXFED-27APR-T0.00::1786898838066::0d136406",
+    "venueContractId": "KXFED-27APR-T0.00",
+    "questionText": "Will the upper bound of the federal funds rate be above 0.00% following the Fed's Apr 28, 2027 meeting?",
+    "rulesText": "If the upper bound of the target federal funds rate published on the Federal Reserve's official website is greater than 0.00% following the Federal Reserve's Apr 28, 2027 meeting, then the market resolves to Yes.\n\nThis market will expire the first 2:05 PM ET following the release of a Federal Reserve statement for their Apr 28, 2027 meeting or one week following the last day of that meeting.",
+    "rulesHash": "0d136406",
+    "resolutionSourceText": "Federal Reserve target range",
+    "settlementTimezone": "ET",
+    "evaluationTimestampMs": 1808934900000,
+    "rawStatus": "active",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  }
+]

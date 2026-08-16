@@ -65,9 +65,13 @@ export interface TradeTickerStageRecord {
 export interface LifecycleFeeStageRecord {
     sourceEventId: string;
     venueContractId: string;
+    seriesTicker?: string;
+    eventTicker?: string;
     rawStatus?: string;
     canCloseEarly?: boolean;
     feeScheduleId?: string;
+    feeType?: string;
+    feeMultiplier?: number;
     feeConfig: Record<string, unknown>;
     parseVersion: string;
     parseSuccess: boolean;

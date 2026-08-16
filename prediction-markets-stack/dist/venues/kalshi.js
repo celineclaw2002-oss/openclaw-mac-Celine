@@ -114,6 +114,8 @@ function mapKalshiApiMarket(market) {
     return {
         ticker: market.ticker,
         title: market.title,
+        ...(market.event_ticker === undefined ? {} : { event_ticker: market.event_ticker }),
+        ...(market.series_ticker === undefined ? {} : { series_ticker: market.series_ticker }),
         ...(market.subtitle === undefined ? {} : { subtitle: market.subtitle }),
         ...(market.category === undefined ? {} : { category: market.category }),
         ...(market.status === undefined ? {} : { status: market.status }),
@@ -138,6 +140,12 @@ function mapKalshiApiMarket(market) {
         ...(openInterest === null ? {} : { open_interest: openInterest }),
         ...(inferredRanges === null ? {} : { ranges: inferredRanges }),
         ...(market.fee_config === undefined ? {} : { fee_config: market.fee_config }),
+        ...(market.fee_type === undefined ? {} : { fee_type: market.fee_type }),
+        ...(market.fee_multiplier === undefined ? {} : { fee_multiplier: market.fee_multiplier }),
+        ...(market.fee_type_override === undefined ? {} : { fee_type_override: market.fee_type_override }),
+        ...(market.fee_multiplier_override === undefined
+            ? {}
+            : { fee_multiplier_override: market.fee_multiplier_override }),
         ...(market.can_close_early === undefined ? {} : { can_close_early: market.can_close_early })
     };
 }
