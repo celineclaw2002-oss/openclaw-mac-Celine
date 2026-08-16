@@ -22,6 +22,13 @@ Built a durable FFA research memo in the Mission Control Vault, modeled after th
   - AIS-driven freight analytics
 - Wrote the main Vault memo:
   - `/Users/canozgel-macmini/MissionControlVault/10 Research/Freight and FFAs/ffa-quant-research-breakthrough-2026-08-16.md`
+- Wrote three separate pre-testing blueprints in the Vault:
+  - `/Users/canozgel-macmini/MissionControlVault/10 Research/Freight and FFAs/ffa-blueprint-01-prompt-calendar-spread-2026-08-16.md`
+  - `/Users/canozgel-macmini/MissionControlVault/10 Research/Freight and FFAs/ffa-blueprint-02-intra-class-route-spread-2026-08-16.md`
+  - `/Users/canozgel-macmini/MissionControlVault/10 Research/Freight and FFAs/ffa-blueprint-03-basket-vs-route-rv-2026-08-16.md`
+- Added the next layer of remote-prep execution documents:
+  - `/Users/canozgel-macmini/MissionControlVault/10 Research/Freight and FFAs/ffa-segment-selection-memo-2026-08-16.md`
+  - `/Users/canozgel-macmini/MissionControlVault/10 Research/Freight and FFAs/ffa-30-day-pilot-plan-2026-08-16.md`
 
 ## Current conclusions
 
@@ -35,11 +42,29 @@ Built a durable FFA research memo in the Mission Control Vault, modeled after th
   - route selection
   - interpretation of AIS and congestion data
   - confidence in whether a dislocation is economically real
+- After a final blueprint pass, the three ideas now rank as:
+  1. prompt calendar-spread tightness strategy
+  2. intra-class route-spread relative value
+  3. basket-vs-route residual value
+- Key refinement from the earlier memo:
+  - these are no longer treated as merely three expressions of one signal
+  - they are now framed as three distinct alpha programs sharing one physical-state data stack but requiring different target design, validation, execution, and kill criteria
+- Segment-selection conclusion after the next pass:
+  - `Capesize dry bulk` first
+  - `Panamax` second
+  - tanker later unless Can's contact edge is clearly tanker-heavy
 
 ## Important files
 
 - Main Vault memo:
   - `/Users/canozgel-macmini/MissionControlVault/10 Research/Freight and FFAs/ffa-quant-research-breakthrough-2026-08-16.md`
+- Blueprint Vault notes:
+  - `/Users/canozgel-macmini/MissionControlVault/10 Research/Freight and FFAs/ffa-blueprint-01-prompt-calendar-spread-2026-08-16.md`
+  - `/Users/canozgel-macmini/MissionControlVault/10 Research/Freight and FFAs/ffa-blueprint-02-intra-class-route-spread-2026-08-16.md`
+  - `/Users/canozgel-macmini/MissionControlVault/10 Research/Freight and FFAs/ffa-blueprint-03-basket-vs-route-rv-2026-08-16.md`
+- Segment and pilot notes:
+  - `/Users/canozgel-macmini/MissionControlVault/10 Research/Freight and FFAs/ffa-segment-selection-memo-2026-08-16.md`
+  - `/Users/canozgel-macmini/MissionControlVault/10 Research/Freight and FFAs/ffa-30-day-pilot-plan-2026-08-16.md`
 
 ## Open questions
 
@@ -57,7 +82,12 @@ Built a durable FFA research memo in the Mission Control Vault, modeled after th
 
 ## Next steps
 
-1. Write a segment-selection memo comparing Capesize, Panamax, and one tanker complex.
-2. Draft the feature schema for the latent-tightness engine.
-3. Build a 30-day pilot plan covering data, backtest design, and partner conversations.
-4. Turn the shipping-contact list into a structured outreach plan by segment and role.
+1. Build the shared physical-state feature schema that all three blueprints depend on, now explicitly for a Capesize-first pilot.
+2. Build the data-vendor comparison against that schema.
+3. Start testing in rank order:
+   - Blueprint 01 first
+   - Blueprint 02 second
+   - Blueprint 03 third
+4. Use the 30-day pilot plan to sequence the first build.
+5. Turn the shipping-contact list into a structured outreach plan by segment and role.
+6. Ask Can for actual contact names so the outreach scaffold can be made concrete.

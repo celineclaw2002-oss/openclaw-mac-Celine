@@ -12,6 +12,8 @@
 - Noted that year-end bonus is discretionary and pro-rated, not guaranteed.
 - Prepared a concise set of questions for Can to ask himself and, where useful, Morgan Stanley.
 - Drafted the next set of HR questions around compensation flexibility, typical year-end bonus, promotion/comp growth trajectory, benefits onboarding, start-date flexibility, and personal trading / prediction-market restrictions.
+- Built a dedicated compliance question pack for personal trading, prediction markets, freight derivatives research, automation, outside activity, and IP boundaries:
+  - `10 Research/morgan-stanley-personal-trading-compliance-question-pack-2026-08-16.md`
 - Built an Excel-friendly monthly budget file based on the current offer and Can's stated expenses.
 - Built a formatted `.xlsx` budget planner with editable inputs, compensation and tax breakdowns, and monthly savings outputs, then emailed it to `canozgel@gmail.com`.
 

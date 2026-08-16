@@ -44,6 +44,12 @@ Built a reusable venue primer on Kalshi and Polymarket for future prediction-mar
   - `10 Research/prediction-markets-ml-researchers-track-3-2026-08-08.md`
 - Built a Track 1 transfer memo focused on market microstructure, LOBs, structured prediction, and market-making:
   - `10 Research/prediction-markets-ml-market-microstructure-transfer-memo-2026-08-08.md`
+- Wrote two separate pre-testing blueprints in the Vault for the two highest-priority ideas:
+  - `/Users/canozgel-macmini/MissionControlVault/10 Research/Prediction Markets/prediction-markets-blueprint-01-internal-consistency-2026-08-16.md`
+  - `/Users/canozgel-macmini/MissionControlVault/10 Research/Prediction Markets/prediction-markets-blueprint-02-external-anchor-mispricing-2026-08-16.md`
+- Added the next layer of remote-prep execution documents:
+  - `/Users/canozgel-macmini/MissionControlVault/10 Research/Prediction Markets/prediction-markets-normalization-and-relationship-graph-spec-2026-08-16.md`
+  - `/Users/canozgel-macmini/MissionControlVault/10 Research/Prediction Markets/prediction-markets-30-day-pilot-plan-2026-08-16.md`
 
 ## Current conclusions
 
@@ -67,6 +73,17 @@ Built a reusable venue primer on Kalshi and Polymarket for future prediction-mar
   - Cont/Cartea-style event-flow and imbalance features
   - a queue-aware executability model
   - an inventory-aware execution overlay
+- After the final blueprint pass, the two highest-priority strategies now rank as:
+  1. internal consistency
+  2. external-anchor mispricing
+- Key refinement from the earlier research stage:
+  - these are now framed as two distinct alpha programs with different data models, validation ladders, execution assumptions, and kill criteria
+  - internal consistency is treated as the first structural wedge
+  - external-anchor mispricing is treated as the second, more institutionally legible fair-value wedge
+- New implementation conclusion:
+  - the first build should emphasize `Kalshi-clean semantics first`
+  - then selectively add `Polymarket structural coverage`
+  - external-anchor work should remain narrowed to one or two families after the normalizer exists
 
 ## Important files
 
@@ -80,6 +97,12 @@ Built a reusable venue primer on Kalshi and Polymarket for future prediction-mar
   - `/Users/canozgel-macmini/.openclaw/workspace/10 Research/prediction-markets-ml-market-microstructure-transfer-memo-2026-08-08.md`
 - Alpha-bucket vault folder:
   - `/Users/canozgel-macmini/MissionControlVault/10 Research/Prediction Markets`
+- Blueprint Vault notes:
+  - `/Users/canozgel-macmini/MissionControlVault/10 Research/Prediction Markets/prediction-markets-blueprint-01-internal-consistency-2026-08-16.md`
+  - `/Users/canozgel-macmini/MissionControlVault/10 Research/Prediction Markets/prediction-markets-blueprint-02-external-anchor-mispricing-2026-08-16.md`
+- Normalization and pilot notes:
+  - `/Users/canozgel-macmini/MissionControlVault/10 Research/Prediction Markets/prediction-markets-normalization-and-relationship-graph-spec-2026-08-16.md`
+  - `/Users/canozgel-macmini/MissionControlVault/10 Research/Prediction Markets/prediction-markets-30-day-pilot-plan-2026-08-16.md`
 
 ## Open questions
 
@@ -90,13 +113,11 @@ Built a reusable venue primer on Kalshi and Polymarket for future prediction-mar
 
 ## Next steps
 
-1. Convert the five memos into a ranked research agenda with explicit hypotheses and kill criteria.
-2. Build a market taxonomy and contract-normalization layer for Kalshi and Polymarket.
-3. Turn the Track 3 roster into a concrete model stack proposal:
-   - graph coherence layer
-   - calibrated external-anchor forecaster
-   - execution policy layer
-4. Design a contract-relationship graph for partitions, complements, ladders, and temporal nesting.
-5. Design the capture schema for books, trades, fees, rewards, lifecycle events, and resolution metadata.
-6. Prioritize a Phase I backtest around internal consistency plus external-anchor markets, with resolution and cross-venue overlays.
-7. Start the external-anchor prototype with a narrow calibrated stack for BTC or index thresholds, Fed meetings, and macro-release contracts.
+1. Build the contract-normalization and relationship-graph layer needed for Blueprint 01.
+2. Start with `Kalshi threshold and bucket markets` as the cleanest first semantic layer.
+3. Build the fair-value mapping and calibration layer needed for Blueprint 02 after the normalizer exists.
+4. Start testing in rank order:
+   - Blueprint 01 first
+   - Blueprint 02 second
+5. Use the 30-day pilot plan to sequence the capture schema and backtest ladder.
+6. Start the external-anchor prototype with a narrow calibrated stack for BTC thresholds or Fed meetings, not everything at once.
