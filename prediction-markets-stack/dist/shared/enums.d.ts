@@ -1,0 +1,9 @@
+export type VenueId = "kalshi" | "polymarket";
+export type FamilyClass = "btc_threshold_primary" | "bucket_partition_candidate" | "fed_policy_candidate" | "excluded_v1";
+export type ContractType = "binary" | "threshold_binary" | "categorical_bucket" | "range_bucket" | "synthetic";
+export type OutcomeType = "yes_no" | "one_of_n" | "threshold_above" | "threshold_below" | "range_inclusive" | "range_exclusive";
+export type NormalizedStatus = "listed" | "active" | "paused" | "closed" | "determined" | "disputed" | "amended" | "finalized";
+export type EdgeType = "complement" | "partition_member" | "partition_sum" | "threshold_monotone" | "temporal_nested" | "implication" | "synthetic_equivalent" | "synthetic_transform" | "soft_semantic_related";
+export type HardnessClass = "hard" | "conditional" | "soft";
+export type AnchorFamily = "btc_thresholds" | "fed_decisions" | "macro_ranges";
+export type ExecutionTemplateId = "aggressive_all_legs" | "passive_first" | "hybrid_edge_tiered";

@@ -1,0 +1,30 @@
+[
+  {
+    "thresholdId": "threshold::contract::KXBTC-26AUG1800-T72299.99",
+    "contractId": "contract::KXBTC-26AUG1800-T72299.99",
+    "referenceVariable": "btc_usd",
+    "comparisonOperator": ">",
+    "thresholdValue": 72299.99,
+    "evaluationTimezone": "EDT",
+    "settlementTimestampConvention": "12 AM",
+    "referencePriceDefinition": "CF Benchmarks BRTI",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "thresholdId": "threshold::contract::KXBTC-26AUG1800-T53700",
+    "contractId": "contract::KXBTC-26AUG1800-T53700",
+    "referenceVariable": "btc_usd",
+    "comparisonOperator": "<",
+    "thresholdValue": 53700,
+    "evaluationTimezone": "EDT",
+    "settlementTimestampConvention": "12 AM",
+    "referencePriceDefinition": "CF Benchmarks BRTI",
+    "confidence": 0.9,
+    "ambiguityFlags": [
+      "missing_settlement_source"
+    ]
+  }
+]

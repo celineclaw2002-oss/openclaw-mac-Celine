@@ -1,0 +1,282 @@
+[
+  {
+    "sourceEventId": "kalshi::discovery::/markets::1786894859944::9ed0a846",
+    "venueContractId": "KXBTC-26AUG1800-T72299.99",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rawStatus": "initialized",
+    "openTimeMs": 1787022000000,
+    "closeTimeMs": 1787025600000,
+    "familyClass": "btc_threshold_primary",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::discovery::/markets::1786894860081::6db59b8d",
+    "venueContractId": "KXBTC-26AUG1800-T53700",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rawStatus": "initialized",
+    "openTimeMs": 1787022000000,
+    "closeTimeMs": 1787025600000,
+    "familyClass": "btc_threshold_primary",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::discovery::/markets::1786894860289::b1713f41",
+    "venueContractId": "KXBTC-26AUG1800-B72250",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rawStatus": "initialized",
+    "openTimeMs": 1787022000000,
+    "closeTimeMs": 1787025600000,
+    "familyClass": "btc_threshold_primary",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::discovery::/markets::1786894860459::a83d8dc2",
+    "venueContractId": "KXBTC-26AUG1800-B72150",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rawStatus": "initialized",
+    "openTimeMs": 1787022000000,
+    "closeTimeMs": 1787025600000,
+    "familyClass": "btc_threshold_primary",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::discovery::/markets::1786894860587::eb4ef6eb",
+    "venueContractId": "KXBTC-26AUG1800-B72050",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rawStatus": "initialized",
+    "openTimeMs": 1787022000000,
+    "closeTimeMs": 1787025600000,
+    "familyClass": "btc_threshold_primary",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::discovery::/markets::1786894860734::619610e3",
+    "venueContractId": "KXBTC-26AUG1800-B71950",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rawStatus": "initialized",
+    "openTimeMs": 1787022000000,
+    "closeTimeMs": 1787025600000,
+    "familyClass": "btc_threshold_primary",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::discovery::/markets::1786894860873::e73fd722",
+    "venueContractId": "KXBTC-26AUG1800-B71850",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rawStatus": "initialized",
+    "openTimeMs": 1787022000000,
+    "closeTimeMs": 1787025600000,
+    "familyClass": "btc_threshold_primary",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::discovery::/markets::1786894861039::3700614d",
+    "venueContractId": "KXBTC-26AUG1800-B71750",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rawStatus": "initialized",
+    "openTimeMs": 1787022000000,
+    "closeTimeMs": 1787025600000,
+    "familyClass": "btc_threshold_primary",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::discovery::/markets::1786894861264::4d0129e4",
+    "venueContractId": "KXBTC-26AUG1800-B71650",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rawStatus": "initialized",
+    "openTimeMs": 1787022000000,
+    "closeTimeMs": 1787025600000,
+    "familyClass": "btc_threshold_primary",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::discovery::/markets::1786894861423::280a06e7",
+    "venueContractId": "KXBTC-26AUG1800-B71550",
+    "questionText": "Bitcoin price range on Aug 18, 2026?",
+    "rawStatus": "initialized",
+    "openTimeMs": 1787022000000,
+    "closeTimeMs": 1787025600000,
+    "familyClass": "btc_threshold_primary",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::discovery::/markets::1786894861559::01389aa9",
+    "venueContractId": "KXFED-27APR-T4.25",
+    "questionText": "Will the upper bound of the federal funds rate be above 4.25% following the Fed's Apr 28, 2027 meeting?",
+    "rawStatus": "active",
+    "openTimeMs": 1760364000000,
+    "closeTimeMs": 1808934900000,
+    "familyClass": "bucket_partition_candidate",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::discovery::/markets::1786894861834::b38d7a90",
+    "venueContractId": "KXFED-27APR-T4.00",
+    "questionText": "Will the upper bound of the federal funds rate be above 4.00% following the Fed's Apr 28, 2027 meeting?",
+    "rawStatus": "active",
+    "openTimeMs": 1760364000000,
+    "closeTimeMs": 1808934900000,
+    "familyClass": "bucket_partition_candidate",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::discovery::/markets::1786894861962::07e4df96",
+    "venueContractId": "KXFED-27APR-T3.75",
+    "questionText": "Will the upper bound of the federal funds rate be above 3.75% following the Fed's Apr 28, 2027 meeting?",
+    "rawStatus": "active",
+    "openTimeMs": 1760364000000,
+    "closeTimeMs": 1808934900000,
+    "familyClass": "bucket_partition_candidate",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::discovery::/markets::1786894862111::0da4981f",
+    "venueContractId": "KXFED-27APR-T3.50",
+    "questionText": "Will the upper bound of the federal funds rate be above 3.50% following the Fed's Apr 28, 2027 meeting?",
+    "rawStatus": "active",
+    "openTimeMs": 1760364000000,
+    "closeTimeMs": 1808934900000,
+    "familyClass": "bucket_partition_candidate",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::discovery::/markets::1786894862249::d71573d3",
+    "venueContractId": "KXFED-27APR-T3.25",
+    "questionText": "Will the upper bound of the federal funds rate be above 3.25% following the Fed's Apr 28, 2027 meeting?",
+    "rawStatus": "active",
+    "openTimeMs": 1760364000000,
+    "closeTimeMs": 1808934900000,
+    "familyClass": "bucket_partition_candidate",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::discovery::/markets::1786894862388::251440e7",
+    "venueContractId": "KXFED-27APR-T3.00",
+    "questionText": "Will the upper bound of the federal funds rate be above 3.00% following the Fed's Apr 28, 2027 meeting?",
+    "rawStatus": "active",
+    "openTimeMs": 1760364000000,
+    "closeTimeMs": 1808934900000,
+    "familyClass": "bucket_partition_candidate",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::discovery::/markets::1786894862547::ba1d347e",
+    "venueContractId": "KXFED-27APR-T2.75",
+    "questionText": "Will the upper bound of the federal funds rate be above 2.75% following the Fed's Apr 28, 2027 meeting?",
+    "rawStatus": "active",
+    "openTimeMs": 1760364000000,
+    "closeTimeMs": 1808934900000,
+    "familyClass": "bucket_partition_candidate",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::discovery::/markets::1786894862683::0d3a6524",
+    "venueContractId": "KXFED-27APR-T2.50",
+    "questionText": "Will the upper bound of the federal funds rate be above 2.50% following the Fed's Apr 28, 2027 meeting?",
+    "rawStatus": "active",
+    "openTimeMs": 1760364000000,
+    "closeTimeMs": 1808934900000,
+    "familyClass": "bucket_partition_candidate",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::discovery::/markets::1786894862822::ef72919f",
+    "venueContractId": "KXFED-27APR-T2.25",
+    "questionText": "Will the upper bound of the federal funds rate be above 2.25% following the Fed's Apr 28, 2027 meeting?",
+    "rawStatus": "active",
+    "openTimeMs": 1760364000000,
+    "closeTimeMs": 1808934900000,
+    "familyClass": "bucket_partition_candidate",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::discovery::/markets::1786894862957::490d3b58",
+    "venueContractId": "KXFED-27APR-T2.00",
+    "questionText": "Will the upper bound of the federal funds rate be above 2.00% following the Fed's Apr 28, 2027 meeting?",
+    "rawStatus": "active",
+    "openTimeMs": 1760364000000,
+    "closeTimeMs": 1808934900000,
+    "familyClass": "bucket_partition_candidate",
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  }
+]

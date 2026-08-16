@@ -1,0 +1,374 @@
+[
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B72250",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B72250"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71650",
+      "contract::KXBTC-26AUG1800-B71550"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B72150",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B72150"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71650",
+      "contract::KXBTC-26AUG1800-B71550"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B72050",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B72050"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71650",
+      "contract::KXBTC-26AUG1800-B71550"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B71950",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B71950"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71650",
+      "contract::KXBTC-26AUG1800-B71550"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B71850",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B71850"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71650",
+      "contract::KXBTC-26AUG1800-B71550"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B71750",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B71750"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71650",
+      "contract::KXBTC-26AUG1800-B71550"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B71650",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B71650"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71550"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B71550",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B71550"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71650"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::threshold_monotone::contract::KXFED-27APR-T2.00::contract::KXFED-27APR-T2.25",
+    "edgeType": "threshold_monotone",
+    "sourceContractIds": [
+      "contract::KXFED-27APR-T2.00"
+    ],
+    "targetContractIds": [
+      "contract::KXFED-27APR-T2.25"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "monotone_ineq",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "referenceVariable": "fed_target_rate",
+      "leftThreshold": 2,
+      "rightThreshold": 2.25
+    }
+  },
+  {
+    "edgeId": "edge::threshold_monotone::contract::KXFED-27APR-T2.25::contract::KXFED-27APR-T2.50",
+    "edgeType": "threshold_monotone",
+    "sourceContractIds": [
+      "contract::KXFED-27APR-T2.25"
+    ],
+    "targetContractIds": [
+      "contract::KXFED-27APR-T2.50"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "monotone_ineq",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "referenceVariable": "fed_target_rate",
+      "leftThreshold": 2.25,
+      "rightThreshold": 2.5
+    }
+  },
+  {
+    "edgeId": "edge::threshold_monotone::contract::KXFED-27APR-T2.50::contract::KXFED-27APR-T2.75",
+    "edgeType": "threshold_monotone",
+    "sourceContractIds": [
+      "contract::KXFED-27APR-T2.50"
+    ],
+    "targetContractIds": [
+      "contract::KXFED-27APR-T2.75"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "monotone_ineq",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "referenceVariable": "fed_target_rate",
+      "leftThreshold": 2.5,
+      "rightThreshold": 2.75
+    }
+  },
+  {
+    "edgeId": "edge::threshold_monotone::contract::KXFED-27APR-T2.75::contract::KXFED-27APR-T3.00",
+    "edgeType": "threshold_monotone",
+    "sourceContractIds": [
+      "contract::KXFED-27APR-T2.75"
+    ],
+    "targetContractIds": [
+      "contract::KXFED-27APR-T3.00"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "monotone_ineq",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "referenceVariable": "fed_target_rate",
+      "leftThreshold": 2.75,
+      "rightThreshold": 3
+    }
+  },
+  {
+    "edgeId": "edge::threshold_monotone::contract::KXFED-27APR-T3.00::contract::KXFED-27APR-T3.25",
+    "edgeType": "threshold_monotone",
+    "sourceContractIds": [
+      "contract::KXFED-27APR-T3.00"
+    ],
+    "targetContractIds": [
+      "contract::KXFED-27APR-T3.25"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "monotone_ineq",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "referenceVariable": "fed_target_rate",
+      "leftThreshold": 3,
+      "rightThreshold": 3.25
+    }
+  },
+  {
+    "edgeId": "edge::threshold_monotone::contract::KXFED-27APR-T3.25::contract::KXFED-27APR-T3.50",
+    "edgeType": "threshold_monotone",
+    "sourceContractIds": [
+      "contract::KXFED-27APR-T3.25"
+    ],
+    "targetContractIds": [
+      "contract::KXFED-27APR-T3.50"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "monotone_ineq",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "referenceVariable": "fed_target_rate",
+      "leftThreshold": 3.25,
+      "rightThreshold": 3.5
+    }
+  },
+  {
+    "edgeId": "edge::threshold_monotone::contract::KXFED-27APR-T3.50::contract::KXFED-27APR-T3.75",
+    "edgeType": "threshold_monotone",
+    "sourceContractIds": [
+      "contract::KXFED-27APR-T3.50"
+    ],
+    "targetContractIds": [
+      "contract::KXFED-27APR-T3.75"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "monotone_ineq",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "referenceVariable": "fed_target_rate",
+      "leftThreshold": 3.5,
+      "rightThreshold": 3.75
+    }
+  },
+  {
+    "edgeId": "edge::threshold_monotone::contract::KXFED-27APR-T3.75::contract::KXFED-27APR-T4.00",
+    "edgeType": "threshold_monotone",
+    "sourceContractIds": [
+      "contract::KXFED-27APR-T3.75"
+    ],
+    "targetContractIds": [
+      "contract::KXFED-27APR-T4.00"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "monotone_ineq",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "referenceVariable": "fed_target_rate",
+      "leftThreshold": 3.75,
+      "rightThreshold": 4
+    }
+  },
+  {
+    "edgeId": "edge::threshold_monotone::contract::KXFED-27APR-T4.00::contract::KXFED-27APR-T4.25",
+    "edgeType": "threshold_monotone",
+    "sourceContractIds": [
+      "contract::KXFED-27APR-T4.00"
+    ],
+    "targetContractIds": [
+      "contract::KXFED-27APR-T4.25"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "monotone_ineq",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "referenceVariable": "fed_target_rate",
+      "leftThreshold": 4,
+      "rightThreshold": 4.25
+    }
+  }
+]

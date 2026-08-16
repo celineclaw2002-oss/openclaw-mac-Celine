@@ -1,0 +1,958 @@
+[
+  {
+    "edgeId": "edge::partition_sum::bucket_group::btc_usd",
+    "edgeType": "partition_sum",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71650",
+      "contract::KXBTC-26AUG1800-B71550",
+      "contract::KXBTC-26AUG1800-B71450",
+      "contract::KXBTC-26AUG1800-B71350",
+      "contract::KXBTC-26AUG1800-B71250",
+      "contract::KXBTC-26AUG1800-B71150",
+      "contract::KXBTC-26AUG1800-B71050",
+      "contract::KXBTC-26AUG1800-B70950",
+      "contract::KXBTC-26AUG1800-B70850",
+      "contract::KXBTC-26AUG1800-B70750",
+      "contract::KXBTC-26AUG1800-B70650",
+      "contract::KXBTC-26AUG1800-B70550",
+      "contract::KXBTC-26AUG1800-B70450",
+      "contract::KXBTC-26AUG1800-B70350",
+      "contract::KXBTC-26AUG1800-B70250",
+      "contract::KXBTC-26AUG1800-B70150",
+      "contract::KXBTC-26AUG1800-B70050"
+    ],
+    "targetContractIds": [],
+    "hardnessClass": "hard",
+    "constraintForm": "sum_to_one",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.95,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd",
+      "members": 23
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B72250",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B72250"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71650",
+      "contract::KXBTC-26AUG1800-B71550",
+      "contract::KXBTC-26AUG1800-B71450",
+      "contract::KXBTC-26AUG1800-B71350",
+      "contract::KXBTC-26AUG1800-B71250",
+      "contract::KXBTC-26AUG1800-B71150",
+      "contract::KXBTC-26AUG1800-B71050",
+      "contract::KXBTC-26AUG1800-B70950",
+      "contract::KXBTC-26AUG1800-B70850",
+      "contract::KXBTC-26AUG1800-B70750",
+      "contract::KXBTC-26AUG1800-B70650",
+      "contract::KXBTC-26AUG1800-B70550",
+      "contract::KXBTC-26AUG1800-B70450",
+      "contract::KXBTC-26AUG1800-B70350",
+      "contract::KXBTC-26AUG1800-B70250",
+      "contract::KXBTC-26AUG1800-B70150",
+      "contract::KXBTC-26AUG1800-B70050"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B72150",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B72150"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71650",
+      "contract::KXBTC-26AUG1800-B71550",
+      "contract::KXBTC-26AUG1800-B71450",
+      "contract::KXBTC-26AUG1800-B71350",
+      "contract::KXBTC-26AUG1800-B71250",
+      "contract::KXBTC-26AUG1800-B71150",
+      "contract::KXBTC-26AUG1800-B71050",
+      "contract::KXBTC-26AUG1800-B70950",
+      "contract::KXBTC-26AUG1800-B70850",
+      "contract::KXBTC-26AUG1800-B70750",
+      "contract::KXBTC-26AUG1800-B70650",
+      "contract::KXBTC-26AUG1800-B70550",
+      "contract::KXBTC-26AUG1800-B70450",
+      "contract::KXBTC-26AUG1800-B70350",
+      "contract::KXBTC-26AUG1800-B70250",
+      "contract::KXBTC-26AUG1800-B70150",
+      "contract::KXBTC-26AUG1800-B70050"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B72050",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B72050"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71650",
+      "contract::KXBTC-26AUG1800-B71550",
+      "contract::KXBTC-26AUG1800-B71450",
+      "contract::KXBTC-26AUG1800-B71350",
+      "contract::KXBTC-26AUG1800-B71250",
+      "contract::KXBTC-26AUG1800-B71150",
+      "contract::KXBTC-26AUG1800-B71050",
+      "contract::KXBTC-26AUG1800-B70950",
+      "contract::KXBTC-26AUG1800-B70850",
+      "contract::KXBTC-26AUG1800-B70750",
+      "contract::KXBTC-26AUG1800-B70650",
+      "contract::KXBTC-26AUG1800-B70550",
+      "contract::KXBTC-26AUG1800-B70450",
+      "contract::KXBTC-26AUG1800-B70350",
+      "contract::KXBTC-26AUG1800-B70250",
+      "contract::KXBTC-26AUG1800-B70150",
+      "contract::KXBTC-26AUG1800-B70050"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B71950",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B71950"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71650",
+      "contract::KXBTC-26AUG1800-B71550",
+      "contract::KXBTC-26AUG1800-B71450",
+      "contract::KXBTC-26AUG1800-B71350",
+      "contract::KXBTC-26AUG1800-B71250",
+      "contract::KXBTC-26AUG1800-B71150",
+      "contract::KXBTC-26AUG1800-B71050",
+      "contract::KXBTC-26AUG1800-B70950",
+      "contract::KXBTC-26AUG1800-B70850",
+      "contract::KXBTC-26AUG1800-B70750",
+      "contract::KXBTC-26AUG1800-B70650",
+      "contract::KXBTC-26AUG1800-B70550",
+      "contract::KXBTC-26AUG1800-B70450",
+      "contract::KXBTC-26AUG1800-B70350",
+      "contract::KXBTC-26AUG1800-B70250",
+      "contract::KXBTC-26AUG1800-B70150",
+      "contract::KXBTC-26AUG1800-B70050"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B71850",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B71850"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71650",
+      "contract::KXBTC-26AUG1800-B71550",
+      "contract::KXBTC-26AUG1800-B71450",
+      "contract::KXBTC-26AUG1800-B71350",
+      "contract::KXBTC-26AUG1800-B71250",
+      "contract::KXBTC-26AUG1800-B71150",
+      "contract::KXBTC-26AUG1800-B71050",
+      "contract::KXBTC-26AUG1800-B70950",
+      "contract::KXBTC-26AUG1800-B70850",
+      "contract::KXBTC-26AUG1800-B70750",
+      "contract::KXBTC-26AUG1800-B70650",
+      "contract::KXBTC-26AUG1800-B70550",
+      "contract::KXBTC-26AUG1800-B70450",
+      "contract::KXBTC-26AUG1800-B70350",
+      "contract::KXBTC-26AUG1800-B70250",
+      "contract::KXBTC-26AUG1800-B70150",
+      "contract::KXBTC-26AUG1800-B70050"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B71750",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B71750"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71650",
+      "contract::KXBTC-26AUG1800-B71550",
+      "contract::KXBTC-26AUG1800-B71450",
+      "contract::KXBTC-26AUG1800-B71350",
+      "contract::KXBTC-26AUG1800-B71250",
+      "contract::KXBTC-26AUG1800-B71150",
+      "contract::KXBTC-26AUG1800-B71050",
+      "contract::KXBTC-26AUG1800-B70950",
+      "contract::KXBTC-26AUG1800-B70850",
+      "contract::KXBTC-26AUG1800-B70750",
+      "contract::KXBTC-26AUG1800-B70650",
+      "contract::KXBTC-26AUG1800-B70550",
+      "contract::KXBTC-26AUG1800-B70450",
+      "contract::KXBTC-26AUG1800-B70350",
+      "contract::KXBTC-26AUG1800-B70250",
+      "contract::KXBTC-26AUG1800-B70150",
+      "contract::KXBTC-26AUG1800-B70050"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B71650",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B71650"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71550",
+      "contract::KXBTC-26AUG1800-B71450",
+      "contract::KXBTC-26AUG1800-B71350",
+      "contract::KXBTC-26AUG1800-B71250",
+      "contract::KXBTC-26AUG1800-B71150",
+      "contract::KXBTC-26AUG1800-B71050",
+      "contract::KXBTC-26AUG1800-B70950",
+      "contract::KXBTC-26AUG1800-B70850",
+      "contract::KXBTC-26AUG1800-B70750",
+      "contract::KXBTC-26AUG1800-B70650",
+      "contract::KXBTC-26AUG1800-B70550",
+      "contract::KXBTC-26AUG1800-B70450",
+      "contract::KXBTC-26AUG1800-B70350",
+      "contract::KXBTC-26AUG1800-B70250",
+      "contract::KXBTC-26AUG1800-B70150",
+      "contract::KXBTC-26AUG1800-B70050"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B71550",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B71550"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71650",
+      "contract::KXBTC-26AUG1800-B71450",
+      "contract::KXBTC-26AUG1800-B71350",
+      "contract::KXBTC-26AUG1800-B71250",
+      "contract::KXBTC-26AUG1800-B71150",
+      "contract::KXBTC-26AUG1800-B71050",
+      "contract::KXBTC-26AUG1800-B70950",
+      "contract::KXBTC-26AUG1800-B70850",
+      "contract::KXBTC-26AUG1800-B70750",
+      "contract::KXBTC-26AUG1800-B70650",
+      "contract::KXBTC-26AUG1800-B70550",
+      "contract::KXBTC-26AUG1800-B70450",
+      "contract::KXBTC-26AUG1800-B70350",
+      "contract::KXBTC-26AUG1800-B70250",
+      "contract::KXBTC-26AUG1800-B70150",
+      "contract::KXBTC-26AUG1800-B70050"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B71450",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B71450"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71650",
+      "contract::KXBTC-26AUG1800-B71550",
+      "contract::KXBTC-26AUG1800-B71350",
+      "contract::KXBTC-26AUG1800-B71250",
+      "contract::KXBTC-26AUG1800-B71150",
+      "contract::KXBTC-26AUG1800-B71050",
+      "contract::KXBTC-26AUG1800-B70950",
+      "contract::KXBTC-26AUG1800-B70850",
+      "contract::KXBTC-26AUG1800-B70750",
+      "contract::KXBTC-26AUG1800-B70650",
+      "contract::KXBTC-26AUG1800-B70550",
+      "contract::KXBTC-26AUG1800-B70450",
+      "contract::KXBTC-26AUG1800-B70350",
+      "contract::KXBTC-26AUG1800-B70250",
+      "contract::KXBTC-26AUG1800-B70150",
+      "contract::KXBTC-26AUG1800-B70050"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B71350",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B71350"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71650",
+      "contract::KXBTC-26AUG1800-B71550",
+      "contract::KXBTC-26AUG1800-B71450",
+      "contract::KXBTC-26AUG1800-B71250",
+      "contract::KXBTC-26AUG1800-B71150",
+      "contract::KXBTC-26AUG1800-B71050",
+      "contract::KXBTC-26AUG1800-B70950",
+      "contract::KXBTC-26AUG1800-B70850",
+      "contract::KXBTC-26AUG1800-B70750",
+      "contract::KXBTC-26AUG1800-B70650",
+      "contract::KXBTC-26AUG1800-B70550",
+      "contract::KXBTC-26AUG1800-B70450",
+      "contract::KXBTC-26AUG1800-B70350",
+      "contract::KXBTC-26AUG1800-B70250",
+      "contract::KXBTC-26AUG1800-B70150",
+      "contract::KXBTC-26AUG1800-B70050"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B71250",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B71250"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71650",
+      "contract::KXBTC-26AUG1800-B71550",
+      "contract::KXBTC-26AUG1800-B71450",
+      "contract::KXBTC-26AUG1800-B71350",
+      "contract::KXBTC-26AUG1800-B71150",
+      "contract::KXBTC-26AUG1800-B71050",
+      "contract::KXBTC-26AUG1800-B70950",
+      "contract::KXBTC-26AUG1800-B70850",
+      "contract::KXBTC-26AUG1800-B70750",
+      "contract::KXBTC-26AUG1800-B70650",
+      "contract::KXBTC-26AUG1800-B70550",
+      "contract::KXBTC-26AUG1800-B70450",
+      "contract::KXBTC-26AUG1800-B70350",
+      "contract::KXBTC-26AUG1800-B70250",
+      "contract::KXBTC-26AUG1800-B70150",
+      "contract::KXBTC-26AUG1800-B70050"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B71150",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B71150"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71650",
+      "contract::KXBTC-26AUG1800-B71550",
+      "contract::KXBTC-26AUG1800-B71450",
+      "contract::KXBTC-26AUG1800-B71350",
+      "contract::KXBTC-26AUG1800-B71250",
+      "contract::KXBTC-26AUG1800-B71050",
+      "contract::KXBTC-26AUG1800-B70950",
+      "contract::KXBTC-26AUG1800-B70850",
+      "contract::KXBTC-26AUG1800-B70750",
+      "contract::KXBTC-26AUG1800-B70650",
+      "contract::KXBTC-26AUG1800-B70550",
+      "contract::KXBTC-26AUG1800-B70450",
+      "contract::KXBTC-26AUG1800-B70350",
+      "contract::KXBTC-26AUG1800-B70250",
+      "contract::KXBTC-26AUG1800-B70150",
+      "contract::KXBTC-26AUG1800-B70050"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B71050",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B71050"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71650",
+      "contract::KXBTC-26AUG1800-B71550",
+      "contract::KXBTC-26AUG1800-B71450",
+      "contract::KXBTC-26AUG1800-B71350",
+      "contract::KXBTC-26AUG1800-B71250",
+      "contract::KXBTC-26AUG1800-B71150",
+      "contract::KXBTC-26AUG1800-B70950",
+      "contract::KXBTC-26AUG1800-B70850",
+      "contract::KXBTC-26AUG1800-B70750",
+      "contract::KXBTC-26AUG1800-B70650",
+      "contract::KXBTC-26AUG1800-B70550",
+      "contract::KXBTC-26AUG1800-B70450",
+      "contract::KXBTC-26AUG1800-B70350",
+      "contract::KXBTC-26AUG1800-B70250",
+      "contract::KXBTC-26AUG1800-B70150",
+      "contract::KXBTC-26AUG1800-B70050"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B70950",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B70950"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71650",
+      "contract::KXBTC-26AUG1800-B71550",
+      "contract::KXBTC-26AUG1800-B71450",
+      "contract::KXBTC-26AUG1800-B71350",
+      "contract::KXBTC-26AUG1800-B71250",
+      "contract::KXBTC-26AUG1800-B71150",
+      "contract::KXBTC-26AUG1800-B71050",
+      "contract::KXBTC-26AUG1800-B70850",
+      "contract::KXBTC-26AUG1800-B70750",
+      "contract::KXBTC-26AUG1800-B70650",
+      "contract::KXBTC-26AUG1800-B70550",
+      "contract::KXBTC-26AUG1800-B70450",
+      "contract::KXBTC-26AUG1800-B70350",
+      "contract::KXBTC-26AUG1800-B70250",
+      "contract::KXBTC-26AUG1800-B70150",
+      "contract::KXBTC-26AUG1800-B70050"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B70850",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B70850"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71650",
+      "contract::KXBTC-26AUG1800-B71550",
+      "contract::KXBTC-26AUG1800-B71450",
+      "contract::KXBTC-26AUG1800-B71350",
+      "contract::KXBTC-26AUG1800-B71250",
+      "contract::KXBTC-26AUG1800-B71150",
+      "contract::KXBTC-26AUG1800-B71050",
+      "contract::KXBTC-26AUG1800-B70950",
+      "contract::KXBTC-26AUG1800-B70750",
+      "contract::KXBTC-26AUG1800-B70650",
+      "contract::KXBTC-26AUG1800-B70550",
+      "contract::KXBTC-26AUG1800-B70450",
+      "contract::KXBTC-26AUG1800-B70350",
+      "contract::KXBTC-26AUG1800-B70250",
+      "contract::KXBTC-26AUG1800-B70150",
+      "contract::KXBTC-26AUG1800-B70050"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B70750",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B70750"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71650",
+      "contract::KXBTC-26AUG1800-B71550",
+      "contract::KXBTC-26AUG1800-B71450",
+      "contract::KXBTC-26AUG1800-B71350",
+      "contract::KXBTC-26AUG1800-B71250",
+      "contract::KXBTC-26AUG1800-B71150",
+      "contract::KXBTC-26AUG1800-B71050",
+      "contract::KXBTC-26AUG1800-B70950",
+      "contract::KXBTC-26AUG1800-B70850",
+      "contract::KXBTC-26AUG1800-B70650",
+      "contract::KXBTC-26AUG1800-B70550",
+      "contract::KXBTC-26AUG1800-B70450",
+      "contract::KXBTC-26AUG1800-B70350",
+      "contract::KXBTC-26AUG1800-B70250",
+      "contract::KXBTC-26AUG1800-B70150",
+      "contract::KXBTC-26AUG1800-B70050"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B70650",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B70650"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71650",
+      "contract::KXBTC-26AUG1800-B71550",
+      "contract::KXBTC-26AUG1800-B71450",
+      "contract::KXBTC-26AUG1800-B71350",
+      "contract::KXBTC-26AUG1800-B71250",
+      "contract::KXBTC-26AUG1800-B71150",
+      "contract::KXBTC-26AUG1800-B71050",
+      "contract::KXBTC-26AUG1800-B70950",
+      "contract::KXBTC-26AUG1800-B70850",
+      "contract::KXBTC-26AUG1800-B70750",
+      "contract::KXBTC-26AUG1800-B70550",
+      "contract::KXBTC-26AUG1800-B70450",
+      "contract::KXBTC-26AUG1800-B70350",
+      "contract::KXBTC-26AUG1800-B70250",
+      "contract::KXBTC-26AUG1800-B70150",
+      "contract::KXBTC-26AUG1800-B70050"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B70550",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B70550"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71650",
+      "contract::KXBTC-26AUG1800-B71550",
+      "contract::KXBTC-26AUG1800-B71450",
+      "contract::KXBTC-26AUG1800-B71350",
+      "contract::KXBTC-26AUG1800-B71250",
+      "contract::KXBTC-26AUG1800-B71150",
+      "contract::KXBTC-26AUG1800-B71050",
+      "contract::KXBTC-26AUG1800-B70950",
+      "contract::KXBTC-26AUG1800-B70850",
+      "contract::KXBTC-26AUG1800-B70750",
+      "contract::KXBTC-26AUG1800-B70650",
+      "contract::KXBTC-26AUG1800-B70450",
+      "contract::KXBTC-26AUG1800-B70350",
+      "contract::KXBTC-26AUG1800-B70250",
+      "contract::KXBTC-26AUG1800-B70150",
+      "contract::KXBTC-26AUG1800-B70050"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B70450",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B70450"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71650",
+      "contract::KXBTC-26AUG1800-B71550",
+      "contract::KXBTC-26AUG1800-B71450",
+      "contract::KXBTC-26AUG1800-B71350",
+      "contract::KXBTC-26AUG1800-B71250",
+      "contract::KXBTC-26AUG1800-B71150",
+      "contract::KXBTC-26AUG1800-B71050",
+      "contract::KXBTC-26AUG1800-B70950",
+      "contract::KXBTC-26AUG1800-B70850",
+      "contract::KXBTC-26AUG1800-B70750",
+      "contract::KXBTC-26AUG1800-B70650",
+      "contract::KXBTC-26AUG1800-B70550",
+      "contract::KXBTC-26AUG1800-B70350",
+      "contract::KXBTC-26AUG1800-B70250",
+      "contract::KXBTC-26AUG1800-B70150",
+      "contract::KXBTC-26AUG1800-B70050"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B70350",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B70350"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71650",
+      "contract::KXBTC-26AUG1800-B71550",
+      "contract::KXBTC-26AUG1800-B71450",
+      "contract::KXBTC-26AUG1800-B71350",
+      "contract::KXBTC-26AUG1800-B71250",
+      "contract::KXBTC-26AUG1800-B71150",
+      "contract::KXBTC-26AUG1800-B71050",
+      "contract::KXBTC-26AUG1800-B70950",
+      "contract::KXBTC-26AUG1800-B70850",
+      "contract::KXBTC-26AUG1800-B70750",
+      "contract::KXBTC-26AUG1800-B70650",
+      "contract::KXBTC-26AUG1800-B70550",
+      "contract::KXBTC-26AUG1800-B70450",
+      "contract::KXBTC-26AUG1800-B70250",
+      "contract::KXBTC-26AUG1800-B70150",
+      "contract::KXBTC-26AUG1800-B70050"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B70250",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B70250"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71650",
+      "contract::KXBTC-26AUG1800-B71550",
+      "contract::KXBTC-26AUG1800-B71450",
+      "contract::KXBTC-26AUG1800-B71350",
+      "contract::KXBTC-26AUG1800-B71250",
+      "contract::KXBTC-26AUG1800-B71150",
+      "contract::KXBTC-26AUG1800-B71050",
+      "contract::KXBTC-26AUG1800-B70950",
+      "contract::KXBTC-26AUG1800-B70850",
+      "contract::KXBTC-26AUG1800-B70750",
+      "contract::KXBTC-26AUG1800-B70650",
+      "contract::KXBTC-26AUG1800-B70550",
+      "contract::KXBTC-26AUG1800-B70450",
+      "contract::KXBTC-26AUG1800-B70350",
+      "contract::KXBTC-26AUG1800-B70150",
+      "contract::KXBTC-26AUG1800-B70050"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B70150",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B70150"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71650",
+      "contract::KXBTC-26AUG1800-B71550",
+      "contract::KXBTC-26AUG1800-B71450",
+      "contract::KXBTC-26AUG1800-B71350",
+      "contract::KXBTC-26AUG1800-B71250",
+      "contract::KXBTC-26AUG1800-B71150",
+      "contract::KXBTC-26AUG1800-B71050",
+      "contract::KXBTC-26AUG1800-B70950",
+      "contract::KXBTC-26AUG1800-B70850",
+      "contract::KXBTC-26AUG1800-B70750",
+      "contract::KXBTC-26AUG1800-B70650",
+      "contract::KXBTC-26AUG1800-B70550",
+      "contract::KXBTC-26AUG1800-B70450",
+      "contract::KXBTC-26AUG1800-B70350",
+      "contract::KXBTC-26AUG1800-B70250",
+      "contract::KXBTC-26AUG1800-B70050"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::partition_member::bucket_group::btc_usd::contract::KXBTC-26AUG1800-B70050",
+    "edgeType": "partition_member",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-B70050"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-B72250",
+      "contract::KXBTC-26AUG1800-B72150",
+      "contract::KXBTC-26AUG1800-B72050",
+      "contract::KXBTC-26AUG1800-B71950",
+      "contract::KXBTC-26AUG1800-B71850",
+      "contract::KXBTC-26AUG1800-B71750",
+      "contract::KXBTC-26AUG1800-B71650",
+      "contract::KXBTC-26AUG1800-B71550",
+      "contract::KXBTC-26AUG1800-B71450",
+      "contract::KXBTC-26AUG1800-B71350",
+      "contract::KXBTC-26AUG1800-B71250",
+      "contract::KXBTC-26AUG1800-B71150",
+      "contract::KXBTC-26AUG1800-B71050",
+      "contract::KXBTC-26AUG1800-B70950",
+      "contract::KXBTC-26AUG1800-B70850",
+      "contract::KXBTC-26AUG1800-B70750",
+      "contract::KXBTC-26AUG1800-B70650",
+      "contract::KXBTC-26AUG1800-B70550",
+      "contract::KXBTC-26AUG1800-B70450",
+      "contract::KXBTC-26AUG1800-B70350",
+      "contract::KXBTC-26AUG1800-B70250",
+      "contract::KXBTC-26AUG1800-B70150"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "other",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "bucketGroupId": "bucket_group::btc_usd"
+    }
+  },
+  {
+    "edgeId": "edge::threshold_monotone::contract::KXBTC-26AUG1800-T53700::contract::KXBTC-26AUG1800-T72299.99",
+    "edgeType": "threshold_monotone",
+    "sourceContractIds": [
+      "contract::KXBTC-26AUG1800-T53700"
+    ],
+    "targetContractIds": [
+      "contract::KXBTC-26AUG1800-T72299.99"
+    ],
+    "hardnessClass": "hard",
+    "constraintForm": "monotone_ineq",
+    "confidenceScore": 0.9,
+    "ruleDependencyScore": 0.9,
+    "graphVersion": "graph-live-v1",
+    "supportingEvidence": {
+      "referenceVariable": "btc_usd",
+      "leftThreshold": 53700,
+      "rightThreshold": 72299.99
+    }
+  }
+]

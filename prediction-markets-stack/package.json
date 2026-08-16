@@ -1,0 +1,16 @@
+{
+  "name": "prediction-markets-stack",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "demo": "node --input-type=module -e \"import('./dist/index.js').then(async (m) => { const out = await m.runKalshiBtcThresholdDemo(); console.log(JSON.stringify(out, null, 2)); })\"",
+    "capture:kalshi": "node --input-type=module -e \"import('./dist/index.js').then(async (m) => { const out = await m.runKalshiLiveCapture(); console.log(JSON.stringify(out, null, 2)); })\""
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "typescript": "^5.9.2"
+  }
+}
