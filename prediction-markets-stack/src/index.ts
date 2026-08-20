@@ -33,4 +33,5 @@ export * from "./pipelines/anchor-input-audit.js";
 export * from "./pipelines/btc-observation-session.js";
 export * from "./pipelines/btc-anchor-residuals.js";
 export * from "./pipelines/btc-anchor-experiment-runner.js";
+export * from "./pipelines/btc-paper-trading-loop.js";
 export * from "./pipelines/internal-consistency-experiment-runner.js";

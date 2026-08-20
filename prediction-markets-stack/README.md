@@ -47,3 +47,8 @@ Current live/replay entry points:
 - `npm run run:btc-anchor-experiments`
   - runs deterministic external-anchor trade simulations across execution templates and residual thresholds
   - writes experiment rows under `simulations/` and a family scorecard under `summaries/`
+- `npm run run:btc-paper-loop`
+  - runs a fresh BTC observation session by default
+  - builds anchor residual observations and a baseline experiment slice
+  - updates a persistent paper portfolio under `data/paper-trading/btc-anchor/`
+  - writes loop-by-loop entry, exit, hold, cash, and PnL summaries

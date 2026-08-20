@@ -1,0 +1,44 @@
+{
+  "captureStartedAtMs": 1787217165513,
+  "captureCompletedAtMs": 1787217179939,
+  "pagesFetched": 8,
+  "marketsScanned": 359,
+  "targetSeriesTickers": [
+    "KXBTC",
+    "KXFED"
+  ],
+  "maxCandidatesPerSeries": 250,
+  "selectedBySeries": {
+    "KXFED": 87
+  },
+  "seriesSelectionDiagnostics": [
+    {
+      "seriesTicker": "KXBTC",
+      "scannedCandidates": 250,
+      "tradableCandidates": 0,
+      "selectedCandidates": 0,
+      "selectionMode": "skipped_no_tradable_candidates"
+    },
+    {
+      "seriesTicker": "KXFED",
+      "scannedCandidates": 109,
+      "tradableCandidates": 87,
+      "selectedCandidates": 87,
+      "selectionMode": "tradable_only",
+      "visibleFamilies": 8,
+      "tradableFamilies": 6
+    }
+  ],
+  "tradableSelectedBySeries": {
+    "KXFED": 87
+  },
+  "candidateMarkets": 87,
+  "sourceEventsCaptured": 356,
+  "normalizedContracts": 87,
+  "thresholds": 87,
+  "buckets": 0,
+  "graphEdges": 231,
+  "quoteStates": 87,
+  "internalObservations": 231,
+  "internalSimulations": 9
+}

@@ -1,0 +1,1394 @@
+[
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26DEC-T2.75::1787217167052::0bc30a31",
+    "venueContractId": "KXFED-26DEC-T2.75",
+    "lastPrice": 99,
+    "bestYesBid": 98,
+    "bestYesAsk": 99,
+    "bestNoBid": 1,
+    "bestNoAsk": 2,
+    "volume": 17475.55,
+    "openInterest": 4662.63,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26DEC-T3.00::1787217167192::9857cae0",
+    "venueContractId": "KXFED-26DEC-T3.00",
+    "lastPrice": 98,
+    "bestYesBid": 98,
+    "bestYesAsk": 99,
+    "bestNoBid": 1,
+    "bestNoAsk": 2,
+    "volume": 7888.17,
+    "openInterest": 2755.17,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26DEC-T3.25::1787217167333::034d5323",
+    "venueContractId": "KXFED-26DEC-T3.25",
+    "lastPrice": 97,
+    "bestYesBid": 97,
+    "bestYesAsk": 98,
+    "bestNoBid": 2,
+    "bestNoAsk": 3,
+    "volume": 11049.48,
+    "openInterest": 3399,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26DEC-T3.50::1787217167557::d5da645f",
+    "venueContractId": "KXFED-26DEC-T3.50",
+    "lastPrice": 82,
+    "bestYesBid": 81,
+    "bestYesAsk": 83,
+    "bestNoBid": 17,
+    "bestNoAsk": 19,
+    "volume": 24585.74,
+    "openInterest": 14386.12,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26DEC-T3.75::1787217167704::30455217",
+    "venueContractId": "KXFED-26DEC-T3.75",
+    "lastPrice": 55,
+    "bestYesBid": 52,
+    "bestYesAsk": 55,
+    "bestNoBid": 45,
+    "bestNoAsk": 48,
+    "volume": 23949.49,
+    "openInterest": 19151.06,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26DEC-T4.00::1787217167841::12396835",
+    "venueContractId": "KXFED-26DEC-T4.00",
+    "lastPrice": 21,
+    "bestYesBid": 16,
+    "bestYesAsk": 18,
+    "bestNoBid": 82,
+    "bestNoAsk": 84,
+    "volume": 11029.13,
+    "openInterest": 8243.83,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26DEC-T4.25::1787217167982::e9c18887",
+    "venueContractId": "KXFED-26DEC-T4.25",
+    "lastPrice": 6,
+    "bestYesBid": 2,
+    "bestYesAsk": 4,
+    "bestNoBid": 96,
+    "bestNoAsk": 98,
+    "volume": 8183.26,
+    "openInterest": 5278.96,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26DEC-T4.50::1787217168128::4de72e07",
+    "venueContractId": "KXFED-26DEC-T4.50",
+    "lastPrice": 1,
+    "bestYesBid": 0,
+    "bestYesAsk": 1,
+    "bestNoBid": 99,
+    "bestNoAsk": 100,
+    "volume": 2090.94,
+    "openInterest": 1476,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26DEC-T4.75::1787217168261::98e55e4f",
+    "venueContractId": "KXFED-26DEC-T4.75",
+    "lastPrice": 1,
+    "bestYesBid": 0,
+    "bestYesAsk": 1,
+    "bestNoBid": 99,
+    "bestNoAsk": 100,
+    "volume": 1603.13,
+    "openInterest": 1343.04,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26DEC-T5.00::1787217168413::a65c13ca",
+    "venueContractId": "KXFED-26DEC-T5.00",
+    "lastPrice": 2,
+    "bestYesBid": 0,
+    "bestYesAsk": 1,
+    "bestNoBid": 99,
+    "bestNoAsk": 100,
+    "volume": 1467.32,
+    "openInterest": 969.86,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26DEC-T5.25::1787217168548::dd98240c",
+    "venueContractId": "KXFED-26DEC-T5.25",
+    "lastPrice": 1,
+    "bestYesBid": 0,
+    "bestYesAsk": 1,
+    "bestNoBid": 99,
+    "bestNoAsk": 100,
+    "volume": 939.87,
+    "openInterest": 680.86,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26OCT-T2.75::1787217168688::f23bdd47",
+    "venueContractId": "KXFED-26OCT-T2.75",
+    "lastPrice": 98,
+    "bestYesBid": 98,
+    "bestYesAsk": 99,
+    "bestNoBid": 1,
+    "bestNoAsk": 2,
+    "volume": 1951.18,
+    "openInterest": 965.17,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26OCT-T3.00::1787217168858::548d5e2c",
+    "venueContractId": "KXFED-26OCT-T3.00",
+    "lastPrice": 97,
+    "bestYesBid": 98,
+    "bestYesAsk": 99,
+    "bestNoBid": 1,
+    "bestNoAsk": 2,
+    "volume": 2616.99,
+    "openInterest": 1408.96,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26OCT-T3.25::1787217169040::20b7fe54",
+    "venueContractId": "KXFED-26OCT-T3.25",
+    "lastPrice": 98,
+    "bestYesBid": 98,
+    "bestYesAsk": 99,
+    "bestNoBid": 1,
+    "bestNoAsk": 2,
+    "volume": 4445.78,
+    "openInterest": 1951.09,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26OCT-T3.50::1787217169177::fcbbf342",
+    "venueContractId": "KXFED-26OCT-T3.50",
+    "lastPrice": 93,
+    "bestYesBid": 93,
+    "bestYesAsk": 94,
+    "bestNoBid": 6,
+    "bestNoAsk": 7,
+    "volume": 6731.97,
+    "openInterest": 3836.56,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26OCT-T3.75::1787217169381::383ea8db",
+    "venueContractId": "KXFED-26OCT-T3.75",
+    "lastPrice": 42,
+    "bestYesBid": 42,
+    "bestYesAsk": 65,
+    "bestNoBid": 35,
+    "bestNoAsk": 58,
+    "volume": 6653.59,
+    "openInterest": 4279.93,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26OCT-T4.00::1787217169523::dc2c3b7c",
+    "venueContractId": "KXFED-26OCT-T4.00",
+    "lastPrice": 6,
+    "bestYesBid": 6,
+    "bestYesAsk": 8,
+    "bestNoBid": 92,
+    "bestNoAsk": 94,
+    "volume": 6537.12,
+    "openInterest": 4353.89,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26OCT-T4.25::1787217169662::c0b1f7f6",
+    "venueContractId": "KXFED-26OCT-T4.25",
+    "lastPrice": 1,
+    "bestYesBid": 0,
+    "bestYesAsk": 1,
+    "bestNoBid": 99,
+    "bestNoAsk": 100,
+    "volume": 2557.72,
+    "openInterest": 1963.62,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26OCT-T4.50::1787217169809::34aee6fa",
+    "venueContractId": "KXFED-26OCT-T4.50",
+    "lastPrice": 1,
+    "bestYesBid": 0,
+    "bestYesAsk": 1,
+    "bestNoBid": 99,
+    "bestNoAsk": 100,
+    "volume": 1524,
+    "openInterest": 1289,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26OCT-T4.75::1787217169943::2796598d",
+    "venueContractId": "KXFED-26OCT-T4.75",
+    "lastPrice": 1,
+    "bestYesBid": 0,
+    "bestYesAsk": 1,
+    "bestNoBid": 99,
+    "bestNoAsk": 100,
+    "volume": 1728,
+    "openInterest": 648.16,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26OCT-T5.00::1787217170149::52830df2",
+    "venueContractId": "KXFED-26OCT-T5.00",
+    "lastPrice": 1,
+    "bestYesBid": 0,
+    "bestYesAsk": 1,
+    "bestNoBid": 99,
+    "bestNoAsk": 100,
+    "volume": 374,
+    "openInterest": 255,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26OCT-T5.25::1787217170288::8cdaa9cb",
+    "venueContractId": "KXFED-26OCT-T5.25",
+    "lastPrice": 1,
+    "bestYesBid": 0,
+    "bestYesAsk": 1,
+    "bestNoBid": 99,
+    "bestNoAsk": 100,
+    "volume": 1490,
+    "openInterest": 1022,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26SEP-T2.75::1787217170428::5c29db89",
+    "venueContractId": "KXFED-26SEP-T2.75",
+    "lastPrice": 99,
+    "bestYesBid": 99,
+    "bestYesAsk": 100,
+    "bestNoBid": 0,
+    "bestNoAsk": 1,
+    "volume": 5446.95,
+    "openInterest": 3834.6,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26SEP-T3.00::1787217170564::32ea3c79",
+    "venueContractId": "KXFED-26SEP-T3.00",
+    "lastPrice": 99,
+    "bestYesBid": 99,
+    "bestYesAsk": 100,
+    "bestNoBid": 0,
+    "bestNoAsk": 1,
+    "volume": 10039.22,
+    "openInterest": 5930.81,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26SEP-T3.25::1787217170706::7b541c36",
+    "venueContractId": "KXFED-26SEP-T3.25",
+    "lastPrice": 99,
+    "bestYesBid": 99,
+    "bestYesAsk": 100,
+    "bestNoBid": 0,
+    "bestNoAsk": 1,
+    "volume": 7782.04,
+    "openInterest": 3620.98,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26SEP-T3.50::1787217170844::1154115b",
+    "venueContractId": "KXFED-26SEP-T3.50",
+    "lastPrice": 99,
+    "bestYesBid": 99,
+    "bestYesAsk": 100,
+    "bestNoBid": 0,
+    "bestNoAsk": 1,
+    "volume": 27950.41,
+    "openInterest": 16045.09,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26SEP-T3.75::1787217170987::4b4d0516",
+    "venueContractId": "KXFED-26SEP-T3.75",
+    "lastPrice": 28,
+    "bestYesBid": 27,
+    "bestYesAsk": 28,
+    "bestNoBid": 72,
+    "bestNoAsk": 73,
+    "volume": 288809.25,
+    "openInterest": 175880.7,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26SEP-T4.00::1787217171127::c9ad971f",
+    "venueContractId": "KXFED-26SEP-T4.00",
+    "lastPrice": 1,
+    "bestYesBid": 0,
+    "bestYesAsk": 1,
+    "bestNoBid": 99,
+    "bestNoAsk": 100,
+    "volume": 84550.17,
+    "openInterest": 69034,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26SEP-T4.25::1787217171269::ca093870",
+    "venueContractId": "KXFED-26SEP-T4.25",
+    "lastPrice": 1,
+    "bestYesBid": 0,
+    "bestYesAsk": 1,
+    "bestNoBid": 99,
+    "bestNoAsk": 100,
+    "volume": 17294.45,
+    "openInterest": 15215.7,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26SEP-T4.50::1787217171411::42541cb4",
+    "venueContractId": "KXFED-26SEP-T4.50",
+    "lastPrice": 1,
+    "bestYesBid": 0,
+    "bestYesAsk": 1,
+    "bestNoBid": 99,
+    "bestNoAsk": 100,
+    "volume": 3896.74,
+    "openInterest": 1973.33,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26SEP-T4.75::1787217171574::c88225ce",
+    "venueContractId": "KXFED-26SEP-T4.75",
+    "lastPrice": 1,
+    "bestYesBid": 0,
+    "bestYesAsk": 1,
+    "bestNoBid": 99,
+    "bestNoAsk": 100,
+    "volume": 1618.72,
+    "openInterest": 1071.72,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26SEP-T5.00::1787217171759::b3904d40",
+    "venueContractId": "KXFED-26SEP-T5.00",
+    "lastPrice": 1,
+    "bestYesBid": 0,
+    "bestYesAsk": 1,
+    "bestNoBid": 99,
+    "bestNoAsk": 100,
+    "volume": 656.33,
+    "openInterest": 562.33,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-26SEP-T5.25::1787217171902::413cabd6",
+    "venueContractId": "KXFED-26SEP-T5.25",
+    "lastPrice": 1,
+    "bestYesBid": 0,
+    "bestYesAsk": 1,
+    "bestNoBid": 99,
+    "bestNoAsk": 100,
+    "volume": 512,
+    "openInterest": 414,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27APR-T0.00::1787217172044::2994ea68",
+    "venueContractId": "KXFED-27APR-T0.00",
+    "lastPrice": 96,
+    "bestYesBid": 76,
+    "bestYesAsk": 99,
+    "bestNoBid": 1,
+    "bestNoAsk": 24,
+    "volume": 1706.52,
+    "openInterest": 930.52,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27APR-T0.25::1787217172183::2539c0a7",
+    "venueContractId": "KXFED-27APR-T0.25",
+    "lastPrice": 91,
+    "bestYesBid": 78,
+    "bestYesAsk": 96,
+    "bestNoBid": 4,
+    "bestNoAsk": 22,
+    "volume": 1703.84,
+    "openInterest": 810,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27APR-T0.50::1787217172322::c2c1d05f",
+    "venueContractId": "KXFED-27APR-T0.50",
+    "lastPrice": 86,
+    "bestYesBid": 84,
+    "bestYesAsk": 99,
+    "bestNoBid": 1,
+    "bestNoAsk": 16,
+    "volume": 2689.96,
+    "openInterest": 1131,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27APR-T0.75::1787217172461::31ec33ef",
+    "venueContractId": "KXFED-27APR-T0.75",
+    "lastPrice": 89,
+    "bestYesBid": 60,
+    "bestYesAsk": 97,
+    "bestNoBid": 3,
+    "bestNoAsk": 40,
+    "volume": 3468.5,
+    "openInterest": 1024,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27APR-T1.00::1787217172612::2d1ad20b",
+    "venueContractId": "KXFED-27APR-T1.00",
+    "lastPrice": 92,
+    "bestYesBid": 85,
+    "bestYesAsk": 94,
+    "bestNoBid": 6,
+    "bestNoAsk": 15,
+    "volume": 4844.95,
+    "openInterest": 978.24,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27APR-T1.25::1787217172743::536bcc8b",
+    "venueContractId": "KXFED-27APR-T1.25",
+    "lastPrice": 83,
+    "bestYesBid": 46,
+    "bestYesAsk": 95,
+    "bestNoBid": 5,
+    "bestNoAsk": 54,
+    "volume": 7813.07,
+    "openInterest": 2901.99,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27APR-T1.50::1787217172883::d98b244c",
+    "venueContractId": "KXFED-27APR-T1.50",
+    "lastPrice": 75,
+    "bestYesBid": 66,
+    "bestYesAsk": 95,
+    "bestNoBid": 5,
+    "bestNoAsk": 34,
+    "volume": 5339.22,
+    "openInterest": 980.27,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27APR-T1.75::1787217173028::58530d8f",
+    "venueContractId": "KXFED-27APR-T1.75",
+    "lastPrice": 96,
+    "bestYesBid": 38,
+    "bestYesAsk": 97,
+    "bestNoBid": 3,
+    "bestNoAsk": 62,
+    "volume": 3272.27,
+    "openInterest": 600.27,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27APR-T2.00::1787217173163::878fa1ba",
+    "venueContractId": "KXFED-27APR-T2.00",
+    "lastPrice": 83,
+    "bestYesBid": 38,
+    "bestYesAsk": 98,
+    "bestNoBid": 2,
+    "bestNoAsk": 62,
+    "volume": 7273.84,
+    "openInterest": 1091.45,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27APR-T2.25::1787217173303::57d93473",
+    "venueContractId": "KXFED-27APR-T2.25",
+    "lastPrice": 82,
+    "bestYesBid": 38,
+    "bestYesAsk": 96,
+    "bestNoBid": 4,
+    "bestNoAsk": 62,
+    "volume": 5899.77,
+    "openInterest": 1093.37,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27APR-T2.50::1787217173442::c266b4b1",
+    "venueContractId": "KXFED-27APR-T2.50",
+    "lastPrice": 71,
+    "bestYesBid": 38,
+    "bestYesAsk": 94,
+    "bestNoBid": 6,
+    "bestNoAsk": 62,
+    "volume": 5838.03,
+    "openInterest": 1025.92,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27APR-T2.75::1787217173584::17f1265b",
+    "venueContractId": "KXFED-27APR-T2.75",
+    "lastPrice": 83,
+    "bestYesBid": 39,
+    "bestYesAsk": 97,
+    "bestNoBid": 3,
+    "bestNoAsk": 61,
+    "volume": 5993.75,
+    "openInterest": 1393.65,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27APR-T3.00::1787217173746::83bf7222",
+    "venueContractId": "KXFED-27APR-T3.00",
+    "lastPrice": 63,
+    "bestYesBid": 63,
+    "bestYesAsk": 84,
+    "bestNoBid": 16,
+    "bestNoAsk": 37,
+    "volume": 15648.44,
+    "openInterest": 1045.74,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27APR-T3.25::1787217173932::0db87204",
+    "venueContractId": "KXFED-27APR-T3.25",
+    "lastPrice": 34,
+    "bestYesBid": 39,
+    "bestYesAsk": 81,
+    "bestNoBid": 19,
+    "bestNoAsk": 61,
+    "volume": 15706.79,
+    "openInterest": 1975.14,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27APR-T3.50::1787217174076::665c12cc",
+    "venueContractId": "KXFED-27APR-T3.50",
+    "lastPrice": 83,
+    "bestYesBid": 30,
+    "bestYesAsk": 83,
+    "bestNoBid": 17,
+    "bestNoAsk": 70,
+    "volume": 22528.37,
+    "openInterest": 2185.22,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27APR-T3.75::1787217174213::a1eb3a70",
+    "venueContractId": "KXFED-27APR-T3.75",
+    "lastPrice": 42,
+    "bestYesBid": 42,
+    "bestYesAsk": 57,
+    "bestNoBid": 43,
+    "bestNoAsk": 58,
+    "volume": 10582.13,
+    "openInterest": 1684.12,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27APR-T4.00::1787217174355::ba15395f",
+    "venueContractId": "KXFED-27APR-T4.00",
+    "lastPrice": 42,
+    "bestYesBid": 17,
+    "bestYesAsk": 69,
+    "bestNoBid": 31,
+    "bestNoAsk": 83,
+    "volume": 15315.24,
+    "openInterest": 1732.72,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27APR-T4.25::1787217174490::1b134c68",
+    "venueContractId": "KXFED-27APR-T4.25",
+    "lastPrice": 17,
+    "bestYesBid": 9,
+    "bestYesAsk": 39,
+    "bestNoBid": 61,
+    "bestNoAsk": 91,
+    "volume": 10251.97,
+    "openInterest": 2050.01,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27JAN-T0.00::1787217174636::df3e83cd",
+    "venueContractId": "KXFED-27JAN-T0.00",
+    "lastPrice": 98,
+    "bestYesBid": 97,
+    "bestYesAsk": 98,
+    "bestNoBid": 2,
+    "bestNoAsk": 3,
+    "volume": 721.28,
+    "openInterest": 505.18,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27JAN-T0.25::1787217174776::05d333b8",
+    "venueContractId": "KXFED-27JAN-T0.25",
+    "lastPrice": 97,
+    "bestYesBid": 91,
+    "bestYesAsk": 98,
+    "bestNoBid": 2,
+    "bestNoAsk": 9,
+    "volume": 1053.02,
+    "openInterest": 567.99,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27JAN-T0.50::1787217174902::2cb6ca6d",
+    "venueContractId": "KXFED-27JAN-T0.50",
+    "lastPrice": 96,
+    "bestYesBid": 92,
+    "bestYesAsk": 96,
+    "bestNoBid": 4,
+    "bestNoAsk": 8,
+    "volume": 1855.01,
+    "openInterest": 1078.01,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27JAN-T0.75::1787217175042::c05ed8b2",
+    "venueContractId": "KXFED-27JAN-T0.75",
+    "lastPrice": 93,
+    "bestYesBid": 93,
+    "bestYesAsk": 94,
+    "bestNoBid": 6,
+    "bestNoAsk": 7,
+    "volume": 1963,
+    "openInterest": 592.17,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27JAN-T1.00::1787217175184::bb745a80",
+    "venueContractId": "KXFED-27JAN-T1.00",
+    "lastPrice": 97,
+    "bestYesBid": 92,
+    "bestYesAsk": 98,
+    "bestNoBid": 2,
+    "bestNoAsk": 8,
+    "volume": 1324.29,
+    "openInterest": 525.15,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27JAN-T1.25::1787217175322::f704c9cc",
+    "venueContractId": "KXFED-27JAN-T1.25",
+    "lastPrice": 93,
+    "bestYesBid": 92,
+    "bestYesAsk": 97,
+    "bestNoBid": 3,
+    "bestNoAsk": 8,
+    "volume": 2582.16,
+    "openInterest": 1010.66,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27JAN-T1.50::1787217175466::7498e980",
+    "venueContractId": "KXFED-27JAN-T1.50",
+    "lastPrice": 91,
+    "bestYesBid": 91,
+    "bestYesAsk": 97,
+    "bestNoBid": 3,
+    "bestNoAsk": 9,
+    "volume": 2321.39,
+    "openInterest": 1212.37,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27JAN-T1.75::1787217175608::b259cda6",
+    "venueContractId": "KXFED-27JAN-T1.75",
+    "lastPrice": 96,
+    "bestYesBid": 91,
+    "bestYesAsk": 95,
+    "bestNoBid": 5,
+    "bestNoAsk": 9,
+    "volume": 973.38,
+    "openInterest": 450.73,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27JAN-T2.00::1787217175741::e497c5f1",
+    "venueContractId": "KXFED-27JAN-T2.00",
+    "lastPrice": 96,
+    "bestYesBid": 88,
+    "bestYesAsk": 96,
+    "bestNoBid": 4,
+    "bestNoAsk": 12,
+    "volume": 1314.28,
+    "openInterest": 566.04,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27JAN-T2.25::1787217175883::7489928d",
+    "venueContractId": "KXFED-27JAN-T2.25",
+    "lastPrice": 94,
+    "bestYesBid": 89,
+    "bestYesAsk": 94,
+    "bestNoBid": 6,
+    "bestNoAsk": 11,
+    "volume": 1205.1,
+    "openInterest": 333.82,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27JAN-T2.50::1787217176024::c12e2263",
+    "venueContractId": "KXFED-27JAN-T2.50",
+    "lastPrice": 90,
+    "bestYesBid": 88,
+    "bestYesAsk": 93,
+    "bestNoBid": 7,
+    "bestNoAsk": 12,
+    "volume": 1717.28,
+    "openInterest": 773.83,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27JAN-T2.75::1787217176173::b79b0b7b",
+    "venueContractId": "KXFED-27JAN-T2.75",
+    "lastPrice": 91,
+    "bestYesBid": 83,
+    "bestYesAsk": 93,
+    "bestNoBid": 7,
+    "bestNoAsk": 17,
+    "volume": 973.05,
+    "openInterest": 395.96,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27JAN-T3.00::1787217176305::1263125f",
+    "venueContractId": "KXFED-27JAN-T3.00",
+    "lastPrice": 85,
+    "bestYesBid": 85,
+    "bestYesAsk": 93,
+    "bestNoBid": 7,
+    "bestNoAsk": 15,
+    "volume": 5053.25,
+    "openInterest": 1095.2,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27JAN-T3.25::1787217176446::faa6f98b",
+    "venueContractId": "KXFED-27JAN-T3.25",
+    "lastPrice": 69,
+    "bestYesBid": 65,
+    "bestYesAsk": 91,
+    "bestNoBid": 9,
+    "bestNoAsk": 35,
+    "volume": 12665.14,
+    "openInterest": 2959.49,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27JAN-T3.50::1787217176582::d9cf8457",
+    "venueContractId": "KXFED-27JAN-T3.50",
+    "lastPrice": 64,
+    "bestYesBid": 61,
+    "bestYesAsk": 81,
+    "bestNoBid": 19,
+    "bestNoAsk": 39,
+    "volume": 6450.77,
+    "openInterest": 1388.55,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27JAN-T3.75::1787217176722::7fa87456",
+    "venueContractId": "KXFED-27JAN-T3.75",
+    "lastPrice": 61,
+    "bestYesBid": 32,
+    "bestYesAsk": 61,
+    "bestNoBid": 39,
+    "bestNoAsk": 68,
+    "volume": 1977.87,
+    "openInterest": 390.08,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27JAN-T4.00::1787217176861::1759d92f",
+    "venueContractId": "KXFED-27JAN-T4.00",
+    "lastPrice": 15,
+    "bestYesBid": 15,
+    "bestYesAsk": 43,
+    "bestNoBid": 57,
+    "bestNoAsk": 85,
+    "volume": 3567.83,
+    "openInterest": 535.26,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27JAN-T4.25::1787217177004::e7a3687d",
+    "venueContractId": "KXFED-27JAN-T4.25",
+    "lastPrice": 7,
+    "bestYesBid": 7,
+    "bestYesAsk": 20,
+    "bestNoBid": 80,
+    "bestNoAsk": 93,
+    "volume": 1044.04,
+    "openInterest": 239.12,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27MAR-T0.00::1787217177143::130323e0",
+    "venueContractId": "KXFED-27MAR-T0.00",
+    "lastPrice": 99,
+    "bestYesBid": 94,
+    "bestYesAsk": 99,
+    "bestNoBid": 1,
+    "bestNoAsk": 6,
+    "volume": 781.91,
+    "openInterest": 328.88,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27MAR-T0.25::1787217177394::f9a6febe",
+    "venueContractId": "KXFED-27MAR-T0.25",
+    "lastPrice": 99,
+    "bestYesBid": 94,
+    "bestYesAsk": 99,
+    "bestNoBid": 1,
+    "bestNoAsk": 6,
+    "volume": 872.04,
+    "openInterest": 361,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27MAR-T0.50::1787217177546::f439e82d",
+    "venueContractId": "KXFED-27MAR-T0.50",
+    "lastPrice": 97,
+    "bestYesBid": 94,
+    "bestYesAsk": 97,
+    "bestNoBid": 3,
+    "bestNoAsk": 6,
+    "volume": 469.01,
+    "openInterest": 188.98,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27MAR-T0.75::1787217177847::7e625020",
+    "venueContractId": "KXFED-27MAR-T0.75",
+    "lastPrice": 93,
+    "bestYesBid": 94,
+    "bestYesAsk": 97,
+    "bestNoBid": 3,
+    "bestNoAsk": 6,
+    "volume": 1041.32,
+    "openInterest": 586.3,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27MAR-T1.00::1787217177990::a3b27d24",
+    "venueContractId": "KXFED-27MAR-T1.00",
+    "lastPrice": 93,
+    "bestYesBid": 94,
+    "bestYesAsk": 97,
+    "bestNoBid": 3,
+    "bestNoAsk": 6,
+    "volume": 1326.04,
+    "openInterest": 486.98,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27MAR-T1.25::1787217178131::ded4c831",
+    "venueContractId": "KXFED-27MAR-T1.25",
+    "lastPrice": 89,
+    "bestYesBid": 92,
+    "bestYesAsk": 97,
+    "bestNoBid": 3,
+    "bestNoAsk": 8,
+    "volume": 1673.21,
+    "openInterest": 593.1,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27MAR-T1.50::1787217178269::c291ea1b",
+    "venueContractId": "KXFED-27MAR-T1.50",
+    "lastPrice": 96,
+    "bestYesBid": 92,
+    "bestYesAsk": 96,
+    "bestNoBid": 4,
+    "bestNoAsk": 8,
+    "volume": 889.01,
+    "openInterest": 143,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27MAR-T1.75::1787217178423::61ecb838",
+    "venueContractId": "KXFED-27MAR-T1.75",
+    "lastPrice": 93,
+    "bestYesBid": 93,
+    "bestYesAsk": 96,
+    "bestNoBid": 4,
+    "bestNoAsk": 7,
+    "volume": 1376.4,
+    "openInterest": 204.33,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27MAR-T2.00::1787217178549::a30fd35d",
+    "venueContractId": "KXFED-27MAR-T2.00",
+    "lastPrice": 91,
+    "bestYesBid": 91,
+    "bestYesAsk": 96,
+    "bestNoBid": 4,
+    "bestNoAsk": 9,
+    "volume": 3349.75,
+    "openInterest": 870.88,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27MAR-T2.25::1787217178686::94771700",
+    "venueContractId": "KXFED-27MAR-T2.25",
+    "lastPrice": 86,
+    "bestYesBid": 86,
+    "bestYesAsk": 96,
+    "bestNoBid": 4,
+    "bestNoAsk": 14,
+    "volume": 2301.48,
+    "openInterest": 955.84,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27MAR-T2.50::1787217178949::07f939b0",
+    "venueContractId": "KXFED-27MAR-T2.50",
+    "lastPrice": 94,
+    "bestYesBid": 65,
+    "bestYesAsk": 97,
+    "bestNoBid": 3,
+    "bestNoAsk": 35,
+    "volume": 1224.34,
+    "openInterest": 249.28,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27MAR-T2.75::1787217179076::649f14eb",
+    "venueContractId": "KXFED-27MAR-T2.75",
+    "lastPrice": 96,
+    "bestYesBid": 65,
+    "bestYesAsk": 96,
+    "bestNoBid": 4,
+    "bestNoAsk": 35,
+    "volume": 1759.36,
+    "openInterest": 311.98,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27MAR-T3.00::1787217179214::f3238086",
+    "venueContractId": "KXFED-27MAR-T3.00",
+    "lastPrice": 14,
+    "bestYesBid": 65,
+    "bestYesAsk": 94,
+    "bestNoBid": 6,
+    "bestNoAsk": 35,
+    "volume": 1719.03,
+    "openInterest": 295.1,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27MAR-T3.25::1787217179357::a439403f",
+    "venueContractId": "KXFED-27MAR-T3.25",
+    "lastPrice": 67,
+    "bestYesBid": 56,
+    "bestYesAsk": 94,
+    "bestNoBid": 6,
+    "bestNoAsk": 44,
+    "volume": 4733.1,
+    "openInterest": 714.94,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27MAR-T3.50::1787217179502::dc086b1f",
+    "venueContractId": "KXFED-27MAR-T3.50",
+    "lastPrice": 66,
+    "bestYesBid": 26,
+    "bestYesAsk": 66,
+    "bestNoBid": 34,
+    "bestNoAsk": 74,
+    "volume": 2856.03,
+    "openInterest": 1143.01,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27MAR-T3.75::1787217179639::884d96c2",
+    "venueContractId": "KXFED-27MAR-T3.75",
+    "lastPrice": 54,
+    "bestYesBid": 22,
+    "bestYesAsk": 47,
+    "bestNoBid": 53,
+    "bestNoAsk": 78,
+    "volume": 2251.69,
+    "openInterest": 690,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27MAR-T4.00::1787217179775::dcaa6737",
+    "venueContractId": "KXFED-27MAR-T4.00",
+    "lastPrice": 54,
+    "bestYesBid": 18,
+    "bestYesAsk": 48,
+    "bestNoBid": 52,
+    "bestNoAsk": 82,
+    "volume": 3416.15,
+    "openInterest": 596,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  },
+  {
+    "sourceEventId": "kalshi::trade_ticker::/markets/KXFED-27MAR-T4.25::1787217179916::d89eae32",
+    "venueContractId": "KXFED-27MAR-T4.25",
+    "lastPrice": 9,
+    "bestYesBid": 5,
+    "bestYesAsk": 13,
+    "bestNoBid": 87,
+    "bestNoAsk": 95,
+    "volume": 2572.44,
+    "openInterest": 900.68,
+    "parseVersion": "kalshi-v1",
+    "parseSuccess": true,
+    "qualityFlags": [
+      "missing_settlement_source"
+    ]
+  }
+]

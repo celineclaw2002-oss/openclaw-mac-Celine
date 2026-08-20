@@ -1,0 +1,22 @@
+{
+  "outputRoot": "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live/20260820T091245512Z",
+  "portfolioRoot": "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/paper-trading/btc-anchor",
+  "loopTimeIso": "2026-08-20T09:12:59.965Z",
+  "observationSessionAction": "executed",
+  "btcCaptureAction": "wait_for_open",
+  "entryResidualThreshold": 0.035,
+  "exitResidualThreshold": 0.012,
+  "consideredObservations": 0,
+  "eligibleEntries": 0,
+  "entriesPlaced": 0,
+  "exitsPlaced": 0,
+  "holdsReviewed": 0,
+  "openPositions": 0,
+  "closedPositions": 0,
+  "cashCents": 100000,
+  "realizedPnlCents": 0,
+  "unrealizedPnlCents": 0,
+  "netLiquidationCents": 100000,
+  "actions": [],
+  "skippedReason": "BTC families are not open yet, so the paper loop did not stage trades."
+}

@@ -667,3 +667,56 @@ Built a reusable venue primer on Kalshi and Polymarket for future prediction-mar
   - **reserve path:** build a second BTC external-anchor sleeve for continuously tradable milestone-by-date contracts on Polymarket if we want ongoing crypto-linked live evaluation even when Kalshi BTC is pre-open
 - Durable memo saved to Vault:
   - `/Users/canozgel-macmini/.openclaw/MissionControlVault/10 Research/Prediction Markets/prediction-markets-btc-external-anchor-live-path-decision-2026-08-16.md`
+
+## 2026-08-20 BTC paper-trading loop scaffold
+
+- Added a persistent BTC paper-trading loop on top of the existing Kalshi live-capture and BTC anchor stack:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/src/pipelines/btc-paper-trading-loop.ts`
+- Added exports and CLI wiring:
+  - `npm run run:btc-paper-loop`
+  - updated:
+    - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/src/index.ts`
+    - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/package.json`
+    - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/README.md`
+- The loop currently does the following in one run:
+  - starts a fresh BTC observation session unless an `outputRoot` is supplied
+  - short-circuits cleanly when BTC families are still pre-open
+  - builds external-anchor residual observations once anchor inputs exist
+  - runs a baseline hybrid execution experiment slice
+  - maintains a persistent paper portfolio and loop journal under:
+    - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/paper-trading/btc-anchor`
+  - records:
+    - entries
+    - exits
+    - holds
+    - cash
+    - realized PnL
+    - unrealized PnL
+    - net liquidation
+- First live paper-loop results:
+  - run command:
+    - `npm run run:btc-paper-loop`
+  - latest replay root:
+    - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live/20260820T091340708Z`
+  - latest paper-loop summary:
+    - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/paper-trading/btc-anchor/latest-summary.json`
+  - latest portfolio state:
+    - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/paper-trading/btc-anchor/portfolio-state.json`
+  - result:
+    - `btcCaptureAction: "wait_for_open"`
+    - `entriesPlaced: 0`
+    - `openPositions: 0`
+    - `cashCents: 100000`
+    - `netLiquidationCents: 100000`
+    - skipped because current visible BTC families are still pre-open
+- Latest readiness window from the generated planner:
+  - next open family:
+    - `KXBTC-26AUG2123`
+  - next open time:
+    - `2026-08-22T02:00:00.000Z`
+  - recommended capture start:
+    - `2026-08-22T02:05:00.000Z`
+  - recommended capture end:
+    - `2026-08-22T04:05:00.000Z`
+- Immediate next step:
+  - trigger the BTC paper loop automatically shortly after the recommended capture start so the first real paper fills can happen when live tradable quotes exist
