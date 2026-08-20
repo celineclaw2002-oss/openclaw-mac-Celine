@@ -19,6 +19,9 @@
     "build:btc-anchor-residuals": "node --input-type=module -e \"import('./dist/index.js').then(async (m) => { const out = await m.runBtcAnchorResiduals(); console.log(JSON.stringify(out, null, 2)); })\"",
     "run:btc-anchor-experiments": "node --input-type=module -e \"import('./dist/index.js').then(async (m) => { const out = await m.runBtcAnchorExperimentRunner(); console.log(JSON.stringify(out, null, 2)); })\"",
     "run:btc-paper-loop": "node --input-type=module -e \"import('./dist/index.js').then(async (m) => { const out = await m.runBtcPaperTradingLoop(); console.log(JSON.stringify(out, null, 2)); })\"",
+    "scan:polymarket-btc": "node --input-type=module -e \"import('./dist/pipelines/polymarket-btc-milestone-scan.js').then(async (m) => { const out = await m.runPolymarketBtcMilestoneScan(); console.log(JSON.stringify(out, null, 2)); })\"",
+    "run:polymarket-btc-paper-loop": "node --input-type=module -e \"import('./dist/pipelines/polymarket-btc-paper-loop.js').then(async (m) => { const out = await m.runPolymarketBtcPaperLoop(); console.log(JSON.stringify(out, null, 2)); })\"",
+    "backtest:polymarket-btc-barrier": "node --input-type=module -e \"import('./dist/pipelines/polymarket-btc-barrier-backtest.js').then(async (m) => { const out = await m.runPolymarketBtcBarrierBacktest(); console.log(JSON.stringify(out, null, 2)); })\"",
     "run:internal-consistency-experiments": "node --input-type=module -e \"import('./dist/index.js').then(async (m) => { const out = await m.runInternalConsistencyExperimentRunner(); console.log(JSON.stringify(out, null, 2)); })\""
   },
   "devDependencies": {

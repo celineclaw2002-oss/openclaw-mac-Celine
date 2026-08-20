@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 import type { CanonicalContract } from "../domain/contracts.js";
@@ -78,6 +78,30 @@ interface HoldAction {
   reason: string;
 }
 
+interface PaperPerformanceSnapshot {
+  initialCapitalCents: number;
+  loopCount: number;
+  closedTrades: number;
+  openTrades: number;
+  grossTradedNotionalCents: number;
+  turnoverRatio: number;
+  currentGrossExposureCents: number;
+  currentNetExposureCents: number;
+  currentGrossExposureRate: number;
+  currentNetExposureRate: number;
+  cumulativeReturn: number;
+  realizedReturn: number;
+  unrealizedReturn: number;
+  maxDrawdown: number;
+  winRate?: number;
+  averageWinCents?: number;
+  averageLossCents?: number;
+  profitFactor?: number;
+  averageHoldingMinutes?: number;
+  loopSharpeRatio?: number;
+  loopSortinoRatio?: number;
+}
+
 export interface BtcPaperTradingLoopOptions {
   outputRoot?: string;
   portfolioRoot?: string;
@@ -107,6 +131,14 @@ export interface BtcPaperTradingLoopSummary {
   realizedPnlCents: number;
   unrealizedPnlCents: number;
   netLiquidationCents: number;
+  entryNotionalCents: number;
+  exitNotionalCents: number;
+  grossTradedNotionalCents: number;
+  grossExposureCents: number;
+  netExposureCents: number;
+  grossExposureRate: number;
+  netExposureRate: number;
+  performance: PaperPerformanceSnapshot;
   actions: Array<EntryAction | ExitAction | HoldAction>;
   skippedReason?: string;
 }
@@ -151,6 +183,25 @@ export async function runBtcPaperTradingLoop(
       (sum, position) => sum + (position.lastMarkPriceCents ?? position.entryPriceCents) * position.quantity,
       0
     );
+    const netExposureCents = portfolio.openPositions.reduce(
+      (sum, position) =>
+        sum +
+        (position.side === "yes" ? 1 : -1) * (position.lastMarkPriceCents ?? position.entryPriceCents) * position.quantity,
+      0
+    );
+    const netLiquidationCents = portfolio.cashCents + markedOpenValue;
+    const performance = await buildPerformanceSnapshot({
+      portfolioRoot,
+      currentSummary: {
+        loopTimeIso: baseSummary.loopTimeIso,
+        netLiquidationCents,
+        grossTradedNotionalCents: 0,
+        grossExposureRate: ratio(markedOpenValue, netLiquidationCents),
+        netExposureRate: ratio(netExposureCents, netLiquidationCents)
+      },
+      portfolio,
+      initialCapitalCents: startingCashCents
+    });
     const blockedSummary: BtcPaperTradingLoopSummary = {
       ...baseSummary,
       consideredObservations: 0,
@@ -166,7 +217,15 @@ export async function runBtcPaperTradingLoop(
         const markPrice = position.lastMarkPriceCents ?? position.entryPriceCents;
         return sum + (markPrice - position.entryPriceCents) * position.quantity;
       }, 0),
-      netLiquidationCents: portfolio.cashCents + markedOpenValue,
+      netLiquidationCents,
+      entryNotionalCents: 0,
+      exitNotionalCents: 0,
+      grossTradedNotionalCents: 0,
+      grossExposureCents: markedOpenValue,
+      netExposureCents,
+      grossExposureRate: ratio(markedOpenValue, netLiquidationCents),
+      netExposureRate: ratio(netExposureCents, netLiquidationCents),
+      performance,
       actions: [],
       skippedReason:
         observationSession.btcCaptureAction === "wait_for_open"
@@ -316,6 +375,35 @@ export async function runBtcPaperTradingLoop(
   const netLiquidationCents =
     portfolio.cashCents +
     portfolio.openPositions.reduce((sum, position) => sum + (position.lastMarkPriceCents ?? position.entryPriceCents) * position.quantity, 0);
+  const entryNotionalCents = actions
+    .filter((action): action is EntryAction => action.type === "entry")
+    .reduce((sum, action) => sum + action.priceCents * action.quantity, 0);
+  const exitNotionalCents = actions
+    .filter((action): action is ExitAction => action.type === "exit")
+    .reduce((sum, action) => sum + action.exitPriceCents * action.quantity, 0);
+  const grossTradedNotionalCents = entryNotionalCents + exitNotionalCents;
+  const grossExposureCents = portfolio.openPositions.reduce(
+    (sum, position) => sum + (position.lastMarkPriceCents ?? position.entryPriceCents) * position.quantity,
+    0
+  );
+  const netExposureCents = portfolio.openPositions.reduce(
+    (sum, position) =>
+      sum +
+      (position.side === "yes" ? 1 : -1) * (position.lastMarkPriceCents ?? position.entryPriceCents) * position.quantity,
+    0
+  );
+  const performance = await buildPerformanceSnapshot({
+    portfolioRoot,
+    currentSummary: {
+      loopTimeIso: baseSummary.loopTimeIso,
+      netLiquidationCents,
+      grossTradedNotionalCents,
+      grossExposureRate: ratio(grossExposureCents, netLiquidationCents),
+      netExposureRate: ratio(netExposureCents, netLiquidationCents)
+    },
+    portfolio,
+    initialCapitalCents: startingCashCents
+  });
 
   const summary: BtcPaperTradingLoopSummary = {
     ...baseSummary,
@@ -330,6 +418,14 @@ export async function runBtcPaperTradingLoop(
     realizedPnlCents: portfolio.realizedPnlCents,
     unrealizedPnlCents,
     netLiquidationCents,
+    entryNotionalCents,
+    exitNotionalCents,
+    grossTradedNotionalCents,
+    grossExposureCents,
+    netExposureCents,
+    grossExposureRate: ratio(grossExposureCents, netLiquidationCents),
+    netExposureRate: ratio(netExposureCents, netLiquidationCents),
+    performance,
     actions
   };
 
@@ -476,6 +572,7 @@ async function writeLoopArtifacts(
   await mkdir(path.dirname(loopTarget), { recursive: true });
   await writeFile(loopTarget, `${JSON.stringify(summary, null, 2)}\n`, "utf8");
   await writeFile(path.join(portfolioRoot, "latest-summary.json"), `${JSON.stringify(summary, null, 2)}\n`, "utf8");
+  await writeFile(path.join(portfolioRoot, "performance-summary.json"), `${JSON.stringify(summary.performance, null, 2)}\n`, "utf8");
 }
 
 async function readJsonFile<T>(target: string): Promise<T> {
@@ -484,4 +581,150 @@ async function readJsonFile<T>(target: string): Promise<T> {
 
 function deterministicPositionId(contractId: string, side: PaperSide, timeMs: number): string {
   return `paper::${contractId}::${side}::${timeMs}`;
+}
+
+interface HistoricalLoopSnapshot {
+  loopTimeIso: string;
+  netLiquidationCents: number;
+  grossTradedNotionalCents?: number;
+  grossExposureRate?: number;
+  netExposureRate?: number;
+}
+
+async function buildPerformanceSnapshot(inputs: {
+  portfolioRoot: string;
+  currentSummary: HistoricalLoopSnapshot;
+  portfolio: PaperPortfolioState;
+  initialCapitalCents: number;
+}): Promise<PaperPerformanceSnapshot> {
+  const history = await loadHistoricalLoopSnapshots(inputs.portfolioRoot);
+  const ordered = [...history, inputs.currentSummary].sort((left, right) => left.loopTimeIso.localeCompare(right.loopTimeIso));
+  const returns = ordered.slice(1).map((point, index) => {
+    const prior = ordered[index];
+    if (!prior || prior.netLiquidationCents === 0) {
+      return 0;
+    }
+    return point.netLiquidationCents / prior.netLiquidationCents - 1;
+  });
+  const cumulativeReturn = inputs.currentSummary.netLiquidationCents / inputs.initialCapitalCents - 1;
+  const realizedReturn = inputs.portfolio.realizedPnlCents / inputs.initialCapitalCents;
+  const unrealizedValue = inputs.portfolio.openPositions.reduce((sum, position) => {
+    const markPrice = position.lastMarkPriceCents ?? position.entryPriceCents;
+    return sum + (markPrice - position.entryPriceCents) * position.quantity;
+  }, 0);
+  const unrealizedReturn = unrealizedValue / inputs.initialCapitalCents;
+  const grossTradedNotionalCents = ordered.reduce(
+    (sum, point) => sum + (point.grossTradedNotionalCents ?? 0),
+    0
+  );
+  const averageNetLiq = mean(ordered.map((point) => point.netLiquidationCents));
+  const turnoverRatio = averageNetLiq === 0 ? 0 : grossTradedNotionalCents / averageNetLiq;
+  const currentGrossExposureCents = inputs.portfolio.openPositions.reduce(
+    (sum, position) => sum + (position.lastMarkPriceCents ?? position.entryPriceCents) * position.quantity,
+    0
+  );
+  const currentNetExposureCents = inputs.portfolio.openPositions.reduce(
+    (sum, position) =>
+      sum +
+      (position.side === "yes" ? 1 : -1) * (position.lastMarkPriceCents ?? position.entryPriceCents) * position.quantity,
+    0
+  );
+  const wins = inputs.portfolio.closedPositions.filter((position) => position.realizedPnlCents > 0);
+  const losses = inputs.portfolio.closedPositions.filter((position) => position.realizedPnlCents < 0);
+  const grossProfit = wins.reduce((sum, position) => sum + position.realizedPnlCents, 0);
+  const grossLoss = losses.reduce((sum, position) => sum + Math.abs(position.realizedPnlCents), 0);
+  const averageHoldingMinutes = mean(
+    inputs.portfolio.closedPositions.map((position) => (position.exitTimeMs - position.entryTimeMs) / 60_000)
+  );
+
+  return {
+    initialCapitalCents: inputs.initialCapitalCents,
+    loopCount: ordered.length,
+    closedTrades: inputs.portfolio.closedPositions.length,
+    openTrades: inputs.portfolio.openPositions.length,
+    grossTradedNotionalCents,
+    turnoverRatio,
+    currentGrossExposureCents,
+    currentNetExposureCents,
+    currentGrossExposureRate: ratio(currentGrossExposureCents, inputs.currentSummary.netLiquidationCents),
+    currentNetExposureRate: ratio(currentNetExposureCents, inputs.currentSummary.netLiquidationCents),
+    cumulativeReturn,
+    realizedReturn,
+    unrealizedReturn,
+    maxDrawdown: computeMaxDrawdown(ordered.map((point) => point.netLiquidationCents)),
+    ...(wins.length + losses.length === 0 ? {} : { winRate: ratio(wins.length, wins.length + losses.length) }),
+    ...(wins.length === 0 ? {} : { averageWinCents: mean(wins.map((position) => position.realizedPnlCents)) }),
+    ...(losses.length === 0 ? {} : { averageLossCents: mean(losses.map((position) => position.realizedPnlCents)) }),
+    ...(grossLoss === 0 ? {} : { profitFactor: grossProfit / grossLoss }),
+    ...(inputs.portfolio.closedPositions.length === 0 ? {} : { averageHoldingMinutes }),
+    ...(returns.length < 2 ? {} : { loopSharpeRatio: computeSharpeRatio(returns) }),
+    ...(returns.filter((value) => value < 0).length === 0 ? {} : { loopSortinoRatio: computeSortinoRatio(returns) })
+  };
+}
+
+async function loadHistoricalLoopSnapshots(portfolioRoot: string): Promise<HistoricalLoopSnapshot[]> {
+  const loopsRoot = path.join(portfolioRoot, "loops");
+  try {
+    const entries = (await readdir(loopsRoot)).filter((entry) => entry.endsWith(".json")).sort();
+    const snapshots = await Promise.all(
+      entries.map(async (entry) => JSON.parse(await readFile(path.join(loopsRoot, entry), "utf8")) as HistoricalLoopSnapshot)
+    );
+    return snapshots.filter((snapshot) => typeof snapshot.netLiquidationCents === "number");
+  } catch {
+    return [];
+  }
+}
+
+function computeMaxDrawdown(equityCurve: number[]): number {
+  let peak = Number.NEGATIVE_INFINITY;
+  let maxDrawdown = 0;
+  for (const value of equityCurve) {
+    peak = Math.max(peak, value);
+    if (peak <= 0) {
+      continue;
+    }
+    maxDrawdown = Math.min(maxDrawdown, value / peak - 1);
+  }
+  return maxDrawdown;
+}
+
+function computeSharpeRatio(returns: number[]): number {
+  const deviation = sampleStdDev(returns);
+  if (deviation === 0) {
+    return 0;
+  }
+  return mean(returns) / deviation * Math.sqrt(returns.length);
+}
+
+function computeSortinoRatio(returns: number[]): number {
+  const downside = returns.filter((value) => value < 0);
+  const downsideDeviation = sampleStdDev(downside);
+  if (downsideDeviation === 0) {
+    return 0;
+  }
+  return mean(returns) / downsideDeviation * Math.sqrt(returns.length);
+}
+
+function mean(values: number[]): number {
+  if (values.length === 0) {
+    return 0;
+  }
+  return values.reduce((sum, value) => sum + value, 0) / values.length;
+}
+
+function sampleStdDev(values: number[]): number {
+  if (values.length < 2) {
+    return 0;
+  }
+  const average = mean(values);
+  const variance =
+    values.reduce((sum, value) => sum + (value - average) * (value - average), 0) / (values.length - 1);
+  return Math.sqrt(Math.max(variance, 0));
+}
+
+function ratio(numerator: number, denominator: number): number {
+  if (denominator === 0) {
+    return 0;
+  }
+  return numerator / denominator;
 }

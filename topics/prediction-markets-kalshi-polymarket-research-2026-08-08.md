@@ -720,3 +720,170 @@ Built a reusable venue primer on Kalshi and Polymarket for future prediction-mar
     - `2026-08-22T04:05:00.000Z`
 - Immediate next step:
   - trigger the BTC paper loop automatically shortly after the recommended capture start so the first real paper fills can happen when live tradable quotes exist
+
+## 2026-08-20 Paper performance metrics layer
+
+- Extended the BTC paper-trading loop so each run now writes performance analytics, not just action logs:
+  - cumulative return
+  - realized return
+  - unrealized return
+  - loop-level Sharpe
+  - loop-level Sortino when downside returns exist
+  - max drawdown
+  - turnover ratio
+  - gross / net exposure
+  - win rate, profit factor, and holding-time stats once trades actually close
+- The loop summary now also records per-run:
+  - `entryNotionalCents`
+  - `exitNotionalCents`
+  - `grossTradedNotionalCents`
+  - `grossExposureCents`
+  - `netExposureCents`
+  - `grossExposureRate`
+  - `netExposureRate`
+- New durable output:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/paper-trading/btc-anchor/performance-summary.json`
+- Latest verified state after the metrics pass:
+  - latest paper summary:
+    - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/paper-trading/btc-anchor/latest-summary.json`
+  - current performance snapshot:
+    - `loopCount: 4`
+    - `cumulativeReturn: 0`
+    - `loopSharpeRatio: 0`
+    - `maxDrawdown: 0`
+    - `turnoverRatio: 0`
+  - interpretation:
+    - the metrics layer is working
+    - values are still zero because BTC families have remained pre-open, so no paper entries or exits have happened yet
+
+## 2026-08-20 Reserve-path promotion: Polymarket BTC milestone scan
+
+- Added a live reserve-path scanner for continuously tradable BTC milestone markets on Polymarket:
+  - runtime client:
+    - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/src/runtime/polymarket-api.ts`
+  - pipeline:
+    - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/src/pipelines/polymarket-btc-milestone-scan.ts`
+  - CLI:
+    - `npm run scan:polymarket-btc`
+- The scanner writes a durable output under:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/polymarket-live/`
+- First live verified scan result:
+  - latest root:
+    - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/polymarket-live/20260820T132645863Z`
+  - verdict:
+    - `viable_public_data_with_restriction_risk`
+  - primary recommendation:
+    - `Use Polymarket as the always-on research and paper-trading reserve path, but treat venue/jurisdiction restrictions as a production gating item.`
+  - strongest currently live market found:
+    - event:
+      - `When will Bitcoin hit $150k?`
+    - market:
+      - `Will Bitcoin hit $150k by December 31, 2026?`
+    - live fields at scan time:
+      - `bestBid: 0.023`
+      - `bestAsk: 0.024`
+      - `spread: 0.001`
+      - `volume24hr: 21630.786272999998`
+      - `liquidityNum: 88632.44849`
+      - `acceptingOrders: true`
+      - `enableOrderBook: true`
+- Strategic conclusion changed materially:
+  - it no longer makes sense to treat Kalshi BTC pre-open timing as the only path for an always-on BTC sleeve
+  - the better architecture is:
+    - `Kalshi BTC terminal-threshold sleeve` for clean regulated settlement semantics when open
+    - `Polymarket BTC milestone sleeve` for always-on research and paper-trading continuity
+    - a venue-agnostic BTC probability engine underneath both, with separate payoff translators:
+      - terminal threshold probability for Kalshi
+      - first-passage / barrier-hit probability for Polymarket milestone markets
+- Production caveat:
+  - the current live Polymarket path appears usable for public-data research and paper trading immediately
+  - real-money production use remains gated by venue restriction / compliance / jurisdiction review rather than by data availability
+- Immediate next build priority:
+  - stop treating `wait_for_open` as the only operational answer
+  - add a second paper-trading loop for the Polymarket milestone sleeve so the BTC program can keep learning even when Kalshi is unavailable
+
+## 2026-08-20 Polymarket BTC milestone paper loop
+
+- Added the second BTC reserve-sleeve paper loop:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/src/pipelines/polymarket-btc-paper-loop.ts`
+- Added CLI:
+  - `npm run run:polymarket-btc-paper-loop`
+- What it currently does:
+  - runs the live Polymarket BTC milestone scan
+  - pulls live Coinbase BTC spot
+  - computes a crude first-passage / barrier-hit anchor probability under a simple vol assumption
+  - compares that anchor to live Polymarket mid prices
+  - manages a persistent paper portfolio under:
+    - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/paper-trading/polymarket-btc-milestone`
+  - writes the same style of performance summary used by the Kalshi paper loop
+  - surfaces `topSignals` so the reserve sleeve can explain why it did or did not trade
+- First live verified loop result:
+  - latest root:
+    - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/polymarket-live/20260820T133413580Z`
+  - latest best market:
+    - `will-bitcoin-hit-150k-by-december-31-2026`
+  - live inputs at the last verified run:
+    - `spotPrice: 71590.55`
+    - `marketMid: 0.0235`
+    - `anchorProbability: 0.04154695080372406`
+    - `signal: 0.01804695080372406`
+    - recommended side from the crude anchor:
+      - `yes`
+  - result:
+    - `eligibleEntries: 0`
+    - `entriesPlaced: 0`
+    - no paper trade yet because the signal did not clear the default entry threshold of `0.04`
+- Interpretation:
+  - this is no longer a venue-availability blocker
+  - it is now a model / threshold question:
+    - the market is live
+    - the reserve sleeve can observe and score it continuously
+    - the current first-pass barrier model sees a positive edge, but not large enough yet to justify entry under the initial guardrails
+- Better framing going forward:
+  - Kalshi BTC is the clean terminal-threshold sleeve
+  - Polymarket BTC milestone is the always-on barrier-hit sleeve
+  - the blocker has moved from `data availability` to `signal quality / deployment policy`, which is a much healthier place to be
+
+## 2026-08-20 Historical barrier backtest
+
+- Added a research-grounded historical validation pipeline:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/src/pipelines/polymarket-btc-barrier-backtest.ts`
+- Added CLI:
+  - `npm run backtest:polymarket-btc-barrier`
+- Scope:
+  - pulls daily BTC candles from Coinbase
+  - builds synthetic milestone / barrier-hit observations across multiple horizons and barrier multipliers
+  - compares three models on a held-out set:
+    - raw first-passage barrier probability
+    - isotonic-calibrated barrier probability
+    - terminal-only baseline probability
+- Latest verified run output:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/backtests/polymarket-btc-barrier/20260820T134713906Z/summaries/barrier-backtest-summary.json`
+- Dataset:
+  - candles: `2058`
+  - observations: `44682`
+  - train: `31277`
+  - test: `13405`
+- Held-out overall metrics:
+  - raw barrier:
+    - `Brier 0.1009`
+    - `log loss 0.3222`
+    - `mean prediction 0.3241`
+  - calibrated barrier:
+    - `Brier 0.1077`
+    - `log loss 0.3519`
+    - `mean prediction 0.3731`
+  - terminal baseline:
+    - `Brier 0.1778`
+    - `log loss 0.5003`
+    - `mean prediction 0.1361`
+- Main conclusion:
+  - the raw first-passage barrier model materially outperforms the terminal-only baseline out of sample
+  - the isotonic calibration pass degrades performance in this sample and should not be promoted blindly
+- Segment takeaways:
+  - raw barrier wins cleanly across `30d`, `90d`, `180d`, and `365d` horizons
+  - raw barrier is especially strong for closer milestone levels like `1.05x`, `1.10x`, and `1.25x`
+  - for very far barriers like `2.00x`, the terminal baseline can slightly outperform because the true event rate is extremely low
+- Trading-readiness implication:
+  - the always-on Polymarket reserve sleeve is now supported by a credible historical model-quality backtest
+  - the next bottleneck is threshold selection, calibration discipline, and live quote-to-fair mapping, not access to BTC external data

@@ -51,4 +51,18 @@ Current live/replay entry points:
   - runs a fresh BTC observation session by default
   - builds anchor residual observations and a baseline experiment slice
   - updates a persistent paper portfolio under `data/paper-trading/btc-anchor/`
-  - writes loop-by-loop entry, exit, hold, cash, and PnL summaries
+  - writes loop-by-loop entry, exit, hold, cash, exposure, and PnL summaries
+  - updates `performance-summary.json` with cumulative return, loop Sharpe/Sortino, turnover, exposure, drawdown, and trade stats
+- `npm run scan:polymarket-btc`
+  - scans Polymarket public event data for BTC milestone-style markets
+  - writes a reserve-path viability summary under `data/polymarket-live/`
+  - helps decide whether the always-on BTC sleeve should pivot away from Kalshi-only timing windows
+- `npm run run:polymarket-btc-paper-loop`
+  - runs the Polymarket BTC milestone scanner plus a Coinbase-based barrier-hit anchor
+  - maintains a persistent paper portfolio under `data/paper-trading/polymarket-btc-milestone/`
+  - gives the BTC program an always-on reserve sleeve even when Kalshi BTC families are pre-open
+- `npm run backtest:polymarket-btc-barrier`
+  - pulls historical daily BTC candles from Coinbase
+  - builds synthetic BTC milestone / barrier-hit observations across horizons and barrier levels
+  - compares raw first-passage barrier probabilities against a terminal-only baseline and an isotonic-calibrated variant
+  - writes historical model-quality summaries under `data/backtests/polymarket-btc-barrier/`

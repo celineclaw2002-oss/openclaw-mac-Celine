@@ -1,0 +1,57 @@
+{
+  "outputRoot": "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live/20260820T122459909Z",
+  "checkedAtIso": "2026-08-20T12:25:15.187Z",
+  "seriesTicker": "KXBTC",
+  "captureCompletedAtMs": 1787228715187,
+  "visibleFamilies": 2,
+  "tradableFamilies": 0,
+  "nextOpenFamily": "KXBTC-26AUG2123",
+  "nextOpenTimeMs": 1787364000000,
+  "nextOpenTimeIso": "2026-08-22T02:00:00.000Z",
+  "families": [
+    {
+      "eventTicker": "KXBTC-26AUG2123",
+      "contracts": 62,
+      "tradableContracts": 0,
+      "initializedContracts": 62,
+      "activeContracts": 0,
+      "liveQuoteContracts": 62,
+      "nonZeroLiquidityContracts": 0,
+      "nonZeroVolumeContracts": 0,
+      "earliestOpenTimeMs": 1787364000000,
+      "latestOpenTimeMs": 1787364000000,
+      "earliestOpenTimeIso": "2026-08-22T02:00:00.000Z",
+      "latestOpenTimeIso": "2026-08-22T02:00:00.000Z",
+      "readinessStatus": "pre_open",
+      "readinessScore": 8,
+      "blockerReasons": [
+        "all_contracts_initialized",
+        "pre_open_family",
+        "zero_reported_liquidity",
+        "zero_reported_volume"
+      ]
+    },
+    {
+      "eventTicker": "KXBTC-26AUG2200",
+      "contracts": 188,
+      "tradableContracts": 0,
+      "initializedContracts": 188,
+      "activeContracts": 0,
+      "liveQuoteContracts": 188,
+      "nonZeroLiquidityContracts": 0,
+      "nonZeroVolumeContracts": 0,
+      "earliestOpenTimeMs": 1787367600000,
+      "latestOpenTimeMs": 1787367600000,
+      "earliestOpenTimeIso": "2026-08-22T03:00:00.000Z",
+      "latestOpenTimeIso": "2026-08-22T03:00:00.000Z",
+      "readinessStatus": "pre_open",
+      "readinessScore": 8,
+      "blockerReasons": [
+        "all_contracts_initialized",
+        "pre_open_family",
+        "zero_reported_liquidity",
+        "zero_reported_volume"
+      ]
+    }
+  ]
+}

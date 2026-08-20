@@ -1,0 +1,6377 @@
+{
+  "outputRoot": "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/backtests/polymarket-btc-barrier/20260820T134713906Z",
+  "checkedAtIso": "2026-08-20T13:47:15.391Z",
+  "sourceNote": "Synthetic historical BTC milestone backtest grounded in first-passage / barrier-hit modeling and proper scoring. This evaluates model quality, not venue execution or market-specific edge.",
+  "startIso": "2021-01-01T00:00:00.000Z",
+  "endIso": "2026-08-20T13:47:13.907Z",
+  "candleCount": 2058,
+  "lookbackDays": 30,
+  "horizonDays": [
+    30,
+    90,
+    180,
+    365
+  ],
+  "barrierMultipliers": [
+    1.05,
+    1.1,
+    1.25,
+    1.5,
+    1.75,
+    2
+  ],
+  "observations": 44682,
+  "trainObservations": 31277,
+  "testObservations": 13405,
+  "overall": {
+    "rawBarrier": {
+      "modelId": "raw_barrier",
+      "sampleSize": 13405,
+      "positiveRate": 0.3225662066393137,
+      "brierScore": 0.1009135480768593,
+      "logLoss": 0.3222152831024508,
+      "meanPrediction": 0.32411609478815995,
+      "calibrationError": 0.21508532683163883
+    },
+    "calibratedBarrier": {
+      "modelId": "calibrated_barrier",
+      "sampleSize": 13405,
+      "positiveRate": 0.3225662066393137,
+      "brierScore": 0.10770366501896748,
+      "logLoss": 0.3518577570848698,
+      "meanPrediction": 0.373089715984317,
+      "calibrationError": 0.2586739657421413
+    },
+    "terminalBaseline": {
+      "modelId": "terminal_baseline",
+      "sampleSize": 13405,
+      "positiveRate": 0.3225662066393137,
+      "brierScore": 0.17776266068301444,
+      "logLoss": 0.5003093879574475,
+      "meanPrediction": 0.1360633318620039,
+      "calibrationError": 0.2758860597157286
+    }
+  },
+  "segmented": [
+    {
+      "groupType": "barrier_multiplier",
+      "groupId": "1.05",
+      "sampleSize": 2234,
+      "rawBarrier": {
+        "modelId": "raw_barrier",
+        "sampleSize": 2234,
+        "positiveRate": 0.8375111906893464,
+        "brierScore": 0.1194131384574082,
+        "logLoss": 0.3889637528067045,
+        "meanPrediction": 0.7948989582735738,
+        "calibrationError": 0.2709801999427789
+      },
+      "calibratedBarrier": {
+        "modelId": "calibrated_barrier",
+        "sampleSize": 2234,
+        "positiveRate": 0.8375111906893464,
+        "brierScore": 0.12051798700656946,
+        "logLoss": 0.39423347808775894,
+        "meanPrediction": 0.789592235516668,
+        "calibrationError": 0.2753551235577337
+      },
+      "terminalBaseline": {
+        "modelId": "terminal_baseline",
+        "sampleSize": 2234,
+        "positiveRate": 0.8375111906893464,
+        "brierScore": 0.3661786069083641,
+        "logLoss": 0.9337921980211757,
+        "meanPrediction": 0.35014269295100814,
+        "calibrationError": 0.592612447380158
+      }
+    },
+    {
+      "groupType": "barrier_multiplier",
+      "groupId": "1.10",
+      "sampleSize": 2234,
+      "rawBarrier": {
+        "modelId": "raw_barrier",
+        "sampleSize": 2234,
+        "positiveRate": 0.6347358997314234,
+        "brierScore": 0.18144760736978835,
+        "logLoss": 0.5403360525838264,
+        "meanPrediction": 0.6223029554468066,
+        "calibrationError": 0.38469977877907946
+      },
+      "calibratedBarrier": {
+        "modelId": "calibrated_barrier",
+        "sampleSize": 2234,
+        "positiveRate": 0.6347358997314234,
+        "brierScore": 0.18352637843893094,
+        "logLoss": 0.5456891936929331,
+        "meanPrediction": 0.6261679716696922,
+        "calibrationError": 0.3894673370772544
+      },
+      "terminalBaseline": {
+        "modelId": "terminal_baseline",
+        "sampleSize": 2234,
+        "positiveRate": 0.6347358997314234,
+        "brierScore": 0.34235714107420706,
+        "logLoss": 0.8947307365070817,
+        "meanPrediction": 0.26738792570365105,
+        "calibrationError": 0.5339693181749501
+      }
+    },
+    {
+      "groupType": "barrier_multiplier",
+      "groupId": "1.25",
+      "sampleSize": 2234,
+      "rawBarrier": {
+        "modelId": "raw_barrier",
+        "sampleSize": 2234,
+        "positiveRate": 0.27260519247985676,
+        "brierScore": 0.14463073526584047,
+        "logLoss": 0.45323187430157574,
+        "meanPrediction": 0.31130128573582044,
+        "calibrationError": 0.31321320823317395
+      },
+      "calibratedBarrier": {
+        "modelId": "calibrated_barrier",
+        "sampleSize": 2234,
+        "positiveRate": 0.27260519247985676,
+        "brierScore": 0.15483337056146287,
+        "logLoss": 0.48621792720426144,
+        "meanPrediction": 0.36914240870928156,
+        "calibrationError": 0.36235589551375946
+      },
+      "terminalBaseline": {
+        "modelId": "terminal_baseline",
+        "sampleSize": 2234,
+        "positiveRate": 0.27260519247985676,
+        "brierScore": 0.19037011818048205,
+        "logLoss": 0.5610264805459401,
+        "meanPrediction": 0.1243643765708109,
+        "calibrationError": 0.2928627538581123
+      }
+    },
+    {
+      "groupType": "barrier_multiplier",
+      "groupId": "1.50",
+      "sampleSize": 2234,
+      "rawBarrier": {
+        "modelId": "raw_barrier",
+        "sampleSize": 2234,
+        "positiveRate": 0.12085944494180842,
+        "brierScore": 0.09569460124010021,
+        "logLoss": 0.3145829379345529,
+        "meanPrediction": 0.1240955342232966,
+        "calibrationError": 0.18297846721335792
+      },
+      "calibratedBarrier": {
+        "modelId": "calibrated_barrier",
+        "sampleSize": 2234,
+        "positiveRate": 0.12085944494180842,
+        "brierScore": 0.10200459161245072,
+        "logLoss": 0.3402628051736446,
+        "meanPrediction": 0.2110796487305146,
+        "calibrationError": 0.251135114912926
+      },
+      "terminalBaseline": {
+        "modelId": "terminal_baseline",
+        "sampleSize": 2234,
+        "positiveRate": 0.12085944494180842,
+        "brierScore": 0.1036116670039496,
+        "logLoss": 0.3617158637995895,
+        "meanPrediction": 0.044740828790449605,
+        "calibrationError": 0.14382355260329333
+      }
+    },
+    {
+      "groupType": "barrier_multiplier",
+      "groupId": "1.75",
+      "sampleSize": 2234,
+      "rawBarrier": {
+        "modelId": "raw_barrier",
+        "sampleSize": 2234,
+        "positiveRate": 0.05326768128916741,
+        "brierScore": 0.04823888883223998,
+        "logLoss": 0.17178167006461206,
+        "meanPrediction": 0.059777293864625845,
+        "calibrationError": 0.09533428524030627
+      },
+      "calibratedBarrier": {
+        "modelId": "calibrated_barrier",
+        "sampleSize": 2234,
+        "positiveRate": 0.05326768128916741,
+        "brierScore": 0.0572396791790802,
+        "logLoss": 0.21481479160061423,
+        "meanPrediction": 0.14116542086159292,
+        "calibrationError": 0.16492161303170885
+      },
+      "terminalBaseline": {
+        "modelId": "terminal_baseline",
+        "sampleSize": 2234,
+        "positiveRate": 0.05326768128916741,
+        "brierScore": 0.04878641500298163,
+        "logLoss": 0.18957230165524144,
+        "meanPrediction": 0.019799693202558172,
+        "calibrationError": 0.0672762525423443
+      }
+    },
+    {
+      "groupType": "barrier_multiplier",
+      "groupId": "2.00",
+      "sampleSize": 2235,
+      "rawBarrier": {
+        "modelId": "raw_barrier",
+        "sampleSize": 2235,
+        "positiveRate": 0.016554809843400447,
+        "brierScore": 0.016094284736844156,
+        "logLoss": 0.06451076657100295,
+        "meanPrediction": 0.03245109847950976,
+        "calibrationError": 0.04338288033068935
+      },
+      "calibratedBarrier": {
+        "modelId": "calibrated_barrier",
+        "sampleSize": 2235,
+        "positiveRate": 0.016554809843400447,
+        "brierScore": 0.028135600175128755,
+        "logLoss": 0.13002764402546627,
+        "meanPrediction": 0.10151217601357664,
+        "calibrationError": 0.10887576416503347
+      },
+      "terminalBaseline": {
+        "modelId": "terminal_baseline",
+        "sampleSize": 2235,
+        "positiveRate": 0.016554809843400447,
+        "brierScore": 0.015344718677434458,
+        "logLoss": 0.061215297837984115,
+        "meanPrediction": 0.010000902972746174,
+        "calibrationError": 0.024884389004404813
+      }
+    },
+    {
+      "groupType": "horizon_days",
+      "groupId": "180",
+      "sampleSize": 3270,
+      "rawBarrier": {
+        "modelId": "raw_barrier",
+        "sampleSize": 3270,
+        "positiveRate": 0.3620795107033639,
+        "brierScore": 0.11163771309973729,
+        "logLoss": 0.3556118665442964,
+        "meanPrediction": 0.3891824772886693,
+        "calibrationError": 0.2403948085652962
+      },
+      "calibratedBarrier": {
+        "modelId": "calibrated_barrier",
+        "sampleSize": 3270,
+        "positiveRate": 0.3620795107033639,
+        "brierScore": 0.1215165244942314,
+        "logLoss": 0.401147106081448,
+        "meanPrediction": 0.4478920243202929,
+        "calibrationError": 0.2936318413458648
+      },
+      "terminalBaseline": {
+        "modelId": "terminal_baseline",
+        "sampleSize": 3270,
+        "positiveRate": 0.3620795107033639,
+        "brierScore": 0.19338652650917626,
+        "logLoss": 0.5398165363208663,
+        "meanPrediction": 0.16081135839587837,
+        "calibrationError": 0.30811249906719546
+      }
+    },
+    {
+      "groupType": "horizon_days",
+      "groupId": "30",
+      "sampleSize": 4165,
+      "rawBarrier": {
+        "modelId": "raw_barrier",
+        "sampleSize": 4165,
+        "positiveRate": 0.19759903961584635,
+        "brierScore": 0.08051237610399069,
+        "logLoss": 0.24807582168517614,
+        "meanPrediction": 0.19705988382481235,
+        "calibrationError": 0.16689829222020724
+      },
+      "calibratedBarrier": {
+        "modelId": "calibrated_barrier",
+        "sampleSize": 4165,
+        "positiveRate": 0.19759903961584635,
+        "brierScore": 0.08605095139055387,
+        "logLoss": 0.27447558598587635,
+        "meanPrediction": 0.23584702976174665,
+        "calibrationError": 0.20223266659430117
+      },
+      "terminalBaseline": {
+        "modelId": "terminal_baseline",
+        "sampleSize": 4165,
+        "positiveRate": 0.19759903961584635,
+        "brierScore": 0.11603410826104053,
+        "logLoss": 0.3285586421983175,
+        "meanPrediction": 0.09062852942053458,
+        "calibrationError": 0.18306390367581346
+      }
+    },
+    {
+      "groupType": "horizon_days",
+      "groupId": "365",
+      "sampleSize": 2160,
+      "rawBarrier": {
+        "modelId": "raw_barrier",
+        "sampleSize": 2160,
+        "positiveRate": 0.5212962962962963,
+        "brierScore": 0.11910313626950834,
+        "logLoss": 0.3868965694380576,
+        "meanPrediction": 0.4994607930365305,
+        "calibrationError": 0.2729872525308226
+      },
+      "calibratedBarrier": {
+        "modelId": "calibrated_barrier",
+        "sampleSize": 2160,
+        "positiveRate": 0.5212962962962963,
+        "brierScore": 0.12310716851578354,
+        "logLoss": 0.4047250848833277,
+        "meanPrediction": 0.5378081315613585,
+        "calibrationError": 0.30455919435977546
+      },
+      "terminalBaseline": {
+        "modelId": "terminal_baseline",
+        "sampleSize": 2160,
+        "positiveRate": 0.5212962962962963,
+        "brierScore": 0.2833058633090523,
+        "logLoss": 0.7754945336892893,
+        "meanPrediction": 0.1899349342376687,
+        "calibrationError": 0.4208388651403083
+      }
+    },
+    {
+      "groupType": "horizon_days",
+      "groupId": "90",
+      "sampleSize": 3810,
+      "rawBarrier": {
+        "modelId": "raw_barrier",
+        "sampleSize": 3810,
+        "positiveRate": 0.3125984251968504,
+        "brierScore": 0.10369920454564284,
+        "logLoss": 0.33792983702982954,
+        "meanPrediction": 0.3077584831527752,
+        "calibrationError": 0.21321362981781106
+      },
+      "calibratedBarrier": {
+        "modelId": "calibrated_barrier",
+        "sampleSize": 3810,
+        "positiveRate": 0.3125984251968504,
+        "brierScore": 0.11078606245337527,
+        "logLoss": 0.3641745926135226,
+        "meanPrediction": 0.36553603152556874,
+        "calibrationError": 0.26435734209713996
+      },
+      "terminalBaseline": {
+        "modelId": "terminal_baseline",
+        "sampleSize": 3810,
+        "positiveRate": 0.3125984251968504,
+        "brierScore": 0.17199784753701225,
+        "logLoss": 0.49814496962615784,
+        "meanPrediction": 0.13394974768129939,
+        "calibrationError": 0.2675201183797299
+      }
+    },
+    {
+      "groupType": "overall",
+      "groupId": "overall",
+      "sampleSize": 13405,
+      "rawBarrier": {
+        "modelId": "raw_barrier",
+        "sampleSize": 13405,
+        "positiveRate": 0.3225662066393137,
+        "brierScore": 0.1009135480768593,
+        "logLoss": 0.3222152831024508,
+        "meanPrediction": 0.32411609478815995,
+        "calibrationError": 0.21508532683163883
+      },
+      "calibratedBarrier": {
+        "modelId": "calibrated_barrier",
+        "sampleSize": 13405,
+        "positiveRate": 0.3225662066393137,
+        "brierScore": 0.10770366501896748,
+        "logLoss": 0.3518577570848698,
+        "meanPrediction": 0.373089715984317,
+        "calibrationError": 0.2586739657421413
+      },
+      "terminalBaseline": {
+        "modelId": "terminal_baseline",
+        "sampleSize": 13405,
+        "positiveRate": 0.3225662066393137,
+        "brierScore": 0.17776266068301444,
+        "logLoss": 0.5003093879574475,
+        "meanPrediction": 0.1360633318620039,
+        "calibrationError": 0.2758860597157286
+      }
+    }
+  ],
+  "calibrationBlocks": [
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0,
+      "upperX": 0,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.220446049250313e-16,
+      "upperX": 2.220446049250313e-16,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.440892098500626e-16,
+      "upperX": 4.440892098500626e-16,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.440892098500626e-16,
+      "upperX": 4.440892098500626e-16,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.440892098500626e-16,
+      "upperX": 4.440892098500626e-16,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.440892098500626e-16,
+      "upperX": 4.440892098500626e-16,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.440892098500626e-16,
+      "upperX": 4.440892098500626e-16,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.440892098500626e-16,
+      "upperX": 4.440892098500626e-16,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.440892098500626e-16,
+      "upperX": 4.440892098500626e-16,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.440892098500626e-16,
+      "upperX": 4.440892098500626e-16,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.440892098500626e-16,
+      "upperX": 4.440892098500626e-16,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.440892098500626e-16,
+      "upperX": 4.440892098500626e-16,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.661338147750939e-16,
+      "upperX": 6.661338147750939e-16,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.881784197001252e-16,
+      "upperX": 8.881784197001252e-16,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.881784197001252e-16,
+      "upperX": 8.881784197001252e-16,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.881784197001252e-16,
+      "upperX": 8.881784197001252e-16,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.3322676295501878e-15,
+      "upperX": 1.3322676295501878e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.3322676295501878e-15,
+      "upperX": 1.3322676295501878e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.3322676295501878e-15,
+      "upperX": 1.3322676295501878e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.5543122344752192e-15,
+      "upperX": 1.5543122344752192e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.6645352591003757e-15,
+      "upperX": 2.6645352591003757e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.1086244689504383e-15,
+      "upperX": 3.1086244689504383e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.1086244689504383e-15,
+      "upperX": 3.1086244689504383e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.1086244689504383e-15,
+      "upperX": 3.1086244689504383e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.3306690738754696e-15,
+      "upperX": 3.3306690738754696e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.552713678800501e-15,
+      "upperX": 3.552713678800501e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.552713678800501e-15,
+      "upperX": 3.552713678800501e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.552713678800501e-15,
+      "upperX": 3.552713678800501e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.552713678800501e-15,
+      "upperX": 3.552713678800501e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.774758283725532e-15,
+      "upperX": 3.774758283725532e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.9968028886505635e-15,
+      "upperX": 3.9968028886505635e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.9968028886505635e-15,
+      "upperX": 3.9968028886505635e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.440892098500626e-15,
+      "upperX": 4.440892098500626e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.884981308350689e-15,
+      "upperX": 4.884981308350689e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.884981308350689e-15,
+      "upperX": 4.884981308350689e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.329070518200751e-15,
+      "upperX": 5.329070518200751e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.661338147750939e-15,
+      "upperX": 6.661338147750939e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.8833827526759706e-15,
+      "upperX": 6.8833827526759706e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.327471962526033e-15,
+      "upperX": 7.327471962526033e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.549516567451064e-15,
+      "upperX": 7.549516567451064e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.993605777301127e-15,
+      "upperX": 7.993605777301127e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.881784197001252e-15,
+      "upperX": 8.881784197001252e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.881784197001252e-15,
+      "upperX": 8.881784197001252e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.325873406851315e-15,
+      "upperX": 9.325873406851315e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.325873406851315e-15,
+      "upperX": 9.325873406851315e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.325873406851315e-15,
+      "upperX": 9.325873406851315e-15,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.0658141036401503e-14,
+      "upperX": 1.0658141036401503e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.0880185641326534e-14,
+      "upperX": 1.0880185641326534e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.199040866595169e-14,
+      "upperX": 1.199040866595169e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.3322676295501878e-14,
+      "upperX": 1.3322676295501878e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.3988810110276972e-14,
+      "upperX": 1.3988810110276972e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.3988810110276972e-14,
+      "upperX": 1.3988810110276972e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.4210854715202004e-14,
+      "upperX": 1.4210854715202004e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.7763568394002505e-14,
+      "upperX": 1.7763568394002505e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.7763568394002505e-14,
+      "upperX": 1.7763568394002505e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.9984014443252818e-14,
+      "upperX": 1.9984014443252818e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.0872192862952943e-14,
+      "upperX": 2.0872192862952943e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.0872192862952943e-14,
+      "upperX": 2.0872192862952943e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.1094237467877974e-14,
+      "upperX": 2.1094237467877974e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.2426505097428162e-14,
+      "upperX": 2.2426505097428162e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.5757174171303632e-14,
+      "upperX": 2.5757174171303632e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.7533531010703882e-14,
+      "upperX": 2.7533531010703882e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.7977620220553945e-14,
+      "upperX": 2.7977620220553945e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.108624468950438e-14,
+      "upperX": 3.108624468950438e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.5083047578154947e-14,
+      "upperX": 3.5083047578154947e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.597122599785507e-14,
+      "upperX": 3.597122599785507e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.597122599785507e-14,
+      "upperX": 3.597122599785507e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.6415315207705135e-14,
+      "upperX": 3.6415315207705135e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.68594044175552e-14,
+      "upperX": 3.68594044175552e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.863576125695545e-14,
+      "upperX": 3.863576125695545e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.085620730620576e-14,
+      "upperX": 4.085620730620576e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.75175454539567e-14,
+      "upperX": 4.75175454539567e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.8183679268731794e-14,
+      "upperX": 4.8183679268731794e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.884981308350689e-14,
+      "upperX": 4.884981308350689e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.973799150320701e-14,
+      "upperX": 4.973799150320701e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.062616992290714e-14,
+      "upperX": 5.062616992290714e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.10702591327572e-14,
+      "upperX": 5.10702591327572e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.1514348342607263e-14,
+      "upperX": 5.1514348342607263e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.3290705182007514e-14,
+      "upperX": 5.3290705182007514e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.46229728115577e-14,
+      "upperX": 5.46229728115577e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.573319583618286e-14,
+      "upperX": 5.573319583618286e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.950795411990839e-14,
+      "upperX": 5.950795411990839e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.23945339839338e-14,
+      "upperX": 6.23945339839338e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.350475700855895e-14,
+      "upperX": 6.350475700855895e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.327471962526033e-14,
+      "upperX": 7.327471962526033e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.949196856316121e-14,
+      "upperX": 7.949196856316121e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.993605777301127e-14,
+      "upperX": 7.993605777301127e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.304468224196171e-14,
+      "upperX": 8.304468224196171e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.326672684688674e-14,
+      "upperX": 8.326672684688674e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.593126210598712e-14,
+      "upperX": 8.593126210598712e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.615330671091215e-14,
+      "upperX": 8.615330671091215e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.636735853746359e-14,
+      "upperX": 9.636735853746359e-14,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.0347278589506459e-13,
+      "upperX": 1.0347278589506459e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.0347278589506459e-13,
+      "upperX": 1.0347278589506459e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.092459456231154e-13,
+      "upperX": 1.092459456231154e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.127986593019159e-13,
+      "upperX": 1.127986593019159e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.2212453270876722e-13,
+      "upperX": 1.2212453270876722e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.2256862191861728e-13,
+      "upperX": 1.2256862191861728e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.438849039914203e-13,
+      "upperX": 1.438849039914203e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.5365486660812167e-13,
+      "upperX": 1.5365486660812167e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.7852386235972517e-13,
+      "upperX": 1.7852386235972517e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.8895995879120164e-13,
+      "upperX": 1.8895995879120164e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.9961809982760315e-13,
+      "upperX": 1.9961809982760315e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.049471703458039e-13,
+      "upperX": 2.049471703458039e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.0738966099997924e-13,
+      "upperX": 2.0738966099997924e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.2071233729548112e-13,
+      "upperX": 2.2071233729548112e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.3003821070233244e-13,
+      "upperX": 2.3003821070233244e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.4447111002245947e-13,
+      "upperX": 2.4447111002245947e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.4491519923230953e-13,
+      "upperX": 2.4491519923230953e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.653433028854124e-13,
+      "upperX": 2.653433028854124e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.164135620181696e-13,
+      "upperX": 3.164135620181696e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.177458296477198e-13,
+      "upperX": 3.177458296477198e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.490541189421492e-13,
+      "upperX": 3.490541189421492e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.5083047578154947e-13,
+      "upperX": 3.5083047578154947e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.9035441545820504e-13,
+      "upperX": 3.9035441545820504e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.9035441545820504e-13,
+      "upperX": 3.9035441545820504e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.241051954068098e-13,
+      "upperX": 4.241051954068098e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.018208071305708e-13,
+      "upperX": 5.018208071305708e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.38680211548126e-13,
+      "upperX": 5.38680211548126e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.440092820663267e-13,
+      "upperX": 5.440092820663267e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.453415496958769e-13,
+      "upperX": 5.453415496958769e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.230571614196379e-13,
+      "upperX": 6.230571614196379e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.337153024560394e-13,
+      "upperX": 6.337153024560394e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.282263763703668e-13,
+      "upperX": 8.282263763703668e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.402167850363185e-13,
+      "upperX": 8.402167850363185e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.730793865652231e-13,
+      "upperX": 8.730793865652231e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.748557434046234e-13,
+      "upperX": 8.748557434046234e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.703349235223868e-13,
+      "upperX": 9.703349235223868e-13,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.2314593789142236e-12,
+      "upperX": 1.2314593789142236e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.2458922782343507e-12,
+      "upperX": 1.2458922782343507e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.2581047315052274e-12,
+      "upperX": 1.2581047315052274e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.290745288429207e-12,
+      "upperX": 1.290745288429207e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.3007372956508334e-12,
+      "upperX": 1.3007372956508334e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.3766765505351941e-12,
+      "upperX": 1.3766765505351941e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.3999912340523224e-12,
+      "upperX": 1.3999912340523224e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.453503983839255e-12,
+      "upperX": 1.453503983839255e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.5227819005758647e-12,
+      "upperX": 1.5227819005758647e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.5722978474741467e-12,
+      "upperX": 1.5722978474741467e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.5893952820533741e-12,
+      "upperX": 1.5893952820533741e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.5922818619173995e-12,
+      "upperX": 1.5922818619173995e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.6036061367685761e-12,
+      "upperX": 1.6036061367685761e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.0166091019291343e-12,
+      "upperX": 2.0166091019291343e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.0385915178167124e-12,
+      "upperX": 2.0385915178167124e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.0543566847663897e-12,
+      "upperX": 2.0543566847663897e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.076783189863818e-12,
+      "upperX": 2.076783189863818e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.142508392921627e-12,
+      "upperX": 2.142508392921627e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.3883117705736367e-12,
+      "upperX": 2.3883117705736367e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.6831870059140783e-12,
+      "upperX": 2.6831870059140783e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.8546054409162025e-12,
+      "upperX": 2.8546054409162025e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.3848479574771773e-12,
+      "upperX": 3.3848479574771773e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.015232590859341e-12,
+      "upperX": 4.015232590859341e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.222400207254395e-12,
+      "upperX": 4.222400207254395e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.4293457790445245e-12,
+      "upperX": 4.4293457790445245e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.435118938772575e-12,
+      "upperX": 4.435118938772575e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.512390461286486e-12,
+      "upperX": 4.512390461286486e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.524602914557363e-12,
+      "upperX": 4.524602914557363e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.644284956611955e-12,
+      "upperX": 4.644284956611955e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.6567194544877566e-12,
+      "upperX": 4.6567194544877566e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.041744799427761e-12,
+      "upperX": 5.041744799427761e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.39257527520931e-12,
+      "upperX": 5.39257527520931e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.505462835093567e-12,
+      "upperX": 6.505462835093567e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.512790307056093e-12,
+      "upperX": 6.512790307056093e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.077227692775523e-12,
+      "upperX": 7.077227692775523e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.558842440857916e-12,
+      "upperX": 7.558842440857916e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.447909038977741e-12,
+      "upperX": 8.447909038977741e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.14646136607189e-12,
+      "upperX": 9.14646136607189e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.175327164712144e-12,
+      "upperX": 9.175327164712144e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.248601884337404e-12,
+      "upperX": 9.248601884337404e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.918732502001149e-12,
+      "upperX": 9.918732502001149e-12,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.1897594021093028e-11,
+      "upperX": 1.1897594021093028e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.326183607375242e-11,
+      "upperX": 1.326183607375242e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.361355472795367e-11,
+      "upperX": 1.361355472795367e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.4142242932280169e-11,
+      "upperX": 1.4142242932280169e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.6191270546528358e-11,
+      "upperX": 1.6191270546528358e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.6753265441593612e-11,
+      "upperX": 1.6753265441593612e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.701261354014605e-11,
+      "upperX": 1.701261354014605e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.0537349598725996e-11,
+      "upperX": 2.0537349598725996e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.0544010936873747e-11,
+      "upperX": 2.0544010936873747e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.7710722605434057e-11,
+      "upperX": 2.7710722605434057e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.964339884670153e-11,
+      "upperX": 2.964339884670153e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.449973640101689e-11,
+      "upperX": 3.449973640101689e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.660449721110126e-11,
+      "upperX": 3.660449721110126e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.717870455943739e-11,
+      "upperX": 3.717870455943739e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.7338132585773565e-11,
+      "upperX": 3.7338132585773565e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.158740019022389e-11,
+      "upperX": 4.158740019022389e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.218492222207715e-11,
+      "upperX": 4.218492222207715e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.780709161877894e-11,
+      "upperX": 4.780709161877894e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.989009205758066e-11,
+      "upperX": 4.989009205758066e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.1168402848134065e-11,
+      "upperX": 5.1168402848134065e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.121592039358802e-11,
+      "upperX": 5.121592039358802e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.1952664392729275e-11,
+      "upperX": 5.1952664392729275e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.361444621598821e-11,
+      "upperX": 5.361444621598821e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.397859936806526e-11,
+      "upperX": 5.397859936806526e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.3983262304768687e-11,
+      "upperX": 5.3983262304768687e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.49431611318596e-11,
+      "upperX": 5.49431611318596e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.526112900611224e-11,
+      "upperX": 5.526112900611224e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.537792446830281e-11,
+      "upperX": 5.537792446830281e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.7315707735483556e-11,
+      "upperX": 5.7315707735483556e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.20405948836833e-11,
+      "upperX": 6.20405948836833e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.692202347835519e-11,
+      "upperX": 6.692202347835519e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.23421322845752e-11,
+      "upperX": 7.23421322845752e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.561884451945389e-11,
+      "upperX": 7.561884451945389e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.749978436777383e-11,
+      "upperX": 7.749978436777383e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.455902644755042e-11,
+      "upperX": 8.455902644755042e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.764788894666253e-11,
+      "upperX": 8.764788894666253e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.012168789013231e-11,
+      "upperX": 9.012168789013231e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.036194015266119e-11,
+      "upperX": 9.036194015266119e-11,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.0297673824766207e-10,
+      "upperX": 1.0297673824766207e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.0614353840310287e-10,
+      "upperX": 1.0614353840310287e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.238071867248891e-10,
+      "upperX": 1.238071867248891e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.372888469575173e-10,
+      "upperX": 1.372888469575173e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.4973844386645396e-10,
+      "upperX": 1.4973844386645396e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.5373080586300603e-10,
+      "upperX": 1.5373080586300603e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.5970957889521742e-10,
+      "upperX": 1.5970957889521742e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.7387069561891622e-10,
+      "upperX": 1.7387069561891622e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.8539747514978444e-10,
+      "upperX": 1.8539747514978444e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.937159321840909e-10,
+      "upperX": 1.937159321840909e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.9502754966538305e-10,
+      "upperX": 1.9502754966538305e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.0632162645028984e-10,
+      "upperX": 2.0632162645028984e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.0758372798468372e-10,
+      "upperX": 2.0758372798468372e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.11409556527542e-10,
+      "upperX": 2.11409556527542e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.1164647812099702e-10,
+      "upperX": 2.1164647812099702e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.1440982322928903e-10,
+      "upperX": 2.1440982322928903e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.2476998040588114e-10,
+      "upperX": 2.2476998040588114e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.294799905655509e-10,
+      "upperX": 2.294799905655509e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.308513380455679e-10,
+      "upperX": 2.308513380455679e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.4169866108536553e-10,
+      "upperX": 2.4169866108536553e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.4283597355179154e-10,
+      "upperX": 2.4283597355179154e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.4392377007131927e-10,
+      "upperX": 2.4392377007131927e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.506461704854246e-10,
+      "upperX": 2.506461704854246e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.5389268465403347e-10,
+      "upperX": 2.5389268465403347e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.608118165881024e-10,
+      "upperX": 2.608118165881024e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.6091973026609594e-10,
+      "upperX": 2.6091973026609594e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.7000335300897405e-10,
+      "upperX": 2.7000335300897405e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.056825903513527e-10,
+      "upperX": 3.056825903513527e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.1725289062478623e-10,
+      "upperX": 3.1725289062478623e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.384834634800882e-10,
+      "upperX": 3.384834634800882e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.392706116045474e-10,
+      "upperX": 3.392706116045474e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.4017944017250556e-10,
+      "upperX": 3.4017944017250556e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.583142671459427e-10,
+      "upperX": 3.583142671459427e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.6152059124106017e-10,
+      "upperX": 3.6152059124106017e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.8079894792986124e-10,
+      "upperX": 3.8079894792986124e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.909157442194555e-10,
+      "upperX": 3.909157442194555e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.9210013014212564e-10,
+      "upperX": 3.9210013014212564e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.3799541771250006e-10,
+      "upperX": 4.3799541771250006e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.5662273961966093e-10,
+      "upperX": 4.5662273961966093e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.653104568319577e-10,
+      "upperX": 4.653104568319577e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.6536419162634957e-10,
+      "upperX": 4.6536419162634957e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.035403205511102e-10,
+      "upperX": 5.035403205511102e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.164415561864644e-10,
+      "upperX": 5.164415561864644e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.175535555679289e-10,
+      "upperX": 5.175535555679289e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.395288660281494e-10,
+      "upperX": 5.395288660281494e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.027727206259215e-10,
+      "upperX": 6.027727206259215e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.029277077601591e-10,
+      "upperX": 6.029277077601591e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.548694919672471e-10,
+      "upperX": 6.548694919672471e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.944529395980226e-10,
+      "upperX": 6.944529395980226e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.217382247404203e-10,
+      "upperX": 7.217382247404203e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.703881976794946e-10,
+      "upperX": 7.703881976794946e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.165659259873337e-10,
+      "upperX": 8.165659259873337e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.734097889373515e-10,
+      "upperX": 8.734097889373515e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.747829127742079e-10,
+      "upperX": 8.747829127742079e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.795408845685415e-10,
+      "upperX": 8.795408845685415e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.989213817756081e-10,
+      "upperX": 8.989213817756081e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.379776955142916e-10,
+      "upperX": 9.379776955142916e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.434655279250137e-10,
+      "upperX": 9.434655279250137e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.594098848708654e-10,
+      "upperX": 9.594098848708654e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.6121799408877e-10,
+      "upperX": 9.6121799408877e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.67879110191916e-10,
+      "upperX": 9.67879110191916e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.758172048179858e-10,
+      "upperX": 9.758172048179858e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.966647507297921e-10,
+      "upperX": 9.966647507297921e-10,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.0040055453686136e-9,
+      "upperX": 1.0040055453686136e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.04443076409666e-9,
+      "upperX": 1.04443076409666e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.0449976439730335e-9,
+      "upperX": 1.0449976439730335e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.1243721509401894e-9,
+      "upperX": 1.1243721509401894e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.1547689471314015e-9,
+      "upperX": 1.1547689471314015e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.1737486538265784e-9,
+      "upperX": 1.1737486538265784e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.2028453788559546e-9,
+      "upperX": 1.2028453788559546e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.2076433186791746e-9,
+      "upperX": 1.2076433186791746e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.2275582772502958e-9,
+      "upperX": 1.2275582772502958e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.24139232227094e-9,
+      "upperX": 1.24139232227094e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.2809779903477647e-9,
+      "upperX": 1.2809779903477647e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.317019382440776e-9,
+      "upperX": 1.317019382440776e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.336766031201364e-9,
+      "upperX": 1.336766031201364e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.3793413078388994e-9,
+      "upperX": 1.3793413078388994e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.3938981080485746e-9,
+      "upperX": 1.3938981080485746e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.5316412582677685e-9,
+      "upperX": 1.5316412582677685e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.5407108922005364e-9,
+      "upperX": 1.5407108922005364e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.6241807898609295e-9,
+      "upperX": 1.6241807898609295e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.6640968603098827e-9,
+      "upperX": 1.6640968603098827e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.6672943026208031e-9,
+      "upperX": 1.6672943026208031e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.6932413249293177e-9,
+      "upperX": 1.6932413249293177e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.7045378442048786e-9,
+      "upperX": 1.7045378442048786e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.7480947800407876e-9,
+      "upperX": 1.7480947800407876e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.8383277122779873e-9,
+      "upperX": 1.8383277122779873e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.8722463579479154e-9,
+      "upperX": 1.8722463579479154e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.923463388564528e-9,
+      "upperX": 1.923463388564528e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.9258425965062997e-9,
+      "upperX": 1.9258425965062997e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.993895271112933e-9,
+      "upperX": 1.993895271112933e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.0086177165978825e-9,
+      "upperX": 2.0086177165978825e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.036336432809094e-9,
+      "upperX": 2.036336432809094e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.0490162899733377e-9,
+      "upperX": 2.0490162899733377e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.1394064297908244e-9,
+      "upperX": 2.1394064297908244e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.14501749695728e-9,
+      "upperX": 2.14501749695728e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.152750200323794e-9,
+      "upperX": 2.152750200323794e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.261523412983024e-9,
+      "upperX": 2.261523412983024e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.32386798693085e-9,
+      "upperX": 2.32386798693085e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.3242630042830115e-9,
+      "upperX": 2.3242630042830115e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.3813284677487445e-9,
+      "upperX": 2.3813284677487445e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.381801422757235e-9,
+      "upperX": 2.381801422757235e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.389377140588067e-9,
+      "upperX": 2.389377140588067e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.4130200060312745e-9,
+      "upperX": 2.4130200060312745e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.4970523426759428e-9,
+      "upperX": 2.4970523426759428e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.510433194657935e-9,
+      "upperX": 2.510433194657935e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.5478550380597653e-9,
+      "upperX": 2.5478550380597653e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.570105461785488e-9,
+      "upperX": 2.570105461785488e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.663289810911351e-9,
+      "upperX": 2.663289810911351e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.664359399773275e-9,
+      "upperX": 2.664359399773275e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.710028423891231e-9,
+      "upperX": 2.710028423891231e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.7530615565041217e-9,
+      "upperX": 2.7530615565041217e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.8336704094300558e-9,
+      "upperX": 2.8336704094300558e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.8589091094488595e-9,
+      "upperX": 2.8589091094488595e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.916681562936674e-9,
+      "upperX": 2.916681562936674e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.963913559028697e-9,
+      "upperX": 2.963913559028697e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.0160456354622056e-9,
+      "upperX": 3.0160456354622056e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.0395717054432225e-9,
+      "upperX": 3.0395717054432225e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.1625853047501096e-9,
+      "upperX": 3.1625853047501096e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.167633710887685e-9,
+      "upperX": 3.167633710887685e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.2390061743825527e-9,
+      "upperX": 3.2390061743825527e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.2556883855505703e-9,
+      "upperX": 3.2556883855505703e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.3257141485165675e-9,
+      "upperX": 3.3257141485165675e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.5749196936052385e-9,
+      "upperX": 3.5749196936052385e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.709196505496948e-9,
+      "upperX": 3.709196505496948e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.739568876781618e-9,
+      "upperX": 3.739568876781618e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.885061605757301e-9,
+      "upperX": 3.885061605757301e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.924147673473044e-9,
+      "upperX": 3.924147673473044e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.995766828523983e-9,
+      "upperX": 3.995766828523983e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.032039591095327e-9,
+      "upperX": 4.032039591095327e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.286631716254874e-9,
+      "upperX": 4.286631716254874e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.299560707465844e-9,
+      "upperX": 4.299560707465844e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.3116159531564335e-9,
+      "upperX": 4.3116159531564335e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.348190252301265e-9,
+      "upperX": 4.348190252301265e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.3693630935592864e-9,
+      "upperX": 4.3693630935592864e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.456783164741296e-9,
+      "upperX": 4.456783164741296e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.502670014616683e-9,
+      "upperX": 4.502670014616683e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.542400455775919e-9,
+      "upperX": 4.542400455775919e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.588995405896412e-9,
+      "upperX": 4.588995405896412e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.596933056433272e-9,
+      "upperX": 4.596933056433272e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.6924719665497605e-9,
+      "upperX": 4.6924719665497605e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.758900828960577e-9,
+      "upperX": 4.758900828960577e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.864087577161058e-9,
+      "upperX": 4.864087577161058e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.982270596087801e-9,
+      "upperX": 4.982270596087801e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.156760796154458e-9,
+      "upperX": 5.156760796154458e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.2131172711966656e-9,
+      "upperX": 5.2131172711966656e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.681393577816607e-9,
+      "upperX": 5.681393577816607e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.73277159077179e-9,
+      "upperX": 5.73277159077179e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.742641473460708e-9,
+      "upperX": 5.742641473460708e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.777028411202423e-9,
+      "upperX": 5.777028411202423e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.886618303918567e-9,
+      "upperX": 5.886618303918567e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.2570384429250225e-9,
+      "upperX": 6.2570384429250225e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.268038310608404e-9,
+      "upperX": 6.268038310608404e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.7782734980426085e-9,
+      "upperX": 6.7782734980426085e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.907824978696908e-9,
+      "upperX": 6.907824978696908e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.039387739382619e-9,
+      "upperX": 7.039387739382619e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.444924010613363e-9,
+      "upperX": 7.444924010613363e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.55897922033455e-9,
+      "upperX": 7.55897922033455e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.795590839521083e-9,
+      "upperX": 7.795590839521083e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.807309465590606e-9,
+      "upperX": 7.807309465590606e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.038239851515527e-9,
+      "upperX": 8.038239851515527e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.193667744293975e-9,
+      "upperX": 8.193667744293975e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.266808571022466e-9,
+      "upperX": 8.266808571022466e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.526628292315763e-9,
+      "upperX": 8.526628292315763e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.639597037785052e-9,
+      "upperX": 8.639597037785052e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.275157530908018e-9,
+      "upperX": 9.275157530908018e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.30124377518382e-9,
+      "upperX": 9.30124377518382e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.80791070581688e-9,
+      "upperX": 9.80791070581688e-9,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.0060916544318843e-8,
+      "upperX": 1.0060916544318843e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.0559615404304168e-8,
+      "upperX": 1.0559615404304168e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.0677482453758103e-8,
+      "upperX": 1.0677482453758103e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.077561595508314e-8,
+      "upperX": 1.077561595508314e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.0921785698059239e-8,
+      "upperX": 1.0921785698059239e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.094440937876584e-8,
+      "upperX": 1.094440937876584e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.0992914356577899e-8,
+      "upperX": 1.0992914356577899e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.1361623197814197e-8,
+      "upperX": 1.1361623197814197e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.1523521248335555e-8,
+      "upperX": 1.1523521248335555e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.1525084220309623e-8,
+      "upperX": 1.1525084220309623e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.1530026711170649e-8,
+      "upperX": 1.1530026711170649e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.1606690719645485e-8,
+      "upperX": 1.1606690719645485e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.1620946649415487e-8,
+      "upperX": 1.1620946649415487e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.213842648617458e-8,
+      "upperX": 1.213842648617458e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.2179118158428537e-8,
+      "upperX": 1.2179118158428537e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.2353249534413635e-8,
+      "upperX": 1.2353249534413635e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.2714126418345018e-8,
+      "upperX": 1.2714126418345018e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.2747680244729054e-8,
+      "upperX": 1.2747680244729054e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.2970402529788316e-8,
+      "upperX": 1.2970402529788316e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.312701103373115e-8,
+      "upperX": 1.312701103373115e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.3576037627416326e-8,
+      "upperX": 1.3576037627416326e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.3673375987011127e-8,
+      "upperX": 1.3673375987011127e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.3743444604585875e-8,
+      "upperX": 1.3743444604585875e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.384158476724906e-8,
+      "upperX": 1.384158476724906e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.3886005234553522e-8,
+      "upperX": 1.3886005234553522e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.3977669244269464e-8,
+      "upperX": 1.3977669244269464e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.4128116454514839e-8,
+      "upperX": 1.4128116454514839e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.4182280017038806e-8,
+      "upperX": 1.4182280017038806e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.4232288458870812e-8,
+      "upperX": 1.4232288458870812e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.4236477774431933e-8,
+      "upperX": 1.4236477774431933e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.4558161787192603e-8,
+      "upperX": 1.4558161787192603e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.4627332678429639e-8,
+      "upperX": 1.4627332678429639e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.4935152670148e-8,
+      "upperX": 1.4935152670148e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.494095647203153e-8,
+      "upperX": 1.494095647203153e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.5052385782254873e-8,
+      "upperX": 1.5052385782254873e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.5077062709423217e-8,
+      "upperX": 1.5077062709423217e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.5159884014792624e-8,
+      "upperX": 1.5159884014792624e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.5174755674252083e-8,
+      "upperX": 1.5174755674252083e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.5188996282944345e-8,
+      "upperX": 1.5188996282944345e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.5265197328417912e-8,
+      "upperX": 1.5265197328417912e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.5509316053652356e-8,
+      "upperX": 1.5509316053652356e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.5727062319115248e-8,
+      "upperX": 1.5727062319115248e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.5769178629554403e-8,
+      "upperX": 1.5769178629554403e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.580670483392055e-8,
+      "upperX": 1.580670483392055e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.6598925345334692e-8,
+      "upperX": 1.6598925345334692e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.6648167733279706e-8,
+      "upperX": 1.6648167733279706e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.6719306605850193e-8,
+      "upperX": 1.6719306605850193e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.680159233963252e-8,
+      "upperX": 1.680159233963252e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.7065943325178523e-8,
+      "upperX": 1.7065943325178523e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.7296259757770827e-8,
+      "upperX": 1.7296259757770827e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.73572043404846e-8,
+      "upperX": 1.73572043404846e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.743433020173768e-8,
+      "upperX": 1.743433020173768e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.7530169316160027e-8,
+      "upperX": 1.7530169316160027e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.8162757076112257e-8,
+      "upperX": 1.8162757076112257e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.8758687936326623e-8,
+      "upperX": 1.8758687936326623e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.909086311258079e-8,
+      "upperX": 1.909086311258079e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.9230153469607103e-8,
+      "upperX": 1.9230153469607103e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.9561560149483626e-8,
+      "upperX": 1.9561560149483626e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.9741416945606716e-8,
+      "upperX": 1.9741416945606716e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.9959323527274364e-8,
+      "upperX": 1.9959323527274364e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.124111486700997e-8,
+      "upperX": 2.124111486700997e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.1452525089671326e-8,
+      "upperX": 2.1452525089671326e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.1602560407174565e-8,
+      "upperX": 2.1602560407174565e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.1841586317350448e-8,
+      "upperX": 2.1841586317350448e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.2788562370479326e-8,
+      "upperX": 2.2788562370479326e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.2808254840356312e-8,
+      "upperX": 2.2808254840356312e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.2863786863780433e-8,
+      "upperX": 2.2863786863780433e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.3110503732937104e-8,
+      "upperX": 2.3110503732937104e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.3551992800463495e-8,
+      "upperX": 2.3551992800463495e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.4010871069179984e-8,
+      "upperX": 2.4010871069179984e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.4192897019048587e-8,
+      "upperX": 2.4192897019048587e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.436784374282297e-8,
+      "upperX": 2.436784374282297e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.440600765929446e-8,
+      "upperX": 2.440600765929446e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.4859303726643134e-8,
+      "upperX": 2.4859303726643134e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.5367927758424003e-8,
+      "upperX": 2.5367927758424003e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.5439916395697537e-8,
+      "upperX": 2.5439916395697537e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.5547256310431976e-8,
+      "upperX": 2.5547256310431976e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.56698207135031e-8,
+      "upperX": 2.56698207135031e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.59413130976327e-8,
+      "upperX": 2.59413130976327e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.6071304670693962e-8,
+      "upperX": 2.6071304670693962e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.7010300884811045e-8,
+      "upperX": 2.7010300884811045e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.7746271058504135e-8,
+      "upperX": 2.7746271058504135e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.9280675217790986e-8,
+      "upperX": 2.9280675217790986e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.9351706398728084e-8,
+      "upperX": 2.9351706398728084e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.003932724787717e-8,
+      "upperX": 3.003932724787717e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.030041284546314e-8,
+      "upperX": 3.030041284546314e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.0330812750278824e-8,
+      "upperX": 3.0330812750278824e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.049901664553545e-8,
+      "upperX": 3.049901664553545e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.102625667494863e-8,
+      "upperX": 3.102625667494863e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.118289049197642e-8,
+      "upperX": 3.118289049197642e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.1471095951474126e-8,
+      "upperX": 3.1471095951474126e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.226189715377359e-8,
+      "upperX": 3.226189715377359e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.24009756802468e-8,
+      "upperX": 3.24009756802468e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.265238301963791e-8,
+      "upperX": 3.265238301963791e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.414874916174426e-8,
+      "upperX": 3.414874916174426e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.4862396525170425e-8,
+      "upperX": 3.4862396525170425e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.517312774370396e-8,
+      "upperX": 3.517312774370396e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.623127575735907e-8,
+      "upperX": 3.623127575735907e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.673515558411111e-8,
+      "upperX": 3.673515558411111e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.6811368175904136e-8,
+      "upperX": 3.6811368175904136e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.700471595813326e-8,
+      "upperX": 3.700471595813326e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.7608395508925696e-8,
+      "upperX": 3.7608395508925696e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.87495129317017e-8,
+      "upperX": 3.87495129317017e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.9072457269639926e-8,
+      "upperX": 3.9072457269639926e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.038111178772397e-8,
+      "upperX": 4.038111178772397e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.0898785247378555e-8,
+      "upperX": 4.0898785247378555e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.1285481255926015e-8,
+      "upperX": 4.1285481255926015e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.1860226396295275e-8,
+      "upperX": 4.1860226396295275e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.214156290593962e-8,
+      "upperX": 4.214156290593962e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.36814595605739e-8,
+      "upperX": 4.36814595605739e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.5186951957987276e-8,
+      "upperX": 4.5186951957987276e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.561259014934649e-8,
+      "upperX": 4.561259014934649e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.565720268523421e-8,
+      "upperX": 4.565720268523421e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.5904023915355197e-8,
+      "upperX": 4.5904023915355197e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.6919052421046104e-8,
+      "upperX": 4.6919052421046104e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.7329782759675254e-8,
+      "upperX": 4.7329782759675254e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.734397984762495e-8,
+      "upperX": 4.734397984762495e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.773476502961671e-8,
+      "upperX": 4.773476502961671e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.778156048601545e-8,
+      "upperX": 4.778156048601545e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.82126645273695e-8,
+      "upperX": 4.82126645273695e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.844919887503352e-8,
+      "upperX": 4.844919887503352e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.8658490570119284e-8,
+      "upperX": 4.8658490570119284e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.8947958353195986e-8,
+      "upperX": 4.8947958353195986e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.903049966031858e-8,
+      "upperX": 4.903049966031858e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.063087193946103e-8,
+      "upperX": 5.063087193946103e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.093594168670279e-8,
+      "upperX": 5.093594168670279e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.110128031837746e-8,
+      "upperX": 5.110128031837746e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.21996135205427e-8,
+      "upperX": 5.21996135205427e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.274976633273809e-8,
+      "upperX": 5.274976633273809e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.365442357074812e-8,
+      "upperX": 5.365442357074812e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.410205794476042e-8,
+      "upperX": 5.410205794476042e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.472734665445955e-8,
+      "upperX": 5.472734665445955e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.5283683852991317e-8,
+      "upperX": 5.5283683852991317e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.797946189822767e-8,
+      "upperX": 5.797946189822767e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.00851088883303e-8,
+      "upperX": 6.00851088883303e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.026811871784332e-8,
+      "upperX": 6.026811871784332e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.173019606592334e-8,
+      "upperX": 6.173019606592334e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.199323454580963e-8,
+      "upperX": 6.199323454580963e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.258397089453638e-8,
+      "upperX": 6.258397089453638e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.315441147819456e-8,
+      "upperX": 6.315441147819456e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.33019898721443e-8,
+      "upperX": 6.33019898721443e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.3327972199545e-8,
+      "upperX": 6.3327972199545e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.442728373023954e-8,
+      "upperX": 6.442728373023954e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.933791540930656e-8,
+      "upperX": 6.933791540930656e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.04748326363358e-8,
+      "upperX": 7.04748326363358e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.173518423719827e-8,
+      "upperX": 7.173518423719827e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.29212388250744e-8,
+      "upperX": 7.29212388250744e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.318313133275467e-8,
+      "upperX": 7.318313133275467e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.524073208919901e-8,
+      "upperX": 7.524073208919901e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.565496096262336e-8,
+      "upperX": 7.565496096262336e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.568930682211317e-8,
+      "upperX": 7.568930682211317e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.776436738993198e-8,
+      "upperX": 7.776436738993198e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.97019330533999e-8,
+      "upperX": 7.97019330533999e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.9742234593283e-8,
+      "upperX": 7.9742234593283e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.167246767776248e-8,
+      "upperX": 8.167246767776248e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.240357041167101e-8,
+      "upperX": 8.240357041167101e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.402516105121549e-8,
+      "upperX": 8.402516105121549e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.806452056475678e-8,
+      "upperX": 8.806452056475678e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.808118368008877e-8,
+      "upperX": 8.808118368008877e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.127988365165152e-8,
+      "upperX": 9.127988365165152e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.158625613459037e-8,
+      "upperX": 9.158625613459037e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.165905678898412e-8,
+      "upperX": 9.165905678898412e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.253044486179363e-8,
+      "upperX": 9.253044486179363e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.35824822079212e-8,
+      "upperX": 9.35824822079212e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.516588295177542e-8,
+      "upperX": 9.516588295177542e-8,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.0123804328188157e-7,
+      "upperX": 1.0123804328188157e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.0242921733016885e-7,
+      "upperX": 1.0242921733016885e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.0531864136353875e-7,
+      "upperX": 1.0531864136353875e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.0753497892146413e-7,
+      "upperX": 1.0753497892146413e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.0920477633291625e-7,
+      "upperX": 1.0920477633291625e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.1184852732881723e-7,
+      "upperX": 1.1184852732881723e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.1243974373797982e-7,
+      "upperX": 1.1243974373797982e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.1254589127318582e-7,
+      "upperX": 1.1254589127318582e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.1269118682655233e-7,
+      "upperX": 1.1269118682655233e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.1288338130910347e-7,
+      "upperX": 1.1288338130910347e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.1584016057497593e-7,
+      "upperX": 1.1584016057497593e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.1777499508980327e-7,
+      "upperX": 1.1777499508980327e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.1830174528881798e-7,
+      "upperX": 1.1830174528881798e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.1830847124194577e-7,
+      "upperX": 1.1830847124194577e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.1857603965381713e-7,
+      "upperX": 1.1857603965381713e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.1969091007202337e-7,
+      "upperX": 1.1969091007202337e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.2031412399693409e-7,
+      "upperX": 1.2031412399693409e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.206215274329736e-7,
+      "upperX": 1.206215274329736e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.2307251973098232e-7,
+      "upperX": 1.2307251973098232e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.2565863327651527e-7,
+      "upperX": 1.2565863327651527e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.2891443956775106e-7,
+      "upperX": 1.2891443956775106e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.2901331380987813e-7,
+      "upperX": 1.2901331380987813e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.2929080295265294e-7,
+      "upperX": 1.2929080295265294e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.2966832518834792e-7,
+      "upperX": 1.2966832518834792e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.3099418283424313e-7,
+      "upperX": 1.3099418283424313e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.3596216574818243e-7,
+      "upperX": 1.3596216574818243e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.3633421747094587e-7,
+      "upperX": 1.3633421747094587e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.39205978966217e-7,
+      "upperX": 1.39205978966217e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.4248751245560243e-7,
+      "upperX": 1.4248751245560243e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.4348524657314954e-7,
+      "upperX": 1.4348524657314954e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.4430008410393214e-7,
+      "upperX": 1.4430008410393214e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.4431857731089792e-7,
+      "upperX": 1.4431857731089792e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.4442009632631425e-7,
+      "upperX": 1.4442009632631425e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.477363329449588e-7,
+      "upperX": 1.477363329449588e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.508257994053963e-7,
+      "upperX": 1.508257994053963e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.5155531274402279e-7,
+      "upperX": 1.5155531274402279e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.5327975178003328e-7,
+      "upperX": 1.5327975178003328e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.5670454622807028e-7,
+      "upperX": 1.5670454622807028e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.5764409067031693e-7,
+      "upperX": 1.5764409067031693e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.5839906053471964e-7,
+      "upperX": 1.5839906053471964e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.6164566751797338e-7,
+      "upperX": 1.6164566751797338e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.6323411156093925e-7,
+      "upperX": 1.6323411156093925e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.637822151234758e-7,
+      "upperX": 1.637822151234758e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.6393295521055506e-7,
+      "upperX": 1.6393295521055506e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.6493695209618409e-7,
+      "upperX": 1.6493695209618409e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.6584992801327303e-7,
+      "upperX": 1.6584992801327303e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.6614124631608718e-7,
+      "upperX": 1.6614124631608718e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.676751537615928e-7,
+      "upperX": 1.676751537615928e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.7132362595262407e-7,
+      "upperX": 1.7132362595262407e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.7981469491168411e-7,
+      "upperX": 1.7981469491168411e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.7986096123578932e-7,
+      "upperX": 1.7986096123578932e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.8207620033905414e-7,
+      "upperX": 1.8207620033905414e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.8680207358734435e-7,
+      "upperX": 1.8680207358734435e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.870933736825009e-7,
+      "upperX": 1.870933736825009e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.8727723638534144e-7,
+      "upperX": 1.8727723638534144e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.8766993936658594e-7,
+      "upperX": 1.8766993936658594e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.969239040722215e-7,
+      "upperX": 1.969239040722215e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.9710502163761134e-7,
+      "upperX": 1.9710502163761134e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 1.9763085590263074e-7,
+      "upperX": 1.9763085590263074e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.0447962389980034e-7,
+      "upperX": 2.0447962389980034e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.059739883097933e-7,
+      "upperX": 2.059739883097933e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.08880851726434e-7,
+      "upperX": 2.08880851726434e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.089069508492969e-7,
+      "upperX": 2.089069508492969e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.1716210985012196e-7,
+      "upperX": 2.1716210985012196e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.180853511113412e-7,
+      "upperX": 2.180853511113412e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.1889286871967784e-7,
+      "upperX": 2.1889286871967784e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.2161534873887945e-7,
+      "upperX": 2.2161534873887945e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.2188942616629959e-7,
+      "upperX": 2.2188942616629959e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.317858440736842e-7,
+      "upperX": 2.317858440736842e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.3301024398847403e-7,
+      "upperX": 2.3301024398847403e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.3435524365567062e-7,
+      "upperX": 2.3435524365567062e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.3447709973645203e-7,
+      "upperX": 2.3447709973645203e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.3584240826934888e-7,
+      "upperX": 2.3584240826934888e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.3795561054917869e-7,
+      "upperX": 2.3795561054917869e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.411861941276072e-7,
+      "upperX": 2.411861941276072e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.418509033041971e-7,
+      "upperX": 2.418509033041971e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.432455059597771e-7,
+      "upperX": 2.432455059597771e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.4693465272562776e-7,
+      "upperX": 2.4693465272562776e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.5256656011052314e-7,
+      "upperX": 2.5256656011052314e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.5337468900765714e-7,
+      "upperX": 2.5337468900765714e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.552504398956046e-7,
+      "upperX": 2.552504398956046e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.5578537110604316e-7,
+      "upperX": 2.5578537110604316e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.6312452661159114e-7,
+      "upperX": 2.6312452661159114e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.640716498802931e-7,
+      "upperX": 2.640716498802931e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.662522584628846e-7,
+      "upperX": 2.662522584628846e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.679196442478826e-7,
+      "upperX": 2.679196442478826e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.686617508462774e-7,
+      "upperX": 2.686617508462774e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.6932249364008953e-7,
+      "upperX": 2.6932249364008953e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.730174029075272e-7,
+      "upperX": 2.730174029075272e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.733601398574592e-7,
+      "upperX": 2.733601398574592e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.741245723747454e-7,
+      "upperX": 2.741245723747454e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.7468061558622026e-7,
+      "upperX": 2.7468061558622026e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.8270550789244453e-7,
+      "upperX": 2.8270550789244453e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.8333688595338913e-7,
+      "upperX": 2.8333688595338913e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.8749457769983167e-7,
+      "upperX": 2.8749457769983167e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.916349934878326e-7,
+      "upperX": 2.916349934878326e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.981873954421843e-7,
+      "upperX": 2.981873954421843e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 2.9967856662871384e-7,
+      "upperX": 2.9967856662871384e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.005480542217498e-7,
+      "upperX": 3.005480542217498e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.029777517760124e-7,
+      "upperX": 3.029777517760124e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.0651163296369077e-7,
+      "upperX": 3.0651163296369077e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.083592916564015e-7,
+      "upperX": 3.083592916564015e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.0884630985994477e-7,
+      "upperX": 3.0884630985994477e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.111507671516023e-7,
+      "upperX": 3.111507671516023e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.16593342208904e-7,
+      "upperX": 3.16593342208904e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.173700915404254e-7,
+      "upperX": 3.173700915404254e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.1775276121415175e-7,
+      "upperX": 3.1775276121415175e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.178401790648877e-7,
+      "upperX": 3.178401790648877e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.1891912088966023e-7,
+      "upperX": 3.1891912088966023e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.1976684411461065e-7,
+      "upperX": 3.1976684411461065e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.2043371378520646e-7,
+      "upperX": 3.2043371378520646e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.208081817973607e-7,
+      "upperX": 3.208081817973607e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.221180566725934e-7,
+      "upperX": 3.221180566725934e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.2555187923222206e-7,
+      "upperX": 3.2555187923222206e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.26722416232883e-7,
+      "upperX": 3.26722416232883e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.297143051916862e-7,
+      "upperX": 3.297143051916862e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.3420077971690887e-7,
+      "upperX": 3.3420077971690887e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.3429220280822847e-7,
+      "upperX": 3.3429220280822847e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.353153115170926e-7,
+      "upperX": 3.353153115170926e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.362222704694773e-7,
+      "upperX": 3.362222704694773e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.402386736794938e-7,
+      "upperX": 3.402386736794938e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.4152769456952115e-7,
+      "upperX": 3.4152769456952115e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.419229657186662e-7,
+      "upperX": 3.419229657186662e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.4364442269563256e-7,
+      "upperX": 3.4364442269563256e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.6765921151982184e-7,
+      "upperX": 3.6765921151982184e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.7109042283489657e-7,
+      "upperX": 3.7109042283489657e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.747774268703097e-7,
+      "upperX": 3.747774268703097e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.7954661635808407e-7,
+      "upperX": 3.7954661635808407e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.802962320609282e-7,
+      "upperX": 3.802962320609282e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.8186384854199673e-7,
+      "upperX": 3.8186384854199673e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.838131652500465e-7,
+      "upperX": 3.838131652500465e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.8626493070736956e-7,
+      "upperX": 3.8626493070736956e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.8670123103656806e-7,
+      "upperX": 3.8670123103656806e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.8894618326068553e-7,
+      "upperX": 3.8894618326068553e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.9048393940532833e-7,
+      "upperX": 3.9048393940532833e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.915307185131667e-7,
+      "upperX": 3.915307185131667e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.926310765400842e-7,
+      "upperX": 3.926310765400842e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 3.9750567637497625e-7,
+      "upperX": 3.9750567637497625e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.034249858619887e-7,
+      "upperX": 4.034249858619887e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.1208633172473697e-7,
+      "upperX": 4.1208633172473697e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.142839840071133e-7,
+      "upperX": 4.142839840071133e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.188664672888365e-7,
+      "upperX": 4.188664672888365e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.201903820444386e-7,
+      "upperX": 4.201903820444386e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.2280831236141125e-7,
+      "upperX": 4.2280831236141125e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.238677249190914e-7,
+      "upperX": 4.238677249190914e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.2718306336730905e-7,
+      "upperX": 4.2718306336730905e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.350125921703807e-7,
+      "upperX": 4.350125921703807e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.354005000983818e-7,
+      "upperX": 4.354005000983818e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.469220107328198e-7,
+      "upperX": 4.469220107328198e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.624004339426335e-7,
+      "upperX": 4.624004339426335e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.7475220821269204e-7,
+      "upperX": 4.7475220821269204e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.762503147404118e-7,
+      "upperX": 4.762503147404118e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.822554222627673e-7,
+      "upperX": 4.822554222627673e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.83557242692001e-7,
+      "upperX": 4.83557242692001e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.859937239309886e-7,
+      "upperX": 4.859937239309886e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.896446654800712e-7,
+      "upperX": 4.896446654800712e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 4.983829513527382e-7,
+      "upperX": 4.983829513527382e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.002372698292845e-7,
+      "upperX": 5.002372698292845e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.027613851904533e-7,
+      "upperX": 5.027613851904533e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.045796611646836e-7,
+      "upperX": 5.045796611646836e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.059796306383646e-7,
+      "upperX": 5.059796306383646e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.138461487419477e-7,
+      "upperX": 5.138461487419477e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.324017289254357e-7,
+      "upperX": 5.324017289254357e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.360623607231219e-7,
+      "upperX": 5.360623607231219e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.401009455230366e-7,
+      "upperX": 5.401009455230366e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.406528824636325e-7,
+      "upperX": 5.406528824636325e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.522323545115171e-7,
+      "upperX": 5.522323545115171e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.580252546710796e-7,
+      "upperX": 5.580252546710796e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.648828864668332e-7,
+      "upperX": 5.648828864668332e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.675182235265197e-7,
+      "upperX": 5.675182235265197e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.691427202858534e-7,
+      "upperX": 5.691427202858534e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.782103267293337e-7,
+      "upperX": 5.782103267293337e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.787444776750306e-7,
+      "upperX": 5.787444776750306e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.808806107232556e-7,
+      "upperX": 5.808806107232556e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.904177058368987e-7,
+      "upperX": 5.904177058368987e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.925267445583415e-7,
+      "upperX": 5.925267445583415e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 5.948538117639401e-7,
+      "upperX": 5.948538117639401e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.287265652549223e-7,
+      "upperX": 6.287265652549223e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.338814100281809e-7,
+      "upperX": 6.338814100281809e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.376559016363359e-7,
+      "upperX": 6.376559016363359e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.45598812187842e-7,
+      "upperX": 6.45598812187842e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.476172933478352e-7,
+      "upperX": 6.476172933478352e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.540796917420266e-7,
+      "upperX": 6.540796917420266e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.793934861359929e-7,
+      "upperX": 6.793934861359929e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.865517248044739e-7,
+      "upperX": 6.865517248044739e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 6.981172671061131e-7,
+      "upperX": 6.981172671061131e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.019397392227233e-7,
+      "upperX": 7.019397392227233e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.116784568328427e-7,
+      "upperX": 7.116784568328427e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.205525058839868e-7,
+      "upperX": 7.205525058839868e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.425866530574865e-7,
+      "upperX": 7.425866530574865e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.452496884052806e-7,
+      "upperX": 7.452496884052806e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.459111097674054e-7,
+      "upperX": 7.459111097674054e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.560470001166664e-7,
+      "upperX": 7.560470001166664e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.571802591588295e-7,
+      "upperX": 7.571802591588295e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.591020163566498e-7,
+      "upperX": 7.591020163566498e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.775689594424762e-7,
+      "upperX": 7.775689594424762e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.902482617172524e-7,
+      "upperX": 7.902482617172524e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 7.995300621566059e-7,
+      "upperX": 7.995300621566059e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.085503804267091e-7,
+      "upperX": 8.085503804267091e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.093455590163501e-7,
+      "upperX": 8.093455590163501e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.238256532511201e-7,
+      "upperX": 8.238256532511201e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.294494426852594e-7,
+      "upperX": 8.294494426852594e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.308516461497106e-7,
+      "upperX": 8.308516461497106e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.343443753666691e-7,
+      "upperX": 8.343443753666691e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.34742092559182e-7,
+      "upperX": 8.34742092559182e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.463913965250924e-7,
+      "upperX": 8.463913965250924e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.535295532574594e-7,
+      "upperX": 8.535295532574594e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 8.763818417634184e-7,
+      "upperX": 8.763818417634184e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.029028547047346e-7,
+      "upperX": 9.029028547047346e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.038984400966399e-7,
+      "upperX": 9.038984400966399e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.286731164070972e-7,
+      "upperX": 9.286731164070972e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.346364429063669e-7,
+      "upperX": 9.346364429063669e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.653237573736817e-7,
+      "upperX": 9.653237573736817e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 9.72811417199182e-7,
+      "upperX": 9.72811417199182e-7,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000001028404166270036,
+      "upperX": 0.000001028404166270036,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000010286032481321428,
+      "upperX": 0.0000010286032481321428,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000010350934038783066,
+      "upperX": 0.0000010350934038783066,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000010533002237078648,
+      "upperX": 0.0000010533002237078648,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000010616286527653784,
+      "upperX": 0.0000010616286527653784,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000010789541491362797,
+      "upperX": 0.0000010789541491362797,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000010978746931566974,
+      "upperX": 0.0000010978746931566974,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000010989196159716386,
+      "upperX": 0.0000010989196159716386,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000011036501277317257,
+      "upperX": 0.0000011036501277317257,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000011170674540927905,
+      "upperX": 0.0000011170674540927905,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000001117196883448912,
+      "upperX": 0.000001117196883448912,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000011215765693961544,
+      "upperX": 0.0000011215765693961544,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000011352485163040882,
+      "upperX": 0.0000011352485163040882,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000011483360387032349,
+      "upperX": 0.0000011483360387032349,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000011727631217262058,
+      "upperX": 0.0000011727631217262058,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000011752847632884311,
+      "upperX": 0.0000011752847632884311,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000011843765219676783,
+      "upperX": 0.0000011843765219676783,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000011963387069879872,
+      "upperX": 0.0000011963387069879872,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000001203705789931675,
+      "upperX": 0.000001203705789931675,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000012041342087876217,
+      "upperX": 0.0000012041342087876217,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000012167331726598007,
+      "upperX": 0.0000012167331726598007,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000012271107947547932,
+      "upperX": 0.0000012271107947547932,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000012369402524470274,
+      "upperX": 0.0000012369402524470274,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000012455271618527775,
+      "upperX": 0.0000012455271618527775,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000012854175395204948,
+      "upperX": 0.0000012854175395204948,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000013024297766950355,
+      "upperX": 0.0000013024297766950355,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000013118148829427412,
+      "upperX": 0.0000013118148829427412,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000013385980550673082,
+      "upperX": 0.0000013385980550673082,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000013400878953184758,
+      "upperX": 0.0000013400878953184758,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000013901183069098266,
+      "upperX": 0.0000013901183069098266,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.00000140360976885745,
+      "upperX": 0.00000140360976885745,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000014061963624634188,
+      "upperX": 0.0000014061963624634188,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000014153062091182278,
+      "upperX": 0.0000014153062091182278,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000014154651073461366,
+      "upperX": 0.0000014154651073461366,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000014383187274535914,
+      "upperX": 0.0000014383187274535914,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000014385073343614607,
+      "upperX": 0.0000014385073343614607,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000001450784800294258,
+      "upperX": 0.000001450784800294258,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000014509302606047214,
+      "upperX": 0.0000014509302606047214,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000014893490263290232,
+      "upperX": 0.0000014893490263290232,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000015037292766528765,
+      "upperX": 0.0000015037292766528765,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000015039728149535136,
+      "upperX": 0.0000015039728149535136,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000015126333954285087,
+      "upperX": 0.0000015126333954285087,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000001531873228710623,
+      "upperX": 0.000001531873228710623,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000001548631294756575,
+      "upperX": 0.000001548631294756575,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000015490419806862832,
+      "upperX": 0.0000015490419806862832,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000015665256618557777,
+      "upperX": 0.0000015665256618557777,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000001594466918941606,
+      "upperX": 0.000001594466918941606,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000015974276963426348,
+      "upperX": 0.0000015974276963426348,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000016037450469852388,
+      "upperX": 0.0000016037450469852388,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000016110173479688683,
+      "upperX": 0.0000016110173479688683,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000016112756493491531,
+      "upperX": 0.0000016112756493491531,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000016133666380646616,
+      "upperX": 0.0000016133666380646616,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000001636529185722324,
+      "upperX": 0.000001636529185722324,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000016444264057113855,
+      "upperX": 0.0000016444264057113855,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000001646134876853722,
+      "upperX": 0.000001646134876853722,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000001731434847718205,
+      "upperX": 0.000001731434847718205,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000017347261447309137,
+      "upperX": 0.0000017347261447309137,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000017437626107508208,
+      "upperX": 0.0000017437626107508208,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000017571094377277774,
+      "upperX": 0.0000017571094377277774,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000017622988537357998,
+      "upperX": 0.0000017622988537357998,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000017821503961457097,
+      "upperX": 0.0000017821503961457097,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000017933175875395335,
+      "upperX": 0.0000017933175875395335,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000018403012518319883,
+      "upperX": 0.0000018403012518319883,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000018863538471247665,
+      "upperX": 0.0000018863538471247665,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.00000190874052075074,
+      "upperX": 0.00000190874052075074,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000001919500239866423,
+      "upperX": 0.000001919500239866423,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000019219827349648,
+      "upperX": 0.0000019219827349648,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000019377634676853717,
+      "upperX": 0.0000019377634676853717,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000019481564885737157,
+      "upperX": 0.0000019481564885737157,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.00000194912554385418,
+      "upperX": 0.00000194912554385418,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000019640684567612254,
+      "upperX": 0.0000019640684567612254,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000019796643067060415,
+      "upperX": 0.0000019796643067060415,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000019872384475760896,
+      "upperX": 0.0000019872384475760896,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000002000422043790806,
+      "upperX": 0.000002000422043790806,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000020226325385674926,
+      "upperX": 0.0000020226325385674926,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000002024464163197237,
+      "upperX": 0.000002024464163197237,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000020299808070056713,
+      "upperX": 0.0000020299808070056713,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000020365849413561676,
+      "upperX": 0.0000020365849413561676,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000020529722701834174,
+      "upperX": 0.0000020529722701834174,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000002053589922335064,
+      "upperX": 0.000002053589922335064,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000021248678767626927,
+      "upperX": 0.0000021248678767626927,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000021288015716880437,
+      "upperX": 0.0000021288015716880437,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000002138792870809425,
+      "upperX": 0.000002138792870809425,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000021407133987683125,
+      "upperX": 0.0000021407133987683125,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000021475936278214647,
+      "upperX": 0.0000021475936278214647,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000021628103414883526,
+      "upperX": 0.0000021628103414883526,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000021758824719775305,
+      "upperX": 0.0000021758824719775305,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000021906560068174485,
+      "upperX": 0.0000021906560068174485,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000002203406309853051,
+      "upperX": 0.000002203406309853051,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000002218311560220343,
+      "upperX": 0.000002218311560220343,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000022208456287309275,
+      "upperX": 0.0000022208456287309275,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000002248817887462451,
+      "upperX": 0.000002248817887462451,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000002251230546868044,
+      "upperX": 0.000002251230546868044,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000002272234026268194,
+      "upperX": 0.000002272234026268194,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000023052899851272457,
+      "upperX": 0.0000023052899851272457,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000002342142717548512,
+      "upperX": 0.000002342142717548512,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000002371815721158299,
+      "upperX": 0.000002371815721158299,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000002373687153056636,
+      "upperX": 0.000002373687153056636,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000023872439434136083,
+      "upperX": 0.0000023872439434136083,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000023895157990061477,
+      "upperX": 0.0000023895157990061477,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000023960170567605132,
+      "upperX": 0.0000023960170567605132,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000023994308016028754,
+      "upperX": 0.0000023994308016028754,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000024132847222801956,
+      "upperX": 0.0000024132847222801956,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000002432411424058145,
+      "upperX": 0.000002432411424058145,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000024993802951733812,
+      "upperX": 0.0000024993802951733812,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000002538773264060268,
+      "upperX": 0.000002538773264060268,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000025485053580798223,
+      "upperX": 0.0000025485053580798223,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000002554406312027524,
+      "upperX": 0.000002554406312027524,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000002563748781270192,
+      "upperX": 0.000002563748781270192,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000025827350800256,
+      "upperX": 0.0000025827350800256,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000002597884049659882,
+      "upperX": 0.000002597884049659882,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000002614139772649793,
+      "upperX": 0.000002614139772649793,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000002615002991701587,
+      "upperX": 0.000002615002991701587,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000026244842579181693,
+      "upperX": 0.0000026244842579181693,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000002642521468754211,
+      "upperX": 0.000002642521468754211,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000002643803175494952,
+      "upperX": 0.000002643803175494952,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000002663565198623985,
+      "upperX": 0.000002663565198623985,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000002689236222597202,
+      "upperX": 0.000002689236222597202,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.00000272259808897779,
+      "upperX": 0.00000272259808897779,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000002750690210717721,
+      "upperX": 0.000002750690210717721,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000002801424053178181,
+      "upperX": 0.000002801424053178181,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000028269332101871214,
+      "upperX": 0.0000028269332101871214,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.00000283179577875714,
+      "upperX": 0.00000283179577875714,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000002841187245472554,
+      "upperX": 0.000002841187245472554,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000002858982799835985,
+      "upperX": 0.000002858982799835985,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000028704185561778672,
+      "upperX": 0.0000028704185561778672,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000028780526706295717,
+      "upperX": 0.0000028780526706295717,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000029002188843829657,
+      "upperX": 0.0000029002188843829657,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000002906553740356088,
+      "upperX": 0.000002906553740356088,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000029070844771439397,
+      "upperX": 0.0000029070844771439397,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.00000298292427514113,
+      "upperX": 0.00000298292427514113,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000003011026486587909,
+      "upperX": 0.000003011026486587909,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000030394646248765866,
+      "upperX": 0.0000030394646248765866,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000030504496448813256,
+      "upperX": 0.0000030504496448813256,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000003053986218803928,
+      "upperX": 0.000003053986218803928,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.00000305715807091822,
+      "upperX": 0.00000305715807091822,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000030958526324731395,
+      "upperX": 0.0000030958526324731395,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000031250932588378078,
+      "upperX": 0.0000031250932588378078,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000031483015201505538,
+      "upperX": 0.0000031483015201505538,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000031514282246014602,
+      "upperX": 0.0000031514282246014602,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000003171760488474007,
+      "upperX": 0.000003171760488474007,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000031973118117534227,
+      "upperX": 0.0000031973118117534227,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000032089586778916157,
+      "upperX": 0.0000032089586778916157,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000032127246951674238,
+      "upperX": 0.0000032127246951674238,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000032162555188008923,
+      "upperX": 0.0000032162555188008923,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000032436778774069808,
+      "upperX": 0.0000032436778774069808,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000032536449050546423,
+      "upperX": 0.0000032536449050546423,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000003272810037868723,
+      "upperX": 0.000003272810037868723,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.00000329492081108107,
+      "upperX": 0.00000329492081108107,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000033404318979801673,
+      "upperX": 0.0000033404318979801673,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000033696155732343414,
+      "upperX": 0.0000033696155732343414,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000003433809049990799,
+      "upperX": 0.000003433809049990799,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000034986699137817823,
+      "upperX": 0.0000034986699137817823,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000035095327777234786,
+      "upperX": 0.0000035095327777234786,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000035150331796351963,
+      "upperX": 0.0000035150331796351963,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.00000353146303533336,
+      "upperX": 0.00000353146303533336,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000003538024282212504,
+      "upperX": 0.000003538024282212504,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.0000035449056836611703,
+      "upperX": 0.0000035449056836611703,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000003726461540232151,
+      "upperX": 0.000003726461540232151,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000003772770190479946,
+      "upperX": 0.000003772770190479946,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000003805516333166281,
+      "upperX": 0.000003805516333166281,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000003819283283856834,
+      "upperX": 0.000003819283283856834,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.00000385250656798064,
+      "upperX": 0.00000385250656798064,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000003866120181772459,
+      "upperX": 0.000003866120181772459,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.00000387879217478293,
+      "upperX": 0.00000387879217478293,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000003881842145059267,
+      "upperX": 0.000003881842145059267,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000003893010630307003,
+      "upperX": 0.000003893010630307003,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000003934274021233364,
+      "upperX": 0.000003934274021233364,
+      "fittedValue": 0
+    },
+    {
+      "lowerX": 0.000003951191607010074,
+      "upperX": 0.000041200353829484726,
+      "fittedValue": 0.014141414141414142
+    },
+    {
+      "lowerX": 0.000041366959180777485,
+      "upperX": 0.000047302910906488194,
+      "fittedValue": 0.027777777777777776
+    },
+    {
+      "lowerX": 0.00004732383877703583,
+      "upperX": 0.0007013078990159016,
+      "fittedValue": 0.030201342281879196
+    },
+    {
+      "lowerX": 0.0007013827517832194,
+      "upperX": 0.0007563373161780795,
+      "fittedValue": 0.03125
+    },
+    {
+      "lowerX": 0.0007594052831352283,
+      "upperX": 0.0008278135093258143,
+      "fittedValue": 0.06896551724137931
+    },
+    {
+      "lowerX": 0.0008284522817927353,
+      "upperX": 0.0012715691206590662,
+      "fittedValue": 0.07834101382488479
+    },
+    {
+      "lowerX": 0.0012724371808323642,
+      "upperX": 0.0019298307901247647,
+      "fittedValue": 0.08016877637130802
+    },
+    {
+      "lowerX": 0.0019319919595557344,
+      "upperX": 0.00372576555149684,
+      "fittedValue": 0.08097928436911488
+    },
+    {
+      "lowerX": 0.0037355549104405306,
+      "upperX": 0.016175081901677713,
+      "fittedValue": 0.13256484149855907
+    },
+    {
+      "lowerX": 0.01619887849051782,
+      "upperX": 0.01901879810401752,
+      "fittedValue": 0.1483050847457627
+    },
+    {
+      "lowerX": 0.019028537811542456,
+      "upperX": 0.04625930128603084,
+      "fittedValue": 0.18792401628222524
+    },
+    {
+      "lowerX": 0.04626784230644598,
+      "upperX": 0.05606534946996855,
+      "fittedValue": 0.1928020565552699
+    },
+    {
+      "lowerX": 0.05607827611760263,
+      "upperX": 0.059313155867336764,
+      "fittedValue": 0.21818181818181817
+    },
+    {
+      "lowerX": 0.05939087250614339,
+      "upperX": 0.05956250334110358,
+      "fittedValue": 0.2222222222222222
+    },
+    {
+      "lowerX": 0.05957690073627431,
+      "upperX": 0.10091108326758835,
+      "fittedValue": 0.2222222222222222
+    },
+    {
+      "lowerX": 0.10091331862575026,
+      "upperX": 0.16657651929679584,
+      "fittedValue": 0.27058177826564217
+    },
+    {
+      "lowerX": 0.16659925506221973,
+      "upperX": 0.2663101608887315,
+      "fittedValue": 0.3060821484992101
+    },
+    {
+      "lowerX": 0.26642727489654616,
+      "upperX": 0.26771566012470194,
+      "fittedValue": 0.3076923076923077
+    },
+    {
+      "lowerX": 0.2678272951152052,
+      "upperX": 0.26861809614158383,
+      "fittedValue": 0.3125
+    },
+    {
+      "lowerX": 0.26863573560987963,
+      "upperX": 0.2871092256623653,
+      "fittedValue": 0.3477157360406091
+    },
+    {
+      "lowerX": 0.2871461679160623,
+      "upperX": 0.38840300123045446,
+      "fittedValue": 0.3511171910624715
+    },
+    {
+      "lowerX": 0.3884212379523302,
+      "upperX": 0.38958405095459003,
+      "fittedValue": 0.42105263157894735
+    },
+    {
+      "lowerX": 0.3896952650034682,
+      "upperX": 0.39824617537845963,
+      "fittedValue": 0.423728813559322
+    },
+    {
+      "lowerX": 0.39829086563257676,
+      "upperX": 0.41009811717189915,
+      "fittedValue": 0.4529616724738676
+    },
+    {
+      "lowerX": 0.4101422812191913,
+      "upperX": 0.51613544508213,
+      "fittedValue": 0.45668934240362813
+    },
+    {
+      "lowerX": 0.5161969916699602,
+      "upperX": 0.530660607097315,
+      "fittedValue": 0.47058823529411764
+    },
+    {
+      "lowerX": 0.5306813318729517,
+      "upperX": 0.5312691751812233,
+      "fittedValue": 0.5
+    },
+    {
+      "lowerX": 0.5313157699291098,
+      "upperX": 0.5319132739155936,
+      "fittedValue": 0.5454545454545454
+    },
+    {
+      "lowerX": 0.5319509684677175,
+      "upperX": 0.5791375173717279,
+      "fittedValue": 0.5584699453551912
+    },
+    {
+      "lowerX": 0.5791657107680592,
+      "upperX": 0.6188240043844342,
+      "fittedValue": 0.5824800910125142
+    },
+    {
+      "lowerX": 0.6188264071711767,
+      "upperX": 0.6394798758866012,
+      "fittedValue": 0.6329113924050633
+    },
+    {
+      "lowerX": 0.6396133026090183,
+      "upperX": 0.657614341140702,
+      "fittedValue": 0.6582633053221288
+    },
+    {
+      "lowerX": 0.6576479346622035,
+      "upperX": 0.6584699207120304,
+      "fittedValue": 0.6666666666666666
+    },
+    {
+      "lowerX": 0.6584738358358693,
+      "upperX": 0.6627142028450268,
+      "fittedValue": 0.6666666666666666
+    },
+    {
+      "lowerX": 0.6627204205950701,
+      "upperX": 0.6629613086485229,
+      "fittedValue": 0.6666666666666666
+    },
+    {
+      "lowerX": 0.6629765667728345,
+      "upperX": 0.6630317607647536,
+      "fittedValue": 0.6666666666666666
+    },
+    {
+      "lowerX": 0.6631062537769492,
+      "upperX": 0.6642897875638278,
+      "fittedValue": 0.6666666666666666
+    },
+    {
+      "lowerX": 0.6643584244236558,
+      "upperX": 0.7001010801446363,
+      "fittedValue": 0.6919540229885057
+    },
+    {
+      "lowerX": 0.7001020799525031,
+      "upperX": 0.7350380558586971,
+      "fittedValue": 0.717978848413631
+    },
+    {
+      "lowerX": 0.7350648946781482,
+      "upperX": 0.7420162614090919,
+      "fittedValue": 0.7393364928909952
+    },
+    {
+      "lowerX": 0.7420179739056012,
+      "upperX": 0.7482604160334332,
+      "fittedValue": 0.7569444444444444
+    },
+    {
+      "lowerX": 0.748287628628564,
+      "upperX": 0.790411256807215,
+      "fittedValue": 0.7658132530120482
+    },
+    {
+      "lowerX": 0.7904239707210132,
+      "upperX": 0.8023219613605461,
+      "fittedValue": 0.7722222222222223
+    },
+    {
+      "lowerX": 0.8023768200854375,
+      "upperX": 0.8137107208499725,
+      "fittedValue": 0.8179190751445087
+    },
+    {
+      "lowerX": 0.8137201228573279,
+      "upperX": 0.846866503483575,
+      "fittedValue": 0.8328025477707006
+    },
+    {
+      "lowerX": 0.8468858158498718,
+      "upperX": 0.8688959676238355,
+      "fittedValue": 0.8534385569334837
+    },
+    {
+      "lowerX": 0.8688960318314871,
+      "upperX": 0.9048900939866744,
+      "fittedValue": 0.8750773036487323
+    },
+    {
+      "lowerX": 0.904913497860339,
+      "upperX": 0.907164055510028,
+      "fittedValue": 0.8768115942028986
+    },
+    {
+      "lowerX": 0.9072515968834616,
+      "upperX": 0.9082621200424974,
+      "fittedValue": 0.8936170212765957
+    },
+    {
+      "lowerX": 0.9082769443206047,
+      "upperX": 0.9134922211666747,
+      "fittedValue": 0.8978723404255319
+    },
+    {
+      "lowerX": 0.9135108750216956,
+      "upperX": 0.93973022272109,
+      "fittedValue": 0.9115770282588879
+    },
+    {
+      "lowerX": 0.9397330327517128,
+      "upperX": 0.9454653447392118,
+      "fittedValue": 0.9455445544554455
+    },
+    {
+      "lowerX": 0.9454763634967374,
+      "upperX": 0.9517706145887201,
+      "fittedValue": 0.9586206896551724
+    },
+    {
+      "lowerX": 0.9518172957865616,
+      "upperX": 0.9529472000257537,
+      "fittedValue": 0.9591836734693877
+    },
+    {
+      "lowerX": 0.9529580126412749,
+      "upperX": 0.9542755207240017,
+      "fittedValue": 0.972972972972973
+    },
+    {
+      "lowerX": 0.9543285660107585,
+      "upperX": 0.9543285660107585,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9543447357049799,
+      "upperX": 0.9543447357049799,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9543996927927947,
+      "upperX": 0.9543996927927947,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.954510731595555,
+      "upperX": 0.954510731595555,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9545111596789642,
+      "upperX": 0.9545111596789642,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9545675729643774,
+      "upperX": 0.9545675729643774,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9546075948434236,
+      "upperX": 0.9546075948434236,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9546091174404727,
+      "upperX": 0.9546091174404727,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9546287007518282,
+      "upperX": 0.9546287007518282,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9546332865646845,
+      "upperX": 0.9546332865646845,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9546409458786509,
+      "upperX": 0.9546409458786509,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9546661937904828,
+      "upperX": 0.9546661937904828,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9547442511978441,
+      "upperX": 0.9547442511978441,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9547519594025209,
+      "upperX": 0.9547519594025209,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9548067683692896,
+      "upperX": 0.9548067683692896,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9549551168588024,
+      "upperX": 0.9549551168588024,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9550329495368801,
+      "upperX": 0.9550329495368801,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9550381059686801,
+      "upperX": 0.9550381059686801,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9554082520990534,
+      "upperX": 0.9554082520990534,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.955462253273264,
+      "upperX": 0.955462253273264,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9556629594738479,
+      "upperX": 0.9556629594738479,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9557178403414524,
+      "upperX": 0.9557178403414524,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.955758437666542,
+      "upperX": 0.955758437666542,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9558809577736342,
+      "upperX": 0.9558809577736342,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9558881710723965,
+      "upperX": 0.9558881710723965,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9559607781011386,
+      "upperX": 0.9559607781011386,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9561427475584843,
+      "upperX": 0.9561427475584843,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9562822496485075,
+      "upperX": 0.9562822496485075,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9563088625129383,
+      "upperX": 0.9563088625129383,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9563910882714663,
+      "upperX": 0.9563910882714663,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9565379818142761,
+      "upperX": 0.9565379818142761,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9567104507462125,
+      "upperX": 0.9567104507462125,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9568962918432673,
+      "upperX": 0.9568962918432673,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.95695445045306,
+      "upperX": 0.95695445045306,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9570247643297212,
+      "upperX": 0.9570247643297212,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9570308948463211,
+      "upperX": 0.9570308948463211,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9570708971548518,
+      "upperX": 0.9570708971548518,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9571755923336767,
+      "upperX": 0.9571755923336767,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9572984838555441,
+      "upperX": 0.9572984838555441,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9574212450200235,
+      "upperX": 0.9574212450200235,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9574415141955321,
+      "upperX": 0.9574415141955321,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9574443387335243,
+      "upperX": 0.9574443387335243,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9575000073977042,
+      "upperX": 0.9575000073977042,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.957745506986615,
+      "upperX": 0.957745506986615,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9579893930866719,
+      "upperX": 0.9579893930866719,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9584455805920777,
+      "upperX": 0.9584455805920777,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9585037554946392,
+      "upperX": 0.9585037554946392,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9585566549206128,
+      "upperX": 0.9585566549206128,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9586858158578848,
+      "upperX": 0.9586858158578848,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9588234678113641,
+      "upperX": 0.9588234678113641,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9588823257477377,
+      "upperX": 0.9588823257477377,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9589631964055338,
+      "upperX": 0.9589631964055338,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.958964295291445,
+      "upperX": 0.958964295291445,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9590733435401666,
+      "upperX": 0.9590733435401666,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9593563504550415,
+      "upperX": 0.9593563504550415,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9594696773962954,
+      "upperX": 0.9594696773962954,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9594771398572983,
+      "upperX": 0.9594771398572983,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9595210285779765,
+      "upperX": 0.9595210285779765,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9595412969859074,
+      "upperX": 0.9595412969859074,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.959658664637991,
+      "upperX": 0.959658664637991,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9596795923866126,
+      "upperX": 0.9596795923866126,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9596880359268369,
+      "upperX": 0.9596880359268369,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9598644940248615,
+      "upperX": 0.9598644940248615,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.959922110164332,
+      "upperX": 0.959922110164332,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9601585027886066,
+      "upperX": 0.9601585027886066,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.960203992475301,
+      "upperX": 0.960203992475301,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9603619515113191,
+      "upperX": 0.9603619515113191,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9604122017653582,
+      "upperX": 0.9604122017653582,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9605066959181385,
+      "upperX": 0.9605066959181385,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9605972133818661,
+      "upperX": 0.9605972133818661,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9607688512246426,
+      "upperX": 0.9607688512246426,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9607934754220546,
+      "upperX": 0.9607934754220546,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9608532059104544,
+      "upperX": 0.9608532059104544,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9609251713301634,
+      "upperX": 0.9609251713301634,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9609744615347298,
+      "upperX": 0.9609744615347298,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9610002720230464,
+      "upperX": 0.9610002720230464,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9610032479589692,
+      "upperX": 0.9610032479589692,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9611697275996107,
+      "upperX": 0.9611697275996107,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9612923795832695,
+      "upperX": 0.9612923795832695,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9613749276155179,
+      "upperX": 0.9613749276155179,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9614003233859256,
+      "upperX": 0.9614003233859256,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9614408390187745,
+      "upperX": 0.9614408390187745,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9614684549170893,
+      "upperX": 0.9614684549170893,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9615935602440862,
+      "upperX": 0.9615935602440862,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9616069442796351,
+      "upperX": 0.9616069442796351,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.961754369753065,
+      "upperX": 0.961754369753065,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9617789919566893,
+      "upperX": 0.9617789919566893,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9618425292304082,
+      "upperX": 0.9618425292304082,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9618900445901089,
+      "upperX": 0.9618900445901089,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9619824327670616,
+      "upperX": 0.9619824327670616,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9620429042238765,
+      "upperX": 0.9620429042238765,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9620449797259307,
+      "upperX": 0.9620449797259307,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9620938431547454,
+      "upperX": 0.9620938431547454,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.962229887102545,
+      "upperX": 0.962229887102545,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.962564539756928,
+      "upperX": 0.962564539756928,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9626761260383208,
+      "upperX": 0.9626761260383208,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9627748035005432,
+      "upperX": 0.9627748035005432,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.962810967282294,
+      "upperX": 0.962810967282294,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9628117207826841,
+      "upperX": 0.9628117207826841,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9628718708357114,
+      "upperX": 0.9628718708357114,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9630679866918981,
+      "upperX": 0.9630679866918981,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9631393784798792,
+      "upperX": 0.9631393784798792,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9631782795465629,
+      "upperX": 0.9631782795465629,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9632740554070769,
+      "upperX": 0.9632740554070769,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9635217776883553,
+      "upperX": 0.9635217776883553,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9637818632338262,
+      "upperX": 0.9637818632338262,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.963859047116872,
+      "upperX": 0.963859047116872,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9639747709364654,
+      "upperX": 0.9639747709364654,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9640433886854782,
+      "upperX": 0.9640433886854782,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9641553544386996,
+      "upperX": 0.9641553544386996,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9647720306960017,
+      "upperX": 0.9647720306960017,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9648761715781013,
+      "upperX": 0.9648761715781013,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9651081404973911,
+      "upperX": 0.9651081404973911,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9652574748150036,
+      "upperX": 0.9652574748150036,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.965480646692841,
+      "upperX": 0.965480646692841,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9654810057979402,
+      "upperX": 0.9654810057979402,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9654921631649263,
+      "upperX": 0.9654921631649263,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.965520130969947,
+      "upperX": 0.965520130969947,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9655410553626638,
+      "upperX": 0.9655410553626638,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9655666708828603,
+      "upperX": 0.9655666708828603,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9656062369366416,
+      "upperX": 0.9656062369366416,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9658139246288915,
+      "upperX": 0.9658139246288915,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9658221681896202,
+      "upperX": 0.9658221681896202,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9659042383220231,
+      "upperX": 0.9659042383220231,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9661547825231309,
+      "upperX": 0.9661547825231309,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9662882621803739,
+      "upperX": 0.9662882621803739,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9663368590798029,
+      "upperX": 0.9663368590798029,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9663442548800867,
+      "upperX": 0.9663442548800867,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9663955494317285,
+      "upperX": 0.9663955494317285,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9664581465741824,
+      "upperX": 0.9664581465741824,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9664726946779363,
+      "upperX": 0.9664726946779363,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9667885630823969,
+      "upperX": 0.9667885630823969,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9668105137122467,
+      "upperX": 0.9668105137122467,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9669322075859947,
+      "upperX": 0.9669322075859947,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9669551729239951,
+      "upperX": 0.9669551729239951,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9672160645669492,
+      "upperX": 0.9672160645669492,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9672183945967627,
+      "upperX": 0.9672183945967627,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9674135130563126,
+      "upperX": 0.9674135130563126,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.967765615559409,
+      "upperX": 0.967765615559409,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9677794451277415,
+      "upperX": 0.9677794451277415,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9678511013658637,
+      "upperX": 0.9678511013658637,
+      "fittedValue": 1
+    },
+    {
+      "lowerX": 0.9679684557920261,
+      "upperX": 0.9679684557920261,
+      "fittedValue": 1
+    }
+  ],
+  "verdict": "Raw first-passage barrier modeling beats the terminal-only baseline, but calibration did not add further improvement in this sample."
+}

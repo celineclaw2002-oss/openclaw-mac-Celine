@@ -30,6 +30,29 @@ interface HoldAction {
     markPriceCents?: number;
     reason: string;
 }
+interface PaperPerformanceSnapshot {
+    initialCapitalCents: number;
+    loopCount: number;
+    closedTrades: number;
+    openTrades: number;
+    grossTradedNotionalCents: number;
+    turnoverRatio: number;
+    currentGrossExposureCents: number;
+    currentNetExposureCents: number;
+    currentGrossExposureRate: number;
+    currentNetExposureRate: number;
+    cumulativeReturn: number;
+    realizedReturn: number;
+    unrealizedReturn: number;
+    maxDrawdown: number;
+    winRate?: number;
+    averageWinCents?: number;
+    averageLossCents?: number;
+    profitFactor?: number;
+    averageHoldingMinutes?: number;
+    loopSharpeRatio?: number;
+    loopSortinoRatio?: number;
+}
 export interface BtcPaperTradingLoopOptions {
     outputRoot?: string;
     portfolioRoot?: string;
@@ -58,6 +81,14 @@ export interface BtcPaperTradingLoopSummary {
     realizedPnlCents: number;
     unrealizedPnlCents: number;
     netLiquidationCents: number;
+    entryNotionalCents: number;
+    exitNotionalCents: number;
+    grossTradedNotionalCents: number;
+    grossExposureCents: number;
+    netExposureCents: number;
+    grossExposureRate: number;
+    netExposureRate: number;
+    performance: PaperPerformanceSnapshot;
     actions: Array<EntryAction | ExitAction | HoldAction>;
     skippedReason?: string;
 }

@@ -1,4 +1,4 @@
-import { readFile, readdir, writeFile } from "node:fs/promises";
+import { readFile, readdir, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 import type {
@@ -178,12 +178,21 @@ async function resolveLatestCaptureRoot(cwd: string): Promise<string> {
   const directories = entries
     .filter((entry) => entry.isDirectory())
     .map((entry) => entry.name)
-    .sort();
-  const latest = directories.at(-1);
-  if (!latest) {
-    throw new Error("No Kalshi live capture directories found.");
+    .sort()
+    .reverse();
+  for (const directory of directories) {
+    const candidateRoot = path.join(capturesRoot, directory);
+    const observationsPath = path.join(candidateRoot, "observations", "external-anchor-btc.json");
+    try {
+      const details = await stat(observationsPath);
+      if (details.isFile()) {
+        return candidateRoot;
+      }
+    } catch {
+      continue;
+    }
   }
-  return path.join(capturesRoot, latest);
+  throw new Error("No Kalshi live capture directories with external-anchor BTC observations found.");
 }
 
 async function readJsonFile<T>(target: string): Promise<T> {
