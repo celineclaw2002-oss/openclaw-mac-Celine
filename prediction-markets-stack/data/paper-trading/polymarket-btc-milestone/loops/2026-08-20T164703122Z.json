@@ -1,0 +1,264 @@
+{
+  "outputRoot": "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/polymarket-live/20260820T164700464Z",
+  "portfolioRoot": "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/paper-trading/polymarket-btc-milestone",
+  "loopTimeIso": "2026-08-20T16:47:03.122Z",
+  "scanAction": "executed",
+  "reservePathVerdict": "viable_public_data_with_restriction_risk",
+  "policyMode": "segment_aware",
+  "entryEdgeThreshold": 0.04,
+  "exitEdgeThreshold": 0.015,
+  "policySourceSummaryPath": "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/backtests/polymarket-btc-barrier/20260820T134713906Z/summaries/barrier-backtest-summary.json",
+  "spotPrice": 72645.95,
+  "annualizedVol": 0.6,
+  "consideredMarkets": 53,
+  "quoteReadyMarkets": 34,
+  "eligibleEntries": 16,
+  "entriesPlaced": 0,
+  "exitsPlaced": 0,
+  "holdsReviewed": 4,
+  "openPositions": 4,
+  "closedPositions": 0,
+  "cashCents": 50052,
+  "realizedPnlCents": 0,
+  "unrealizedPnlCents": -403,
+  "netLiquidationCents": 99597,
+  "entryNotionalCents": 0,
+  "exitNotionalCents": 0,
+  "grossTradedNotionalCents": 0,
+  "grossExposureCents": 49545,
+  "netExposureCents": 49545,
+  "grossExposureRate": 0.4974547426127293,
+  "netExposureRate": 0.4974547426127293,
+  "bestMarket": "will-bitcoin-reach-120000-by-december-31-2026-625-425-562",
+  "topSignals": [
+    {
+      "marketSlug": "will-bitcoin-reach-90000-by-december-31-2026-113-862-581-343",
+      "side": "yes",
+      "signal": 0.2548439477619458,
+      "anchorProbability": 0.5548439477619458,
+      "marketMid": 0.3,
+      "barrierMultiplier": 1.2388853060631735,
+      "horizonDays": 133.50898712962962,
+      "qualityBucket": "medium",
+      "entryEdgeThreshold": 0.02,
+      "allowEntry": true,
+      "policyRationale": "historically_supported_segment"
+    },
+    {
+      "marketSlug": "will-bitcoin-reach-85000-by-december-31-2026-from-june-8",
+      "side": "yes",
+      "signal": 0.2400520290270028,
+      "anchorProbability": 0.6650520290270028,
+      "marketMid": 0.425,
+      "barrierMultiplier": 1.1700583446152195,
+      "horizonDays": 133.50898712962962,
+      "qualityBucket": "strong",
+      "entryEdgeThreshold": 0.012,
+      "allowEntry": true,
+      "policyRationale": "historically_strong_segment"
+    },
+    {
+      "marketSlug": "will-bitcoin-reach-95000-by-december-31-2026-from-june-8",
+      "side": "yes",
+      "signal": 0.23456452535909497,
+      "anchorProbability": 0.459564525359095,
+      "marketMid": 0.225,
+      "barrierMultiplier": 1.3077122675111277,
+      "horizonDays": 133.50898712962962,
+      "qualityBucket": "medium",
+      "entryEdgeThreshold": 0.02,
+      "allowEntry": true,
+      "policyRationale": "historically_supported_segment"
+    },
+    {
+      "marketSlug": "will-bitcoin-reach-100000-by-december-31-2026-571-361-361",
+      "side": "yes",
+      "signal": 0.22333733188988816,
+      "anchorProbability": 0.37833733188988816,
+      "marketMid": 0.155,
+      "barrierMultiplier": 1.3765392289590817,
+      "horizonDays": 133.5089871412037,
+      "qualityBucket": "medium",
+      "entryEdgeThreshold": 0.02,
+      "allowEntry": true,
+      "policyRationale": "historically_supported_segment"
+    },
+    {
+      "marketSlug": "will-bitcoin-reach-80000-by-december-31-2026-from-june-8",
+      "side": "yes",
+      "signal": 0.21537391268644046,
+      "anchorProbability": 0.7903739126864404,
+      "marketMid": 0.575,
+      "barrierMultiplier": 1.1012313831672653,
+      "horizonDays": 133.5089871412037,
+      "qualityBucket": "strong",
+      "entryEdgeThreshold": 0.012,
+      "allowEntry": true,
+      "policyRationale": "historically_strong_segment"
+    }
+  ],
+  "researchSnapshot": {
+    "regime": {
+      "spotPrice": 72645.95,
+      "annualizedVol": 0.6,
+      "quoteReadyMarkets": 34,
+      "upsideQuoteReadyMarkets": 20,
+      "downsideQuoteReadyMarkets": 12,
+      "averageSpread": 0.0075294117647058826,
+      "realizedVol20d": 0.37631303347407236,
+      "momentum20d": 0.15680682648398178,
+      "momentum60d": 0.14931139295994988,
+      "volBucket": "low",
+      "trendBucket": "up"
+    },
+    "candidateBook": {
+      "allowedEntries": 20,
+      "blockedEntries": 12,
+      "strongSignals": 15,
+      "mediumSignals": 4,
+      "cautiousSignals": 2,
+      "blockedSignals": 11,
+      "averageAllowedSignal": 0.10319256254692813,
+      "averageAllowedBarrierMultiplier": 0.8741024103890165,
+      "averageAllowedHorizonDays": 133.50898711574075,
+      "averageGrossEdgeToMid": 0.10319256254692813,
+      "averageNetEdgeToEntry": 0.09821756254692814,
+      "averageSpreadCost": 0.005199999999999998
+    },
+    "concentration": {
+      "openEventGroups": 4,
+      "largestEventExposureCents": 12496,
+      "largestEventExposureRate": 0.125465626474693,
+      "largestDirectionExposureCents": 49545,
+      "largestDirectionExposureRate": 0.4974547426127293,
+      "weightedAverageBarrierMultiplier": 1.2736301064017501,
+      "weightedAverageHorizonDays": 0
+    },
+    "costDiagnostics": {
+      "expectedEntryCostCents": 403,
+      "realizedSpreadCaptureCents": 0
+    },
+    "attribution": {
+      "byDirection": [
+        {
+          "bucketId": "yes",
+          "openPositions": 4,
+          "grossExposureCents": 49545,
+          "realizedPnlCents": 0,
+          "unrealizedPnlCents": -403,
+          "totalPnlCents": -403
+        }
+      ],
+      "byBarrierBucket": [
+        {
+          "bucketId": "unknown",
+          "openPositions": 4,
+          "grossExposureCents": 49545,
+          "realizedPnlCents": 0,
+          "unrealizedPnlCents": -403,
+          "totalPnlCents": -403
+        }
+      ],
+      "byHorizonBucket": [
+        {
+          "bucketId": "unknown",
+          "openPositions": 4,
+          "grossExposureCents": 49545,
+          "realizedPnlCents": 0,
+          "unrealizedPnlCents": -403,
+          "totalPnlCents": -403
+        }
+      ],
+      "byEvent": [
+        {
+          "bucketId": "will-bitcoin-reach-85000",
+          "openPositions": 1,
+          "grossExposureCents": 12470,
+          "realizedPnlCents": 0,
+          "unrealizedPnlCents": 0,
+          "totalPnlCents": 0
+        },
+        {
+          "bucketId": "will-bitcoin-reach-95000",
+          "openPositions": 1,
+          "grossExposureCents": 12489,
+          "realizedPnlCents": 0,
+          "unrealizedPnlCents": 0,
+          "totalPnlCents": 0
+        },
+        {
+          "bucketId": "will-bitcoin-reach-100000",
+          "openPositions": 1,
+          "grossExposureCents": 12496,
+          "realizedPnlCents": 0,
+          "unrealizedPnlCents": 0,
+          "totalPnlCents": 0
+        },
+        {
+          "bucketId": "will-bitcoin-reach-90000",
+          "openPositions": 1,
+          "grossExposureCents": 12090,
+          "realizedPnlCents": 0,
+          "unrealizedPnlCents": -403,
+          "totalPnlCents": -403
+        }
+      ]
+    }
+  },
+  "performance": {
+    "initialCapitalCents": 100000,
+    "loopCount": 13,
+    "closedTrades": 0,
+    "openTrades": 4,
+    "grossTradedNotionalCents": 49948,
+    "turnoverRatio": 0.5000130908799689,
+    "currentGrossExposureCents": 49545,
+    "currentNetExposureCents": 49545,
+    "currentGrossExposureRate": 0.4974547426127293,
+    "currentNetExposureRate": 0.4974547426127293,
+    "cumulativeReturn": -0.004029999999999978,
+    "realizedReturn": 0,
+    "unrealizedReturn": -0.00403,
+    "maxDrawdown": -0.004029999999999978,
+    "loopSharpeRatio": -1.3372575433854392,
+    "loopSortinoRatio": -0.9320030440945483
+  },
+  "actions": [
+    {
+      "type": "hold",
+      "marketSlug": "will-bitcoin-reach-90000-by-december-31-2026-113-862-581-343",
+      "side": "yes",
+      "quantity": 403,
+      "signal": 0.2548439477619458,
+      "markPriceCents": 30,
+      "reason": "position_still_valid"
+    },
+    {
+      "type": "hold",
+      "marketSlug": "will-bitcoin-reach-85000-by-december-31-2026-from-june-8",
+      "side": "yes",
+      "quantity": 290,
+      "signal": 0.2400520290270028,
+      "markPriceCents": 43,
+      "reason": "position_still_valid"
+    },
+    {
+      "type": "hold",
+      "marketSlug": "will-bitcoin-reach-95000-by-december-31-2026-from-june-8",
+      "side": "yes",
+      "quantity": 543,
+      "signal": 0.23456452535909497,
+      "markPriceCents": 23,
+      "reason": "position_still_valid"
+    },
+    {
+      "type": "hold",
+      "marketSlug": "will-bitcoin-reach-100000-by-december-31-2026-571-361-361",
+      "side": "yes",
+      "quantity": 781,
+      "signal": 0.22333733188988816,
+      "markPriceCents": 16,
+      "reason": "position_still_valid"
+    }
+  ]
+}

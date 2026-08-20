@@ -61,6 +61,7 @@ Current live/replay entry points:
   - runs the Polymarket BTC milestone scanner plus a Coinbase-based barrier-hit anchor
   - maintains a persistent paper portfolio under `data/paper-trading/polymarket-btc-milestone/`
   - gives the BTC program an always-on reserve sleeve even when Kalshi BTC families are pre-open
+  - applies a segment-aware research gate so nearer / historically stronger barrier regimes can trade on lower thresholds while weak far-out regimes are blocked
 - `npm run backtest:polymarket-btc-barrier`
   - pulls historical daily BTC candles from Coinbase
   - builds synthetic BTC milestone / barrier-hit observations across horizons and barrier levels

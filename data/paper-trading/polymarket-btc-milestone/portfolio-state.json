@@ -1,0 +1,46 @@
+{
+  "strategyId": "polymarket-btc-milestone-paper-v1",
+  "createdAtIso": "2026-08-20T16:11:01.362Z",
+  "updatedAtIso": "2026-08-20T16:11:01.802Z",
+  "loopCount": 1,
+  "cashCents": 75011,
+  "realizedPnlCents": 0,
+  "openPositions": [
+    {
+      "positionId": "paper::will-bitcoin-reach-90000-by-december-31-2026-113-862-581-343::yes::1787242261795",
+      "eventSlug": "what-price-will-bitcoin-hit-before-2027",
+      "marketSlug": "will-bitcoin-reach-90000-by-december-31-2026-113-862-581-343",
+      "questionText": "Will Bitcoin reach $90,000 by December 31, 2026?",
+      "side": "yes",
+      "quantity": 403,
+      "entryPriceCents": 31,
+      "entryTimeMs": 1787242261795,
+      "entrySignal": 0.24512848261964199,
+      "entryAnchorProbability": 0.550128482619642,
+      "barrierPrice": 90000,
+      "barrierDirection": "up",
+      "marketEndDate": "2027-01-01T05:00:00Z",
+      "lastMarkPriceCents": 31,
+      "lastMarkTimeMs": 1787242261795
+    },
+    {
+      "positionId": "paper::will-bitcoin-reach-100000-by-december-31-2026-571-361-361::yes::1787242261795",
+      "eventSlug": "what-price-will-bitcoin-hit-before-2027",
+      "marketSlug": "will-bitcoin-reach-100000-by-december-31-2026-571-361-361",
+      "questionText": "Will Bitcoin reach $100,000 by December 31, 2026?",
+      "side": "yes",
+      "quantity": 781,
+      "entryPriceCents": 16,
+      "entryTimeMs": 1787242261795,
+      "entrySignal": 0.2195476816363298,
+      "entryAnchorProbability": 0.3745476816363298,
+      "barrierPrice": 100000,
+      "barrierDirection": "up",
+      "marketEndDate": "2027-01-01T05:00:00Z",
+      "lastMarkPriceCents": 16,
+      "lastMarkTimeMs": 1787242261795
+    }
+  ],
+  "closedPositions": [],
+  "lastOutputRoot": "/Users/canozgel-macmini/.openclaw/workspace/data/polymarket-live/20260820T161057091Z"
+}

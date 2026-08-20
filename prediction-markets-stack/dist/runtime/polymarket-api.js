@@ -8,6 +8,9 @@ export class PolymarketGammaClient {
         if (options.limit !== undefined) {
             url.searchParams.set("limit", String(options.limit));
         }
+        if (options.offset !== undefined) {
+            url.searchParams.set("offset", String(options.offset));
+        }
         if (options.active !== undefined) {
             url.searchParams.set("active", String(options.active));
         }

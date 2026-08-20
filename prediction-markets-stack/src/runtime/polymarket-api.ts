@@ -35,6 +35,7 @@ export interface PolymarketEventRecord {
 
 export interface PolymarketListEventsOptions {
   limit?: number;
+  offset?: number;
   active?: boolean;
   closed?: boolean;
 }
@@ -46,6 +47,9 @@ export class PolymarketGammaClient {
     const url = new URL(`${this.baseUrl}/events`);
     if (options.limit !== undefined) {
       url.searchParams.set("limit", String(options.limit));
+    }
+    if (options.offset !== undefined) {
+      url.searchParams.set("offset", String(options.offset));
     }
     if (options.active !== undefined) {
       url.searchParams.set("active", String(options.active));

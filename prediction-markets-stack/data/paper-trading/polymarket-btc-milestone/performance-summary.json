@@ -1,17 +1,18 @@
 {
   "initialCapitalCents": 100000,
-  "loopCount": 5,
+  "loopCount": 15,
   "closedTrades": 0,
-  "openTrades": 0,
-  "grossTradedNotionalCents": 0,
-  "turnoverRatio": 0,
-  "currentGrossExposureCents": 0,
-  "currentNetExposureCents": 0,
-  "currentGrossExposureRate": 0,
-  "currentNetExposureRate": 0,
+  "openTrades": 4,
+  "grossTradedNotionalCents": 49948,
+  "turnoverRatio": 0.49994194635843514,
+  "currentGrossExposureCents": 49948,
+  "currentNetExposureCents": 49948,
+  "currentGrossExposureRate": 0.49948,
+  "currentNetExposureRate": 0.49948,
   "cumulativeReturn": 0,
   "realizedReturn": 0,
   "unrealizedReturn": 0,
-  "maxDrawdown": 0,
-  "loopSharpeRatio": 0
+  "maxDrawdown": -0.004029999999999978,
+  "loopSharpeRatio": 0.0024574041081299076,
+  "loopSortinoRatio": 0.0027854711850167956
 }

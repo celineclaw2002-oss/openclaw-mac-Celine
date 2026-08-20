@@ -887,3 +887,90 @@ Built a reusable venue primer on Kalshi and Polymarket for future prediction-mar
 - Trading-readiness implication:
   - the always-on Polymarket reserve sleeve is now supported by a credible historical model-quality backtest
   - the next bottleneck is threshold selection, calibration discipline, and live quote-to-fair mapping, not access to BTC external data
+- Follow-through implementation:
+  - the Polymarket paper loop now consumes the latest historical barrier-backtest summary and applies a segment-aware gate rather than one blunt global threshold
+  - strong / medium / cautious historical segments get tighter entry thresholds
+  - segments that underperform the terminal baseline are blocked entirely
+- Latest live verdict under the new gate:
+  - market: `will-bitcoin-hit-150k-by-december-31-2026`
+  - live signal: about `+2.08%` on the `yes` side
+  - barrier multiplier: about `2.07x`
+  - horizon: about `134` days
+  - policy result: `blocked`
+  - interpretation:
+    - the system is now declining this market for a research-backed reason, not because the venue is unavailable or because a fixed threshold happened to be too high
+- Follow-up universe expansion:
+  - widened the Polymarket scanner to paginate through the Gamma API instead of only reading the first event page
+  - widened BTC coverage beyond the `150k hit` family into the live `What price will Bitcoin hit in 2026?` family
+  - updated the reserve sleeve so it can score both upside `reach` barriers and downside `dip` barriers
+- Latest live run after the universe expansion:
+  - scan now sees `1000` active events, `3` matching BTC event families, `53` matching BTC markets, and `34` quote-ready BTC markets
+  - the live sleeve shifted from a single weak far-out contract into nearer thresholds where the backtest is strongest
+  - first live entries placed:
+    - `will-bitcoin-reach-85000-by-december-31-2026-from-june-8`
+    - `will-bitcoin-reach-90000-by-december-31-2026-113-862-581-343`
+    - `will-bitcoin-reach-95000-by-december-31-2026-from-june-8`
+    - `will-bitcoin-reach-100000-by-december-31-2026-571-361-361`
+  - top live signal examples:
+    - `85k`: anchor about `65.99%` vs market mid about `42.0%`
+    - `90k`: anchor about `55.01%` vs market mid about `30.5%`
+    - `95k`: anchor about `45.53%` vs market mid about `22.5%`
+    - `100k`: anchor about `37.45%` vs market mid about `15.5%`
+  - immediate paper result:
+    - `entriesPlaced: 4`
+    - `openPositions: 4`
+    - `grossExposureCents: 49658`
+    - `unrealizedPnlCents: -290` right after entry, consistent with paying the spread
+- Follow-up risk and research hardening:
+  - added ladder-aware correlation controls to the live reserve sleeve
+  - the loop now caps same-event exposure and same-direction position count, and requires minimum barrier spacing before adding another threshold in the same family
+  - added a quant-style research snapshot to the runtime summary with:
+    - regime state
+    - candidate-book composition
+    - portfolio concentration
+- Latest control outcome:
+  - next live loop saw `15` still-eligible entries but placed `0` new trades because the existing BTC threshold ladder already consumed the allowed family exposure
+  - current concentration snapshot from the runtime summary:
+    - `quoteReadyMarkets: 34`
+    - `upsideQuoteReadyMarkets: 20`
+    - `downsideQuoteReadyMarkets: 12`
+    - `allowedEntries: 13`
+    - `largestEventExposureRate: 24.989%`
+    - `largestDirectionExposureRate: 24.989%`
+  - interpretation:
+    - the sleeve is now behaving more like a real research portfolio and less like a naive top-signal stacker
+- Added the next quant-research layer:
+  - persisted a dedicated research artifact at:
+    - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/paper-trading/polymarket-btc-milestone/research-summary.json`
+  - added regime tagging from recent Coinbase candles:
+    - `realizedVol20d`
+    - `momentum20d`
+    - `momentum60d`
+    - `volBucket`
+    - `trendBucket`
+  - added candidate-book diagnostics:
+    - gross edge to mid
+    - net edge to entry
+    - average spread cost
+  - added attribution cuts:
+    - by direction
+    - by barrier bucket
+    - by horizon bucket
+    - by event
+  - added overlap-adjusted sizing on top of the hard caps so overlap can reduce trade size before the family-level cap fully blocks new entries
+- Latest persisted research snapshot highlights:
+  - regime:
+    - `volBucket: low`
+    - `trendBucket: up`
+    - `realizedVol20d: 0.3752`
+    - `momentum20d: 15.62%`
+  - candidate book:
+    - `allowedEntries: 20`
+    - `blockedEntries: 12`
+    - `averageGrossEdgeToMid: 10.18%`
+    - `averageNetEdgeToEntry: 9.80%`
+    - `averageSpreadCost: 0.395%`
+  - attribution:
+    - all current open risk still sits in the `yes` bucket
+    - current barrier bucket is `<=100000`
+    - current horizon bucket is `<=180 days`

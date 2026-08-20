@@ -33,6 +33,7 @@ export interface PolymarketEventRecord {
 }
 export interface PolymarketListEventsOptions {
     limit?: number;
+    offset?: number;
     active?: boolean;
     closed?: boolean;
 }

@@ -1,0 +1,108 @@
+{
+  "regime": {
+    "spotPrice": 72613.77,
+    "annualizedVol": 0.6,
+    "quoteReadyMarkets": 34,
+    "upsideQuoteReadyMarkets": 20,
+    "downsideQuoteReadyMarkets": 12,
+    "averageSpread": 0.006000000000000002,
+    "realizedVol20d": 0.3751734666208112,
+    "momentum20d": 0.15616346124767003,
+    "momentum60d": 0.14867219635512444,
+    "volBucket": "low",
+    "trendBucket": "up"
+  },
+  "candidateBook": {
+    "allowedEntries": 20,
+    "blockedEntries": 12,
+    "strongSignals": 15,
+    "mediumSignals": 4,
+    "cautiousSignals": 2,
+    "blockedSignals": 11,
+    "averageAllowedSignal": 0.10176425912856268,
+    "averageAllowedBarrierMultiplier": 0.8744897834116037,
+    "averageAllowedHorizonDays": 133.5082320364583,
+    "averageGrossEdgeToMid": 0.10176425912856268,
+    "averageNetEdgeToEntry": 0.09803925912856268,
+    "averageSpreadCost": 0.003949999999999998
+  },
+  "concentration": {
+    "openEventGroups": 4,
+    "largestEventExposureCents": 12496,
+    "largestEventExposureRate": 0.12496,
+    "largestDirectionExposureCents": 49948,
+    "largestDirectionExposureRate": 0.49948,
+    "weightedAverageBarrierMultiplier": 1.2739140778946758,
+    "weightedAverageHorizonDays": 133.5082319560185
+  },
+  "costDiagnostics": {
+    "expectedEntryCostCents": 0,
+    "realizedSpreadCaptureCents": 0
+  },
+  "attribution": {
+    "byDirection": [
+      {
+        "bucketId": "yes",
+        "openPositions": 4,
+        "grossExposureCents": 49948,
+        "realizedPnlCents": 0,
+        "unrealizedPnlCents": 0,
+        "totalPnlCents": 0
+      }
+    ],
+    "byBarrierBucket": [
+      {
+        "bucketId": "<=100000",
+        "openPositions": 4,
+        "grossExposureCents": 49948,
+        "realizedPnlCents": 0,
+        "unrealizedPnlCents": 0,
+        "totalPnlCents": 0
+      }
+    ],
+    "byHorizonBucket": [
+      {
+        "bucketId": "<=180",
+        "openPositions": 4,
+        "grossExposureCents": 49948,
+        "realizedPnlCents": 0,
+        "unrealizedPnlCents": 0,
+        "totalPnlCents": 0
+      }
+    ],
+    "byEvent": [
+      {
+        "bucketId": "will-bitcoin-reach-90000",
+        "openPositions": 1,
+        "grossExposureCents": 12493,
+        "realizedPnlCents": 0,
+        "unrealizedPnlCents": 0,
+        "totalPnlCents": 0
+      },
+      {
+        "bucketId": "will-bitcoin-reach-85000",
+        "openPositions": 1,
+        "grossExposureCents": 12470,
+        "realizedPnlCents": 0,
+        "unrealizedPnlCents": 0,
+        "totalPnlCents": 0
+      },
+      {
+        "bucketId": "will-bitcoin-reach-95000",
+        "openPositions": 1,
+        "grossExposureCents": 12489,
+        "realizedPnlCents": 0,
+        "unrealizedPnlCents": 0,
+        "totalPnlCents": 0
+      },
+      {
+        "bucketId": "will-bitcoin-reach-100000",
+        "openPositions": 1,
+        "grossExposureCents": 12496,
+        "realizedPnlCents": 0,
+        "unrealizedPnlCents": 0,
+        "totalPnlCents": 0
+      }
+    ]
+  }
+}

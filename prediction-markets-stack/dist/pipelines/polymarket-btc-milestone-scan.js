@@ -6,11 +6,21 @@ export async function runPolymarketBtcMilestoneScan(options = {}) {
     await mkdir(path.join(outputRoot, "raw"), { recursive: true });
     await mkdir(path.join(outputRoot, "summaries"), { recursive: true });
     const client = new PolymarketGammaClient();
-    const events = await client.listEvents({
-        limit: options.limit ?? 500,
-        active: true,
-        closed: false
-    });
+    const pageSize = Math.min(options.limit ?? 100, 500);
+    const maxPages = options.maxPages ?? 10;
+    const events = [];
+    for (let page = 0; page < maxPages; page += 1) {
+        const batch = await client.listEvents({
+            limit: pageSize,
+            offset: page * pageSize,
+            active: true,
+            closed: false
+        });
+        events.push(...batch);
+        if (batch.length < pageSize) {
+            break;
+        }
+    }
     const matchingEvents = events.filter(matchesBtcMilestoneEvent);
     const rows = matchingEvents.flatMap((event) => flattenMatchingMarkets(event));
     const openMarkets = rows.filter((row) => row.active && !row.closed);
@@ -51,7 +61,10 @@ export async function runPolymarketBtcMilestoneScan(options = {}) {
 }
 function matchesBtcMilestoneEvent(event) {
     const haystack = `${event.title} ${event.slug}`.toLowerCase();
-    return haystack.includes("bitcoin hit") || haystack.includes("bitcoin above") || haystack.includes("bitcoin");
+    return (haystack.includes("when will bitcoin hit") ||
+        haystack.includes("what price will bitcoin hit") ||
+        haystack.includes("bitcoin all time high") ||
+        haystack.includes("bitcoin above"));
 }
 function flattenMatchingMarkets(event) {
     return (event.markets ?? [])
@@ -82,7 +95,10 @@ function flattenMatchingMarkets(event) {
 }
 function matchesBtcMilestoneMarket(market) {
     const text = `${market.question} ${market.slug}`.toLowerCase();
-    return text.includes("bitcoin hit") || text.includes("bitcoin") || text.includes("btc");
+    return (text.includes("will bitcoin reach") ||
+        text.includes("will bitcoin dip") ||
+        text.includes("bitcoin hit") ||
+        text.includes("bitcoin all time high"));
 }
 function compareReservePathPriority(left, right) {
     const leftScore = reservePathPriorityScore(left);

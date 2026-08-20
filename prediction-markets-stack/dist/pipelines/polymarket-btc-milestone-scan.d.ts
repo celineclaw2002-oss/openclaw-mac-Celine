@@ -1,6 +1,7 @@
 export interface PolymarketBtcMilestoneScanOptions {
     outputRoot?: string;
     limit?: number;
+    maxPages?: number;
 }
 export interface PolymarketBtcMilestoneRow {
     eventId: string;

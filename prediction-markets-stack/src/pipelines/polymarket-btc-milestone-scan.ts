@@ -7,6 +7,7 @@ import { PolymarketGammaClient } from "../runtime/polymarket-api.js";
 export interface PolymarketBtcMilestoneScanOptions {
   outputRoot?: string;
   limit?: number;
+  maxPages?: number;
 }
 
 export interface PolymarketBtcMilestoneRow {
@@ -59,11 +60,21 @@ export async function runPolymarketBtcMilestoneScan(
   await mkdir(path.join(outputRoot, "summaries"), { recursive: true });
 
   const client = new PolymarketGammaClient();
-  const events = await client.listEvents({
-    limit: options.limit ?? 500,
-    active: true,
-    closed: false
-  });
+  const pageSize = Math.min(options.limit ?? 100, 500);
+  const maxPages = options.maxPages ?? 10;
+  const events: PolymarketEventRecord[] = [];
+  for (let page = 0; page < maxPages; page += 1) {
+    const batch = await client.listEvents({
+      limit: pageSize,
+      offset: page * pageSize,
+      active: true,
+      closed: false
+    });
+    events.push(...batch);
+    if (batch.length < pageSize) {
+      break;
+    }
+  }
 
   const matchingEvents = events.filter(matchesBtcMilestoneEvent);
   const rows = matchingEvents.flatMap((event) => flattenMatchingMarkets(event));
@@ -115,7 +126,12 @@ export async function runPolymarketBtcMilestoneScan(
 
 function matchesBtcMilestoneEvent(event: PolymarketEventRecord): boolean {
   const haystack = `${event.title} ${event.slug}`.toLowerCase();
-  return haystack.includes("bitcoin hit") || haystack.includes("bitcoin above") || haystack.includes("bitcoin");
+  return (
+    haystack.includes("when will bitcoin hit") ||
+    haystack.includes("what price will bitcoin hit") ||
+    haystack.includes("bitcoin all time high") ||
+    haystack.includes("bitcoin above")
+  );
 }
 
 function flattenMatchingMarkets(event: PolymarketEventRecord): PolymarketBtcMilestoneRow[] {
@@ -149,7 +165,12 @@ function flattenMatchingMarkets(event: PolymarketEventRecord): PolymarketBtcMile
 
 function matchesBtcMilestoneMarket(market: PolymarketMarketRecord): boolean {
   const text = `${market.question} ${market.slug}`.toLowerCase();
-  return text.includes("bitcoin hit") || text.includes("bitcoin") || text.includes("btc");
+  return (
+    text.includes("will bitcoin reach") ||
+    text.includes("will bitcoin dip") ||
+    text.includes("bitcoin hit") ||
+    text.includes("bitcoin all time high")
+  );
 }
 
 function compareReservePathPriority(left: PolymarketBtcMilestoneRow, right: PolymarketBtcMilestoneRow): number {
