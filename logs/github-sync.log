@@ -2792,3 +2792,74 @@ fatal: could not read Username for 'https://github.com': Device not configured
 To https://github.com/celineclaw2002-oss/openclaw-mac-Celine.git
    87801c9..0da60d8  main -> main
 [2026-08-16 16:00:05 EDT] Synced workspace to GitHub.
+[main f8cb63c] chore: automated workspace sync (2026-08-20 08:00:00 EDT)
+ 74 files changed, 130482 insertions(+)
+ create mode 100644 memory/2026-08-20.md
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/graphs/edges.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/normalized/buckets.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/normalized/contracts.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/normalized/families.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/normalized/rules.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/normalized/thresholds.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/observations/internal-consistency.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/raw/book/kalshi-live-20260820T091245513Z.jsonl
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/raw/discovery/kalshi-live-20260820T091245513Z.jsonl
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/raw/lifecycle_fee/kalshi-live-20260820T091245513Z.jsonl
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/raw/metadata/kalshi-live-20260820T091245513Z.jsonl
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/raw/trade_ticker/kalshi-live-20260820T091245513Z.jsonl
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/simulations/internal-consistency.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/staging/book-records.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/staging/discovery-records.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/staging/lifecycle-fee-records.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/staging/metadata-records.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/staging/trade-ticker-records.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/state/execution-states.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/state/fee-states.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/state/lifecycle-states.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/state/quote-states.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/summaries/btc-capture-window-plan.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/summaries/btc-market-readiness.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/summaries/candidate-markets.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/summaries/capture-summary.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/summaries/discovery-pages.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/summaries/event-fee-metadata.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/summaries/semantic-audit.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091245512Z/summaries/series-fee-metadata.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/graphs/edges.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/normalized/buckets.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/normalized/contracts.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/normalized/families.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/normalized/rules.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/normalized/thresholds.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/observations/internal-consistency.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/raw/book/kalshi-live-20260820T091340708Z.jsonl
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/raw/discovery/kalshi-live-20260820T091340708Z.jsonl
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/raw/lifecycle_fee/kalshi-live-20260820T091340708Z.jsonl
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/raw/metadata/kalshi-live-20260820T091340708Z.jsonl
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/raw/trade_ticker/kalshi-live-20260820T091340708Z.jsonl
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/simulations/internal-consistency.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/staging/book-records.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/staging/discovery-records.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/staging/lifecycle-fee-records.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/staging/metadata-records.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/staging/trade-ticker-records.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/state/execution-states.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/state/fee-states.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/state/lifecycle-states.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/state/quote-states.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/summaries/btc-capture-window-plan.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/summaries/btc-market-readiness.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/summaries/candidate-markets.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/summaries/capture-summary.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/summaries/discovery-pages.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/summaries/event-fee-metadata.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/summaries/semantic-audit.json
+ create mode 100644 prediction-markets-stack/data/kalshi-live/20260820T091340708Z/summaries/series-fee-metadata.json
+ create mode 100644 prediction-markets-stack/data/paper-trading/btc-anchor/latest-summary.json
+ create mode 100644 prediction-markets-stack/data/paper-trading/btc-anchor/loops/2026-08-20T091259965Z.json
+ create mode 100644 prediction-markets-stack/data/paper-trading/btc-anchor/loops/2026-08-20T091355468Z.json
+ create mode 100644 prediction-markets-stack/data/paper-trading/btc-anchor/portfolio-state.json
+ create mode 100644 prediction-markets-stack/dist/pipelines/btc-paper-trading-loop.d.ts
+ create mode 100644 prediction-markets-stack/dist/pipelines/btc-paper-trading-loop.js
+ create mode 100644 prediction-markets-stack/src/pipelines/btc-paper-trading-loop.ts
+fatal: could not read Username for 'https://github.com': Device not configured
