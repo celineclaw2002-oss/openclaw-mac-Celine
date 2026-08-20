@@ -2868,3 +2868,56 @@ fatal: could not read Username for 'https://github.com': Device not configured
 To https://github.com/celineclaw2002-oss/openclaw-mac-Celine.git
    e9f1782..ad0f831  main -> main
 [2026-08-20 08:00:05 EDT] Synced workspace to GitHub.
+fatal: Unable to create '/Users/canozgel-macmini/.openclaw/workspace/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+[main ce46b3c] chore: automated workspace sync (2026-08-20 16:00:05 EDT)
+ 56 files changed, 8270626 insertions(+), 116 deletions(-)
+ create mode 100644 data/paper-trading/polymarket-btc-milestone/latest-summary.json
+ create mode 100644 data/paper-trading/polymarket-btc-milestone/loops/2026-08-20T161101361Z.json
+ create mode 100644 data/paper-trading/polymarket-btc-milestone/performance-summary.json
+ create mode 100644 data/paper-trading/polymarket-btc-milestone/portfolio-state.json
+ create mode 100644 data/polymarket-live/20260820T161057091Z/raw/events.json
+ create mode 100644 data/polymarket-live/20260820T161057091Z/summaries/btc-milestone-scan.json
+ create mode 100644 prediction-markets-stack/data/paper-trading/polymarket-btc-milestone/loops/2026-08-20T154901525Z.json
+ create mode 100644 prediction-markets-stack/data/paper-trading/polymarket-btc-milestone/loops/2026-08-20T155013044Z.json
+ create mode 100644 prediction-markets-stack/data/paper-trading/polymarket-btc-milestone/loops/2026-08-20T155047044Z.json
+ create mode 100644 prediction-markets-stack/data/paper-trading/polymarket-btc-milestone/loops/2026-08-20T155522794Z.json
+ create mode 100644 prediction-markets-stack/data/paper-trading/polymarket-btc-milestone/loops/2026-08-20T155555671Z.json
+ create mode 100644 prediction-markets-stack/data/paper-trading/polymarket-btc-milestone/loops/2026-08-20T160953710Z.json
+ create mode 100644 prediction-markets-stack/data/paper-trading/polymarket-btc-milestone/loops/2026-08-20T164612116Z.json
+ create mode 100644 prediction-markets-stack/data/paper-trading/polymarket-btc-milestone/loops/2026-08-20T164703122Z.json
+ create mode 100644 prediction-markets-stack/data/paper-trading/polymarket-btc-milestone/loops/2026-08-20T164743866Z.json
+ create mode 100644 prediction-markets-stack/data/paper-trading/polymarket-btc-milestone/loops/2026-08-20T164808278Z.json
+ create mode 100644 prediction-markets-stack/data/paper-trading/polymarket-btc-milestone/research-summary.json
+ create mode 100644 prediction-markets-stack/data/polymarket-live/20260820T154900644Z/raw/events.json
+ create mode 100644 prediction-markets-stack/data/polymarket-live/20260820T154900644Z/summaries/btc-milestone-scan.json
+ create mode 100644 prediction-markets-stack/data/polymarket-live/20260820T155011922Z/raw/events.json
+ create mode 100644 prediction-markets-stack/data/polymarket-live/20260820T155011922Z/summaries/btc-milestone-scan.json
+ create mode 100644 prediction-markets-stack/data/polymarket-live/20260820T155046344Z/raw/events.json
+ create mode 100644 prediction-markets-stack/data/polymarket-live/20260820T155046344Z/summaries/btc-milestone-scan.json
+ create mode 100644 prediction-markets-stack/data/polymarket-live/20260820T155521488Z/raw/events.json
+ create mode 100644 prediction-markets-stack/data/polymarket-live/20260820T155521488Z/summaries/btc-milestone-scan.json
+ create mode 100644 prediction-markets-stack/data/polymarket-live/20260820T155521493Z/raw/events.json
+ create mode 100644 prediction-markets-stack/data/polymarket-live/20260820T155521493Z/summaries/btc-milestone-scan.json
+ create mode 100644 prediction-markets-stack/data/polymarket-live/20260820T155553011Z/raw/events.json
+ create mode 100644 prediction-markets-stack/data/polymarket-live/20260820T155553011Z/summaries/btc-milestone-scan.json
+ create mode 100644 prediction-markets-stack/data/polymarket-live/20260820T155553013Z/raw/events.json
+ create mode 100644 prediction-markets-stack/data/polymarket-live/20260820T155553013Z/summaries/btc-milestone-scan.json
+ create mode 100644 prediction-markets-stack/data/polymarket-live/20260820T160949892Z/raw/events.json
+ create mode 100644 prediction-markets-stack/data/polymarket-live/20260820T160949892Z/summaries/btc-milestone-scan.json
+ create mode 100644 prediction-markets-stack/data/polymarket-live/20260820T164609378Z/raw/events.json
+ create mode 100644 prediction-markets-stack/data/polymarket-live/20260820T164609378Z/summaries/btc-milestone-scan.json
+ create mode 100644 prediction-markets-stack/data/polymarket-live/20260820T164700464Z/raw/events.json
+ create mode 100644 prediction-markets-stack/data/polymarket-live/20260820T164700464Z/summaries/btc-milestone-scan.json
+ create mode 100644 prediction-markets-stack/data/polymarket-live/20260820T164736304Z/raw/events.json
+ create mode 100644 prediction-markets-stack/data/polymarket-live/20260820T164736304Z/summaries/btc-milestone-scan.json
+ create mode 100644 prediction-markets-stack/data/polymarket-live/20260820T164805617Z/raw/events.json
+ create mode 100644 prediction-markets-stack/data/polymarket-live/20260820T164805617Z/summaries/btc-milestone-scan.json
+To https://github.com/celineclaw2002-oss/openclaw-mac-Celine.git
+   261df84..ce46b3c  main -> main
+[2026-08-20 16:00:05 EDT] Synced workspace to GitHub.
