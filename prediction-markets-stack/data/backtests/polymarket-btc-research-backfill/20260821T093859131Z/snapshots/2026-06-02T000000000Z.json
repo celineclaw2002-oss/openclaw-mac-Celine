@@ -1,0 +1,1081 @@
+{
+  "timestampIso": "2026-06-02T00:00:00.000Z",
+  "spotPrice": 66658.35,
+  "annualizedVol": 0.368748683873919,
+  "quoteReadyMarkets": 50,
+  "allowedEntries": 24,
+  "blockedEntries": 26,
+  "topSignalAbs": 0.23218664774263842,
+  "researchSnapshot": {
+    "regime": {
+      "spotPrice": 66658.35,
+      "annualizedVol": 0.368748683873919,
+      "quoteReadyMarkets": 50,
+      "upsideQuoteReadyMarkets": 32,
+      "downsideQuoteReadyMarkets": 18,
+      "averageSpread": 0.03261957591293462,
+      "realizedVol20d": 0.3788438657319081,
+      "momentum20d": -0.15929104762798413,
+      "momentum60d": -0.004504779645277715,
+      "volBucket": "low",
+      "trendBucket": "down"
+    },
+    "candidateBook": {
+      "allowedEntries": 24,
+      "blockedEntries": 26,
+      "strongSignals": 23,
+      "mediumSignals": 8,
+      "cautiousSignals": 2,
+      "blockedSignals": 17,
+      "averageAllowedSignal": 0.1369836666747357,
+      "averageAllowedBarrierMultiplier": 1.0595071735198964,
+      "averageAllowedHorizonDays": 132.80622978009254,
+      "averageGrossEdgeToMid": 0.1369836666747357,
+      "averageNetEdgeToEntry": 0.11704586049703747,
+      "averageSpreadCost": 0.01993780617769821
+    },
+    "concentration": {
+      "openEventGroups": 0,
+      "largestEventExposureCents": 0,
+      "largestEventExposureRate": 0,
+      "largestDirectionExposureCents": 0,
+      "largestDirectionExposureRate": 0
+    },
+    "costDiagnostics": {
+      "expectedEntryCostCents": 0,
+      "realizedSpreadCaptureCents": 0
+    },
+    "attribution": {
+      "byDirection": [],
+      "byBarrierBucket": [],
+      "byHorizonBucket": [],
+      "byEvent": []
+    },
+    "modelDiagnostics": {
+      "sleeves": [
+        {
+          "sleeveId": "anchor_residual",
+          "title": "Anchor Residual",
+          "weight": 0.5,
+          "candidates": 50,
+          "allowedEntries": 33,
+          "averageScore": 0.27809202451164794,
+          "averageContribution": 0.13904601225582397,
+          "averageNetEdgeToEntry": 0.05403698655648304
+        },
+        {
+          "sleeveId": "trend_regime",
+          "title": "Trend Regime",
+          "weight": 0.3,
+          "candidates": 50,
+          "allowedEntries": 33,
+          "averageScore": 0.5039999999999998,
+          "averageContribution": 0.1511999999999998,
+          "averageNetEdgeToEntry": 0.05403698655648304
+        },
+        {
+          "sleeveId": "carry_horizon",
+          "title": "Carry Horizon",
+          "weight": 0.2,
+          "candidates": 50,
+          "allowedEntries": 33,
+          "averageScore": 0.4640131074520012,
+          "averageContribution": 0.09280262149040024,
+          "averageNetEdgeToEntry": 0.05403698655648304
+        }
+      ],
+      "topCandidates": [
+        {
+          "marketSlug": "will-bitcoin-dip-to-65000-by-december-31-2026-175-145-572-522-479-997-983",
+          "eventSlug": "will-bitcoin-dip-to-65000",
+          "side": "yes",
+          "allowEntry": true,
+          "qualityBucket": "strong",
+          "signal": 0.23218664774263842,
+          "modelProbabilityForSide": 0.9287465909705537,
+          "entryPriceCents": 72,
+          "markPriceCents": 70,
+          "grossEdgeToMid": 0.23218664774263842,
+          "netEdgeToEntry": 0.2087465909705537,
+          "spreadCostProbability": 0.023440056772084716,
+          "barrierMultiplier": 0.9751216464253915,
+          "horizonDays": 132.8062297800926,
+          "ensembleScore": 0.7154981010803783,
+          "expectedEdgeScore": 0.1493577894464336,
+          "sleeveBreakdown": [
+            {
+              "sleeveId": "anchor_residual",
+              "title": "Anchor Residual",
+              "weight": 0.5,
+              "score": 1,
+              "contribution": 0.5
+            },
+            {
+              "sleeveId": "trend_regime",
+              "title": "Trend Regime",
+              "weight": 0.3,
+              "score": 0.2,
+              "contribution": 0.06
+            },
+            {
+              "sleeveId": "carry_horizon",
+              "title": "Carry Horizon",
+              "weight": 0.2,
+              "score": 0.7774905054018908,
+              "contribution": 0.15549810108037818
+            }
+          ]
+        },
+        {
+          "marketSlug": "will-bitcoin-reach-65000-by-december-31-2026-from-june-29",
+          "eventSlug": "will-bitcoin-reach-65000",
+          "side": "yes",
+          "allowEntry": true,
+          "qualityBucket": "strong",
+          "signal": 0.23218664774263842,
+          "modelProbabilityForSide": 1,
+          "entryPriceCents": 79,
+          "markPriceCents": 77,
+          "grossEdgeToMid": 0.23218664774263842,
+          "netEdgeToEntry": 0.20999999999999996,
+          "spreadCostProbability": 0.022186647742638455,
+          "barrierMultiplier": 0.9751216464253915,
+          "horizonDays": 132.8062297800926,
+          "ensembleScore": 0.7154981010803783,
+          "expectedEdgeScore": 0.15025460122687942,
+          "sleeveBreakdown": [
+            {
+              "sleeveId": "anchor_residual",
+              "title": "Anchor Residual",
+              "weight": 0.5,
+              "score": 1,
+              "contribution": 0.5
+            },
+            {
+              "sleeveId": "trend_regime",
+              "title": "Trend Regime",
+              "weight": 0.3,
+              "score": 0.2,
+              "contribution": 0.06
+            },
+            {
+              "sleeveId": "carry_horizon",
+              "title": "Carry Horizon",
+              "weight": 0.2,
+              "score": 0.7774905054018908,
+              "contribution": 0.15549810108037818
+            }
+          ]
+        },
+        {
+          "marketSlug": "will-bitcoin-reach-65000-by-december-31-2026-from-june-8",
+          "eventSlug": "will-bitcoin-reach-65000",
+          "side": "yes",
+          "allowEntry": true,
+          "qualityBucket": "strong",
+          "signal": 0.23218664774263842,
+          "modelProbabilityForSide": 1,
+          "entryPriceCents": 79,
+          "markPriceCents": 77,
+          "grossEdgeToMid": 0.23218664774263842,
+          "netEdgeToEntry": 0.20999999999999996,
+          "spreadCostProbability": 0.022186647742638455,
+          "barrierMultiplier": 0.9751216464253915,
+          "horizonDays": 132.8062297800926,
+          "ensembleScore": 0.7154981010803783,
+          "expectedEdgeScore": 0.15025460122687942,
+          "sleeveBreakdown": [
+            {
+              "sleeveId": "anchor_residual",
+              "title": "Anchor Residual",
+              "weight": 0.5,
+              "score": 1,
+              "contribution": 0.5
+            },
+            {
+              "sleeveId": "trend_regime",
+              "title": "Trend Regime",
+              "weight": 0.3,
+              "score": 0.2,
+              "contribution": 0.06
+            },
+            {
+              "sleeveId": "carry_horizon",
+              "title": "Carry Horizon",
+              "weight": 0.2,
+              "score": 0.7774905054018908,
+              "contribution": 0.15549810108037818
+            }
+          ]
+        },
+        {
+          "marketSlug": "will-bitcoin-reach-70000-by-december-31-2026-594-899-294-344-343-378-654",
+          "eventSlug": "will-bitcoin-reach-70000",
+          "side": "yes",
+          "allowEntry": true,
+          "qualityBucket": "strong",
+          "signal": 0.21554070331451913,
+          "modelProbabilityForSide": 0.8621628132580765,
+          "entryPriceCents": 67,
+          "markPriceCents": 65,
+          "grossEdgeToMid": 0.21554070331451913,
+          "netEdgeToEntry": 0.1921628132580765,
+          "spreadCostProbability": 0.02337789005644264,
+          "barrierMultiplier": 1.0501310038427294,
+          "horizonDays": 132.8062297800926,
+          "ensembleScore": 0.6913596571773076,
+          "expectedEdgeScore": 0.13285361669633075,
+          "sleeveBreakdown": [
+            {
+              "sleeveId": "anchor_residual",
+              "title": "Anchor Residual",
+              "weight": 0.5,
+              "score": 0.9608140662903825,
+              "contribution": 0.48040703314519123
+            },
+            {
+              "sleeveId": "trend_regime",
+              "title": "Trend Regime",
+              "weight": 0.3,
+              "score": 0.2,
+              "contribution": 0.06
+            },
+            {
+              "sleeveId": "carry_horizon",
+              "title": "Carry Horizon",
+              "weight": 0.2,
+              "score": 0.7547631201605821,
+              "contribution": 0.15095262403211643
+            }
+          ]
+        },
+        {
+          "marketSlug": "will-bitcoin-reach-70000-by-december-31-2026-from-june-8",
+          "eventSlug": "will-bitcoin-reach-70000",
+          "side": "yes",
+          "allowEntry": true,
+          "qualityBucket": "strong",
+          "signal": 0.21554070331451913,
+          "modelProbabilityForSide": 0.8621628132580765,
+          "entryPriceCents": 67,
+          "markPriceCents": 65,
+          "grossEdgeToMid": 0.21554070331451913,
+          "netEdgeToEntry": 0.1921628132580765,
+          "spreadCostProbability": 0.02337789005644264,
+          "barrierMultiplier": 1.0501310038427294,
+          "horizonDays": 132.8062297800926,
+          "ensembleScore": 0.6913596571773076,
+          "expectedEdgeScore": 0.13285361669633075,
+          "sleeveBreakdown": [
+            {
+              "sleeveId": "anchor_residual",
+              "title": "Anchor Residual",
+              "weight": 0.5,
+              "score": 0.9608140662903825,
+              "contribution": 0.48040703314519123
+            },
+            {
+              "sleeveId": "trend_regime",
+              "title": "Trend Regime",
+              "weight": 0.3,
+              "score": 0.2,
+              "contribution": 0.06
+            },
+            {
+              "sleeveId": "carry_horizon",
+              "title": "Carry Horizon",
+              "weight": 0.2,
+              "score": 0.7547631201605821,
+              "contribution": 0.15095262403211643
+            }
+          ]
+        },
+        {
+          "marketSlug": "will-bitcoin-dip-to-60k-by-december-31-2026-from-july-21",
+          "eventSlug": "will-bitcoin-dip-to-60k",
+          "side": "yes",
+          "allowEntry": true,
+          "qualityBucket": "strong",
+          "signal": 0.1771884723455539,
+          "modelProbabilityForSide": 0.7087538893822158,
+          "entryPriceCents": 55,
+          "markPriceCents": 53,
+          "grossEdgeToMid": 0.1771884723455539,
+          "netEdgeToEntry": 0.1587538893822158,
+          "spreadCostProbability": 0.01843458296333811,
+          "barrierMultiplier": 0.9001122890080536,
+          "horizonDays": 132.8062297800926,
+          "ensembleScore": 0.5988811402007969,
+          "expectedEdgeScore": 0.09507471028453257,
+          "sleeveBreakdown": [
+            {
+              "sleeveId": "anchor_residual",
+              "title": "Anchor Residual",
+              "weight": 0.5,
+              "score": 0.793769446911079,
+              "contribution": 0.3968847234555395
+            },
+            {
+              "sleeveId": "trend_regime",
+              "title": "Trend Regime",
+              "weight": 0.3,
+              "score": 0.2,
+              "contribution": 0.06
+            },
+            {
+              "sleeveId": "carry_horizon",
+              "title": "Carry Horizon",
+              "weight": 0.2,
+              "score": 0.7099820837262869,
+              "contribution": 0.1419964167452574
+            }
+          ]
+        },
+        {
+          "marketSlug": "will-bitcoin-dip-to-60000-by-december-31-2026-868-514-748-652-885-613-696-368-736-451-217-888-749-379",
+          "eventSlug": "will-bitcoin-dip-to-60000",
+          "side": "yes",
+          "allowEntry": true,
+          "qualityBucket": "strong",
+          "signal": 0.1771884723455539,
+          "modelProbabilityForSide": 0.7087538893822158,
+          "entryPriceCents": 55,
+          "markPriceCents": 53,
+          "grossEdgeToMid": 0.1771884723455539,
+          "netEdgeToEntry": 0.1587538893822158,
+          "spreadCostProbability": 0.01843458296333811,
+          "barrierMultiplier": 0.9001122890080536,
+          "horizonDays": 132.8062297800926,
+          "ensembleScore": 0.5988811402007969,
+          "expectedEdgeScore": 0.09507471028453257,
+          "sleeveBreakdown": [
+            {
+              "sleeveId": "anchor_residual",
+              "title": "Anchor Residual",
+              "weight": 0.5,
+              "score": 0.793769446911079,
+              "contribution": 0.3968847234555395
+            },
+            {
+              "sleeveId": "trend_regime",
+              "title": "Trend Regime",
+              "weight": 0.3,
+              "score": 0.2,
+              "contribution": 0.06
+            },
+            {
+              "sleeveId": "carry_horizon",
+              "title": "Carry Horizon",
+              "weight": 0.2,
+              "score": 0.7099820837262869,
+              "contribution": 0.1419964167452574
+            }
+          ]
+        },
+        {
+          "marketSlug": "will-bitcoin-dip-to-60k-by-december-31-2026-from-june-8-887",
+          "eventSlug": "will-bitcoin-dip-to-60k",
+          "side": "yes",
+          "allowEntry": true,
+          "qualityBucket": "strong",
+          "signal": 0.1771884723455539,
+          "modelProbabilityForSide": 0.7087538893822158,
+          "entryPriceCents": 55,
+          "markPriceCents": 53,
+          "grossEdgeToMid": 0.1771884723455539,
+          "netEdgeToEntry": 0.1587538893822158,
+          "spreadCostProbability": 0.01843458296333811,
+          "barrierMultiplier": 0.9001122890080536,
+          "horizonDays": 132.8062297800926,
+          "ensembleScore": 0.5988811402007969,
+          "expectedEdgeScore": 0.09507471028453257,
+          "sleeveBreakdown": [
+            {
+              "sleeveId": "anchor_residual",
+              "title": "Anchor Residual",
+              "weight": 0.5,
+              "score": 0.793769446911079,
+              "contribution": 0.3968847234555395
+            },
+            {
+              "sleeveId": "trend_regime",
+              "title": "Trend Regime",
+              "weight": 0.3,
+              "score": 0.2,
+              "contribution": 0.06
+            },
+            {
+              "sleeveId": "carry_horizon",
+              "title": "Carry Horizon",
+              "weight": 0.2,
+              "score": 0.7099820837262869,
+              "contribution": 0.1419964167452574
+            }
+          ]
+        },
+        {
+          "marketSlug": "will-bitcoin-dip-to-60k-by-december-31-2026-from-june-7",
+          "eventSlug": "will-bitcoin-dip-to-60k",
+          "side": "yes",
+          "allowEntry": true,
+          "qualityBucket": "strong",
+          "signal": 0.1771884723455539,
+          "modelProbabilityForSide": 0.7087538893822158,
+          "entryPriceCents": 55,
+          "markPriceCents": 53,
+          "grossEdgeToMid": 0.1771884723455539,
+          "netEdgeToEntry": 0.1587538893822158,
+          "spreadCostProbability": 0.01843458296333811,
+          "barrierMultiplier": 0.9001122890080536,
+          "horizonDays": 132.8062297800926,
+          "ensembleScore": 0.5988811402007969,
+          "expectedEdgeScore": 0.09507471028453257,
+          "sleeveBreakdown": [
+            {
+              "sleeveId": "anchor_residual",
+              "title": "Anchor Residual",
+              "weight": 0.5,
+              "score": 0.793769446911079,
+              "contribution": 0.3968847234555395
+            },
+            {
+              "sleeveId": "trend_regime",
+              "title": "Trend Regime",
+              "weight": 0.3,
+              "score": 0.2,
+              "contribution": 0.06
+            },
+            {
+              "sleeveId": "carry_horizon",
+              "title": "Carry Horizon",
+              "weight": 0.2,
+              "score": 0.7099820837262869,
+              "contribution": 0.1419964167452574
+            }
+          ]
+        },
+        {
+          "marketSlug": "will-bitcoin-dip-to-75000-by-december-31-2026-333-141-768-486-937-643-979",
+          "eventSlug": "will-bitcoin-dip-to-75000",
+          "side": "yes",
+          "allowEntry": true,
+          "qualityBucket": "strong",
+          "signal": 0.16889372742366648,
+          "modelProbabilityForSide": 1,
+          "entryPriceCents": 85,
+          "markPriceCents": 83,
+          "grossEdgeToMid": 0.16889372742366648,
+          "netEdgeToEntry": 0.15000000000000002,
+          "spreadCostProbability": 0.018893727423666462,
+          "barrierMultiplier": 1.125140361260067,
+          "horizonDays": 132.8062297800926,
+          "ensembleScore": 0.5724509396969957,
+          "expectedEdgeScore": 0.08586764095454937,
+          "sleeveBreakdown": [
+            {
+              "sleeveId": "anchor_residual",
+              "title": "Anchor Residual",
+              "weight": 0.5,
+              "score": 0.7500000000000001,
+              "contribution": 0.37500000000000006
+            },
+            {
+              "sleeveId": "trend_regime",
+              "title": "Trend Regime",
+              "weight": 0.3,
+              "score": 0.2,
+              "contribution": 0.06
+            },
+            {
+              "sleeveId": "carry_horizon",
+              "title": "Carry Horizon",
+              "weight": 0.2,
+              "score": 0.6872546984849783,
+              "contribution": 0.13745093969699568
+            }
+          ]
+        },
+        {
+          "marketSlug": "will-bitcoin-reach-75000-by-december-31-2026-from-june-8",
+          "eventSlug": "will-bitcoin-reach-75000",
+          "side": "yes",
+          "allowEntry": true,
+          "qualityBucket": "strong",
+          "signal": 0.1688937274236666,
+          "modelProbabilityForSide": 0.6755749096946664,
+          "entryPriceCents": 53,
+          "markPriceCents": 51,
+          "grossEdgeToMid": 0.1688937274236666,
+          "netEdgeToEntry": 0.14557490969466635,
+          "spreadCostProbability": 0.02331881772900024,
+          "barrierMultiplier": 1.125140361260067,
+          "horizonDays": 132.8062297800926,
+          "ensembleScore": 0.5613882139336616,
+          "expectedEdgeScore": 0.08172403854704281,
+          "sleeveBreakdown": [
+            {
+              "sleeveId": "anchor_residual",
+              "title": "Anchor Residual",
+              "weight": 0.5,
+              "score": 0.7278745484733318,
+              "contribution": 0.3639372742366659
+            },
+            {
+              "sleeveId": "trend_regime",
+              "title": "Trend Regime",
+              "weight": 0.3,
+              "score": 0.2,
+              "contribution": 0.06
+            },
+            {
+              "sleeveId": "carry_horizon",
+              "title": "Carry Horizon",
+              "weight": 0.2,
+              "score": 0.6872546984849783,
+              "contribution": 0.13745093969699568
+            }
+          ]
+        },
+        {
+          "marketSlug": "will-bitcoin-reach-75000-by-december-31-2026-887-423-442-296-878",
+          "eventSlug": "will-bitcoin-reach-75000",
+          "side": "yes",
+          "allowEntry": true,
+          "qualityBucket": "strong",
+          "signal": 0.1688937274236666,
+          "modelProbabilityForSide": 0.6755749096946664,
+          "entryPriceCents": 53,
+          "markPriceCents": 51,
+          "grossEdgeToMid": 0.1688937274236666,
+          "netEdgeToEntry": 0.14557490969466635,
+          "spreadCostProbability": 0.02331881772900024,
+          "barrierMultiplier": 1.125140361260067,
+          "horizonDays": 132.8062297800926,
+          "ensembleScore": 0.5613882139336616,
+          "expectedEdgeScore": 0.08172403854704281,
+          "sleeveBreakdown": [
+            {
+              "sleeveId": "anchor_residual",
+              "title": "Anchor Residual",
+              "weight": 0.5,
+              "score": 0.7278745484733318,
+              "contribution": 0.3639372742366659
+            },
+            {
+              "sleeveId": "trend_regime",
+              "title": "Trend Regime",
+              "weight": 0.3,
+              "score": 0.2,
+              "contribution": 0.06
+            },
+            {
+              "sleeveId": "carry_horizon",
+              "title": "Carry Horizon",
+              "weight": 0.2,
+              "score": 0.6872546984849783,
+              "contribution": 0.13745093969699568
+            }
+          ]
+        }
+      ],
+      "allowedEntries": 33,
+      "blockedEntries": 17,
+      "averageEnsembleScore": 0.3830486337462242,
+      "averageExpectedEdgeScore": 0.03229367810624582
+    }
+  },
+  "topCandidates": [
+    {
+      "marketSlug": "will-bitcoin-dip-to-65000-by-december-31-2026-175-145-572-522-479-997-983",
+      "eventSlug": "will-bitcoin-dip-to-65000",
+      "side": "yes",
+      "allowEntry": true,
+      "qualityBucket": "strong",
+      "signal": 0.23218664774263842,
+      "modelProbabilityForSide": 0.9287465909705537,
+      "entryPriceCents": 72,
+      "markPriceCents": 70,
+      "grossEdgeToMid": 0.23218664774263842,
+      "netEdgeToEntry": 0.2087465909705537,
+      "spreadCostProbability": 0.023440056772084716,
+      "barrierMultiplier": 0.9751216464253915,
+      "horizonDays": 132.8062297800926,
+      "ensembleScore": 0.7154981010803783,
+      "expectedEdgeScore": 0.1493577894464336,
+      "sleeveBreakdown": [
+        {
+          "sleeveId": "anchor_residual",
+          "title": "Anchor Residual",
+          "weight": 0.5,
+          "score": 1,
+          "contribution": 0.5
+        },
+        {
+          "sleeveId": "trend_regime",
+          "title": "Trend Regime",
+          "weight": 0.3,
+          "score": 0.2,
+          "contribution": 0.06
+        },
+        {
+          "sleeveId": "carry_horizon",
+          "title": "Carry Horizon",
+          "weight": 0.2,
+          "score": 0.7774905054018908,
+          "contribution": 0.15549810108037818
+        }
+      ]
+    },
+    {
+      "marketSlug": "will-bitcoin-reach-65000-by-december-31-2026-from-june-29",
+      "eventSlug": "will-bitcoin-reach-65000",
+      "side": "yes",
+      "allowEntry": true,
+      "qualityBucket": "strong",
+      "signal": 0.23218664774263842,
+      "modelProbabilityForSide": 1,
+      "entryPriceCents": 79,
+      "markPriceCents": 77,
+      "grossEdgeToMid": 0.23218664774263842,
+      "netEdgeToEntry": 0.20999999999999996,
+      "spreadCostProbability": 0.022186647742638455,
+      "barrierMultiplier": 0.9751216464253915,
+      "horizonDays": 132.8062297800926,
+      "ensembleScore": 0.7154981010803783,
+      "expectedEdgeScore": 0.15025460122687942,
+      "sleeveBreakdown": [
+        {
+          "sleeveId": "anchor_residual",
+          "title": "Anchor Residual",
+          "weight": 0.5,
+          "score": 1,
+          "contribution": 0.5
+        },
+        {
+          "sleeveId": "trend_regime",
+          "title": "Trend Regime",
+          "weight": 0.3,
+          "score": 0.2,
+          "contribution": 0.06
+        },
+        {
+          "sleeveId": "carry_horizon",
+          "title": "Carry Horizon",
+          "weight": 0.2,
+          "score": 0.7774905054018908,
+          "contribution": 0.15549810108037818
+        }
+      ]
+    },
+    {
+      "marketSlug": "will-bitcoin-reach-65000-by-december-31-2026-from-june-8",
+      "eventSlug": "will-bitcoin-reach-65000",
+      "side": "yes",
+      "allowEntry": true,
+      "qualityBucket": "strong",
+      "signal": 0.23218664774263842,
+      "modelProbabilityForSide": 1,
+      "entryPriceCents": 79,
+      "markPriceCents": 77,
+      "grossEdgeToMid": 0.23218664774263842,
+      "netEdgeToEntry": 0.20999999999999996,
+      "spreadCostProbability": 0.022186647742638455,
+      "barrierMultiplier": 0.9751216464253915,
+      "horizonDays": 132.8062297800926,
+      "ensembleScore": 0.7154981010803783,
+      "expectedEdgeScore": 0.15025460122687942,
+      "sleeveBreakdown": [
+        {
+          "sleeveId": "anchor_residual",
+          "title": "Anchor Residual",
+          "weight": 0.5,
+          "score": 1,
+          "contribution": 0.5
+        },
+        {
+          "sleeveId": "trend_regime",
+          "title": "Trend Regime",
+          "weight": 0.3,
+          "score": 0.2,
+          "contribution": 0.06
+        },
+        {
+          "sleeveId": "carry_horizon",
+          "title": "Carry Horizon",
+          "weight": 0.2,
+          "score": 0.7774905054018908,
+          "contribution": 0.15549810108037818
+        }
+      ]
+    },
+    {
+      "marketSlug": "will-bitcoin-reach-70000-by-december-31-2026-594-899-294-344-343-378-654",
+      "eventSlug": "will-bitcoin-reach-70000",
+      "side": "yes",
+      "allowEntry": true,
+      "qualityBucket": "strong",
+      "signal": 0.21554070331451913,
+      "modelProbabilityForSide": 0.8621628132580765,
+      "entryPriceCents": 67,
+      "markPriceCents": 65,
+      "grossEdgeToMid": 0.21554070331451913,
+      "netEdgeToEntry": 0.1921628132580765,
+      "spreadCostProbability": 0.02337789005644264,
+      "barrierMultiplier": 1.0501310038427294,
+      "horizonDays": 132.8062297800926,
+      "ensembleScore": 0.6913596571773076,
+      "expectedEdgeScore": 0.13285361669633075,
+      "sleeveBreakdown": [
+        {
+          "sleeveId": "anchor_residual",
+          "title": "Anchor Residual",
+          "weight": 0.5,
+          "score": 0.9608140662903825,
+          "contribution": 0.48040703314519123
+        },
+        {
+          "sleeveId": "trend_regime",
+          "title": "Trend Regime",
+          "weight": 0.3,
+          "score": 0.2,
+          "contribution": 0.06
+        },
+        {
+          "sleeveId": "carry_horizon",
+          "title": "Carry Horizon",
+          "weight": 0.2,
+          "score": 0.7547631201605821,
+          "contribution": 0.15095262403211643
+        }
+      ]
+    },
+    {
+      "marketSlug": "will-bitcoin-reach-70000-by-december-31-2026-from-june-8",
+      "eventSlug": "will-bitcoin-reach-70000",
+      "side": "yes",
+      "allowEntry": true,
+      "qualityBucket": "strong",
+      "signal": 0.21554070331451913,
+      "modelProbabilityForSide": 0.8621628132580765,
+      "entryPriceCents": 67,
+      "markPriceCents": 65,
+      "grossEdgeToMid": 0.21554070331451913,
+      "netEdgeToEntry": 0.1921628132580765,
+      "spreadCostProbability": 0.02337789005644264,
+      "barrierMultiplier": 1.0501310038427294,
+      "horizonDays": 132.8062297800926,
+      "ensembleScore": 0.6913596571773076,
+      "expectedEdgeScore": 0.13285361669633075,
+      "sleeveBreakdown": [
+        {
+          "sleeveId": "anchor_residual",
+          "title": "Anchor Residual",
+          "weight": 0.5,
+          "score": 0.9608140662903825,
+          "contribution": 0.48040703314519123
+        },
+        {
+          "sleeveId": "trend_regime",
+          "title": "Trend Regime",
+          "weight": 0.3,
+          "score": 0.2,
+          "contribution": 0.06
+        },
+        {
+          "sleeveId": "carry_horizon",
+          "title": "Carry Horizon",
+          "weight": 0.2,
+          "score": 0.7547631201605821,
+          "contribution": 0.15095262403211643
+        }
+      ]
+    },
+    {
+      "marketSlug": "will-bitcoin-dip-to-60k-by-december-31-2026-from-july-21",
+      "eventSlug": "will-bitcoin-dip-to-60k",
+      "side": "yes",
+      "allowEntry": true,
+      "qualityBucket": "strong",
+      "signal": 0.1771884723455539,
+      "modelProbabilityForSide": 0.7087538893822158,
+      "entryPriceCents": 55,
+      "markPriceCents": 53,
+      "grossEdgeToMid": 0.1771884723455539,
+      "netEdgeToEntry": 0.1587538893822158,
+      "spreadCostProbability": 0.01843458296333811,
+      "barrierMultiplier": 0.9001122890080536,
+      "horizonDays": 132.8062297800926,
+      "ensembleScore": 0.5988811402007969,
+      "expectedEdgeScore": 0.09507471028453257,
+      "sleeveBreakdown": [
+        {
+          "sleeveId": "anchor_residual",
+          "title": "Anchor Residual",
+          "weight": 0.5,
+          "score": 0.793769446911079,
+          "contribution": 0.3968847234555395
+        },
+        {
+          "sleeveId": "trend_regime",
+          "title": "Trend Regime",
+          "weight": 0.3,
+          "score": 0.2,
+          "contribution": 0.06
+        },
+        {
+          "sleeveId": "carry_horizon",
+          "title": "Carry Horizon",
+          "weight": 0.2,
+          "score": 0.7099820837262869,
+          "contribution": 0.1419964167452574
+        }
+      ]
+    },
+    {
+      "marketSlug": "will-bitcoin-dip-to-60000-by-december-31-2026-868-514-748-652-885-613-696-368-736-451-217-888-749-379",
+      "eventSlug": "will-bitcoin-dip-to-60000",
+      "side": "yes",
+      "allowEntry": true,
+      "qualityBucket": "strong",
+      "signal": 0.1771884723455539,
+      "modelProbabilityForSide": 0.7087538893822158,
+      "entryPriceCents": 55,
+      "markPriceCents": 53,
+      "grossEdgeToMid": 0.1771884723455539,
+      "netEdgeToEntry": 0.1587538893822158,
+      "spreadCostProbability": 0.01843458296333811,
+      "barrierMultiplier": 0.9001122890080536,
+      "horizonDays": 132.8062297800926,
+      "ensembleScore": 0.5988811402007969,
+      "expectedEdgeScore": 0.09507471028453257,
+      "sleeveBreakdown": [
+        {
+          "sleeveId": "anchor_residual",
+          "title": "Anchor Residual",
+          "weight": 0.5,
+          "score": 0.793769446911079,
+          "contribution": 0.3968847234555395
+        },
+        {
+          "sleeveId": "trend_regime",
+          "title": "Trend Regime",
+          "weight": 0.3,
+          "score": 0.2,
+          "contribution": 0.06
+        },
+        {
+          "sleeveId": "carry_horizon",
+          "title": "Carry Horizon",
+          "weight": 0.2,
+          "score": 0.7099820837262869,
+          "contribution": 0.1419964167452574
+        }
+      ]
+    },
+    {
+      "marketSlug": "will-bitcoin-dip-to-60k-by-december-31-2026-from-june-8-887",
+      "eventSlug": "will-bitcoin-dip-to-60k",
+      "side": "yes",
+      "allowEntry": true,
+      "qualityBucket": "strong",
+      "signal": 0.1771884723455539,
+      "modelProbabilityForSide": 0.7087538893822158,
+      "entryPriceCents": 55,
+      "markPriceCents": 53,
+      "grossEdgeToMid": 0.1771884723455539,
+      "netEdgeToEntry": 0.1587538893822158,
+      "spreadCostProbability": 0.01843458296333811,
+      "barrierMultiplier": 0.9001122890080536,
+      "horizonDays": 132.8062297800926,
+      "ensembleScore": 0.5988811402007969,
+      "expectedEdgeScore": 0.09507471028453257,
+      "sleeveBreakdown": [
+        {
+          "sleeveId": "anchor_residual",
+          "title": "Anchor Residual",
+          "weight": 0.5,
+          "score": 0.793769446911079,
+          "contribution": 0.3968847234555395
+        },
+        {
+          "sleeveId": "trend_regime",
+          "title": "Trend Regime",
+          "weight": 0.3,
+          "score": 0.2,
+          "contribution": 0.06
+        },
+        {
+          "sleeveId": "carry_horizon",
+          "title": "Carry Horizon",
+          "weight": 0.2,
+          "score": 0.7099820837262869,
+          "contribution": 0.1419964167452574
+        }
+      ]
+    },
+    {
+      "marketSlug": "will-bitcoin-dip-to-60k-by-december-31-2026-from-june-7",
+      "eventSlug": "will-bitcoin-dip-to-60k",
+      "side": "yes",
+      "allowEntry": true,
+      "qualityBucket": "strong",
+      "signal": 0.1771884723455539,
+      "modelProbabilityForSide": 0.7087538893822158,
+      "entryPriceCents": 55,
+      "markPriceCents": 53,
+      "grossEdgeToMid": 0.1771884723455539,
+      "netEdgeToEntry": 0.1587538893822158,
+      "spreadCostProbability": 0.01843458296333811,
+      "barrierMultiplier": 0.9001122890080536,
+      "horizonDays": 132.8062297800926,
+      "ensembleScore": 0.5988811402007969,
+      "expectedEdgeScore": 0.09507471028453257,
+      "sleeveBreakdown": [
+        {
+          "sleeveId": "anchor_residual",
+          "title": "Anchor Residual",
+          "weight": 0.5,
+          "score": 0.793769446911079,
+          "contribution": 0.3968847234555395
+        },
+        {
+          "sleeveId": "trend_regime",
+          "title": "Trend Regime",
+          "weight": 0.3,
+          "score": 0.2,
+          "contribution": 0.06
+        },
+        {
+          "sleeveId": "carry_horizon",
+          "title": "Carry Horizon",
+          "weight": 0.2,
+          "score": 0.7099820837262869,
+          "contribution": 0.1419964167452574
+        }
+      ]
+    },
+    {
+      "marketSlug": "will-bitcoin-dip-to-75000-by-december-31-2026-333-141-768-486-937-643-979",
+      "eventSlug": "will-bitcoin-dip-to-75000",
+      "side": "yes",
+      "allowEntry": true,
+      "qualityBucket": "strong",
+      "signal": 0.16889372742366648,
+      "modelProbabilityForSide": 1,
+      "entryPriceCents": 85,
+      "markPriceCents": 83,
+      "grossEdgeToMid": 0.16889372742366648,
+      "netEdgeToEntry": 0.15000000000000002,
+      "spreadCostProbability": 0.018893727423666462,
+      "barrierMultiplier": 1.125140361260067,
+      "horizonDays": 132.8062297800926,
+      "ensembleScore": 0.5724509396969957,
+      "expectedEdgeScore": 0.08586764095454937,
+      "sleeveBreakdown": [
+        {
+          "sleeveId": "anchor_residual",
+          "title": "Anchor Residual",
+          "weight": 0.5,
+          "score": 0.7500000000000001,
+          "contribution": 0.37500000000000006
+        },
+        {
+          "sleeveId": "trend_regime",
+          "title": "Trend Regime",
+          "weight": 0.3,
+          "score": 0.2,
+          "contribution": 0.06
+        },
+        {
+          "sleeveId": "carry_horizon",
+          "title": "Carry Horizon",
+          "weight": 0.2,
+          "score": 0.6872546984849783,
+          "contribution": 0.13745093969699568
+        }
+      ]
+    },
+    {
+      "marketSlug": "will-bitcoin-reach-75000-by-december-31-2026-from-june-8",
+      "eventSlug": "will-bitcoin-reach-75000",
+      "side": "yes",
+      "allowEntry": true,
+      "qualityBucket": "strong",
+      "signal": 0.1688937274236666,
+      "modelProbabilityForSide": 0.6755749096946664,
+      "entryPriceCents": 53,
+      "markPriceCents": 51,
+      "grossEdgeToMid": 0.1688937274236666,
+      "netEdgeToEntry": 0.14557490969466635,
+      "spreadCostProbability": 0.02331881772900024,
+      "barrierMultiplier": 1.125140361260067,
+      "horizonDays": 132.8062297800926,
+      "ensembleScore": 0.5613882139336616,
+      "expectedEdgeScore": 0.08172403854704281,
+      "sleeveBreakdown": [
+        {
+          "sleeveId": "anchor_residual",
+          "title": "Anchor Residual",
+          "weight": 0.5,
+          "score": 0.7278745484733318,
+          "contribution": 0.3639372742366659
+        },
+        {
+          "sleeveId": "trend_regime",
+          "title": "Trend Regime",
+          "weight": 0.3,
+          "score": 0.2,
+          "contribution": 0.06
+        },
+        {
+          "sleeveId": "carry_horizon",
+          "title": "Carry Horizon",
+          "weight": 0.2,
+          "score": 0.6872546984849783,
+          "contribution": 0.13745093969699568
+        }
+      ]
+    },
+    {
+      "marketSlug": "will-bitcoin-reach-75000-by-december-31-2026-887-423-442-296-878",
+      "eventSlug": "will-bitcoin-reach-75000",
+      "side": "yes",
+      "allowEntry": true,
+      "qualityBucket": "strong",
+      "signal": 0.1688937274236666,
+      "modelProbabilityForSide": 0.6755749096946664,
+      "entryPriceCents": 53,
+      "markPriceCents": 51,
+      "grossEdgeToMid": 0.1688937274236666,
+      "netEdgeToEntry": 0.14557490969466635,
+      "spreadCostProbability": 0.02331881772900024,
+      "barrierMultiplier": 1.125140361260067,
+      "horizonDays": 132.8062297800926,
+      "ensembleScore": 0.5613882139336616,
+      "expectedEdgeScore": 0.08172403854704281,
+      "sleeveBreakdown": [
+        {
+          "sleeveId": "anchor_residual",
+          "title": "Anchor Residual",
+          "weight": 0.5,
+          "score": 0.7278745484733318,
+          "contribution": 0.3639372742366659
+        },
+        {
+          "sleeveId": "trend_regime",
+          "title": "Trend Regime",
+          "weight": 0.3,
+          "score": 0.2,
+          "contribution": 0.06
+        },
+        {
+          "sleeveId": "carry_horizon",
+          "title": "Carry Horizon",
+          "weight": 0.2,
+          "score": 0.6872546984849783,
+          "contribution": 0.13745093969699568
+        }
+      ]
+    }
+  ]
+}

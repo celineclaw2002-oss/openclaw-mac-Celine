@@ -1,0 +1,138 @@
+[
+  {
+    "scenarioId": "spot_down_20_vol_spike",
+    "title": "Spot -20%, vol spike",
+    "shockDescription": "Spot -20%, vol spike",
+    "estimatedPnlCents": -1906,
+    "returnImpact": -0.022476415094339623,
+    "worstMarkets": [
+      {
+        "marketSlug": "will-bitcoin-dip-to-60k-by-december-31-2026-from-july-21",
+        "side": "yes",
+        "impactCents": -1434
+      },
+      {
+        "marketSlug": "will-bitcoin-reach-70000-by-december-31-2026-594-899-294-344-343-378-654",
+        "side": "yes",
+        "impactCents": -260
+      },
+      {
+        "marketSlug": "will-bitcoin-reach-65000-by-december-31-2026-from-june-8",
+        "side": "yes",
+        "impactCents": -97
+      },
+      {
+        "marketSlug": "will-bitcoin-dip-to-65000-by-december-31-2026-175-145-572-522-479-997-983",
+        "side": "yes",
+        "impactCents": -86
+      },
+      {
+        "marketSlug": "will-bitcoin-reach-65000-by-december-31-2026-from-june-29",
+        "side": "yes",
+        "impactCents": -17
+      }
+    ]
+  },
+  {
+    "scenarioId": "spot_up_15_vol_crush",
+    "title": "Spot +15%, vol crush",
+    "shockDescription": "Spot +15%, vol crush",
+    "estimatedPnlCents": 1385,
+    "returnImpact": 0.01633254716981132,
+    "worstMarkets": [
+      {
+        "marketSlug": "will-bitcoin-reach-70000-by-december-31-2026-from-june-8",
+        "side": "yes",
+        "impactCents": 9
+      },
+      {
+        "marketSlug": "will-bitcoin-reach-65000-by-december-31-2026-from-june-29",
+        "side": "yes",
+        "impactCents": 12
+      },
+      {
+        "marketSlug": "will-bitcoin-dip-to-65000-by-december-31-2026-175-145-572-522-479-997-983",
+        "side": "yes",
+        "impactCents": 62
+      },
+      {
+        "marketSlug": "will-bitcoin-reach-65000-by-december-31-2026-from-june-8",
+        "side": "yes",
+        "impactCents": 70
+      },
+      {
+        "marketSlug": "will-bitcoin-reach-70000-by-december-31-2026-594-899-294-344-343-378-654",
+        "side": "yes",
+        "impactCents": 189
+      }
+    ]
+  },
+  {
+    "scenarioId": "liquidity_gap",
+    "title": "Spread widening and quote fade",
+    "shockDescription": "Spread widening and quote fade",
+    "estimatedPnlCents": -693,
+    "returnImpact": -0.008172169811320755,
+    "worstMarkets": [
+      {
+        "marketSlug": "will-bitcoin-dip-to-60k-by-december-31-2026-from-july-21",
+        "side": "yes",
+        "impactCents": -522
+      },
+      {
+        "marketSlug": "will-bitcoin-reach-70000-by-december-31-2026-594-899-294-344-343-378-654",
+        "side": "yes",
+        "impactCents": -95
+      },
+      {
+        "marketSlug": "will-bitcoin-reach-65000-by-december-31-2026-from-june-8",
+        "side": "yes",
+        "impactCents": -35
+      },
+      {
+        "marketSlug": "will-bitcoin-dip-to-65000-by-december-31-2026-175-145-572-522-479-997-983",
+        "side": "yes",
+        "impactCents": -31
+      },
+      {
+        "marketSlug": "will-bitcoin-reach-65000-by-december-31-2026-from-june-29",
+        "side": "yes",
+        "impactCents": -6
+      }
+    ]
+  },
+  {
+    "scenarioId": "trend_reversal",
+    "title": "Trend reversal against current sleeve mix",
+    "shockDescription": "Trend reversal against current sleeve mix",
+    "estimatedPnlCents": -1040,
+    "returnImpact": -0.012264150943396227,
+    "worstMarkets": [
+      {
+        "marketSlug": "will-bitcoin-dip-to-60k-by-december-31-2026-from-july-21",
+        "side": "yes",
+        "impactCents": -782
+      },
+      {
+        "marketSlug": "will-bitcoin-reach-70000-by-december-31-2026-594-899-294-344-343-378-654",
+        "side": "yes",
+        "impactCents": -142
+      },
+      {
+        "marketSlug": "will-bitcoin-reach-65000-by-december-31-2026-from-june-8",
+        "side": "yes",
+        "impactCents": -53
+      },
+      {
+        "marketSlug": "will-bitcoin-dip-to-65000-by-december-31-2026-175-145-572-522-479-997-983",
+        "side": "yes",
+        "impactCents": -47
+      },
+      {
+        "marketSlug": "will-bitcoin-reach-65000-by-december-31-2026-from-june-29",
+        "side": "yes",
+        "impactCents": -9
+      }
+    ]
+  }
+]

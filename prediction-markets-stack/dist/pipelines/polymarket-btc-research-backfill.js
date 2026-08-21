@@ -2,6 +2,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { CoinbaseHttpClient } from "../runtime/coinbase-api.js";
 import { runPolymarketBtcMilestoneScan } from "./polymarket-btc-milestone-scan.js";
+import { writeRunManifest } from "../shared/run-manifest.js";
 import { buildCandidate, buildRegimeTagsFromCandles, buildResearchSnapshot, computeBarrierHitProbability, extractBarrierSpec, loadBacktestPolicy } from "./polymarket-btc-paper-loop.js";
 export async function runPolymarketBtcResearchBackfill(options = {}) {
     const outputRoot = options.outputRoot ?? path.resolve(process.cwd(), "data", "backtests", "polymarket-btc-research-backfill", timestampId(new Date()));
@@ -73,7 +74,8 @@ export async function runPolymarketBtcResearchBackfill(options = {}) {
             allowedEntries: researchSnapshot.candidateBook.allowedEntries,
             blockedEntries: researchSnapshot.candidateBook.blockedEntries,
             topSignalAbs: Math.max(0, ...candidates.map((candidate) => Math.abs(candidate.signal))),
-            researchSnapshot
+            researchSnapshot,
+            topCandidates: researchSnapshot.modelDiagnostics.topCandidates
         };
         snapshots.push(record);
         await writeFile(path.join(outputRoot, "snapshots", `${record.timestampIso.replaceAll(":", "").replaceAll(".", "")}.json`), `${JSON.stringify(record, null, 2)}\n`, "utf8");
@@ -87,7 +89,8 @@ export async function runPolymarketBtcResearchBackfill(options = {}) {
         blockedEntries: snapshot.blockedEntries,
         topSignalAbs: snapshot.topSignalAbs,
         regime: snapshot.researchSnapshot.regime,
-        candidateBook: snapshot.researchSnapshot.candidateBook
+        candidateBook: snapshot.researchSnapshot.candidateBook,
+        modelDiagnostics: snapshot.researchSnapshot.modelDiagnostics
     }));
     const historyPath = path.join(outputRoot, "summaries", "research-snapshot-history.json");
     await writeFile(path.join(outputRoot, "raw", "candles.json"), `${JSON.stringify(candles, null, 2)}\n`, "utf8");
@@ -119,6 +122,24 @@ export async function runPolymarketBtcResearchBackfill(options = {}) {
             : {})
     };
     await writeFile(path.join(outputRoot, "summaries", "research-backfill-summary.json"), `${JSON.stringify(summary, null, 2)}\n`, "utf8");
+    await writeRunManifest({
+        pipelineId: "polymarket-btc-research-backfill",
+        outputRoot,
+        sourceArtifacts: [historyPath, path.join(outputRoot, "raw", "candles.json"), path.join(outputRoot, "raw", "base-markets.json")],
+        parameters: {
+            startIso,
+            endIso,
+            stepDays,
+            lookbackDays,
+            marketSurface,
+            syntheticSpread
+        },
+        summary: {
+            snapshots: summary.snapshots,
+            baseMarkets: summary.baseMarkets,
+            latestTimestampIso: summary.latestTimestampIso
+        }
+    });
     return summary;
 }
 async function loadBaseMarkets(scanOutputRoot) {

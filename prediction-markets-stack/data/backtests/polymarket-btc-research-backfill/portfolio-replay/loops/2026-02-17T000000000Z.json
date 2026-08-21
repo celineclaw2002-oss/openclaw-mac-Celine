@@ -1,0 +1,38 @@
+{
+  "timestampIso": "2026-02-17T00:00:00.000Z",
+  "cashCents": 79508,
+  "netLiquidationCents": 89909,
+  "openPositions": 2,
+  "entriesPlaced": 0,
+  "exitsPlaced": 0,
+  "averageEnsembleScore": 0.38437535351437074,
+  "sleeveAllocations": {
+    "totalCapitalCents": 89909,
+    "sleeves": [
+      {
+        "sleeveId": "anchor_residual",
+        "title": "Anchor Residual",
+        "convictionScore": 0.42670355568165125,
+        "crowdingPenalty": 0.11568363567607247,
+        "targetWeight": 0.3320494863269439,
+        "targetCapitalCents": 29854
+      },
+      {
+        "sleeveId": "trend_regime",
+        "title": "Trend Regime",
+        "convictionScore": 0.4087039295346223,
+        "crowdingPenalty": 0,
+        "targetWeight": 0.31804265058204323,
+        "targetCapitalCents": 28595
+      },
+      {
+        "sleeveId": "carry_horizon",
+        "title": "Carry Horizon",
+        "convictionScore": 0.44965264362701773,
+        "crowdingPenalty": 0,
+        "targetWeight": 0.3499078630910129,
+        "targetCapitalCents": 31460
+      }
+    ]
+  }
+}

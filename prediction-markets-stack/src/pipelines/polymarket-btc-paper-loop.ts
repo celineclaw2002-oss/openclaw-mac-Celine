@@ -3,6 +3,7 @@ import path from "node:path";
 
 import type { CoinbaseDailyCandleRecord } from "../runtime/coinbase-api.js";
 import { CoinbaseHttpClient } from "../runtime/coinbase-api.js";
+import { buildResearchModelDiagnostics, type CandidateModelSummary } from "../models/research-sleeves.js";
 import type { PolymarketBtcMilestoneRow } from "./polymarket-btc-milestone-scan.js";
 import { runPolymarketBtcMilestoneScan } from "./polymarket-btc-milestone-scan.js";
 
@@ -193,6 +194,23 @@ export interface ResearchSnapshot {
     byBarrierBucket: AttributionBucket[];
     byHorizonBucket: AttributionBucket[];
     byEvent: AttributionBucket[];
+  };
+  modelDiagnostics: {
+    sleeves: Array<{
+      sleeveId: string;
+      title: string;
+      weight: number;
+      candidates: number;
+      allowedEntries: number;
+      averageScore: number;
+      averageContribution: number;
+      averageNetEdgeToEntry: number;
+    }>;
+    topCandidates: CandidateModelSummary[];
+    allowedEntries: number;
+    blockedEntries: number;
+    averageEnsembleScore: number;
+    averageExpectedEdgeScore: number;
   };
 }
 
@@ -1178,6 +1196,32 @@ export function buildResearchSnapshot(inputs: {
   let weightedBarrierSum = 0;
   let weightedHorizonSum = 0;
   let exposureWeightSum = 0;
+  const modelDiagnostics = buildResearchModelDiagnostics({
+    candidates: inputs.candidates.map((candidate) => ({
+      marketSlug: candidate.market.marketSlug,
+      eventSlug: eventSlugFromMarketSlug(candidate.market.marketSlug),
+      side: candidate.side,
+      signal: candidate.signal,
+      modelProbabilityForSide: candidate.modelProbabilityForSide,
+      anchorProbability: candidate.anchorProbability,
+      entryPriceCents: candidate.entryPriceCents,
+      ...(candidate.markPriceCents === undefined ? {} : { markPriceCents: candidate.markPriceCents }),
+      grossEdgeToMid: candidate.grossEdgeToMid,
+      netEdgeToEntry: candidate.netEdgeToEntry,
+      spreadCostProbability: candidate.spreadCostProbability,
+      barrierMultiplier: candidate.policy.barrierMultiplier,
+      horizonDays: candidate.policy.horizonDays,
+      qualityBucket: candidate.policy.qualityBucket,
+      allowEntry: candidate.policy.allowEntry
+    })),
+    regime: {
+      annualizedVol: inputs.annualizedVol,
+      ...(inputs.regimeTags.volBucket ? { volBucket: inputs.regimeTags.volBucket } : {}),
+      ...(inputs.regimeTags.trendBucket ? { trendBucket: inputs.regimeTags.trendBucket } : {}),
+      ...(inputs.regimeTags.momentum20d === undefined ? {} : { momentum20d: inputs.regimeTags.momentum20d }),
+      ...(inputs.regimeTags.momentum60d === undefined ? {} : { momentum60d: inputs.regimeTags.momentum60d })
+    }
+  });
 
   for (const position of inputs.openPositions) {
     const exposure = (position.lastMarkPriceCents ?? position.entryPriceCents) * position.quantity;
@@ -1264,7 +1308,8 @@ export function buildResearchSnapshot(inputs: {
         inputs.closedPositions,
         (position) => position.eventSlug || eventSlugFromMarketSlug(position.marketSlug)
       )
-    }
+    },
+    modelDiagnostics
   };
 }
 

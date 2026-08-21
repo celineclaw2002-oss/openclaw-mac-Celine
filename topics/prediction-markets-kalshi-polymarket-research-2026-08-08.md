@@ -313,6 +313,48 @@ Built a reusable venue primer on Kalshi and Polymarket for future prediction-mar
    - signal density by regime
    - entry gating by historical segment bucket
    - stability of gross edge vs net edge across high-vol and low-vol episodes
+
+## 2026-08-21 Hedge-fund-grade target state
+
+- Added a durable end-state blueprint for the whole project at:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/docs/hedge-fund-end-state.md`
+- Added a machine-readable end-state manifest at:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/src/config/research-end-state.ts`
+- Added a readiness audit pipeline at:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/src/pipelines/research-platform-readiness-audit.ts`
+- Added a CLI entrypoint:
+  - `npm run audit:research-platform`
+- Strategic change in operating mode:
+  - the project is no longer being advanced as a loose sequence of individual features
+  - it is now being developed against an explicit hedge-fund-grade end state spanning:
+    - point-in-time data and replay
+    - semantic normalization and graphs
+    - modeling and calibration
+    - simulation and execution realism
+    - portfolio and risk
+    - production controls and governance
+- Added first institutional control scaffolding:
+  - run-manifest helper in `src/shared/run-manifest.ts`
+  - promotion gate spec in `prediction-markets-stack/docs/promotion-gates.md`
+  - monitoring placeholder in `prediction-markets-stack/data/monitoring/README.md`
+- Validated current readiness baseline with:
+  - `npm run check`
+  - `npm run build`
+  - `npm run audit:research-platform`
+- Latest validated readiness score:
+  - overall score: `76.47`
+  - completed capabilities: `13`
+  - planned capabilities: `4`
+- Current highest-priority remaining gaps from the audit:
+  1. `model_ensemble_stack`
+  2. `sim_historical_portfolio_replay`
+  3. `risk_stress_framework`
+  4. `risk_capital_allocator`
+- New program order from the audit:
+  1. introduce a multi-sleeve model registry / ensemble layer
+  2. extend historical backfill into portfolio-aware replay
+  3. add stress and scenario analytics
+  4. add sleeve-aware capital allocation
   - `anchors/deribit-btc-options-selected.json`
 - Current Deribit capture summary on the latest replay slice:
   - `futuresUniverse: 13`
@@ -1029,3 +1071,56 @@ Built a reusable venue primer on Kalshi and Polymarket for future prediction-mar
     - all current open risk still sits in the `yes` bucket
     - current barrier bucket is `<=100000`
     - current horizon bucket is `<=180 days`
+
+## 2026-08-21 replay, ensemble, and risk layer closed
+
+- Closed the four readiness gaps that were still open after the first platform audit:
+  - `model_ensemble_stack`
+  - `sim_historical_portfolio_replay`
+  - `risk_stress_framework`
+  - `risk_capital_allocator`
+- Added a real model-registry layer at:
+  - `prediction-markets-stack/src/models/research-sleeves.ts`
+  - new sleeve mix is:
+    - `anchor_residual`
+    - `trend_regime`
+    - `carry_horizon`
+- The research snapshot schema now carries `modelDiagnostics`, including:
+  - sleeve summaries
+  - top ranked candidates
+  - ensemble score
+  - expected edge score
+- The historical backfill runner now emits replayable candidate diagnostics in each snapshot instead of only aggregate research-state fields.
+- Added a portfolio construction layer at:
+  - `prediction-markets-stack/src/portfolio/capital-allocation.ts`
+  - `prediction-markets-stack/src/portfolio/stress-testing.ts`
+- Added a historical portfolio replay pipeline at:
+  - `prediction-markets-stack/src/pipelines/polymarket-btc-portfolio-replay.ts`
+  - CLI:
+    - `npm run replay:polymarket-btc-portfolio`
+- Latest validated replay artifacts:
+  - backfill root:
+    - `prediction-markets-stack/data/backtests/polymarket-btc-research-backfill/20260821T093859131Z`
+  - replay root:
+    - `prediction-markets-stack/data/backtests/polymarket-btc-research-backfill/portfolio-replay`
+  - latest stress output:
+    - `prediction-markets-stack/data/stress-tests/polymarket-btc-portfolio-replay-latest.json`
+- Latest replay summary on the current synthetic historical stack:
+  - `replayedSnapshots: 138`
+  - `netLiquidationCents: 84800`
+  - `realizedPnlCents: -12072`
+  - `openPositions: 6`
+  - `closedPositions: 20`
+  - `maxDrawdown: -15.34%`
+- Important interpretation:
+  - the audit now scores `100`, but that is a capability-completeness score, not proof the BTC sleeve is economically good enough yet
+  - the new replay result is useful precisely because it shows the current sleeve mix still loses money under this synthetic historical setup
+- Latest readiness audit result:
+  - `overallScore: 100`
+  - `completedCapabilities: 17`
+  - `priorityGaps: 0`
+- Best next frontier after closing the platform gaps:
+  - improve the economic quality of the sleeves rather than adding more scaffolding
+  - start with cross-venue / flow features instead of relying so heavily on the terminal baseline
+  - replace synthetic quote replay with archived order-book or at least richer quote-surface history
+  - make stress testing more contract-aware around co-resolution and ladder overlap instead of generic directional shocks

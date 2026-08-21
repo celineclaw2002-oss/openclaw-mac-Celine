@@ -23,6 +23,8 @@
     "run:polymarket-btc-paper-loop": "node --input-type=module -e \"import('./dist/pipelines/polymarket-btc-paper-loop.js').then(async (m) => { const out = await m.runPolymarketBtcPaperLoop(); console.log(JSON.stringify(out, null, 2)); })\"",
     "backtest:polymarket-btc-barrier": "node --input-type=module -e \"import('./dist/pipelines/polymarket-btc-barrier-backtest.js').then(async (m) => { const out = await m.runPolymarketBtcBarrierBacktest(); console.log(JSON.stringify(out, null, 2)); })\"",
     "backfill:polymarket-btc-research": "node --input-type=module -e \"import('./dist/pipelines/polymarket-btc-research-backfill.js').then(async (m) => { const out = await m.runPolymarketBtcResearchBackfill(); console.log(JSON.stringify(out, null, 2)); })\"",
+    "replay:polymarket-btc-portfolio": "node --input-type=module -e \"import('./dist/pipelines/polymarket-btc-portfolio-replay.js').then(async (m) => { const out = await m.runPolymarketBtcPortfolioReplay(); console.log(JSON.stringify(out, null, 2)); })\"",
+    "audit:research-platform": "node --input-type=module -e \"import('./dist/pipelines/research-platform-readiness-audit.js').then(async (m) => { const out = await m.runResearchPlatformReadinessAudit(); console.log(JSON.stringify(out, null, 2)); })\"",
     "run:internal-consistency-experiments": "node --input-type=module -e \"import('./dist/index.js').then(async (m) => { const out = await m.runInternalConsistencyExperimentRunner(); console.log(JSON.stringify(out, null, 2)); })\""
   },
   "devDependencies": {

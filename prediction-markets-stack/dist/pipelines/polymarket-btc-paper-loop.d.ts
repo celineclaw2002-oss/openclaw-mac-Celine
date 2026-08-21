@@ -1,5 +1,6 @@
 import type { CoinbaseDailyCandleRecord } from "../runtime/coinbase-api.js";
 import { CoinbaseHttpClient } from "../runtime/coinbase-api.js";
+import { type CandidateModelSummary } from "../models/research-sleeves.js";
 import type { PolymarketBtcMilestoneRow } from "./polymarket-btc-milestone-scan.js";
 export type PaperSide = "yes" | "no";
 export type BarrierDirection = "up" | "down";
@@ -162,6 +163,23 @@ export interface ResearchSnapshot {
         byBarrierBucket: AttributionBucket[];
         byHorizonBucket: AttributionBucket[];
         byEvent: AttributionBucket[];
+    };
+    modelDiagnostics: {
+        sleeves: Array<{
+            sleeveId: string;
+            title: string;
+            weight: number;
+            candidates: number;
+            allowedEntries: number;
+            averageScore: number;
+            averageContribution: number;
+            averageNetEdgeToEntry: number;
+        }>;
+        topCandidates: CandidateModelSummary[];
+        allowedEntries: number;
+        blockedEntries: number;
+        averageEnsembleScore: number;
+        averageExpectedEdgeScore: number;
     };
 }
 export interface AttributionBucket {

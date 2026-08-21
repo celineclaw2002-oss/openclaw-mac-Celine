@@ -1,0 +1,16 @@
+{
+  "manifestId": "polymarket-btc-portfolio-replay::2026-08-21T093901925Z",
+  "pipelineId": "polymarket-btc-portfolio-replay",
+  "generatedAtIso": "2026-08-21T09:39:01.925Z",
+  "outputRoot": "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/backtests/polymarket-btc-research-backfill/portfolio-replay",
+  "sourceArtifacts": [
+    "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/backtests/polymarket-btc-research-backfill/portfolio-replay/replay-summary.json",
+    "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/stress-tests/polymarket-btc-portfolio-replay-latest.json"
+  ],
+  "parameters": {},
+  "summary": {
+    "replayedSnapshots": 138,
+    "netLiquidationCents": 84800,
+    "maxDrawdown": -0.15337999061529706
+  }
+}

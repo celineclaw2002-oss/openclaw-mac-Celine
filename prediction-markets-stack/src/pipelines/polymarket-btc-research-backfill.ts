@@ -5,6 +5,7 @@ import type { CoinbaseDailyCandleRecord } from "../runtime/coinbase-api.js";
 import { CoinbaseHttpClient } from "../runtime/coinbase-api.js";
 import type { PolymarketBtcMilestoneRow } from "./polymarket-btc-milestone-scan.js";
 import { runPolymarketBtcMilestoneScan } from "./polymarket-btc-milestone-scan.js";
+import { writeRunManifest } from "../shared/run-manifest.js";
 import {
   buildCandidate,
   buildRegimeTagsFromCandles,
@@ -26,6 +27,7 @@ interface HistoricalSnapshotRecord {
   blockedEntries: number;
   topSignalAbs: number;
   researchSnapshot: ResearchSnapshot;
+  topCandidates: ResearchSnapshot["modelDiagnostics"]["topCandidates"];
 }
 
 export interface PolymarketBtcResearchBackfillOptions {
@@ -142,7 +144,8 @@ export async function runPolymarketBtcResearchBackfill(
       allowedEntries: researchSnapshot.candidateBook.allowedEntries,
       blockedEntries: researchSnapshot.candidateBook.blockedEntries,
       topSignalAbs: Math.max(0, ...candidates.map((candidate) => Math.abs(candidate.signal))),
-      researchSnapshot
+      researchSnapshot,
+      topCandidates: researchSnapshot.modelDiagnostics.topCandidates
     };
     snapshots.push(record);
     await writeFile(
@@ -161,7 +164,8 @@ export async function runPolymarketBtcResearchBackfill(
     blockedEntries: snapshot.blockedEntries,
     topSignalAbs: snapshot.topSignalAbs,
     regime: snapshot.researchSnapshot.regime,
-    candidateBook: snapshot.researchSnapshot.candidateBook
+    candidateBook: snapshot.researchSnapshot.candidateBook,
+    modelDiagnostics: snapshot.researchSnapshot.modelDiagnostics
   }));
   const historyPath = path.join(outputRoot, "summaries", "research-snapshot-history.json");
   await writeFile(path.join(outputRoot, "raw", "candles.json"), `${JSON.stringify(candles, null, 2)}\n`, "utf8");
@@ -199,6 +203,24 @@ export async function runPolymarketBtcResearchBackfill(
       : {})
   };
   await writeFile(path.join(outputRoot, "summaries", "research-backfill-summary.json"), `${JSON.stringify(summary, null, 2)}\n`, "utf8");
+  await writeRunManifest({
+    pipelineId: "polymarket-btc-research-backfill",
+    outputRoot,
+    sourceArtifacts: [historyPath, path.join(outputRoot, "raw", "candles.json"), path.join(outputRoot, "raw", "base-markets.json")],
+    parameters: {
+      startIso,
+      endIso,
+      stepDays,
+      lookbackDays,
+      marketSurface,
+      syntheticSpread
+    },
+    summary: {
+      snapshots: summary.snapshots,
+      baseMarkets: summary.baseMarkets,
+      latestTimestampIso: summary.latestTimestampIso
+    }
+  });
   return summary;
 }
 

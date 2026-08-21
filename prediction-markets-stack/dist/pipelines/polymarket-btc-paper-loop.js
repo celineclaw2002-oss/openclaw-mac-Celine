@@ -1,6 +1,7 @@
 import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { CoinbaseHttpClient } from "../runtime/coinbase-api.js";
+import { buildResearchModelDiagnostics } from "../models/research-sleeves.js";
 import { runPolymarketBtcMilestoneScan } from "./polymarket-btc-milestone-scan.js";
 export async function runPolymarketBtcPaperLoop(options = {}) {
     const portfolioRoot = path.resolve(process.cwd(), options.portfolioRoot ?? path.join("data", "paper-trading", "polymarket-btc-milestone"));
@@ -718,6 +719,32 @@ export function buildResearchSnapshot(inputs) {
     let weightedBarrierSum = 0;
     let weightedHorizonSum = 0;
     let exposureWeightSum = 0;
+    const modelDiagnostics = buildResearchModelDiagnostics({
+        candidates: inputs.candidates.map((candidate) => ({
+            marketSlug: candidate.market.marketSlug,
+            eventSlug: eventSlugFromMarketSlug(candidate.market.marketSlug),
+            side: candidate.side,
+            signal: candidate.signal,
+            modelProbabilityForSide: candidate.modelProbabilityForSide,
+            anchorProbability: candidate.anchorProbability,
+            entryPriceCents: candidate.entryPriceCents,
+            ...(candidate.markPriceCents === undefined ? {} : { markPriceCents: candidate.markPriceCents }),
+            grossEdgeToMid: candidate.grossEdgeToMid,
+            netEdgeToEntry: candidate.netEdgeToEntry,
+            spreadCostProbability: candidate.spreadCostProbability,
+            barrierMultiplier: candidate.policy.barrierMultiplier,
+            horizonDays: candidate.policy.horizonDays,
+            qualityBucket: candidate.policy.qualityBucket,
+            allowEntry: candidate.policy.allowEntry
+        })),
+        regime: {
+            annualizedVol: inputs.annualizedVol,
+            ...(inputs.regimeTags.volBucket ? { volBucket: inputs.regimeTags.volBucket } : {}),
+            ...(inputs.regimeTags.trendBucket ? { trendBucket: inputs.regimeTags.trendBucket } : {}),
+            ...(inputs.regimeTags.momentum20d === undefined ? {} : { momentum20d: inputs.regimeTags.momentum20d }),
+            ...(inputs.regimeTags.momentum60d === undefined ? {} : { momentum60d: inputs.regimeTags.momentum60d })
+        }
+    });
     for (const position of inputs.openPositions) {
         const exposure = (position.lastMarkPriceCents ?? position.entryPriceCents) * position.quantity;
         const eventSlug = position.eventSlug || eventSlugFromMarketSlug(position.marketSlug);
@@ -789,7 +816,8 @@ export function buildResearchSnapshot(inputs) {
             byBarrierBucket: buildAttributionBuckets(inputs.openPositions, inputs.closedPositions, (position) => bucketLabel(position.barrierPrice ?? extractBarrierSpec(position.questionText)?.price, [40000, 60000, 80000, 100000, 120000, 150000])),
             byHorizonBucket: buildAttributionBuckets(inputs.openPositions, inputs.closedPositions, (position) => bucketLabel(computeHorizonDays(position.marketEndDate ?? inferMarketEndDate(position.questionText).marketEndDate, inputs.referenceNowMs), [30, 90, 180, 365])),
             byEvent: buildAttributionBuckets(inputs.openPositions, inputs.closedPositions, (position) => position.eventSlug || eventSlugFromMarketSlug(position.marketSlug))
-        }
+        },
+        modelDiagnostics
     };
 }
 function eventSlugFromMarketSlug(marketSlug) {

@@ -1,6 +1,8 @@
 export * from "./shared/enums.js";
 export * from "./shared/time.js";
 export * from "./shared/identity.js";
+export * from "./shared/run-manifest.js";
+export * from "./models/research-sleeves.js";
 export * from "./domain/source-events.js";
 export * from "./domain/contracts.js";
 export * from "./domain/graph.js";
@@ -39,4 +41,8 @@ export * from "./pipelines/polymarket-btc-milestone-scan.js";
 export * from "./pipelines/polymarket-btc-paper-loop.js";
 export * from "./pipelines/polymarket-btc-barrier-backtest.js";
 export * from "./pipelines/polymarket-btc-research-backfill.js";
+export * from "./portfolio/capital-allocation.js";
+export * from "./portfolio/stress-testing.js";
+export * from "./pipelines/polymarket-btc-portfolio-replay.js";
+export * from "./pipelines/research-platform-readiness-audit.js";
 export * from "./pipelines/internal-consistency-experiment-runner.js";
