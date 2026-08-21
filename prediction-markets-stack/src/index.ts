@@ -38,4 +38,5 @@ export * from "./pipelines/btc-paper-trading-loop.js";
 export * from "./pipelines/polymarket-btc-milestone-scan.js";
 export * from "./pipelines/polymarket-btc-paper-loop.js";
 export * from "./pipelines/polymarket-btc-barrier-backtest.js";
+export * from "./pipelines/polymarket-btc-research-backfill.js";
 export * from "./pipelines/internal-consistency-experiment-runner.js";

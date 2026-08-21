@@ -57,7 +57,8 @@ export async function runPolymarketBtcPaperLoop(options = {}) {
             backtestPolicy,
             spotPrice: spot.price,
             barrier: barrier?.price,
-            marketEndDate: market.endDate
+            marketEndDate: market.endDate,
+            referenceNowMs: nowMs
         });
         return {
             marketSlug: market.marketSlug,
@@ -130,7 +131,8 @@ export async function runPolymarketBtcPaperLoop(options = {}) {
                 openPositions: portfolio.openPositions,
                 closedPositions: portfolio.closedPositions,
                 netLiquidationCents,
-                regimeTags
+                regimeTags,
+                referenceNowMs: nowMs
             }),
             performance,
             actions: [],
@@ -155,7 +157,8 @@ export async function runPolymarketBtcPaperLoop(options = {}) {
                 backtestPolicy,
                 spotPrice: spot.price,
                 barrier: extractBarrierSpec(market.question)?.price,
-                marketEndDate: market.endDate
+                marketEndDate: market.endDate,
+                referenceNowMs: nowMs
             })
             : undefined;
         const exitReason = classifyExitReason(signal, positionPolicy?.exitEdgeThreshold ?? exitEdgeThreshold, market, executableExitPrice, positionPolicy);
@@ -321,7 +324,8 @@ export async function runPolymarketBtcPaperLoop(options = {}) {
             openPositions: portfolio.openPositions,
             closedPositions: portfolio.closedPositions,
             netLiquidationCents,
-            regimeTags
+            regimeTags,
+            referenceNowMs: nowMs
         }),
         performance,
         actions,
@@ -339,7 +343,7 @@ export async function runPolymarketBtcPaperLoop(options = {}) {
 async function readScanSummary(target) {
     return JSON.parse(await readFile(target, "utf8"));
 }
-function buildCandidate(market, spotPrice, annualizedVol, nowMs, backtestPolicy) {
+export function buildCandidate(market, spotPrice, annualizedVol, nowMs, backtestPolicy) {
     const barrier = extractBarrierSpec(market.question);
     if (!barrier) {
         return null;
@@ -381,7 +385,7 @@ function buildCandidate(market, spotPrice, annualizedVol, nowMs, backtestPolicy)
         ...(markPriceCents === undefined ? {} : { markPriceCents })
     };
 }
-function extractBarrierSpec(question) {
+export function extractBarrierSpec(question) {
     const match = question.match(/\$([0-9][0-9,]*(?:\.[0-9]+)?)(?:k|K)?/);
     if (!match?.[1]) {
         return undefined;
@@ -401,7 +405,7 @@ function extractBarrierSpec(question) {
     }
     return undefined;
 }
-function computeBarrierHitProbability(spotPrice, barrier, endDate, annualizedVol, nowMs) {
+export function computeBarrierHitProbability(spotPrice, barrier, endDate, annualizedVol, nowMs) {
     if (barrier === undefined || !endDate) {
         return undefined;
     }
@@ -424,11 +428,11 @@ function computeBarrierHitProbability(spotPrice, barrier, endDate, annualizedVol
     const z = logBarrier / sigmaSqrtT;
     return clamp01(2 * (1 - normalCdf(z)));
 }
-function computeSignal(anchorProbability, market) {
+export function computeSignal(anchorProbability, market) {
     const marketMid = deriveYesMid(market);
     return anchorProbability - marketMid;
 }
-function deriveYesMid(market) {
+export function deriveYesMid(market) {
     if (market.bestBid !== undefined && market.bestAsk !== undefined) {
         return (market.bestBid + market.bestAsk) / 2;
     }
@@ -468,7 +472,7 @@ function classifyExitReason(signal, exitEdgeThreshold, market, executableExitPri
     }
     return null;
 }
-async function loadBacktestPolicy(inputs) {
+export async function loadBacktestPolicy(inputs) {
     const sourceSummaryPath = inputs.explicitSummaryPath ?? (await resolveLatestBacktestSummaryPath(inputs.cwd));
     if (!sourceSummaryPath) {
         return {
@@ -514,7 +518,7 @@ async function resolveLatestBacktestSummaryPath(cwd) {
 }
 function deriveCandidatePolicy(inputs) {
     const barrierMultiplier = inputs.barrier === undefined || inputs.spotPrice <= 0 ? Number.POSITIVE_INFINITY : inputs.barrier / inputs.spotPrice;
-    const horizonDays = computeHorizonDays(inputs.marketEndDate);
+    const horizonDays = computeHorizonDays(inputs.marketEndDate, inputs.referenceNowMs);
     const fallback = {
         mode: "fallback",
         allowEntry: true,
@@ -644,7 +648,7 @@ function computeSegmentImprovement(segment) {
         logLossImprovement: ratio(segment.terminalBaseline.logLoss - segment.rawBarrier.logLoss, segment.terminalBaseline.logLoss)
     };
 }
-function computeHorizonDays(endDate) {
+function computeHorizonDays(endDate, referenceNowMs = Date.now()) {
     if (!endDate) {
         return Number.POSITIVE_INFINITY;
     }
@@ -652,7 +656,7 @@ function computeHorizonDays(endDate) {
     if (!Number.isFinite(endMs)) {
         return Number.POSITIVE_INFINITY;
     }
-    return Math.max(0, (endMs - Date.now()) / 86_400_000);
+    return Math.max(0, (endMs - referenceNowMs) / 86_400_000);
 }
 function passesCorrelationControls(inputs) {
     const sameEventPositions = inputs.openPositions.filter((position) => (position.eventSlug || eventSlugFromMarketSlug(position.marketSlug)) === inputs.candidate.market.eventSlug);
@@ -704,7 +708,7 @@ function computeOverlapAdjustedQuantity(inputs) {
     }
     return Math.max(0, Math.floor(Math.min(inputs.baseQuantity, eventCappedQuantity) * spacingPenalty));
 }
-function buildResearchSnapshot(inputs) {
+export function buildResearchSnapshot(inputs) {
     const spreads = inputs.quoteReadyMarkets
         .map((market) => market.spread)
         .filter((spread) => spread !== undefined);
@@ -724,7 +728,7 @@ function buildResearchSnapshot(inputs) {
             continue;
         }
         const horizonDays = position.marketEndDate
-            ? Math.max(0, (Date.parse(position.marketEndDate) - Date.now()) / 86_400_000)
+            ? Math.max(0, (Date.parse(position.marketEndDate) - (inputs.referenceNowMs ?? Date.now())) / 86_400_000)
             : undefined;
         weightedBarrierSum += exposure * (barrierPrice / inputs.spotPrice);
         if (horizonDays !== undefined) {
@@ -782,8 +786,8 @@ function buildResearchSnapshot(inputs) {
         },
         attribution: {
             byDirection: buildAttributionBuckets(inputs.openPositions, inputs.closedPositions, (position) => position.side),
-            byBarrierBucket: buildAttributionBuckets(inputs.openPositions, inputs.closedPositions, (position) => bucketLabel(position.barrierPrice, [40000, 60000, 80000, 100000, 120000, 150000])),
-            byHorizonBucket: buildAttributionBuckets(inputs.openPositions, inputs.closedPositions, (position) => bucketLabel(computeHorizonDays(position.marketEndDate), [30, 90, 180, 365])),
+            byBarrierBucket: buildAttributionBuckets(inputs.openPositions, inputs.closedPositions, (position) => bucketLabel(position.barrierPrice ?? extractBarrierSpec(position.questionText)?.price, [40000, 60000, 80000, 100000, 120000, 150000])),
+            byHorizonBucket: buildAttributionBuckets(inputs.openPositions, inputs.closedPositions, (position) => bucketLabel(computeHorizonDays(position.marketEndDate ?? inferMarketEndDate(position.questionText).marketEndDate, inputs.referenceNowMs), [30, 90, 180, 365])),
             byEvent: buildAttributionBuckets(inputs.openPositions, inputs.closedPositions, (position) => position.eventSlug || eventSlugFromMarketSlug(position.marketSlug))
         }
     };
@@ -858,6 +862,23 @@ function inferMarketEndDate(questionText) {
     }
     return {};
 }
+export function buildRegimeTagsFromCandles(candles) {
+    if (candles.length < 25) {
+        return {};
+    }
+    const closes = candles.map((row) => row.close);
+    const returns = closes.slice(1).map((close, index) => Math.log(close / closes[index]));
+    const vol20 = sampleStdDev(returns.slice(-20)) * Math.sqrt(365.25);
+    const momentum20 = ratio(closes.at(-1) - closes.at(-21), closes.at(-21));
+    const momentum60 = closes.length < 61 ? undefined : ratio(closes.at(-1) - closes.at(-61), closes.at(-61));
+    return {
+        realizedVol20d: vol20,
+        momentum20d: momentum20,
+        ...(momentum60 === undefined ? {} : { momentum60d: momentum60 }),
+        volBucket: vol20 < 0.4 ? "low" : vol20 < 0.8 ? "medium" : "high",
+        trendBucket: momentum20 < -0.05 ? "down" : momentum20 > 0.05 ? "up" : "flat"
+    };
+}
 async function buildRegimeTags(client) {
     try {
         const end = new Date();
@@ -867,21 +888,7 @@ async function buildRegimeTags(client) {
             endIso: end.toISOString(),
             granularitySeconds: 86400
         });
-        if (candles.length < 25) {
-            return {};
-        }
-        const closes = candles.map((row) => row.close);
-        const returns = closes.slice(1).map((close, index) => Math.log(close / closes[index]));
-        const vol20 = sampleStdDev(returns.slice(-20)) * Math.sqrt(365.25);
-        const momentum20 = ratio(closes.at(-1) - closes.at(-21), closes.at(-21));
-        const momentum60 = closes.length < 61 ? undefined : ratio(closes.at(-1) - closes.at(-61), closes.at(-61));
-        return {
-            realizedVol20d: vol20,
-            momentum20d: momentum20,
-            ...(momentum60 === undefined ? {} : { momentum60d: momentum60 }),
-            volBucket: vol20 < 0.4 ? "low" : vol20 < 0.8 ? "medium" : "high",
-            trendBucket: momentum20 < -0.05 ? "down" : momentum20 > 0.05 ? "up" : "flat"
-        };
+        return buildRegimeTagsFromCandles(candles);
     }
     catch {
         return {};

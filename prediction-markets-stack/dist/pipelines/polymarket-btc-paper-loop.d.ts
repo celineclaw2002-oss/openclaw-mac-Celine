@@ -1,4 +1,35 @@
-type PaperSide = "yes" | "no";
+import type { CoinbaseDailyCandleRecord } from "../runtime/coinbase-api.js";
+import { CoinbaseHttpClient } from "../runtime/coinbase-api.js";
+import type { PolymarketBtcMilestoneRow } from "./polymarket-btc-milestone-scan.js";
+export type PaperSide = "yes" | "no";
+export type BarrierDirection = "up" | "down";
+export interface BarrierSpec {
+    price: number;
+    direction: BarrierDirection;
+}
+interface PaperPosition {
+    positionId: string;
+    eventSlug: string;
+    marketSlug: string;
+    questionText: string;
+    side: PaperSide;
+    quantity: number;
+    entryPriceCents: number;
+    entryTimeMs: number;
+    entrySignal: number;
+    entryAnchorProbability: number;
+    barrierPrice?: number;
+    barrierDirection?: BarrierDirection;
+    marketEndDate?: string;
+    lastMarkPriceCents?: number;
+    lastMarkTimeMs?: number;
+}
+interface ClosedPaperPosition extends PaperPosition {
+    exitPriceCents: number;
+    exitTimeMs: number;
+    exitReason: string;
+    realizedPnlCents: number;
+}
 interface EntryAction {
     type: "entry";
     marketSlug: string;
@@ -51,11 +82,25 @@ interface PerformanceSnapshot {
     loopSharpeRatio?: number;
     loopSortinoRatio?: number;
 }
+interface BacktestModelMetrics {
+    brierScore: number;
+    logLoss: number;
+}
+interface BacktestSegmentMetrics {
+    groupType: "overall" | "horizon_days" | "barrier_multiplier";
+    groupId: string;
+    rawBarrier: BacktestModelMetrics;
+    terminalBaseline: BacktestModelMetrics;
+}
+interface BacktestSummarySnapshot {
+    outputRoot: string;
+    segmented: BacktestSegmentMetrics[];
+}
 interface SegmentImprovement {
     brierImprovement: number;
     logLossImprovement: number;
 }
-interface CandidatePolicy {
+export interface CandidatePolicy {
     mode: "fallback" | "segment_aware";
     allowEntry: boolean;
     qualityBucket: "fallback" | "strong" | "medium" | "cautious" | "blocked";
@@ -71,7 +116,7 @@ interface CandidatePolicy {
     qualityScore?: number;
     sourceSummaryPath?: string;
 }
-interface ResearchSnapshot {
+export interface ResearchSnapshot {
     regime: {
         spotPrice: number;
         annualizedVol: number;
@@ -119,7 +164,7 @@ interface ResearchSnapshot {
         byEvent: AttributionBucket[];
     };
 }
-interface AttributionBucket {
+export interface AttributionBucket {
     bucketId: string;
     openPositions: number;
     grossExposureCents: number;
@@ -179,6 +224,21 @@ export interface PolymarketBtcPaperLoopSummary {
     skippedReason?: string;
     policySourceSummaryPath?: string;
 }
+export interface Candidate {
+    market: PolymarketBtcMilestoneRow;
+    side: PaperSide;
+    signal: number;
+    anchorProbability: number;
+    modelProbabilityForSide: number;
+    entryPriceCents: number;
+    markPriceCents?: number;
+    spreadCostProbability: number;
+    grossEdgeToMid: number;
+    netEdgeToEntry: number;
+    policy: CandidatePolicy;
+    barrier: BarrierSpec;
+    marketMid: number;
+}
 type TopSignalDiagnostic = {
     marketSlug: string;
     side: PaperSide;
@@ -193,4 +253,46 @@ type TopSignalDiagnostic = {
     policyRationale: string;
 };
 export declare function runPolymarketBtcPaperLoop(options?: PolymarketBtcPaperLoopOptions): Promise<PolymarketBtcPaperLoopSummary>;
+export declare function buildCandidate(market: PolymarketBtcMilestoneRow, spotPrice: number, annualizedVol: number, nowMs: number, backtestPolicy: Awaited<ReturnType<typeof loadBacktestPolicy>>): Candidate | null;
+export declare function extractBarrierSpec(question: string): BarrierSpec | undefined;
+export declare function computeBarrierHitProbability(spotPrice: number, barrier: BarrierSpec | undefined, endDate: string | undefined, annualizedVol: number, nowMs: number): number | undefined;
+export declare function computeSignal(anchorProbability: number, market: PolymarketBtcMilestoneRow): number;
+export declare function deriveYesMid(market: PolymarketBtcMilestoneRow): number;
+export declare function loadBacktestPolicy(inputs: {
+    cwd: string;
+    fallbackEntryEdgeThreshold: number;
+    fallbackExitEdgeThreshold: number;
+    explicitSummaryPath?: string;
+}): Promise<{
+    mode: "fallback" | "segment_aware";
+    fallbackEntryEdgeThreshold: number;
+    fallbackExitEdgeThreshold: number;
+    summary?: BacktestSummarySnapshot;
+    sourceSummaryPath?: string;
+}>;
+export declare function buildResearchSnapshot(inputs: {
+    spotPrice: number;
+    annualizedVol: number;
+    quoteReadyMarkets: PolymarketBtcMilestoneRow[];
+    candidates: Candidate[];
+    openPositions: PaperPosition[];
+    closedPositions: ClosedPaperPosition[];
+    netLiquidationCents: number;
+    regimeTags: Awaited<ReturnType<typeof buildRegimeTags>>;
+    referenceNowMs?: number;
+}): ResearchSnapshot;
+export declare function buildRegimeTagsFromCandles(candles: CoinbaseDailyCandleRecord[]): {
+    realizedVol20d?: number;
+    momentum20d?: number;
+    momentum60d?: number;
+    volBucket?: "low" | "medium" | "high";
+    trendBucket?: "down" | "flat" | "up";
+};
+declare function buildRegimeTags(client: CoinbaseHttpClient): Promise<{
+    realizedVol20d?: number;
+    momentum20d?: number;
+    momentum60d?: number;
+    volBucket?: "low" | "medium" | "high";
+    trendBucket?: "down" | "flat" | "up";
+}>;
 export {};

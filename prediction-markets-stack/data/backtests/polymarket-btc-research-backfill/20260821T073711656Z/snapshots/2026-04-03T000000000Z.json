@@ -1,0 +1,55 @@
+{
+  "timestampIso": "2026-04-03T00:00:00.000Z",
+  "spotPrice": 66959.99,
+  "annualizedVol": 0.6596861221092898,
+  "quoteReadyMarkets": 50,
+  "allowedEntries": 29,
+  "blockedEntries": 21,
+  "topSignalAbs": 0.2396182733393898,
+  "researchSnapshot": {
+    "regime": {
+      "spotPrice": 66959.99,
+      "annualizedVol": 0.6596861221092898,
+      "quoteReadyMarkets": 50,
+      "upsideQuoteReadyMarkets": 32,
+      "downsideQuoteReadyMarkets": 18,
+      "averageSpread": 0.037785405008632506,
+      "realizedVol20d": 0.4253583068168259,
+      "momentum20d": -0.05997345014222535,
+      "momentum60d": -0.14881567013297214,
+      "volBucket": "medium",
+      "trendBucket": "down"
+    },
+    "candidateBook": {
+      "allowedEntries": 29,
+      "blockedEntries": 21,
+      "strongSignals": 23,
+      "mediumSignals": 8,
+      "cautiousSignals": 2,
+      "blockedSignals": 17,
+      "averageAllowedSignal": 0.16502032053394505,
+      "averageAllowedBarrierMultiplier": 1.037675761610622,
+      "averageAllowedHorizonDays": 132.890814450431,
+      "averageGrossEdgeToMid": 0.16502032053394505,
+      "averageNetEdgeToEntry": 0.14507204982374652,
+      "averageSpreadCost": 0.01994827071019846
+    },
+    "concentration": {
+      "openEventGroups": 0,
+      "largestEventExposureCents": 0,
+      "largestEventExposureRate": 0,
+      "largestDirectionExposureCents": 0,
+      "largestDirectionExposureRate": 0
+    },
+    "costDiagnostics": {
+      "expectedEntryCostCents": 0,
+      "realizedSpreadCaptureCents": 0
+    },
+    "attribution": {
+      "byDirection": [],
+      "byBarrierBucket": [],
+      "byHorizonBucket": [],
+      "byEvent": []
+    }
+  }
+}

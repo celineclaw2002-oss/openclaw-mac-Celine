@@ -258,6 +258,61 @@ Built a reusable venue primer on Kalshi and Polymarket for future prediction-mar
   - `anchors/deribit-btc-anchor-snapshot.json`
   - `anchors/deribit-btc-anchor-summary.json`
   - `anchors/deribit-btc-futures-selected.json`
+
+## 2026-08-21 Historical research replay layer
+
+- Added a new historical replay/backfill pipeline at:
+  - `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/src/pipelines/polymarket-btc-research-backfill.ts`
+- Added a CLI entrypoint:
+  - `npm run backfill:polymarket-btc-research`
+- The replay runner reuses the same `ResearchSnapshot` schema from the live Polymarket BTC paper loop so the historical artifacts are directly comparable on:
+  - regime tags
+  - candidate-book diagnostics
+  - spread / edge diagnostics
+  - the same zeroed portfolio-dependent sections when running in research-only mode
+- The live paper loop was refactored slightly so the snapshot helpers are reusable and point-in-time stable:
+  - `buildCandidate`
+  - `buildResearchSnapshot`
+  - `buildRegimeTagsFromCandles`
+  - `loadBacktestPolicy`
+  - historical horizon calculations now accept an explicit replay timestamp instead of always using wall-clock `Date.now()`
+- The backfill runner supports two quote-surface modes:
+  - `terminal_baseline` as the default, which builds a synthetic yes-mid from barrier-hit and terminal baseline probabilities so research is not blocked by missing archived Polymarket books
+  - `frozen_live`, which reuses the current live market quote surface across past BTC timestamps for factor-state archaeology
+- The runner writes:
+  - `raw/candles.json`
+  - `raw/base-markets.json`
+  - `snapshots/*.json`
+  - `summaries/research-snapshot-history.json`
+  - `summaries/research-backfill-summary.json`
+- First validated sample run:
+  - output root:
+    `/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/backtests/polymarket-btc-research-backfill/20260821T073711656Z`
+  - command shape:
+    `runPolymarketBtcResearchBackfill({ startIso: '2026-01-01T00:00:00.000Z', endIso: '2026-08-01T00:00:00.000Z', stepDays: 14 })`
+  - result:
+    - `15` snapshots
+    - `57` base markets
+    - latest timestamp `2026-07-24T00:00:00.000Z`
+    - latest snapshot `allowedEntries: 24`
+    - latest snapshot `blockedEntries: 25`
+- Important interpretation note:
+  - this is a `research-state replay`, not a true historical venue-execution replay
+  - because historical Polymarket order-book archives are not part of the current stack, concentration / attribution / cost-capture fields remain zero unless we later add a historical execution simulator or archived quote capture
+
+## Current next steps
+
+1. Add a portfolio-aware historical replay mode so concentration and attribution can evolve over time instead of staying zero in research-only backfills.
+2. Add CLI flags or env-driven controls for:
+   - market-surface mode
+   - lookback window
+   - step size
+   - output root
+3. Extend the synthetic quote surface so downside markets and term structure can be stress-tested more explicitly.
+4. Use the replay history artifacts to compare:
+   - signal density by regime
+   - entry gating by historical segment bucket
+   - stability of gross edge vs net edge across high-vol and low-vol episodes
   - `anchors/deribit-btc-options-selected.json`
 - Current Deribit capture summary on the latest replay slice:
   - `futuresUniverse: 13`

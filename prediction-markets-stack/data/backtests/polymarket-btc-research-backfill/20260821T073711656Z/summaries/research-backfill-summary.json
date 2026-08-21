@@ -1,0 +1,18 @@
+{
+  "outputRoot": "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/backtests/polymarket-btc-research-backfill/20260821T073711656Z",
+  "checkedAtIso": "2026-08-21T07:37:13.641Z",
+  "sourceNote": "Historical research-state replay using a synthetic terminal-probability quote surface around the live BTC milestone universe. This avoids dependency on archived Polymarket order books while preserving the research snapshot schema.",
+  "marketSurface": "terminal_baseline",
+  "startIso": "2026-01-01T00:00:00.000Z",
+  "endIso": "2026-08-01T00:00:00.000Z",
+  "stepDays": 14,
+  "lookbackDays": 60,
+  "candleCount": 363,
+  "baseMarkets": 57,
+  "snapshots": 15,
+  "historyPath": "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/backtests/polymarket-btc-research-backfill/20260821T073711656Z/summaries/research-snapshot-history.json",
+  "latestSnapshotPath": "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/backtests/polymarket-btc-research-backfill/20260821T073711656Z/snapshots/2026-07-24T000000000Z.json",
+  "latestTimestampIso": "2026-07-24T00:00:00.000Z",
+  "latestAllowedEntries": 24,
+  "latestBlockedEntries": 25
+}
