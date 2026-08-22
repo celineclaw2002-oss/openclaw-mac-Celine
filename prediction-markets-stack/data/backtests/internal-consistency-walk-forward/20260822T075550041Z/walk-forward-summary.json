@@ -1,0 +1,101 @@
+{
+  "outputRoot": "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/backtests/internal-consistency-walk-forward/20260822T075550041Z",
+  "seriesKey": "KXFED",
+  "requiredEdgeType": "temporal_nested",
+  "totalCapturesSeen": 12,
+  "warmupCaptures": 6,
+  "evaluatedCaptures": 6,
+  "minTrainingCaptures": 6,
+  "trainingWindowCaptures": 12,
+  "minDepthAdjustedResidual": 5,
+  "duplicateEdgePolicy": "trade_each_edge_once",
+  "policies": [
+    {
+      "policyId": "baseline_all_aggressive",
+      "title": "Baseline All Aggressive",
+      "totalTrades": 2,
+      "uniqueEdgesTraded": 2,
+      "tradedCaptures": 1,
+      "cumulativePnlToResolution": 50.0631145845918,
+      "averagePnlPerTrade": 25.0315572922959,
+      "medianPnlPerTrade": 25.0315572922959,
+      "hitRate": 1,
+      "profitFactor": null,
+      "maxDrawdown": 0,
+      "sharpeLike": 1.0954451150103321,
+      "averageTradesPerTradedCapture": 2,
+      "averageEntryFillProbability": 0.9451561979270879,
+      "bestCapturePnl": 50.0631145845918,
+      "worstCapturePnl": 0,
+      "templateUsage": {
+        "aggressive_all_legs": 2
+      },
+      "topEvents": [
+        {
+          "eventKey": "KXFED-26SEP",
+          "trades": 2,
+          "cumulativePnlToResolution": 50.0631145845918,
+          "averagePnlPerTrade": 25.0315572922959
+        }
+      ]
+    },
+    {
+      "policyId": "walk_forward_top_3",
+      "title": "Walk-Forward Top 3",
+      "totalTrades": 2,
+      "uniqueEdgesTraded": 2,
+      "tradedCaptures": 1,
+      "cumulativePnlToResolution": 50.0631145845918,
+      "averagePnlPerTrade": 25.0315572922959,
+      "medianPnlPerTrade": 25.0315572922959,
+      "hitRate": 1,
+      "profitFactor": null,
+      "maxDrawdown": 0,
+      "sharpeLike": 1.0954451150103321,
+      "averageTradesPerTradedCapture": 2,
+      "averageEntryFillProbability": 0.9451561979270879,
+      "bestCapturePnl": 50.0631145845918,
+      "worstCapturePnl": 0,
+      "templateUsage": {
+        "aggressive_all_legs": 2
+      },
+      "topEvents": [
+        {
+          "eventKey": "KXFED-26SEP",
+          "trades": 2,
+          "cumulativePnlToResolution": 50.0631145845918,
+          "averagePnlPerTrade": 25.0315572922959
+        }
+      ]
+    },
+    {
+      "policyId": "walk_forward_top_1",
+      "title": "Walk-Forward Top 1",
+      "totalTrades": 2,
+      "uniqueEdgesTraded": 2,
+      "tradedCaptures": 2,
+      "cumulativePnlToResolution": 48.80176085851345,
+      "averagePnlPerTrade": 24.400880429256723,
+      "medianPnlPerTrade": 24.400880429256723,
+      "hitRate": 1,
+      "profitFactor": null,
+      "maxDrawdown": 0,
+      "sharpeLike": 1.7240379858835082,
+      "averageTradesPerTradedCapture": 1,
+      "averageEntryFillProbability": 0.9480222727385494,
+      "bestCapturePnl": 26.323964284192225,
+      "worstCapturePnl": 0,
+      "templateUsage": {
+        "aggressive_all_legs": 2
+      },
+      "topEvents": [
+        {
+          "eventKey": "KXFED-26SEP",
+          "trades": 2,
+          "cumulativePnlToResolution": 48.80176085851345,
+          "averagePnlPerTrade": 24.400880429256723
+        }
+      ]
+    }
+  ]
+}

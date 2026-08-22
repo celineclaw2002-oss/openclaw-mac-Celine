@@ -26,7 +26,8 @@
     "replay:polymarket-btc-portfolio": "node --input-type=module -e \"import('./dist/pipelines/polymarket-btc-portfolio-replay.js').then(async (m) => { const out = await m.runPolymarketBtcPortfolioReplay(); console.log(JSON.stringify(out, null, 2)); })\"",
     "audit:research-platform": "node --input-type=module -e \"import('./dist/pipelines/research-platform-readiness-audit.js').then(async (m) => { const out = await m.runResearchPlatformReadinessAudit(); console.log(JSON.stringify(out, null, 2)); })\"",
     "run:internal-consistency-experiments": "node --input-type=module -e \"import('./dist/index.js').then(async (m) => { const out = await m.runInternalConsistencyExperimentRunner(); console.log(JSON.stringify(out, null, 2)); })\"",
-    "run:internal-consistency-alpha-scout": "node --input-type=module -e \"import('./dist/index.js').then(async (m) => { const out = await m.runInternalConsistencyAlphaScout(); console.log(JSON.stringify(out, null, 2)); })\""
+    "run:internal-consistency-alpha-scout": "node --input-type=module -e \"import('./dist/index.js').then(async (m) => { const out = await m.runInternalConsistencyAlphaScout(); console.log(JSON.stringify(out, null, 2)); })\"",
+    "backtest:internal-consistency-walk-forward": "node --input-type=module -e \"import('./dist/index.js').then(async (m) => { const out = await m.runInternalConsistencyWalkForwardBacktest(); console.log(JSON.stringify(out, null, 2)); })\""
   },
   "devDependencies": {
     "@types/node": "^26.2.0",

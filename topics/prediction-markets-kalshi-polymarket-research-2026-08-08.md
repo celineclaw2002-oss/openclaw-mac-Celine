@@ -1180,3 +1180,44 @@ Built a reusable venue primer on Kalshi and Polymarket for future prediction-mar
     - richer cadence / repeated capture around Fed ladders
     - historical persistence tracking
     - paper-trading state and PnL
+
+## 2026-08-22 walk-forward backtest baseline for the Fed sleeve
+
+- Added a first proper walk-forward backtest layer for the internal-consistency sleeve at:
+  - `prediction-markets-stack/src/pipelines/internal-consistency-walk-forward-backtest.ts`
+  - CLI:
+    - `npm run backtest:internal-consistency-walk-forward`
+- The new backtest is intentionally narrow and conservative:
+  - scope: `KXFED`
+  - edge type: `temporal_nested`
+  - filter: `executionSafeFlag=true`
+  - filter: `depthAdjustedResidual > 5`
+  - template: `aggressive_all_legs`
+  - anti-duplication rule: trade each unique `edgeId` only once across the walk-forward sample
+  - ranking for the selective policy uses trailing out-of-sample median `depthAdjustedResidual` with fill probability only as a tie-breaker
+- Latest validated output root:
+  - `prediction-markets-stack/data/backtests/internal-consistency-walk-forward/20260822T075550041Z`
+- Latest validated walk-forward result:
+  - matched captures with executable Fed sleeve observations: `12`
+  - warmup captures: `6`
+  - evaluated captures: `6`
+  - baseline-all-aggressive:
+    - `2` unique trades
+    - cumulative simulated PnL to resolution: `50.06`
+    - average entry fill probability: `94.52%`
+  - walk-forward-top-1:
+    - `2` unique trades
+    - cumulative simulated PnL to resolution: `48.80`
+    - traded across `2` captures instead of `1`
+- Important interpretation:
+  - this is the right kind of sanity check because it stopped flattering us once duplicate counting was blocked
+  - the Fed sleeve still looks directionally promising under the stricter rules
+  - but the evidence is nowhere near product-grade yet because the entire validated walk-forward sample collapses to only `2` unique executable trades
+- New conclusion from the backtest pass:
+  - the bottleneck is no longer “do we have a backtest harness?”
+  - it is “can we create enough high-quality, non-duplicative executable observations to believe the signal is real?”
+- Highest-priority next steps after the new baseline:
+  - increase capture density around Fed ladder families so the walk-forward sample is not effectively just two repeating edges
+  - add resolution-aware or holding-period-aware state so repeated captures of the same structural edge are treated more realistically than one-shot simulated outcomes
+  - expand beyond the first same-strike `3.75` cross-expiry links without relaxing execution-safety standards
+  - only after sample size improves should we start claiming hedge-fund-grade validation

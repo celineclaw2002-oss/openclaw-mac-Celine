@@ -1,0 +1,86 @@
+{
+  "baseline_all_aggressive": [
+    {
+      "captureId": "20260816T194330976Z",
+      "eventKey": "KXFED-26SEP",
+      "edgeId": "edge::temporal_nested::contract::KXFED-26SEP-T3.75::contract::KXFED-27APR-T3.75",
+      "observationId": "obs::internal::edge::temporal_nested::contract::KXFED-26SEP-T3.75::contract::KXFED-27APR-T3.75::1786909426189",
+      "executionTemplateId": "aggressive_all_legs",
+      "templateSource": "static",
+      "rankingScore": 28.84945044554275,
+      "trailingMedianDepthAdjustedResidual": 28.849057547614652,
+      "depthAdjustedResidual": 28.84945044554275,
+      "entryFillProbability": 0.942167577349907,
+      "pnlToResolution": 26.323964284192225
+    },
+    {
+      "captureId": "20260816T194330976Z",
+      "eventKey": "KXFED-26SEP",
+      "edgeId": "edge::temporal_nested::contract::KXFED-26SEP-T3.75::contract::KXFED-26DEC-T3.75",
+      "observationId": "obs::internal::edge::temporal_nested::contract::KXFED-26SEP-T3.75::contract::KXFED-26DEC-T3.75::1786909426189",
+      "executionTemplateId": "aggressive_all_legs",
+      "templateSource": "static",
+      "rankingScore": 25.84683157829059,
+      "trailingMedianDepthAdjustedResidual": 25.846290954837883,
+      "depthAdjustedResidual": 25.84683157829059,
+      "entryFillProbability": 0.9481448185042689,
+      "pnlToResolution": 23.739150300399576
+    }
+  ],
+  "walk_forward_top_1": [
+    {
+      "captureId": "20260816T194330976Z",
+      "eventKey": "KXFED-26SEP",
+      "edgeId": "edge::temporal_nested::contract::KXFED-26SEP-T3.75::contract::KXFED-27APR-T3.75",
+      "observationId": "obs::internal::edge::temporal_nested::contract::KXFED-26SEP-T3.75::contract::KXFED-27APR-T3.75::1786909426189",
+      "executionTemplateId": "aggressive_all_legs",
+      "templateSource": "event",
+      "rankingScore": 2885.8479223388154,
+      "trailingMedianDepthAdjustedResidual": 28.849057547614652,
+      "depthAdjustedResidual": 28.84945044554275,
+      "entryFillProbability": 0.942167577349907,
+      "pnlToResolution": 26.323964284192225
+    },
+    {
+      "captureId": "20260820T091245512Z",
+      "eventKey": "KXFED-26SEP",
+      "edgeId": "edge::temporal_nested::contract::KXFED-26SEP-T3.75::contract::KXFED-26DEC-T3.75",
+      "observationId": "obs::internal::edge::temporal_nested::contract::KXFED-26SEP-T3.75::contract::KXFED-26DEC-T3.75::1787217179936",
+      "executionTemplateId": "aggressive_all_legs",
+      "templateSource": "event",
+      "rankingScore": 2585.5829724519153,
+      "trailingMedianDepthAdjustedResidual": 25.846290954837883,
+      "depthAdjustedResidual": 24.321620106431077,
+      "entryFillProbability": 0.9538769681271919,
+      "pnlToResolution": 22.47779657432122
+    }
+  ],
+  "walk_forward_top_3": [
+    {
+      "captureId": "20260816T194330976Z",
+      "eventKey": "KXFED-26SEP",
+      "edgeId": "edge::temporal_nested::contract::KXFED-26SEP-T3.75::contract::KXFED-27APR-T3.75",
+      "observationId": "obs::internal::edge::temporal_nested::contract::KXFED-26SEP-T3.75::contract::KXFED-27APR-T3.75::1786909426189",
+      "executionTemplateId": "aggressive_all_legs",
+      "templateSource": "event",
+      "rankingScore": 2885.8479223388154,
+      "trailingMedianDepthAdjustedResidual": 28.849057547614652,
+      "depthAdjustedResidual": 28.84945044554275,
+      "entryFillProbability": 0.942167577349907,
+      "pnlToResolution": 26.323964284192225
+    },
+    {
+      "captureId": "20260816T194330976Z",
+      "eventKey": "KXFED-26SEP",
+      "edgeId": "edge::temporal_nested::contract::KXFED-26SEP-T3.75::contract::KXFED-26DEC-T3.75",
+      "observationId": "obs::internal::edge::temporal_nested::contract::KXFED-26SEP-T3.75::contract::KXFED-26DEC-T3.75::1786909426189",
+      "executionTemplateId": "aggressive_all_legs",
+      "templateSource": "event",
+      "rankingScore": 2585.5772403022925,
+      "trailingMedianDepthAdjustedResidual": 25.846290954837883,
+      "depthAdjustedResidual": 25.84683157829059,
+      "entryFillProbability": 0.9481448185042689,
+      "pnlToResolution": 23.739150300399576
+    }
+  ]
+}

@@ -47,3 +47,4 @@ export * from "./pipelines/polymarket-btc-portfolio-replay.js";
 export * from "./pipelines/research-platform-readiness-audit.js";
 export * from "./pipelines/internal-consistency-experiment-runner.js";
 export * from "./pipelines/internal-consistency-alpha-scout.js";
+export * from "./pipelines/internal-consistency-walk-forward-backtest.js";
