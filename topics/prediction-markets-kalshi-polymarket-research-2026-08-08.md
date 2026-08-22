@@ -1124,3 +1124,59 @@ Built a reusable venue primer on Kalshi and Polymarket for future prediction-mar
   - start with cross-venue / flow features instead of relying so heavily on the terminal baseline
   - replace synthetic quote replay with archived order-book or at least richer quote-surface history
   - make stress testing more contract-aware around co-resolution and ladder overlap instead of generic directional shocks
+
+## 2026-08-22 internal-consistency alpha scout and Fed ladder lead
+
+- Pivoted the next research iteration away from more BTC-anchor polishing and toward structural internal-consistency scouting.
+- Added a new cross-slice scouting pipeline at:
+  - `prediction-markets-stack/src/pipelines/internal-consistency-alpha-scout.ts`
+  - CLI:
+    - `npm run run:internal-consistency-alpha-scout`
+- Purpose of the new scout:
+  - rank persistent internal-consistency opportunity clusters across recent Kalshi live captures
+  - score series, events, and family classes by:
+    - fee-adjusted survivability
+    - depth-adjusted survivability
+    - simulated PnL to resolution
+    - persistence across captures
+- Latest alpha-scout result:
+  - inspected `8` captures
+  - latest capture root:
+    - `prediction-markets-stack/data/kalshi-live/20260820T134738656Z`
+  - strongest series:
+    - `KXFED`
+  - strongest family class:
+    - `fed_policy_candidate`
+  - strongest event cluster:
+    - `KXFED-26SEP`
+- Headline scout metrics:
+  - series `KXFED`
+    - `observations: 1848`
+    - `depthAdjustedPositiveRate: 76.68%`
+    - `bestMeanPnlToResolution: 15.30`
+    - verdict: `promising`
+  - event `KXFED-26SEP`
+    - `observations: 424`
+    - `depthAdjustedPositiveRate: 71.46%`
+    - `bestMeanPnlToResolution: 22.20`
+    - verdict: `promising`
+- Important new conclusion:
+  - the strongest near-term product avenue is no longer “keep squeezing the BTC threshold sleeve”
+  - it is now “turn internal-consistency in Fed ladder markets into a properly validated signal sleeve”
+- Also generated a fresh internal-consistency scorecard on the latest Kalshi capture:
+  - `prediction-markets-stack/data/kalshi-live/20260820T134738656Z/summaries/internal-consistency-scorecard.json`
+- Fresh live-slice internal-consistency result on that capture:
+  - `observations: 231`
+  - `executionSafeObservations: 3`
+  - `depthAdjustedPositiveRate: 75.76%`
+  - aggressive template `meanPnlToResolution: 14.37`
+  - all `9` simulated trades across the `3` executable observations were positive to resolution in the deterministic template layer
+- Caution:
+  - this is still simulated / structural evidence, not realized production alpha
+  - execution-safe coverage is tiny on the latest slice (`3` executable observations), so the signal is exciting but not yet investable
+- Best next move from here:
+  - build a dedicated `KXFED` internal-consistency sleeve with:
+    - event-level candidate selection
+    - richer cadence / repeated capture around Fed ladders
+    - historical persistence tracking
+    - paper-trading state and PnL
