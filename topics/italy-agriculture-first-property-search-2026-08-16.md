@@ -161,6 +161,50 @@ If the mandate stays strict, the best path is probably:
 - market tone is `similar`
 - strong agriculture-first opportunities with a real habitable house under `EUR 500k` remain rare
 - if staying strict, south-eastern Sicily still looks best, with selective vineyard packages as the only real central / island alternatives
+
+### Date
+
+- `2026-08-23`
+
+### What changed
+
+- Ran another broad sweep across `Immobiliare`, `Idealista`, `Casa.it`, and `TrovaCasa`
+- Re-checked the old shortlist instead of repeating it blindly
+- Main result: no new clean listing clearly beats `Chiaramonte Gulfi`
+
+### Best current survivors
+
+1. `Chiaramonte Gulfi, Sicily`
+- still the clearest agriculture-first fit
+- `EUR 205k`
+- about `6 ha`
+- `110 sqm` house
+- aranceto + uliveto in production with drilled wells and artificial water reserve
+
+2. `Loceri, Sardinia`
+- still the best live alternative if accepting a vineyard-heavy thesis
+- `EUR 420k`
+- about `11.1 ha`
+- about `5.82 ha` of vineyard plus small olive / fruit component
+- `90 sqm` house, two cantine, `3` artesian wells, and a `60,000` liter water tank
+
+3. `Spello, Umbria`
+- still interesting as an operating package, but price discipline worsened
+- `EUR 490k` on `Casa.it` search snippet and `EUR 590k` on `Idealista` search snippet
+- productive farm package with cantina, magazzino, vineyard, olive grove, seminative land, wells, and photovoltaic system
+
+### Rejected or downgraded this pass
+
+- `Acquaviva Picena`: still too expensive on agriculture-only economics, and current portal snippets now show conflicting condition signals
+- `Tuscania`: big enough and irrigated, but too much of the land appears to be seminative with weak income density
+- `Patti`: still too dependent on residential / scenic value versus disclosed farm cash flow
+- `Siracusa / Noto / Pachino` limoneto packages: closest new orchard names were either over budget, too small, or too hospitality-adjacent
+
+### Current verdict
+
+- market tone is still `similar`
+- the opportunity set did not materially improve this week
+- strict sub-`EUR 500k` agriculture-first opportunities with a real house remain very thin
 4. If one or two candidates still look promising, build an agent-question pack for the listing brokers:
    - last 3-5 years of production
    - exact irrigated hectares
