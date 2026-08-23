@@ -205,6 +205,18 @@ If the mandate stays strict, the best path is probably:
 - market tone is still `similar`
 - the opportunity set did not materially improve this week
 - strict sub-`EUR 500k` agriculture-first opportunities with a real house remain very thin
+
+### Foreign-buyer financing snapshot for `Chiaramonte Gulfi`
+
+- working reference price: `EUR 205k`
+- likely non-resident mortgage range from an Italian bank is closer to `50-60%` LTV than domestic primary-home terms
+- that implies a likely loan size around `EUR 102.5k-123k`
+- at roughly `4.5-5.5%` over `20` years, payment is about `EUR 648-846` per month depending on leverage and rate
+- biggest practical issue is not the payment level but mortgage availability, because some banks appear to prefer non-resident loan sizes of roughly `EUR 150k+`
+- likely buyer advantages if eligible:
+- no general ban on foreign buyers if reciprocity applies or if the buyer is EU / EEA or already legally resident in Italy
+- possible `prima casa` tax treatment only if the buyer can satisfy the specific Italian eligibility rules; do not assume this as a non-resident foreign buyer
+- agricultural-land specific diligence still matters because neighboring farmers may have preemption rights and land-use conversion is constrained
 4. If one or two candidates still look promising, build an agent-question pack for the listing brokers:
    - last 3-5 years of production
    - exact irrigated hectares
