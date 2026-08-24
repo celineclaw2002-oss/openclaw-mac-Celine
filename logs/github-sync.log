@@ -3273,3 +3273,36 @@ fatal: could not read Username for 'https://github.com': Device not configured
 To https://github.com/celineclaw2002-oss/openclaw-mac-Celine.git
    d2db974..f1eecda  main -> main
 [2026-08-23 16:00:05 EDT] Synced workspace to GitHub.
+[main 5f794d6] chore: automated workspace sync (2026-08-24 08:00:00 EDT)
+ 48 files changed, 1904814 insertions(+), 299 deletions(-)
+ create mode 100644 memory/2026-08-24.md
+ create mode 100644 prediction-markets-stack/data/backtests/internal-consistency-validation-matrix/20260824T082029228Z/KXFED/walk-forward-captures.json
+ create mode 100644 prediction-markets-stack/data/backtests/internal-consistency-validation-matrix/20260824T082029228Z/KXFED/walk-forward-summary.json
+ create mode 100644 prediction-markets-stack/data/backtests/internal-consistency-validation-matrix/20260824T082029228Z/KXFED/walk-forward-trades.json
+ create mode 100644 prediction-markets-stack/data/backtests/internal-consistency-validation-matrix/20260824T082029228Z/validation-matrix-summary.json
+ create mode 100644 prediction-markets-stack/data/backtests/internal-consistency-walk-forward/20260824T080553747Z/walk-forward-captures.json
+ create mode 100644 prediction-markets-stack/data/backtests/internal-consistency-walk-forward/20260824T080553747Z/walk-forward-summary.json
+ create mode 100644 prediction-markets-stack/data/backtests/internal-consistency-walk-forward/20260824T080553747Z/walk-forward-trades.json
+ create mode 100644 prediction-markets-stack/data/backtests/internal-consistency-walk-forward/20260824T080631013Z/walk-forward-captures.json
+ create mode 100644 prediction-markets-stack/data/backtests/internal-consistency-walk-forward/20260824T080631013Z/walk-forward-summary.json
+ create mode 100644 prediction-markets-stack/data/backtests/internal-consistency-walk-forward/20260824T080631013Z/walk-forward-trades.json
+ create mode 100644 prediction-markets-stack/data/paper-trading/polymarket-btc-milestone/loops/2026-08-24T080950609Z.json
+ create mode 100644 prediction-markets-stack/data/paper-trading/polymarket-btc-milestone/loops/2026-08-24T081004492Z.json
+ create mode 100644 prediction-markets-stack/data/polymarket-live/20260824T080947577Z/raw/events.json
+ create mode 100644 prediction-markets-stack/data/polymarket-live/20260824T080947577Z/summaries/btc-milestone-scan.json
+ create mode 100644 prediction-markets-stack/data/polymarket-live/20260824T081002928Z/raw/events.json
+ create mode 100644 prediction-markets-stack/data/polymarket-live/20260824T081002928Z/summaries/btc-milestone-scan.json
+ create mode 100644 prediction-markets-stack/data/run-manifests/internal-consistency-alpha-scout::2026-08-24T080553774Z.json
+ create mode 100644 prediction-markets-stack/data/run-manifests/internal-consistency-validation-matrix::2026-08-24T082029316Z.json
+ create mode 100644 prediction-markets-stack/data/run-manifests/internal-consistency-walk-forward-backtest::2026-08-24T080553818Z.json
+ create mode 100644 prediction-markets-stack/data/run-manifests/internal-consistency-walk-forward-backtest::2026-08-24T080631073Z.json
+ create mode 100644 prediction-markets-stack/data/run-manifests/internal-consistency-walk-forward-backtest::2026-08-24T082029316Z.json
+ create mode 100644 prediction-markets-stack/data/run-manifests/research-platform-readiness-audit::2026-08-24T080553735Z.json
+ create mode 100644 prediction-markets-stack/data/run-manifests/research-platform-readiness-audit::2026-08-24T080947577Z.json
+ create mode 100644 prediction-markets-stack/data/run-manifests/research-platform-readiness-audit::2026-08-24T081002921Z.json
+ create mode 100644 prediction-markets-stack/dist/pipelines/internal-consistency-validation-matrix.d.ts
+ create mode 100644 prediction-markets-stack/dist/pipelines/internal-consistency-validation-matrix.js
+ create mode 100644 prediction-markets-stack/src/pipelines/internal-consistency-validation-matrix.ts
+ create mode 100644 topics/prediction-markets-model-overhaul-2026-08-24.md
+ create mode 100644 topics/prediction-markets-new-signal-map-2026-08-24.md
+fatal: could not read Username for 'https://github.com': Device not configured
