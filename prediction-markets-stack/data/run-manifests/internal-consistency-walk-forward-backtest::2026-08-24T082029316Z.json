@@ -1,0 +1,24 @@
+{
+  "manifestId": "internal-consistency-walk-forward-backtest::2026-08-24T082029316Z",
+  "pipelineId": "internal-consistency-walk-forward-backtest",
+  "generatedAtIso": "2026-08-24T08:20:29.316Z",
+  "outputRoot": "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/backtests/internal-consistency-validation-matrix/20260824T082029228Z/KXFED",
+  "sourceArtifacts": [
+    "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/backtests/internal-consistency-validation-matrix/20260824T082029228Z/KXFED/walk-forward-summary.json",
+    "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/backtests/internal-consistency-validation-matrix/20260824T082029228Z/KXFED/walk-forward-trades.json",
+    "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/backtests/internal-consistency-validation-matrix/20260824T082029228Z/KXFED/walk-forward-captures.json"
+  ],
+  "parameters": {
+    "seriesKey": "KXFED",
+    "minTrainingCaptures": 6,
+    "trainingWindowCaptures": 12,
+    "minDepthAdjustedResidual": 5,
+    "requiredEdgeType": "temporal_nested"
+  },
+  "summary": {
+    "totalCapturesSeen": 12,
+    "evaluatedCaptures": 6,
+    "topPolicy": "baseline_all_aggressive",
+    "topPolicyPnlToResolution": 50.0631145845918
+  }
+}

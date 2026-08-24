@@ -66,7 +66,8 @@ export async function runPolymarketBtcPortfolioReplay(options = {}) {
             if (openPositions.some((position) => position.marketSlug === candidate.marketSlug && position.side === candidate.side)) {
                 continue;
             }
-            const primarySleeve = candidate.sleeveBreakdown[0]?.sleeveId ?? "anchor_residual";
+            const primarySleeve = [...candidate.sleeveBreakdown].sort((left, right) => right.contribution - left.contribution)[0]?.sleeveId ??
+                "anchor_residual";
             const sleeveBudget = allocations.sleeves.find((sleeve) => sleeve.sleeveId === primarySleeve)?.targetCapitalCents ?? 0;
             const sleeveExposure = exposureBySleeve.get(primarySleeve) ?? 0;
             const perTradeBudget = Math.min(15_000, Math.max(2_500, Math.round(sleeveBudget * 0.35)));

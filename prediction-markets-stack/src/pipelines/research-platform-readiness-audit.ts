@@ -1,4 +1,4 @@
-import { access, mkdir, writeFile } from "node:fs/promises";
+import { access, mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 import {
@@ -32,6 +32,12 @@ interface DomainAuditSummary {
   inProgress: number;
   planned: number;
   averageScore: number;
+}
+
+interface CapabilityQualityAssessment {
+  currentStatus?: EndStateCapabilityStatus;
+  score?: number;
+  auditEvidence?: string[];
 }
 
 export interface ResearchPlatformReadinessAuditSummary {
@@ -124,18 +130,19 @@ async function buildCapabilityAuditRow(
     }
   }
   const currentStatus = deriveCurrentStatus(capability.status, checks.length, passedChecks);
-  const score = checks.length === 0 ? statusScore(currentStatus) : Math.round((passedChecks / checks.length) * 100);
+  const baseScore = checks.length === 0 ? statusScore(currentStatus) : Math.round((passedChecks / checks.length) * 100);
+  const quality = await assessCapabilityQuality(capability.capabilityId);
   return {
     domainId,
     domainTitle,
     capabilityId: capability.capabilityId,
     title: capability.title,
     targetStatus: capability.status,
-    currentStatus,
-    score,
+    currentStatus: quality.currentStatus ?? currentStatus,
+    score: quality.score ?? baseScore,
     whyItMatters: capability.whyItMatters,
     evidence: capability.evidence,
-    auditEvidence,
+    auditEvidence: [...auditEvidence, ...(quality.auditEvidence ?? [])],
     nextMilestone: capability.nextMilestone
   };
 }
@@ -170,6 +177,126 @@ async function pathExists(target: string): Promise<boolean> {
     return true;
   } catch {
     return false;
+  }
+}
+
+async function assessCapabilityQuality(capabilityId: string): Promise<CapabilityQualityAssessment> {
+  switch (capabilityId) {
+    case "data_point_in_time_replay": {
+      const summary = await readJsonIfPresent<{
+        sourceNote?: string;
+        marketSurface?: string;
+      }>("data/backtests/polymarket-btc-research-backfill/20260821T093859131Z/summaries/research-backfill-summary.json");
+      if (!summary) {
+        return {};
+      }
+      const sourceNote = (summary.sourceNote ?? "").toLowerCase();
+      if (
+        summary.marketSurface === "terminal_baseline" ||
+        summary.marketSurface === "frozen_live" ||
+        sourceNote.includes("synthetic") ||
+        sourceNote.includes("frozen")
+      ) {
+        return {
+          currentStatus: "in_progress",
+          score: 35,
+          auditEvidence: ["quality_blocker:replay_uses_synthetic_or_frozen_market_surfaces"]
+        };
+      }
+      return {};
+    }
+    case "model_proper_scoring": {
+      const summary = await readJsonIfPresent<{
+        sourceNote?: string;
+        verdict?: string;
+        overall?: {
+          rawBarrier?: { brierScore?: number; logLoss?: number };
+          calibratedBarrier?: { brierScore?: number; logLoss?: number };
+        };
+      }>("data/backtests/polymarket-btc-barrier/20260820T134713906Z/summaries/barrier-backtest-summary.json");
+      if (!summary) {
+        return {};
+      }
+      const raw = summary.overall?.rawBarrier;
+      const calibrated = summary.overall?.calibratedBarrier;
+      if (
+        raw &&
+        calibrated &&
+        (calibrated.brierScore ?? Number.POSITIVE_INFINITY) >= (raw.brierScore ?? Number.POSITIVE_INFINITY) &&
+        (calibrated.logLoss ?? Number.POSITIVE_INFINITY) >= (raw.logLoss ?? Number.POSITIVE_INFINITY)
+      ) {
+        return {
+          currentStatus: "in_progress",
+          score: 45,
+          auditEvidence: ["quality_blocker:recalibration_fails_out_of_sample_against_raw_model"]
+        };
+      }
+      return {};
+    }
+    case "sim_paper_loops": {
+      const performance = await readJsonIfPresent<{
+        closedTrades?: number;
+        loopSharpeRatio?: number;
+        cumulativeReturn?: number;
+        openTrades?: number;
+      }>("data/paper-trading/polymarket-btc-milestone/performance-summary.json");
+      if (!performance) {
+        return {};
+      }
+      if ((performance.closedTrades ?? 0) === 0 || (performance.loopSharpeRatio ?? 0) <= 0.05) {
+        return {
+          currentStatus: "in_progress",
+          score: 40,
+          auditEvidence: ["quality_blocker:paper_loop_has_no_realized_trade_validation"]
+        };
+      }
+      return {};
+    }
+    case "sim_historical_portfolio_replay": {
+      const replay = await readJsonIfPresent<{
+        realizedPnlCents?: number;
+        maxDrawdown?: number;
+        netLiquidationCents?: number;
+      }>("data/backtests/polymarket-btc-research-backfill/portfolio-replay/replay-summary.json");
+      if (!replay) {
+        return {};
+      }
+      if ((replay.realizedPnlCents ?? 0) < 0 || (replay.maxDrawdown ?? 0) <= -0.1 || (replay.netLiquidationCents ?? 100_000) < 100_000) {
+        return {
+          currentStatus: "in_progress",
+          score: 25,
+          auditEvidence: ["quality_blocker:historical_portfolio_replay_is_not_economically_viable"]
+        };
+      }
+      return {};
+    }
+    case "risk_overlap_controls": {
+      const research = await readJsonIfPresent<{
+        concentration?: { largestDirectionExposureRate?: number };
+      }>("data/paper-trading/polymarket-btc-milestone/research-summary.json");
+      if (!research) {
+        return {};
+      }
+      if ((research.concentration?.largestDirectionExposureRate ?? 0) > 0.35) {
+        return {
+          currentStatus: "in_progress",
+          score: 45,
+          auditEvidence: ["quality_blocker:book_remains_concentrated_in_one_direction"]
+        };
+      }
+      return {};
+    }
+    default:
+      return {};
+  }
+}
+
+async function readJsonIfPresent<T>(target: string): Promise<T | undefined> {
+  try {
+    const resolved = path.resolve(process.cwd(), target);
+    return JSON.parse(await readFile(resolved, "utf8")) as T;
+  } catch {
+    return undefined;
   }
 }
 

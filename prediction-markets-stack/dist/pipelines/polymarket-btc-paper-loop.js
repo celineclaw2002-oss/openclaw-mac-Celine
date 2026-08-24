@@ -37,6 +37,10 @@ export async function runPolymarketBtcPaperLoop(options = {}) {
         exitEdgeThreshold,
         ...(backtestPolicy.sourceSummaryPath ? { policySourceSummaryPath: backtestPolicy.sourceSummaryPath } : {})
     };
+    const deploymentGate = await assessPolymarketDeploymentGate({
+        cwd: process.cwd(),
+        reservePathVerdict: scan.reservePathVerdict
+    });
     const quoteReadyMarkets = scan.markets.filter((market) => market.active && !market.closed && market.bestBid !== undefined && market.bestAsk !== undefined);
     const portfolio = await loadPortfolioState(portfolioRoot, startingCashCents);
     portfolio.loopCount += 1;
@@ -137,6 +141,7 @@ export async function runPolymarketBtcPaperLoop(options = {}) {
             }),
             performance,
             actions: [],
+            deploymentGate,
             skippedReason: "No quote-ready Polymarket BTC milestone markets were found in the current scan."
         };
         await writeArtifacts(portfolioRoot, summary, portfolio);
@@ -162,7 +167,9 @@ export async function runPolymarketBtcPaperLoop(options = {}) {
                 referenceNowMs: nowMs
             })
             : undefined;
-        const exitReason = classifyExitReason(signal, positionPolicy?.exitEdgeThreshold ?? exitEdgeThreshold, market, executableExitPrice, positionPolicy);
+        const exitReason = deploymentGate.allowEntries
+            ? classifyExitReason(signal, positionPolicy?.exitEdgeThreshold ?? exitEdgeThreshold, market, executableExitPrice, positionPolicy)
+            : "deployment_gate_failed";
         if (markPrice !== undefined) {
             position.lastMarkPriceCents = markPrice;
             position.lastMarkTimeMs = nowMs;
@@ -203,6 +210,7 @@ export async function runPolymarketBtcPaperLoop(options = {}) {
     }
     portfolio.openPositions = remainingOpen;
     const candidates = allCandidates
+        .filter(() => deploymentGate.allowEntries)
         .filter((candidate) => candidate.policy.allowEntry)
         .filter((candidate) => Math.abs(candidate.signal) >= candidate.policy.entryEdgeThreshold)
         .filter((candidate) => !portfolio.openPositions.some((position) => position.marketSlug === candidate.market.marketSlug))
@@ -330,16 +338,63 @@ export async function runPolymarketBtcPaperLoop(options = {}) {
         }),
         performance,
         actions,
+        deploymentGate,
         ...(candidates.length > 0 || quoteReadyMarkets.length === 0
             ? {}
             : {
-                skippedReason: signalDiagnostics.some((row) => !row.allowEntry)
-                    ? "Quote-ready BTC milestone markets were found, but the current segment-aware research gate blocked them."
-                    : "Quote-ready BTC milestone markets were found, but none cleared the current entry thresholds."
+                skippedReason: !deploymentGate.allowEntries
+                    ? `Deployment gate blocked new entries: ${deploymentGate.reasons.join("; ")}`
+                    : signalDiagnostics.some((row) => !row.allowEntry)
+                        ? "Quote-ready BTC milestone markets were found, but the current segment-aware research gate blocked them."
+                        : "Quote-ready BTC milestone markets were found, but none cleared the current entry thresholds."
             })
     };
     await writeArtifacts(portfolioRoot, summary, portfolio);
     return summary;
+}
+async function assessPolymarketDeploymentGate(inputs) {
+    const reasons = [];
+    const evidencePaths = [];
+    if (inputs.reservePathVerdict !== "viable_public_data") {
+        reasons.push(`reserve_path_not_fully_tradeable:${inputs.reservePathVerdict}`);
+    }
+    const researchBackfillSummaryPath = path.resolve(inputs.cwd, "data", "backtests", "polymarket-btc-research-backfill", "20260821T093859131Z", "summaries", "research-backfill-summary.json");
+    try {
+        const summary = JSON.parse(await readFile(researchBackfillSummaryPath, "utf8"));
+        evidencePaths.push(researchBackfillSummaryPath);
+        const sourceNote = (summary.sourceNote ?? "").toLowerCase();
+        if (summary.marketSurface === "terminal_baseline" ||
+            summary.marketSurface === "frozen_live" ||
+            sourceNote.includes("synthetic") ||
+            sourceNote.includes("frozen")) {
+            reasons.push("historical_replay_uses_synthetic_or_frozen_market_surfaces");
+        }
+    }
+    catch {
+        reasons.push("missing_historical_research_backfill_summary");
+    }
+    const replaySummaryPath = path.resolve(inputs.cwd, "data", "backtests", "polymarket-btc-research-backfill", "portfolio-replay", "replay-summary.json");
+    try {
+        const replay = JSON.parse(await readFile(replaySummaryPath, "utf8"));
+        evidencePaths.push(replaySummaryPath);
+        if ((replay.realizedPnlCents ?? 0) < 0) {
+            reasons.push("historical_portfolio_replay_is_loss_making");
+        }
+        if ((replay.maxDrawdown ?? 0) <= -0.1) {
+            reasons.push("historical_portfolio_replay_drawdown_exceeds_10pct");
+        }
+        if ((replay.netLiquidationCents ?? 100_000) < 100_000) {
+            reasons.push("historical_portfolio_replay_finishes_below_starting_capital");
+        }
+    }
+    catch {
+        reasons.push("missing_historical_portfolio_replay_summary");
+    }
+    return {
+        allowEntries: reasons.length === 0,
+        reasons,
+        evidencePaths
+    };
 }
 async function readScanSummary(target) {
     return JSON.parse(await readFile(target, "utf8"));

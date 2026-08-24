@@ -1,0 +1,31 @@
+{
+  "manifestId": "internal-consistency-validation-matrix::2026-08-24T082029316Z",
+  "pipelineId": "internal-consistency-validation-matrix",
+  "generatedAtIso": "2026-08-24T08:20:29.316Z",
+  "outputRoot": "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/backtests/internal-consistency-validation-matrix/20260824T082029228Z",
+  "sourceArtifacts": [
+    "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/backtests/internal-consistency-validation-matrix/20260824T082029228Z/validation-matrix-summary.json"
+  ],
+  "parameters": {
+    "requiredEdgeType": "temporal_nested",
+    "minTrainingCaptures": 6,
+    "trainingWindowCaptures": 12,
+    "minDepthAdjustedResidual": 5,
+    "gateConfig": {
+      "minCapturesSeen": 8,
+      "minObservationsSeen": 100,
+      "minEvaluatedCaptures": 4,
+      "minTrades": 6,
+      "minTradedCaptures": 3,
+      "minUniqueEvents": 3,
+      "minAverageEntryFillProbability": 0.7,
+      "minSharpeLike": 0.5,
+      "minHitRate": 0.55
+    }
+  },
+  "summary": {
+    "seriesDiscovered": 1,
+    "eligibleSeries": 1,
+    "promisingSeries": []
+  }
+}

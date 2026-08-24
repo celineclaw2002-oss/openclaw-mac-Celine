@@ -1,0 +1,43 @@
+{
+  "generatedAtIso": "2026-08-24T08:20:29.316Z",
+  "capturesRoot": "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/kalshi-live",
+  "requiredEdgeType": "temporal_nested",
+  "seriesDiscovered": 1,
+  "eligibleSeries": 1,
+  "gateConfig": {
+    "minCapturesSeen": 8,
+    "minObservationsSeen": 100,
+    "minEvaluatedCaptures": 4,
+    "minTrades": 6,
+    "minTradedCaptures": 3,
+    "minUniqueEvents": 3,
+    "minAverageEntryFillProbability": 0.7,
+    "minSharpeLike": 0.5,
+    "minHitRate": 0.55
+  },
+  "rows": [
+    {
+      "seriesKey": "KXFED",
+      "capturesSeen": 22,
+      "observationsSeen": 3895,
+      "requiredEdgeType": "temporal_nested",
+      "walkForwardOutputRoot": "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/backtests/internal-consistency-validation-matrix/20260824T082029228Z/KXFED",
+      "evaluatedCaptures": 6,
+      "totalTrades": 2,
+      "tradedCaptures": 1,
+      "uniqueEvents": 1,
+      "cumulativePnlToResolution": 50.0631145845918,
+      "averagePnlPerTrade": 25.0315572922959,
+      "averageEntryFillProbability": 0.9451561979270879,
+      "hitRate": 1,
+      "sharpeLike": 1.0954451150103321,
+      "verdict": "weak",
+      "failedGates": [
+        "trades_below_6",
+        "traded_captures_below_3",
+        "unique_events_below_3"
+      ]
+    }
+  ],
+  "recommendation": "No internal-consistency series currently clears the minimum validation bar. Collect more captures or expand the target market families before claiming credible alpha."
+}

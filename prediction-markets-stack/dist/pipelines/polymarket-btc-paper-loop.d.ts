@@ -101,6 +101,11 @@ interface SegmentImprovement {
     brierImprovement: number;
     logLossImprovement: number;
 }
+interface DeploymentGateAssessment {
+    allowEntries: boolean;
+    reasons: string[];
+    evidencePaths: string[];
+}
 export interface CandidatePolicy {
     mode: "fallback" | "segment_aware";
     allowEntry: boolean;
@@ -239,6 +244,7 @@ export interface PolymarketBtcPaperLoopSummary {
     researchSnapshot: ResearchSnapshot;
     performance: PerformanceSnapshot;
     actions: Array<EntryAction | ExitAction | HoldAction>;
+    deploymentGate: DeploymentGateAssessment;
     skippedReason?: string;
     policySourceSummaryPath?: string;
 }

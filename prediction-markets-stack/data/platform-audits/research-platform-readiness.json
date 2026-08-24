@@ -1,11 +1,11 @@
 {
-  "checkedAtIso": "2026-08-21T09:40:01.325Z",
+  "checkedAtIso": "2026-08-24T08:10:02.920Z",
   "platformName": "Prediction Markets Research Platform",
   "version": "2026-08-21",
   "northStar": "A fully reproducible, multi-venue prediction-markets research and execution stack with hedge-fund-grade data lineage, calibration discipline, portfolio construction, and production controls.",
-  "overallScore": 100,
-  "completedCapabilities": 17,
-  "inProgressCapabilities": 0,
+  "overallScore": 81.76470588235294,
+  "completedCapabilities": 12,
+  "inProgressCapabilities": 5,
   "plannedCapabilities": 0,
   "domainSummaries": [
     {
@@ -14,10 +14,10 @@
       "researchBasis": "Serious systematic research depends on point-in-time data integrity, replayability, and leakage control.",
       "objective": "Every research result and paper/live decision must be regenerable from archived venue data, anchor data, and deterministic replay tooling.",
       "capabilities": 3,
-      "completed": 3,
-      "inProgress": 0,
+      "completed": 2,
+      "inProgress": 1,
       "planned": 0,
-      "averageScore": 100
+      "averageScore": 78.33333333333333
     },
     {
       "domainId": "semantic_normalization",
@@ -36,10 +36,10 @@
       "researchBasis": "Proper scoring rules, benchmark baselines, and calibration checks are standard for probabilistic forecasting and should anchor all fair-value work.",
       "objective": "Every model must be benchmarked against sensible baselines, segmented by regime, and evaluated with proper scoring plus stability diagnostics.",
       "capabilities": 3,
-      "completed": 3,
-      "inProgress": 0,
+      "completed": 2,
+      "inProgress": 1,
       "planned": 0,
-      "averageScore": 100
+      "averageScore": 81.66666666666667
     },
     {
       "domainId": "simulation_execution",
@@ -47,10 +47,10 @@
       "researchBasis": "Execution assumptions dominate live viability, so simulations must reflect fill uncertainty, slippage, and venue constraints.",
       "objective": "Bridge research signals into realistic paper and later live execution loops with explicit assumptions and measurable degradation versus idealized alpha.",
       "capabilities": 3,
-      "completed": 3,
-      "inProgress": 0,
+      "completed": 1,
+      "inProgress": 2,
       "planned": 0,
-      "averageScore": 100
+      "averageScore": 55
     },
     {
       "domainId": "portfolio_risk",
@@ -58,10 +58,10 @@
       "researchBasis": "Portfolio construction matters as much as signal quality because overlapping contracts can create hidden concentration and false diversification.",
       "objective": "Translate trade-level alpha into capital allocation that respects overlap, regime, venue, liquidity, and tail-risk constraints.",
       "capabilities": 3,
-      "completed": 3,
-      "inProgress": 0,
+      "completed": 2,
+      "inProgress": 1,
       "planned": 0,
-      "averageScore": 100
+      "averageScore": 81.66666666666667
     },
     {
       "domainId": "production_controls",
@@ -104,8 +104,8 @@
       "capabilityId": "data_point_in_time_replay",
       "title": "Historical point-in-time replay for research snapshots and experiments",
       "targetStatus": "in_progress",
-      "currentStatus": "complete",
-      "score": 100,
+      "currentStatus": "in_progress",
+      "score": 35,
       "whyItMatters": "A quant stack is not credible if historical insights cannot be regenerated without look-ahead.",
       "evidence": [
         "Polymarket BTC research backfill runner",
@@ -113,7 +113,8 @@
       ],
       "auditEvidence": [
         "present:src/pipelines/polymarket-btc-research-backfill.ts",
-        "present:data/backtests/polymarket-btc-research-backfill/20260821T073711656Z/summaries/research-snapshot-history.json"
+        "present:data/backtests/polymarket-btc-research-backfill/20260821T073711656Z/summaries/research-snapshot-history.json",
+        "quality_blocker:replay_uses_synthetic_or_frozen_market_surfaces"
       ],
       "nextMilestone": "Add portfolio-aware historical replay with archived quote surfaces and event clocks."
     },
@@ -201,8 +202,8 @@
       "capabilityId": "model_proper_scoring",
       "title": "Proper scoring, calibration, and segment-aware evaluation",
       "targetStatus": "in_progress",
-      "currentStatus": "complete",
-      "score": 100,
+      "currentStatus": "in_progress",
+      "score": 45,
       "whyItMatters": "Brier, log loss, calibration error, and walk-forward testing are table stakes for probabilistic models.",
       "evidence": [
         "Barrier backtest with Brier and log loss",
@@ -210,7 +211,8 @@
       ],
       "auditEvidence": [
         "present:data/backtests/polymarket-btc-barrier/20260820T134713906Z/summaries/barrier-backtest-summary.json",
-        "present:src/pipelines/polymarket-btc-paper-loop.ts"
+        "present:src/pipelines/polymarket-btc-paper-loop.ts",
+        "quality_blocker:recalibration_fails_out_of_sample_against_raw_model"
       ],
       "nextMilestone": "Add rolling walk-forward retraining, calibration drift monitoring, and hypothesis tests."
     },
@@ -255,8 +257,8 @@
       "capabilityId": "sim_paper_loops",
       "title": "Persistent paper trading loops",
       "targetStatus": "in_progress",
-      "currentStatus": "complete",
-      "score": 100,
+      "currentStatus": "in_progress",
+      "score": 40,
       "whyItMatters": "Live paper loops reveal operational and portfolio problems that static backtests miss.",
       "evidence": [
         "Kalshi BTC paper loop",
@@ -265,7 +267,8 @@
       "auditEvidence": [
         "present:src/pipelines/btc-paper-trading-loop.ts",
         "present:src/pipelines/polymarket-btc-paper-loop.ts",
-        "present:data/paper-trading/polymarket-btc-milestone/performance-summary.json"
+        "present:data/paper-trading/polymarket-btc-milestone/performance-summary.json",
+        "quality_blocker:paper_loop_has_no_realized_trade_validation"
       ],
       "nextMilestone": "Promote from single-sleeve loops to unified multi-sleeve portfolio paper trading."
     },
@@ -275,12 +278,13 @@
       "capabilityId": "sim_historical_portfolio_replay",
       "title": "Portfolio-aware historical replay",
       "targetStatus": "planned",
-      "currentStatus": "complete",
-      "score": 100,
+      "currentStatus": "in_progress",
+      "score": 25,
       "whyItMatters": "A complete quant stack should replay position evolution, risk accumulation, and turnover through history.",
       "evidence": [],
       "auditEvidence": [
-        "present:data/backtests/polymarket-btc-research-backfill/portfolio-replay"
+        "present:data/backtests/polymarket-btc-research-backfill/portfolio-replay",
+        "quality_blocker:historical_portfolio_replay_is_not_economically_viable"
       ],
       "nextMilestone": "Extend research backfill into a historical portfolio simulator using archived market surfaces."
     },
@@ -290,8 +294,8 @@
       "capabilityId": "risk_overlap_controls",
       "title": "Overlap-aware sizing and concentration controls",
       "targetStatus": "in_progress",
-      "currentStatus": "complete",
-      "score": 100,
+      "currentStatus": "in_progress",
+      "score": 45,
       "whyItMatters": "Threshold ladders and related event families can silently magnify the same economic bet.",
       "evidence": [
         "Polymarket ladder-aware correlation controls",
@@ -299,7 +303,8 @@
       ],
       "auditEvidence": [
         "present:src/pipelines/polymarket-btc-paper-loop.ts",
-        "present:data/paper-trading/polymarket-btc-milestone/research-summary.json"
+        "present:data/paper-trading/polymarket-btc-milestone/research-summary.json",
+        "quality_blocker:book_remains_concentrated_in_one_direction"
       ],
       "nextMilestone": "Generalize from single-family controls to portfolio-wide correlation and scenario exposure controls."
     },
@@ -379,6 +384,108 @@
       "nextMilestone": "Define go/no-go scorecards with minimum calibration, turnover, and drawdown thresholds."
     }
   ],
-  "priorityGaps": [],
-  "recommendedProgram": []
+  "priorityGaps": [
+    {
+      "domainId": "simulation_execution",
+      "domainTitle": "Simulation, Paper Trading, And Execution Realism",
+      "capabilityId": "sim_historical_portfolio_replay",
+      "title": "Portfolio-aware historical replay",
+      "targetStatus": "planned",
+      "currentStatus": "in_progress",
+      "score": 25,
+      "whyItMatters": "A complete quant stack should replay position evolution, risk accumulation, and turnover through history.",
+      "evidence": [],
+      "auditEvidence": [
+        "present:data/backtests/polymarket-btc-research-backfill/portfolio-replay",
+        "quality_blocker:historical_portfolio_replay_is_not_economically_viable"
+      ],
+      "nextMilestone": "Extend research backfill into a historical portfolio simulator using archived market surfaces."
+    },
+    {
+      "domainId": "data_replay",
+      "domainTitle": "Point-in-Time Data And Replay",
+      "capabilityId": "data_point_in_time_replay",
+      "title": "Historical point-in-time replay for research snapshots and experiments",
+      "targetStatus": "in_progress",
+      "currentStatus": "in_progress",
+      "score": 35,
+      "whyItMatters": "A quant stack is not credible if historical insights cannot be regenerated without look-ahead.",
+      "evidence": [
+        "Polymarket BTC research backfill runner",
+        "Kalshi replay-oriented capture folders"
+      ],
+      "auditEvidence": [
+        "present:src/pipelines/polymarket-btc-research-backfill.ts",
+        "present:data/backtests/polymarket-btc-research-backfill/20260821T073711656Z/summaries/research-snapshot-history.json",
+        "quality_blocker:replay_uses_synthetic_or_frozen_market_surfaces"
+      ],
+      "nextMilestone": "Add portfolio-aware historical replay with archived quote surfaces and event clocks."
+    },
+    {
+      "domainId": "simulation_execution",
+      "domainTitle": "Simulation, Paper Trading, And Execution Realism",
+      "capabilityId": "sim_paper_loops",
+      "title": "Persistent paper trading loops",
+      "targetStatus": "in_progress",
+      "currentStatus": "in_progress",
+      "score": 40,
+      "whyItMatters": "Live paper loops reveal operational and portfolio problems that static backtests miss.",
+      "evidence": [
+        "Kalshi BTC paper loop",
+        "Polymarket BTC paper loop"
+      ],
+      "auditEvidence": [
+        "present:src/pipelines/btc-paper-trading-loop.ts",
+        "present:src/pipelines/polymarket-btc-paper-loop.ts",
+        "present:data/paper-trading/polymarket-btc-milestone/performance-summary.json",
+        "quality_blocker:paper_loop_has_no_realized_trade_validation"
+      ],
+      "nextMilestone": "Promote from single-sleeve loops to unified multi-sleeve portfolio paper trading."
+    },
+    {
+      "domainId": "modeling_calibration",
+      "domainTitle": "Modeling, Calibration, And Benchmarking",
+      "capabilityId": "model_proper_scoring",
+      "title": "Proper scoring, calibration, and segment-aware evaluation",
+      "targetStatus": "in_progress",
+      "currentStatus": "in_progress",
+      "score": 45,
+      "whyItMatters": "Brier, log loss, calibration error, and walk-forward testing are table stakes for probabilistic models.",
+      "evidence": [
+        "Barrier backtest with Brier and log loss",
+        "Segment-aware policy gating"
+      ],
+      "auditEvidence": [
+        "present:data/backtests/polymarket-btc-barrier/20260820T134713906Z/summaries/barrier-backtest-summary.json",
+        "present:src/pipelines/polymarket-btc-paper-loop.ts",
+        "quality_blocker:recalibration_fails_out_of_sample_against_raw_model"
+      ],
+      "nextMilestone": "Add rolling walk-forward retraining, calibration drift monitoring, and hypothesis tests."
+    },
+    {
+      "domainId": "portfolio_risk",
+      "domainTitle": "Portfolio Construction And Risk",
+      "capabilityId": "risk_overlap_controls",
+      "title": "Overlap-aware sizing and concentration controls",
+      "targetStatus": "in_progress",
+      "currentStatus": "in_progress",
+      "score": 45,
+      "whyItMatters": "Threshold ladders and related event families can silently magnify the same economic bet.",
+      "evidence": [
+        "Polymarket ladder-aware correlation controls",
+        "Overlap-adjusted sizing"
+      ],
+      "auditEvidence": [
+        "present:src/pipelines/polymarket-btc-paper-loop.ts",
+        "present:data/paper-trading/polymarket-btc-milestone/research-summary.json",
+        "quality_blocker:book_remains_concentrated_in_one_direction"
+      ],
+      "nextMilestone": "Generalize from single-family controls to portfolio-wide correlation and scenario exposure controls."
+    }
+  ],
+  "recommendedProgram": [
+    "Harden sim_historical_portfolio_replay: Extend research backfill into a historical portfolio simulator using archived market surfaces.",
+    "Harden data_point_in_time_replay: Add portfolio-aware historical replay with archived quote surfaces and event clocks.",
+    "Harden sim_paper_loops: Promote from single-sleeve loops to unified multi-sleeve portfolio paper trading."
+  ]
 }

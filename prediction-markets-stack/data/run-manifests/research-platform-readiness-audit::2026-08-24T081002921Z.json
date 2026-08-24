@@ -1,0 +1,16 @@
+{
+  "manifestId": "research-platform-readiness-audit::2026-08-24T081002921Z",
+  "pipelineId": "research-platform-readiness-audit",
+  "generatedAtIso": "2026-08-24T08:10:02.921Z",
+  "outputRoot": "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/platform-audits",
+  "sourceArtifacts": [
+    "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/platform-audits/research-platform-end-state.json",
+    "/Users/canozgel-macmini/.openclaw/workspace/prediction-markets-stack/data/platform-audits/research-platform-readiness.json"
+  ],
+  "parameters": {},
+  "summary": {
+    "overallScore": 81.76470588235294,
+    "completedCapabilities": 12,
+    "plannedCapabilities": 0
+  }
+}
