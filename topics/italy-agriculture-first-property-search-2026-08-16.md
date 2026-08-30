@@ -224,3 +224,50 @@ If the mandate stays strict, the best path is probably:
    - subsidy receipts
    - condition of the house and any deferred maintenance
 5. Use the new diligence pack to request real operating data from the top `2-3` listing agents before doing any deeper property-level conviction work.
+
+### Date
+
+- `2026-08-30`
+
+### What changed
+
+- Ran another broad sweep across `Immobiliare`, `Idealista`, `Casa.it`, `TrovaCasa`, plus spot checks on `Gate-away` and `Green Acres`
+- Re-tested the old shortlist against the live portal copy rather than reusing August conclusions blindly
+- Main result: only `2` live listings still look like honest agriculture-first survivors under the strict mandate
+
+### Best current survivors
+
+1. `Chiaramonte Gulfi, Sicily`
+- still the clearest fit
+- `EUR 205k`
+- `110 sqm` house
+- about `6 ha`
+- aranceto + uliveto in piena produzione
+- explicit drilled wells and artificial water reserve
+
+2. `Loceri, Sardinia`
+- still the best alternative if accepting a vineyard-heavy thesis
+- `EUR 420k`
+- about `11.1 ha`
+- about `5.67 ha` irrigated vineyard mix plus small olive / fruit component
+- `90 sqm` house, `2` cantine, `3` artesian wells, and a `60,000` liter storage tank
+
+### Rejected or downgraded this pass
+
+- `Spello`: current live portal copy now shows `EUR 590k`, so it is over mandate
+- `Acquaviva Picena`: live copy now explicitly says `da ristrutturare`, so it no longer fits the low-capex screen
+- `Noto / Pachino / Siracusa` limoneto packages: still either over budget, too small, or too redevelopment / hospitality-adjacent
+- `Montemarano / Taurasi` small vineyard-house listings: habitable houses exist, but productive scale is too small for hired-maintenance economics
+- `Taranto / Cerignola` row-crop or vineyard packages: some have irrigation and buildings, but the live copy is too thin on current production and house quality to pass the screen honestly
+- `Castiglione di Sicilia` olive / citrus packages: the more interesting ones surfaced above budget or leaned too scenic / redevelopment-heavy
+
+### Current verdict
+
+- market tone is `worsened`
+- the best name is still `Chiaramonte Gulfi`, but the central-Italy fallback options weakened
+- strict sub-`EUR 500k` agriculture-first opportunities with a real house remain extremely thin
+
+### Same-day rerun note
+
+- repeated the broad sweep later on `2026-08-30`
+- result unchanged: no better new listing surfaced, and the same two live survivors remained `Chiaramonte Gulfi` and `Loceri`
