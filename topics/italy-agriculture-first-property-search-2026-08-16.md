@@ -271,3 +271,60 @@ If the mandate stays strict, the best path is probably:
 
 - repeated the broad sweep later on `2026-08-30`
 - result unchanged: no better new listing surfaced, and the same two live survivors remained `Chiaramonte Gulfi` and `Loceri`
+
+### Date
+
+- `2026-09-20`
+
+### What changed
+
+- Re-ran a broad current search across `Immobiliare.it`, `Idealista`, `Casa.it`, `TrovaCasa` / `Trovit`, `Gate-away`, `Green-Acres`, and specialist / local agency pages.
+- Re-verified the August shortlist and rejected names that moved over budget, now disclose renovation needs, or remain too thin on agriculture-only cash flow.
+- Found one credible new diligence lead at `Ramacca`, Catania.
+
+### Best current survivors
+
+1. `Ramacca, Contrada Polmone`
+- `EUR 329k`
+- about `14.5 ha`, apparently including about `7 ha` citrus, plus olive and arable land
+- large artificial lake; described as productive and operationally equipped
+- portal classifies a one-level `3 room / 1 bathroom` component as habitable, but the dwelling's separate area and cadastral status require confirmation
+- indicative owner FCF `EUR 20k-31k`; roughly `11-16 year` simple payback
+- potentially better than Chiaramonte on scale, but not yet proven
+
+2. `Chiaramonte Gulfi`
+- remains the clean low-entry-price benchmark at `EUR 205k`
+- about `6 ha`, `110 sqm` house, productive orange / olive mix, wells and water reserve
+- saved FCF `EUR 10.5k-14.5k`; roughly `14-20 year` simple payback
+
+3. `San Giacomo, Ragusa`
+- `EUR 279k`
+- `13.38 ha`, `1,000` productive olive trees and `700` carobs
+- habitable `140-147 sqm` house plus about `300 sqm` farm buildings
+- crop economics and water disclosure are too weak to beat Chiaramonte without strong production records
+
+4. `Loceri, Sardinia`
+- still `EUR 420k`
+- about `5.82 ha` vineyards within `11.1 ha`, `90 sqm` house, cellars, drip irrigation, `3` artesian wells and `60,000 L` tank
+- operationally credible but too expensive for commodity grape economics
+
+### Rejected or downgraded this pass
+
+- `Paterno, Poggio Bianco`: only building is explicitly `da ristrutturare`
+- `Spello`: current asking price `EUR 590k`, over mandate
+- `Acquaviva Picena`: current `EUR 325k` version says `da ristrutturare`; older version remains too expensive
+- `Patti`: large house / panoramic value dominates a thin `4 ha` crop base
+- `Sorano`: house still needs completion
+- `San Venanzo` and `Cinigiano`: too much low-income arable / pasture / woodland for the asking price
+- `Melilli` / `Lentini`: productive irrigated orchards but no qualifying habitable house
+- `Mascali`: partly restored buildings and agriturismo dependence
+
+### Current verdict
+
+- market tone is `slightly improved`
+- Ramacca is the first new lead in several weeks worth a direct agent call
+- no listing yet demonstrates a clean `5-10 year` agriculture-only breakeven
+
+### Research file
+
+- `/Users/canozgel-macmini/.openclaw/workspace/10 Research/italy-agriculture-weekly-search-2026-09-20.md`
