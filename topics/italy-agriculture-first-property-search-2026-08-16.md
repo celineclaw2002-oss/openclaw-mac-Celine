@@ -328,3 +328,41 @@ If the mandate stays strict, the best path is probably:
 ### Research file
 
 - `/Users/canozgel-macmini/.openclaw/workspace/10 Research/italy-agriculture-weekly-search-2026-09-20.md`
+
+### Date
+
+- `2026-09-27`
+
+### What changed
+
+- Re-ran a broad current search across `Immobiliare.it`, `Idealista`, `Casa.it`, `TrovaCasa` / `Trovit`, `Subito`, `Cercacasa`, `Green-Acres`, `Gate-away`, `Properstar`, `Engel & Völkers`, and local agency pages.
+- Re-verified the benchmark set: `Chiaramonte Gulfi` still `EUR 205k`, `Ramacca` still `EUR 329k`, `Loceri` still `EUR 420k`.
+- Found one new diligence lead at `Paternò, Ponte Barca` (Catania).
+
+### Best current survivors
+
+1. `Ramacca, Contrada Polmone` — unchanged first call; `EUR 329k`, about `14.5 ha`, indicative FCF `EUR 20k-31k`, roughly `11-16 year` payback; house status still unconfirmed
+2. `Chiaramonte Gulfi` — benchmark; `EUR 205k`, about `6 ha`, `110 sqm` house, FCF `EUR 10.5k-14.5k`, roughly `14-20 year` payback
+3. `Paternò, Ponte Barca` — new; `EUR 380k`, `8 ha` flat fenced land, `2,700` olives with sprinkler irrigation, on-site lake, `193 sqm` house (2 bed / 1 bath, condition ambiguous); indicative FCF `EUR 10k-22k`, roughly `17-38 year` payback; comparable to Chiaramonte with more scale but olive-only
+
+### Rejected or downgraded this pass
+
+- `Francofonte` `EUR 550k`, `Pisticci BonAria` about `EUR 620k`, `Noto Vendicari` `EUR 1.0M`, `Cupello` `EUR 550k`, `Baschi` `EUR 940k`: over budget
+- `Avola Petrara` `EUR 490k`: house dominates a `2 ha` lemon base
+- `Castrofilippo / Favara` `EUR 500k`: at the cap, `400 sqm` house dominates, almond margins too thin
+- `Castiglione di Sicilia` (both SP81 and SP89 listings): casale `da ristrutturare` or no house
+- `Castelvetrano` greenhouses `EUR 365k`: intensive vegetable business, not passive
+- `Caltagirone Piano San Paolo` `EUR 148k`, `Bronte Rizzonito` `EUR 200k`: productive but too small for hired-labor economics
+- `Castellana Grotte` `9.6 ha`: price on request, studio dwelling, trulli to restore, hotel pitch
+- `Tuoro sul Trasimeno` `32 ha` olives + frantoio: price reserved, almost certainly over budget
+- `Cinigiano Porrona` `EUR 390k`: `da ristrutturare`
+
+### Current verdict
+
+- market tone is `similar`
+- no listing demonstrates a clean `5-10 year` agriculture-only breakeven
+- Ramacca first call, Paternò Ponte Barca second call, Chiaramonte Gulfi still the benchmark
+
+### Research file
+
+- `/Users/canozgel-macmini/.openclaw/workspace/10 Research/italy-agriculture-weekly-search-2026-09-27.md`
