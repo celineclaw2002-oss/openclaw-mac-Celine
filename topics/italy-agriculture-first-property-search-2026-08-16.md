@@ -366,3 +366,39 @@ If the mandate stays strict, the best path is probably:
 ### Research file
 
 - `/Users/canozgel-macmini/.openclaw/workspace/10 Research/italy-agriculture-weekly-search-2026-09-27.md`
+
+### Date
+
+- `2026-10-01`
+
+### Mandate change
+
+- The house is now optional. Land-only farms are screened on equal footing.
+- The hard constraints remain `EUR 500k` maximum ask, agriculture-only returns, hired local labor, and a target `5-10 year` payback.
+
+### What changed
+
+- Ran a full deep dive across southern/island and central/northern listings plus an independent underwriting review.
+- Added new land-only leads at `Montalto Uffugo`, `Soriano nel Cimino`, `San Pietro Vernotico`, and `Casalincontrada`.
+- Replaced the earlier optimistic crop-contribution model with CREA-RICA operating margins, conservative acquisition costs, remote-owner overhead, renewal reserves, and zero unverified CAP/PAC support.
+- The prior Ramacca estimate of `EUR 20k-31k` annual FCF / `11-16 years` is superseded. On the evidenced seven-hectare citrus block, corrected FCF is roughly `-EUR 5k` to `+EUR 6k`, with best evidenced payback above `66 years`.
+- The preliminary `4.7-7.5 year` Montalto screen is rejected as too optimistic because water, current production, realized prices, labor, and operating costs are undisclosed.
+
+### Ranked diligence leads
+
+1. `Montalto Uffugo, Calabria` — `EUR 170k`; about `7 ha` vineyard + `2 ha` olives, cellar/equipment; lowest plausible earnings hurdle but not yet underwritable.
+2. `Soriano nel Cimino, Lazio` — `EUR 145k`; `6.64 ha` productive chestnut + `1.26 ha` olives; strict screened FCF about `-EUR 3k` to `+EUR 10k`, roughly `17 years` best case.
+3. `San Pietro Vernotico, Puglia` — `EUR 290k`; about `21 ha` mixed arable/olive/almond; crop split and water are gating.
+4. `Casalincontrada, Abruzzo` — `EUR 95k`; `3 ha` vineyard with private well; low-ticket optionality but scale risk.
+5. `Ramacca, Sicily` — retained as the scale/water benchmark, but fails the corrected economics on currently evidenced crop data.
+
+### Current verdict
+
+- The opportunity set `improved physically` because removing the house requirement lowers entry price per planted hectare.
+- The investment conclusion is unchanged and now more conservative: **zero candidates currently prove a 5-10 year agriculture-only payback**.
+- `Montalto` and `Soriano` are first evidence requests, not purchase-ready investments.
+
+### Research files
+
+- `/Users/canozgel-macmini/.openclaw/workspace/10 Research/italy-agriculture-weekly-search-2026-10-01.md`
+- `/Users/canozgel-macmini/.openclaw/workspace/reports/Italy agricultural land economics.md`
