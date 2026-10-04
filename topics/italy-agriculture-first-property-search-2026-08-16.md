@@ -402,3 +402,39 @@ If the mandate stays strict, the best path is probably:
 
 - `/Users/canozgel-macmini/.openclaw/workspace/10 Research/italy-agriculture-weekly-search-2026-10-01.md`
 - `/Users/canozgel-macmini/.openclaw/workspace/reports/Italy agricultural land economics.md`
+
+### Date
+
+- `2026-10-04`
+
+### What changed
+
+- First full weekly run under the house-optional rule and the corrected `2026-10-01` underwriting standard (`1.21x` all-in, CREA-RICA / ISMEA margins, zero unverified CAP, `EUR 6k-12k` overhead, `EUR 250-500/ha` renewals).
+- Searched land-only categories explicitly: `noccioleto`, `agrumeto`, `limoneto`, `pistacchieto`, `mandorleto`, `vigneto`, `frutteto`, `castagneto`, kiwi, table grapes.
+- New crop benchmarks: ISMEA 2025 Sicily Tarocco cost `EUR 7,018/ha` at `26.5 t/ha`, `EUR 0.26/kg` cost vs `EUR 0.44/kg` price (MO about `EUR 4.8k/ha`); Tonda Gentile Romana `EUR 4.00/kg` Sept 2026, normal yields `20-30 q/ha`, screened at `12-22 q/ha`; CREA-RICA pistachio gross margin `EUR 4,671/ha`.
+- Found the first specialty, irrigated, land-only parcels at low entry prices: Tuscia hazelnut at `EUR 22k-44k` per planted hectare.
+
+### Ranked diligence leads
+
+1. `Soriano nel Cimino, SP Ortana / Fornacchia` — `EUR 90k`; about `4 ha` drip-irrigated hazelnut (well plus springs), `60` olives, `140 sqm` ruin; `EUR 23.7k/ha`; FCF `-EUR 7k` to `+EUR 12k`; optimistic payback about `9 years`, base never. Better entry than Chiaramonte.
+2. `Sutri, Monte Guerrano` — `EUR 350k` negotiable; `8 ha` hazelnut plus `2 ha` arable; water undisclosed; FCF `-EUR 11k` to `+EUR 33k`; optimistic about `13 years`. Best scale.
+3. `Soriano nel Cimino, Sanguetta` — `EUR 225k`; `4.85 ha` irrigated Tonda Gentile Romana plus `1 ha` olives, well, `120 sqm` casale to restore; FCF `-EUR 10k` to `+EUR 17k`; optimistic about `16 years`.
+4. `Paternò, SP15 Gerbini` — `EUR 218.5k`; `4 ha` Tarocco (`1,000` mature plus `650` young), two consortium-fed lakes, seller states `35 t`; FCF `-EUR 6k` to `+EUR 5k`; fails but has an output number.
+5. `San Pietro Vernotico` — `EUR 290k`; `21 ha`; seller offers whole-farm lease at `EUR 2,000/month`, about `6%` cash yield on all-in cost, roughly `17 years`; first hard cash number, outside the operate-it-yourself mandate.
+
+### Oct 1 queue
+
+- `Montalto Uffugo` live and unchanged at `EUR 170k`; `Soriano Ciliano` chestnut live at `EUR 145k`; `Casalincontrada` not re-verified; `Ramacca` and `Chiaramonte Gulfi` unchanged.
+
+### Rejected or downgraded this pass
+
+- `Santa Venerina` lemons `EUR 350k` (`EUR 100k/ha`, `55 t` 2025 stated), `Bronte Barbaro` pistachio `EUR 320k` (`EUR 83k/ha`), `Ronciglione` `EUR 315k` and `Vignanello` `EUR 280k` hazelnut (`EUR 51k-79k/ha`), `Tuscania` superintensive olives `EUR 435k`, `Castiglione Rausa` `EUR 220k` mixed with no water, `Capranica Trinità` `EUR 140k` organic hazelnut without water (watch-list), `Nepi Settevene` `EUR 160k` too small, `Linguaglossa` `1 ha` Etna DOC too small, `Pisticci` confirmed `EUR 620k`.
+
+### Current verdict
+
+- market tone is `improved` on physical entry metrics; investment conclusion unchanged: **zero candidates prove a `5-10 year` agriculture-only payback**
+- next action: send the standard evidence request to the two Soriano agencies and the Sutri agency this week; ask Paternò for three years of invoices; ask San Pietro Vernotico for the lease contract
+
+### Research file
+
+- `/Users/canozgel-macmini/.openclaw/workspace/10 Research/italy-agriculture-weekly-search-2026-10-04.md`
